@@ -1,0 +1,40 @@
+{
+  "updated": "2026-03-07T00:00:00.000Z",
+  "agents": {
+    "archie":    { "status": "active",  "last": "Morning briefing complete." },
+    "proxy":     { "status": "active",  "last": "Calendar clear." },
+    "thread":    { "status": "active",  "last": "Routing clean." },
+    "scribe":    { "status": "online",  "last": "TAM posts queued." },
+    "quill":     { "status": "online",  "last": "Long-form queue active." },
+    "press":     { "status": "idle",    "last": "Standing by." },
+    "reel":      { "status": "idle",    "last": "Standing by." },
+    "signal":    { "status": "online",  "last": "Listening across platforms." },
+    "chain":     { "status": "online",  "last": "26 sequences active." },
+    "ground":    { "status": "online",  "last": "Life ops nominal." },
+    "forge":     { "status": "online",  "last": "Build pipeline clear." },
+    "sentinel":  { "status": "online",  "last": "No threats detected." },
+    "stitch":    { "status": "online",  "last": "Self-heal active." },
+    "architect": { "status": "idle",    "last": "Awaiting trigger." },
+    "lens":      { "status": "online",  "last": "Telemetry nominal." },
+    "intel":     { "status": "online",  "last": "Conversion tracking live." },
+    "scout":     { "status": "idle",    "last": "No alerts." },
+    "drift":     { "status": "idle",    "last": "Scan pending." },
+    "rev":       { "status": "online",  "last": "Stripe monitoring active." },
+    "grit":      { "status": "online",  "last": "Budget nominal." },
+    "yield":     { "status": "idle",    "last": "Growth queue empty." },
+    "log":       { "status": "online",  "last": "Daily memory running." },
+    "relic":     { "status": "online",  "last": "Long-term memory intact." },
+    "vein":      { "status": "online",  "last": "Pattern intel active." },
+    "ember":     { "status": "online",  "last": "Standing by." },
+    "anchor":    { "status": "online",  "last": "Grounded." },
+    "vault":     { "status": "online",  "last": "Containment holding." },
+    "crucible":  { "status": "standby", "last": "Awaiting challenge." },
+    "whisper":   { "status": "standby", "last": "Voice mode off." },
+    "ghost":     { "status": "standby", "last": "Dark." }
+  },
+  "metrics": {
+    "revenue_today": 0,
+    "tam_visitors": 0,
+    "active_sequences": 26
+  }
+}
