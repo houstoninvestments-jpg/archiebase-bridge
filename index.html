@@ -290,7 +290,15 @@ html::before {
 .mic { width:50px;height:50px;background:linear-gradient(135deg,var(--ocean2),var(--ocean));border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;box-shadow:0 0 28px rgba(29,155,240,0.32),0 4px 16px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.18);transition:transform .14s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden; }
 .mic::before { content:'';position:absolute;top:0;left:0;right:0;height:1px;background:rgba(255,255,255,0.28);pointer-events:none; }
 .mic:active { transform:scale(0.9); }
+.mic.listening { animation:breathe 1.4s ease infinite; }
 .mic-b { width:11px;height:18px;background:var(--w);border-radius:6px; }
+
+/* typing indicator (3 dots) */
+.ma.typing { display:flex;gap:6px;align-items:center;padding:19px 21px;max-width:72px; }
+.ma.typing .tdot { width:7px;height:7px;border-radius:50%;background:var(--ocean);opacity:.3;animation:tping 1.2s ease-in-out infinite; }
+.ma.typing .tdot:nth-child(2) { animation-delay:.2s; }
+.ma.typing .tdot:nth-child(3) { animation-delay:.4s; }
+@keyframes tping { 0%,80%,100% { opacity:.25;transform:scale(.9); } 40% { opacity:1;transform:scale(1.1); } }
 
 /* ══ NAV ══ */
 .nav { position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.9);backdrop-filter:blur(40px) saturate(200%);-webkit-backdrop-filter:blur(40px) saturate(200%);border-top:1px solid rgba(255,255,255,0.05);padding:13px 0 26px;display:none;justify-content:space-around;z-index:50; }
@@ -382,13 +390,8 @@ html::before {
     <!-- CHAT -->
     <div class="screen" id="screen-chat" style="display:none;flex-direction:column;">
       <div class="chead"><div class="corb"><div class="cor"></div><div class="coc"></div></div><div class="ctit">ARCHIE</div><div class="clive"><div class="cld"></div>Live · Operator</div></div>
-      <div class="msgs">
-        <div class="ma glass-o"><div class="matg">// Archie · 9:41 AM</div><div class="matx">Morning. TAM is 95% done. Email sequence is the last gap. One session closes it. What's in the way right now?</div></div>
-        <div class="mu"><div class="mutx">Need to fix the portal redirect first</div></div>
-        <div class="ma glass-o"><div class="matg">// Archie · intel</div><div class="matx">Fixed March 29. Commit <span class="rx">██████</span> pushed to main. You're stalling. Pre-breakthrough pattern. Email sequence. Go.</div></div>
-        <div class="mint glass-s"><div class="mitg">// Mission status · live</div><div class="mir"><div class="mik">TAM completion</div><div class="miv" style="color:var(--ocean)">95%</div></div><div class="mir"><div class="mik">Last blocker</div><div class="miv" style="color:var(--sun)">Email sequence</div></div><div class="mir"><div class="mik">Est. to done</div><div class="miv" style="color:var(--green)">1 Session</div></div><div class="mir"><div class="mik">Pattern detected</div><div class="miv" style="color:var(--ember)">Pre-launch stall</div></div></div>
-      </div>
-      <div class="cin"><textarea class="cf" rows="1" placeholder="Say anything..."></textarea><div class="mic"><div class="mic-b"></div></div></div>
+      <div class="msgs" id="msgs"></div>
+      <div class="cin"><textarea class="cf" id="cf" rows="1" placeholder="Say anything..."></textarea><div class="mic" id="mic"><div class="mic-b"></div></div></div>
     </div>
 
     <!-- NAV -->
@@ -545,6 +548,231 @@ setInterval(()=>{
   document.querySelectorAll('.wb').forEach((b,i)=>{b.style.height=Math.round(4+Math.abs(Math.sin(i*.44+off))*26)+'px';});
   off+=0.15;
 },80);
+
+// ══ CHAT WIRING ══
+(function(){
+  const HISTORY_KEY='archie_chat_history';
+  const MAX_HISTORY=20;
+
+  function loadHistory(){
+    try{
+      const raw=localStorage.getItem(HISTORY_KEY);
+      if(!raw) return [];
+      const arr=JSON.parse(raw);
+      return Array.isArray(arr)?arr:[];
+    }catch{ return []; }
+  }
+  function saveHistory(h){
+    try{ localStorage.setItem(HISTORY_KEY,JSON.stringify(h.slice(-MAX_HISTORY))); }catch{}
+  }
+  let history=loadHistory();
+
+  function ts(){
+    const d=new Date();
+    const h=d.getHours(), m=String(d.getMinutes()).padStart(2,'0');
+    const ampm=h>=12?'PM':'AM';
+    return `${((h%12)||12)}:${m} ${ampm}`;
+  }
+
+  function buildMsg(role,content){
+    const div=document.createElement('div');
+    if(role==='assistant'){
+      div.className='ma glass-o';
+      const tag=document.createElement('div');
+      tag.className='matg';
+      tag.textContent=`// Archie · ${ts()}`;
+      const tx=document.createElement('div');
+      tx.className='matx';
+      tx.textContent=content;
+      div.appendChild(tag);
+      div.appendChild(tx);
+      div._tx=tx;
+    }else{
+      div.className='mu';
+      const tx=document.createElement('div');
+      tx.className='mutx';
+      tx.textContent=content;
+      div.appendChild(tx);
+      div._tx=tx;
+    }
+    return div;
+  }
+
+  function scrollToBottom(){
+    const msgs=document.getElementById('msgs');
+    if(msgs) msgs.scrollTop=msgs.scrollHeight;
+  }
+
+  function renderHistory(){
+    const msgs=document.getElementById('msgs');
+    if(!msgs) return;
+    msgs.innerHTML='';
+    if(history.length===0){
+      msgs.appendChild(buildMsg('assistant',"I'm here. What's on your mind?"));
+    }else{
+      for(const m of history) msgs.appendChild(buildMsg(m.role,m.content));
+    }
+    scrollToBottom();
+  }
+
+  let typingEl=null;
+  function showTyping(){
+    const msgs=document.getElementById('msgs');
+    if(!msgs||typingEl) return;
+    typingEl=document.createElement('div');
+    typingEl.className='ma glass-o typing';
+    typingEl.innerHTML='<div class="tdot"></div><div class="tdot"></div><div class="tdot"></div>';
+    msgs.appendChild(typingEl);
+    scrollToBottom();
+  }
+  function hideTyping(){
+    if(typingEl&&typingEl.parentNode) typingEl.parentNode.removeChild(typingEl);
+    typingEl=null;
+  }
+
+  let sending=false;
+  async function send(text){
+    const content=(text||'').trim();
+    if(!content||sending) return;
+    sending=true;
+
+    history.push({role:'user',content});
+    history=history.slice(-MAX_HISTORY);
+    saveHistory(history);
+
+    const msgs=document.getElementById('msgs');
+    msgs.appendChild(buildMsg('user',content));
+    scrollToBottom();
+
+    const ta=document.getElementById('cf');
+    if(ta){ ta.value=''; ta.style.height='auto'; }
+
+    showTyping();
+
+    let resp;
+    try{
+      resp=await fetch('/api/chat',{
+        method:'POST',
+        headers:{'content-type':'application/json'},
+        body:JSON.stringify({messages:history})
+      });
+    }catch(err){
+      hideTyping();
+      msgs.appendChild(buildMsg('assistant',`[connection error: ${err.message}]`));
+      scrollToBottom();
+      sending=false;
+      return;
+    }
+
+    if(!resp.ok||!resp.body){
+      hideTyping();
+      const errText=await resp.text().catch(()=>resp.statusText);
+      msgs.appendChild(buildMsg('assistant',`[error ${resp.status}: ${errText||resp.statusText}]`));
+      scrollToBottom();
+      sending=false;
+      return;
+    }
+
+    hideTyping();
+    const bubble=buildMsg('assistant','');
+    msgs.appendChild(bubble);
+
+    const reader=resp.body.getReader();
+    const decoder=new TextDecoder();
+    let full='';
+    try{
+      while(true){
+        const {value,done}=await reader.read();
+        if(done) break;
+        full+=decoder.decode(value,{stream:true});
+        bubble._tx.textContent=full;
+        scrollToBottom();
+      }
+    }catch(err){
+      // stream ended — use whatever we have
+    }
+
+    if(full.trim()){
+      history.push({role:'assistant',content:full});
+      history=history.slice(-MAX_HISTORY);
+      saveHistory(history);
+    }
+    sending=false;
+  }
+
+  // Web Speech API
+  let recognition=null;
+  function startSpeech(){
+    const Rec=window.SpeechRecognition||window.webkitSpeechRecognition;
+    const mic=document.getElementById('mic');
+    if(!Rec){
+      alert('Voice input not supported in this browser');
+      return;
+    }
+    if(recognition){
+      try{ recognition.stop(); }catch{}
+      recognition=null;
+      if(mic) mic.classList.remove('listening');
+      return;
+    }
+    recognition=new Rec();
+    recognition.continuous=false;
+    recognition.interimResults=true;
+    recognition.lang=navigator.language||'en-US';
+    const ta=document.getElementById('cf');
+    let finalText='';
+    recognition.onresult=(e)=>{
+      let interim='';
+      for(let i=e.resultIndex;i<e.results.length;i++){
+        const r=e.results[i];
+        if(r.isFinal) finalText+=r[0].transcript;
+        else interim+=r[0].transcript;
+      }
+      if(ta) ta.value=(finalText+interim).trim();
+    };
+    recognition.onerror=()=>{
+      if(mic) mic.classList.remove('listening');
+      recognition=null;
+    };
+    recognition.onend=()=>{
+      if(mic) mic.classList.remove('listening');
+      recognition=null;
+      if(ta&&ta.value.trim()) send(ta.value);
+    };
+    try{
+      recognition.start();
+      if(mic) mic.classList.add('listening');
+    }catch(err){
+      recognition=null;
+      if(mic) mic.classList.remove('listening');
+    }
+  }
+
+  function initChat(){
+    const ta=document.getElementById('cf');
+    const mic=document.getElementById('mic');
+    if(ta){
+      ta.addEventListener('keydown',(e)=>{
+        if(e.key==='Enter'&&!e.shiftKey){
+          e.preventDefault();
+          send(ta.value);
+        }
+      });
+    }
+    if(mic){
+      mic.addEventListener('click',(e)=>{
+        e.preventDefault();
+        e.stopPropagation();
+        const val=ta?ta.value.trim():'';
+        if(val){ send(val); }
+        else{ startSpeech(); }
+      });
+    }
+    renderHistory();
+  }
+
+  initChat();
+})();
 </script>
 </body>
 </html>
