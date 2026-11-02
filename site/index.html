@@ -175,54 +175,135 @@ header{position:relative;background:#f7f8f5;color:#142434;border-bottom:1px soli
  .demo-copy{font-size:11px}
 }
 @media(prefers-reduced-motion:reduce){.solution-hero .btn:hover{transform:none}}
+
+/* Workday hero v4 · anti-template system · a useful, human-first offer */
+header{position:relative;background:#f8f6ef;color:#132929;border-bottom:1px solid #e3e1d7}
+.nav{min-height:77px}
+.navlinks{color:#334e4b}.navlinks a:hover{color:#105ea5}
+.nav .btn{background:#203a34;color:#fff;box-shadow:none;border-radius:4px}
+.logo-dot{color:#fd7b45}
+.workday-hero{background:#f8f6ef;color:#152b29;position:relative;padding:64px 0 82px;overflow:hidden}
+.workday-hero:before{display:none}
+.wd-hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(32px,5vw,78px);align-items:center}
+.wd-story{min-width:0}
+.wd-kicker{color:#49685b;font-size:10px;font-weight:900;letter-spacing:.16em;display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:27px}
+.wd-square{display:inline-block;width:10px;height:10px;background:#fa7940;margin-right:3px}
+.wd-slash{color:#a5b2ab}
+.wd-story h1{font-family:'Manrope',system-ui,sans-serif;font-size:clamp(50px,5.45vw,84px);letter-spacing:-.082em;line-height:1.06;margin:0 0 26px;font-weight:800;color:#19342e}
+.wd-handled{display:inline-block;color:#195cf5;position:relative}
+.wd-stop{color:#fc7644}
+.wd-who{color:#49605d;font-size:clamp(15px,1.18vw,17px);line-height:1.7;max-width:592px;margin-bottom:22px}
+.wd-who strong{color:#1c3934;font-weight:800}
+.wd-after{border-left:4px solid #fa7940;padding:2px 0 3px 18px;margin:0 0 29px;max-width:600px}
+.wd-after-label{font-size:10px;letter-spacing:.16em;color:#6c7c6f;font-weight:900}
+.wd-after p{margin:7px 0 0;color:#465c55;font-size:14px;line-height:1.65}
+.wd-after strong{color:#19352f}
+.wd-actions{display:flex;align-items:center;gap:19px;flex-wrap:wrap}
+.wd-primary{background:#195cf5!important;color:#fff;border-radius:5px;padding:16px 21px;font-size:14px;box-shadow:none!important}
+.wd-link{font-weight:800;color:#213d36;text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:#7b9085;text-underline-offset:5px;font-size:13px}
+.wd-reassurance{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:14px 0 0;color:#63756b;font-size:11px;font-weight:700}
+.wd-tick{color:#258c67}.wd-mid{color:#a3b0a5}
+.wd-people{display:flex;align-items:center;gap:13px;border-top:1px solid #dedfd5;margin-top:29px;padding-top:16px;max-width:575px}
+.wd-persona-mark{flex:none;background:#19342e;color:#fff;width:41px;height:41px;display:grid;place-items:center;position:relative;font-family:'Manrope',sans-serif;font-weight:800;font-size:26px;border-radius:7px;letter-spacing:-.13em}
+.wd-persona-mark span{color:#f5c365;position:absolute;font-size:15px;top:3px;right:7px}
+.wd-people>div{color:#6d7b72;font-size:12px;line-height:1.6}.wd-people strong{color:#1c3e34}
+.wd-live{background:#1c3530;border:1px solid #1c3530;color:#fff;min-width:0}
+.wd-live-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 25px;border-bottom:1px solid #476159}
+.wd-live-id{display:flex;gap:9px;align-items:center;color:#f3f6ee;font-size:10px;font-weight:900;letter-spacing:.105em}
+.wd-live-indicator{display:block;width:9px;height:9px;background:#ec8651}
+.wd-live-serial{color:#8fae9d;font:700 10px 'DM Sans',sans-serif;letter-spacing:.08em}
+.wd-live-inner{padding:clamp(20px,3vw,37px) clamp(21px,3vw,37px) 24px}
+.wd-live h2{font-family:'Manrope',sans-serif;font-size:clamp(31px,3vw,47px);letter-spacing:-.07em;line-height:1.13;font-weight:800;margin:0 0 11px;color:#fbfaf3}
+.wd-live-sub{font-size:13px;color:#b5c6b8;line-height:1.5;margin:0 0 22px}
+.wd-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid #506c60;margin-bottom:24px}
+.wd-options button{color:#d0e3d7;background:transparent;border:0;border-right:1px solid #506c60;padding:12px 5px;font-weight:800;font-size:11px;text-align:center}
+.wd-options button:last-child{border-right:0}
+.wd-options button[aria-pressed="true"],.wd-options button:hover{background:#f0f5de;color:#183a30}
+.wd-ticket{background:#f5f5ec;color:#1c352f;border-left:5px solid #f27e45;position:relative}
+.wd-ticket-row{display:grid;grid-template-columns:42px 1fr;gap:8px;padding:21px 19px 21px 15px;border-bottom:1px solid #d9e2d8}
+.wd-ticket-row:last-child{border-bottom:0}
+.wd-ordinal{font-size:12px;color:#73877d;font-weight:900;letter-spacing:-.02em}
+.wd-row-label{display:block;color:#718274;font-weight:900;letter-spacing:.12em;font-size:10px;margin-bottom:8px}
+.wd-ticket-row p{font-size:14px;line-height:1.55;color:#2a403a;margin:0;font-weight:700}
+.wd-is-fix{background:#e5eddc}.wd-is-fix .wd-ordinal,.wd-is-fix .wd-row-label{color:#436752}
+.wd-is-after .wd-ordinal{color:#1657a7}.wd-is-after .wd-row-label{color:#2e6c65}
+.wd-live-bottom{display:flex;align-items:center;gap:10px;justify-content:space-between;margin-top:22px}
+.wd-live-bottom .wd-row-label{color:#b8cebd;font-size:9px;margin-bottom:4px}
+.wd-live-bottom strong{font-size:12px;color:#edf4e8}
+.wd-demo-go{font-size:12px;font-weight:900;color:#172d24;background:#d7ec87;border:0;padding:14px 16px;white-space:nowrap}
+.wd-example-note{color:#9db3a5;font-size:10px;line-height:1.55;margin:17px 0 0}
+.wd-valuebar{background:#e9ede6;border-top:1px solid #dce3d8;border-bottom:1px solid #dce3d8}
+.wd-valuebar-inner{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}
+.wd-valuebar-inner>span{font-size:12px;font-weight:900;color:#4c7362;letter-spacing:.04em}
+.wd-valuebar-inner strong{font-weight:800;color:#18362f;letter-spacing:0;margin-left:6px}
+@media(max-width:1050px){.wd-hero-grid{gap:28px}.wd-story h1{font-size:clamp(49px,5vw,68px)}.wd-who{font-size:15px}.wd-live-inner{padding:24px}.wd-options button{font-size:10px}}
+@media(max-width:800px){.workday-hero{padding:42px 0 54px}.wd-hero-grid{grid-template-columns:1fr;align-items:stretch;gap:35px}.wd-story h1{font-size:clamp(51px,9vw,77px)}.wd-live{max-width:610px}.wd-valuebar-inner{flex-wrap:wrap;gap:12px}}
+@media(max-width:520px){
+ .workday-hero{padding:34px 0 42px}.wd-kicker{font-size:9px;margin-bottom:18px}
+ .wd-story h1{font-size:clamp(45px,10.7vw,59px);line-height:1.08;letter-spacing:-.074em;margin-bottom:21px}
+ .wd-who{font-size:15px;line-height:1.65;margin-bottom:19px}
+ .wd-after{padding-left:13px;margin-bottom:21px}.wd-after p{font-size:13px}
+ .wd-primary{width:100%}.wd-reassurance{font-size:10px}
+ .wd-people{margin-top:22px;padding-top:14px}.wd-people>div{font-size:11px}
+ .wd-live-header{padding:15px 17px}.wd-live-serial{font-size:9px}.wd-live-id{font-size:9px}
+ .wd-live-inner{padding:20px 17px}.wd-live h2{font-size:33px}
+ .wd-options{grid-template-columns:1fr 1fr}.wd-options button{font-size:11px;border-bottom:1px solid #506c60}.wd-options button:nth-child(2){border-right:0}.wd-options button:nth-child(n+3){border-bottom:0}
+ .wd-ticket-row{padding:16px 11px;grid-template-columns:32px 1fr;gap:5px}.wd-ticket-row p{font-size:13px}
+ .wd-live-bottom{align-items:stretch;flex-direction:column;gap:12px}.wd-demo-go{width:100%}
+ .wd-valuebar-inner{padding:15px 0;gap:11px}.wd-valuebar-inner>span{width:100%;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.wd-primary:hover{transform:none}}
 </style>
 </head>
 <body>
 <header><div class="shell nav"><a class="logo" href="#home" aria-label="Archiebase home">archie<span class="logo-dot">●</span>base</a><nav class="navlinks" aria-label="Main navigation"><a href="#problems">What we fix</a><a href="#how">How it works</a><a href="#tools">Free tools</a><a href="#contact">About</a></nav><a class="btn btn-blue" href="#first-fix">Get your first fix ↗</a></div></header>
 <main>
-<section class="hero solution-hero" id="home">
-<div class="shell solution-layout">
-  <div class="solution-copy">
-    <div class="solution-eyebrow"><span class="solution-mark"></span> AI &amp; AUTOMATION FOR SMALL BUSINESSES</div>
-    <h1>Less busywork.<br><span>Fewer missed customers.</span><br>More time to grow.</h1>
-    <p class="solution-intro"><strong>Archiebase helps small-business owners find and fix what's slowing them down.</strong> Missed calls, forgotten follow-ups, repetitive admin, websites that aren't pulling their weight. We use practical AI and simple automations to make your business easier to run.</p>
-    <div class="solution-actions">
-      <a class="btn solution-primary" href="#first-fix">Find my first fix <span aria-hidden="true">↗</span></a>
-      <a class="solution-secondary" href="#problems">See what we can fix <span aria-hidden="true">→</span></a>
-    </div>
-    <p class="solution-assurance"><strong>Free to start.</strong> No signup. No obligation. A practical fix you can keep.</p>
-    <div class="solution-guides"><span class="guides-marker" aria-hidden="true">a<span>•</span></span><p><strong>Real help, not another app to figure out.</strong><br>Archie is your free digital guide. Aaron is the person who can build the solution for you.</p></div>
-  </div>
-  <div class="solution-demo" aria-label="See an example of how Archiebase improves a real business process">
-    <div class="demo-heading"><span class="demo-label">WHAT WE ACTUALLY FIX / 01</span><span class="demo-live"><span></span> WORKING EXAMPLE</span></div>
-    <h2>Small changes.<br>Better days.</h2>
-    <p class="demo-intro">See the difference one simple system can make.</p>
-    <div class="demo-tabs" role="group" aria-label="Choose a business problem">
-      <button type="button" data-hero-issue="calls" aria-pressed="true">Missed calls</button>
-      <button type="button" data-hero-issue="quotes" aria-pressed="false">Quote follow-ups</button>
-      <button type="button" data-hero-issue="reviews" aria-pressed="false">Reviews</button>
-      <button type="button" data-hero-issue="admin" aria-pressed="false">Admin</button>
-    </div>
-    <div class="change-flow" aria-live="polite">
-      <div class="flow-step">
-        <div class="flow-rail"><span class="flow-count">01</span><span class="flow-connector"></span></div>
-        <div><div class="flow-label">THE PROBLEM</div><p id="hero-before">You're on a job. A new customer calls. Nobody answers.</p></div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-rail"><span class="flow-count middle">02</span><span class="flow-connector"></span></div>
-        <div><div class="flow-label">WHAT WE SET UP</div><p id="hero-fix">A friendly automatic text asks what they need.</p></div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-rail"><span class="flow-count after">03</span></div>
-        <div><div class="flow-label">WHAT CHANGES</div><p id="hero-after">The customer hears back promptly. You have a chance to win the job.</p></div>
-      </div>
-    </div>
-    <div class="demo-footer"><button type="button" class="demo-action" id="hero-build">Get a free fix for this <span aria-hidden="true">↗</span></button><button type="button" id="hero-copy" class="demo-copy">Copy sample message</button></div>
-    <p class="demo-caption">Illustrative example, not a claim about your business. Tell Archie about your situation for a tailored starter fix.</p>
-  </div>
-</div>
+<section class="hero workday-hero" id="home">
+ <div class="shell wd-hero-grid">
+   <div class="wd-story">
+     <div class="wd-kicker"><span class="wd-square"></span> ARCHIEBASE <span class="wd-slash">//</span> AI &amp; AUTOMATION FOR SMALL BUSINESSES</div>
+     <h1>The calls.<br>The follow-ups.<br>The admin.<br><span class="wd-handled">Handled<span class="wd-stop">.</span></span></h1>
+     <p class="wd-who"><strong>We make small businesses easier to run.</strong> Archiebase finds the missed opportunities and repetitive work stealing your time, then builds simple AI, automation, and website fixes to take care of them.</p>
+     <div class="wd-after">
+       <span class="wd-after-label">WHAT GETS BETTER</span>
+       <p>Customers hear back. Quotes get followed up. The little things stop slipping through the cracks. <strong>You get more time for the work that actually matters.</strong></p>
+     </div>
+     <div class="wd-actions">
+       <a class="btn wd-primary" href="#first-fix">Find my first fix <span aria-hidden="true">↗</span></a>
+       <a class="wd-link" href="#problems">See what we can fix <span aria-hidden="true">→</span></a>
+     </div>
+     <div class="wd-reassurance"><span class="wd-tick">✓</span> Free practical starting point <span class="wd-mid">/</span> No signup or sales call</div>
+     <div class="wd-people"><span class="wd-persona-mark" aria-hidden="true">a<span>•</span></span><div><strong>Meet Archiebase.</strong> Archie is your free digital guide. Aaron is the real person who can build the fix when you want it done for you.</div></div>
+   </div>
+   <div class="wd-live" aria-label="Interactive example of a small-business automation">
+     <div class="wd-live-header">
+       <div class="wd-live-id"><span class="wd-live-indicator"></span> THIS IS WHAT A FIX LOOKS LIKE</div>
+       <span class="wd-live-serial">EXAMPLE 001 / 004</span>
+     </div>
+     <div class="wd-live-inner">
+       <h2>One problem.<br>One practical fix.</h2>
+       <p class="wd-live-sub">Choose a familiar headache and see how it changes.</p>
+       <div class="wd-options" role="group" aria-label="Explore examples">
+         <button type="button" data-hero-issue="calls" aria-pressed="true">Missed calls</button>
+         <button type="button" data-hero-issue="quotes" aria-pressed="false">Cold quotes</button>
+         <button type="button" data-hero-issue="reviews" aria-pressed="false">Reviews</button>
+         <button type="button" data-hero-issue="admin" aria-pressed="false">Busywork</button>
+       </div>
+       <div class="wd-ticket">
+         <div class="wd-ticket-row wd-is-before"><span class="wd-ordinal">01</span><div><span class="wd-row-label">WITHOUT A SYSTEM</span><p id="hero-before">You're on a job. A new customer calls, but nobody can answer.</p></div></div>
+         <div class="wd-ticket-row wd-is-fix"><span class="wd-ordinal">02</span><div><span class="wd-row-label">THE FIX WE BUILD</span><p id="hero-fix">A helpful automatic text asks what they need.</p></div></div>
+         <div class="wd-ticket-row wd-is-after"><span class="wd-ordinal">03</span><div><span class="wd-row-label">LIFE AFTER</span><p id="hero-after">The customer gets a response while you stay focused on the job.</p></div></div>
+       </div>
+       <div class="wd-live-bottom">
+         <div><span class="wd-row-label">YOUR FIRST STEP</span><strong>Try a version for your own business.</strong></div>
+         <button type="button" class="wd-demo-go" id="hero-build">Get my free fix ↗</button>
+       </div>
+       <p class="wd-example-note">Illustrative example, not a scan of your business. DIY instructions are free. Implementation is optional.</p>
+     </div>
+   </div>
+ </div>
 </section>
-<div class="statbar"><div class="shell statbar-inner"><div class="trustline"><span>✓</span> Useful before you pay</div><div class="trustline"><span>✓</span> Plain-English instructions</div><div class="trustline"><span>✓</span> No unnecessary software</div></div></div>
+<div class="statbar wd-valuebar"><div class="shell wd-valuebar-inner"><span>01 <strong>Find the bottleneck.</strong></span><span>02 <strong>Get a practical fix.</strong></span><span>03 <strong>Build it yourself or have us handle it.</strong></span></div></div>
 <section class="section" id="problems"><div class="shell"><div class="section-heading"><div class="blue-tag">START WITH THE PROBLEM</div><h2>Sound familiar?</h2><p class="dek">You shouldn't need to be an AI expert to improve your business. Pick the frustration that feels most familiar. Archie helps you start with something practical.</p></div><div class="problem-cards" id="problem-grid"><button class="problem" data-problem="calls" aria-pressed="true"><span aria-hidden="true">☎</span><strong>I'm missing calls or leads</strong><small>People reach out, but follow-up doesn't always happen.</small></button><button class="problem" data-problem="reviews" aria-pressed="false"><span aria-hidden="true">★</span><strong>We need more reviews</strong><small>Happy customers rarely remember to leave them.</small></button><button class="problem" data-problem="admin" aria-pressed="false"><span aria-hidden="true">⚙</span><strong>Too much repetitive work</strong><small>We're doing the same little tasks over and over.</small></button><button class="problem" data-problem="website" aria-pressed="false"><span aria-hidden="true">▣</span><strong>My website isn't helping</strong><small>People visit, but it's not clear what to do next.</small></button><button class="problem" data-problem="quotes" aria-pressed="false"><span aria-hidden="true">▤</span><strong>Quotes go quiet</strong><small>We send estimates and never hear back.</small></button><button class="problem" data-problem="questions" aria-pressed="false"><span aria-hidden="true">✦</span><strong>Same questions all day</strong><small>Our team keeps answering the same things.</small></button></div></div></section>
 <section class="section" id="first-fix" style="padding-top:0"><div class="shell"><div class="fix-panel"><div class="fix-left"><div class="eyebrow" style="color:var(--acid)">YOUR FREE FIRST FIX</div><h3>Let's make one thing easier.</h3><p>Two quick details. Archie will put together a starter fix, a ready-to-use template, and clear next steps. No email or account.</p><form id="fix-form"><label for="business">Business name</label><input id="business" maxlength="90" placeholder="Example: Northside Plumbing" required><label for="kind">What do you do?</label><input id="kind" maxlength="90" placeholder="Example: residential plumbing" required><label for="issue">What's slowing you down?</label><select id="issue"><option value="calls">Missed calls and leads</option><option value="reviews">Getting customer reviews</option><option value="admin">Repetitive tasks</option><option value="website">Website enquiries</option><option value="quotes">Quote follow-ups</option><option value="questions">Common customer questions</option></select><button type="submit" class="btn btn-lime">Build my first fix →</button></form></div><div class="fix-right"><div class="result-label">A real starting point, not a sales report</div><div class="result-card" id="first-result" aria-live="polite"><div style="font-size:32px;margin-bottom:13px" aria-hidden="true">✳</div><h3>Here's what you'll get.</h3><p>A ready-to-use message, workflow, or website improvement based on your answers, plus three steps to put it into action.</p><div class="result-example">For example: a follow-up text you can copy and use today, plus instructions for automating it later.</div><p class="note">This is a starter recommendation based on your answers. It is not a scan of your Google listing, website, or private business systems.</p></div></div></div></div></section>
 <section class="section" id="how"><div class="shell"><div class="section-heading"><div class="blue-tag">NO COMPLICATED PROCESS</div><h2>Small fixes. Real progress.</h2><p class="dek">AI is the toolkit, not the pitch. The best fix is the one you can actually use.</p></div><div class="card-grid"><div class="mini-card"><span class="number">01</span><h3>Tell Archie what's stuck.</h3><p>Choose a real headache in your business. No tech jargon, worksheets, or discovery call.</p></div><div class="mini-card"><span class="number">02</span><h3>Get something useful.</h3><p>Receive a practical starter fix you can copy, share, print, or try today.</p></div><div class="mini-card"><span class="number">03</span><h3>DIY or get help.</h3><p>Keep your free instructions. If you'd rather have it implemented, a human can help you do it.</p></div></div></div></section>
@@ -280,11 +361,12 @@ $('lead-form').addEventListener('submit',async e=>{
  }catch(err){fb.className='lead-feedback error';fb.textContent=err.message||'Unable to send.';btn.disabled=false;btn.textContent='Try again →'}
 });
 
+// Working examples. Do not present hypothetical outcomes as completed client results.
 const heroSamples={
- calls:{before:"You're on a job. A new customer calls. Nobody answers.",fix:"A friendly automatic text asks what they need.",after:"They hear back promptly. You have a chance to win the job.",copy:"Hi! Thanks for calling. Sorry we missed you. What can we help you with?"},
- quotes:{before:"You send an estimate and get no response.",fix:"A polite, scheduled follow-up checks whether they have questions.",after:"More conversations stay alive, without you remembering every check-in.",copy:"Hi! Just checking if you had any questions about the estimate. Happy to help whenever you're ready."},
- reviews:{before:"You finish great work, but few customers leave reviews.",fix:"Send every customer a simple review link or show a printable QR sign.",after:"It's easier for customers to share their honest experience.",copy:"Thanks for choosing us! Would you mind sharing an honest review? Here's the link: [your Google review link]"},
- admin:{before:"You copy new customer details between email, forms and spreadsheets.",fix:"Connect the intake form to a tracker and a notification.",after:"Requests get captured and routed without repetitive data entry.",copy:"Workflow: New enquiry → record details → notify staff → send acknowledgement."}
+ calls:{before:"You're on a job. A new customer calls, but nobody can answer.",fix:"A helpful automatic text asks what they need.",after:"The customer gets a response while you stay focused on the job."},
+ quotes:{before:"You send an estimate. The prospect goes quiet.",fix:"A polite reminder goes out at the right time.",after:"The conversation can continue without another task on your list."},
+ reviews:{before:"You do good work. Customers forget to leave a review.",fix:"Send an honest review request with one simple link or QR sign.",after:"It's easier for customers to share their experience."},
+ admin:{before:"New requests show up across email, forms, and text messages.",fix:"A connected workflow captures the details and notifies the right person.",after:"Fewer messages get buried and there’s less manual copying."}
 };
 let heroCurrent="calls";
 function selectHeroIssue(id){
@@ -296,10 +378,11 @@ function selectHeroIssue(id){
  document.getElementById('hero-after').textContent=heroSamples[id].after;
  selected=id;
  document.getElementById('issue').value=id;
+ const serial=['calls','quotes','reviews','admin'].indexOf(id)+1;
+ document.querySelector('.wd-live-serial').textContent='EXAMPLE '+String(serial).padStart(3,'0')+' / 004';
 }
 document.querySelectorAll('[data-hero-issue]').forEach(b=>b.addEventListener('click',()=>selectHeroIssue(b.dataset.heroIssue)));
 document.getElementById('hero-build').addEventListener('click',()=>choose(heroCurrent,true));
-document.getElementById('hero-copy').addEventListener('click',()=>copy(heroSamples[heroCurrent].copy,'Example copied'));
 </script>
 </body>
 </html>
