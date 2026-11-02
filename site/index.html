@@ -91,45 +91,136 @@ header{position:relative;background:#f7f8f4;color:#152532;border-bottom:1px soli
  .hero-bottomline{flex-direction:column;gap:4px;font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* Archiebase v3: outcomes-first hero, pragmatic and editorial */
+header{position:relative;background:#f7f8f5;color:#142434;border-bottom:1px solid #dde3e1}
+.nav{min-height:76px}
+.navlinks{color:#4b5e68}.navlinks a:hover{color:#1759ea}
+.nav .btn{background:#1746d5;border-radius:7px;color:white;box-shadow:none}
+.solution-hero{background:#f7f8f5;color:#152331;padding:65px 0 82px;overflow:hidden}
+.solution-hero:before{display:none}
+.solution-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:center;gap:clamp(36px,5vw,75px)}
+.solution-copy{min-width:0}
+.solution-eyebrow{display:flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.145em;font-weight:900;color:#37576a;margin:0 0 31px}
+.solution-mark{display:block;width:9px;height:9px;background:#2257f5;box-shadow:9px 0 0 #c2e764;margin-right:9px}
+.solution-copy h1{color:#101f2d;font-family:'Manrope','DM Sans',sans-serif;font-weight:800;font-size:clamp(43px,4.7vw,68px);letter-spacing:-.075em;line-height:1.13;margin:0 0 25px}
+.solution-copy h1 span{color:#2257f5}
+.solution-intro{max-width:620px;color:#52616b;font-size:16px;line-height:1.75;margin:0 0 27px}
+.solution-intro strong{color:#263d4d;font-weight:800}
+.solution-actions{display:flex;align-items:center;flex-wrap:wrap;gap:21px}
+.solution-primary{background:#2257f5;color:#fff;border-radius:8px;padding:16px 22px;font-size:14px;box-shadow:0 6px 15px #163ccf1b}
+.solution-secondary{color:#203e52;font-size:13px;font-weight:800;text-decoration:underline;text-decoration-color:#90a6b4;text-decoration-thickness:1px;text-underline-offset:6px;padding:9px 0}
+.solution-assurance{color:#647782;font-size:12px;margin:16px 0 0;line-height:1.5}
+.solution-assurance strong{color:#31556a}
+.solution-guides{display:flex;gap:14px;align-items:center;border-top:1px solid #dae1df;margin-top:35px;padding-top:19px}
+.guides-marker{flex:none;background:#162c3b;border:1px solid #28495e;border-radius:11px;width:45px;height:45px;display:flex;align-items:center;justify-content:center;font:800 25px 'Manrope',sans-serif;color:#fff;letter-spacing:-.16em;padding-right:6px}
+.guides-marker span{color:#cde757;font-size:17px;align-self:flex-start;margin-top:8px;letter-spacing:0}
+.solution-guides p{margin:0;color:#687680;font-size:12px;line-height:1.6}
+.solution-guides strong{color:#253c4a}
+.solution-demo{min-width:0;border:1px solid #ccd6d7;border-radius:12px;background:#fff;box-shadow:12px 12px 0 #e4eae6;padding:clamp(22px,2.4vw,34px)}
+.demo-heading{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 25px}
+.demo-label{font-size:10px;color:#59707c;font-weight:800;letter-spacing:.13em}
+.demo-live{font-size:9px;letter-spacing:.08em;font-weight:800;color:#407068;display:flex;align-items:center;gap:7px}
+.demo-live span{width:7px;height:7px;border-radius:50%;background:#28af80}
+.solution-demo h2{font-size:clamp(30px,3.1vw,42px);letter-spacing:-.065em;line-height:1.12;margin:0 0 9px;color:#102536}
+.demo-intro{margin:0 0 23px;color:#657581;font-size:13px;line-height:1.6}
+.demo-tabs{display:flex;flex-wrap:wrap;gap:6px;padding-bottom:20px;border-bottom:1px solid #e1e6e6}
+.demo-tabs button{border:1px solid #d9e0e2;background:#f9faf9;color:#3d5362;font-weight:800;font-size:11px;border-radius:5px;padding:9px 10px}
+.demo-tabs button:hover,.demo-tabs button[aria-pressed="true"]{background:#eaf0ff;border-color:#8bafff;color:#1749b8}
+.change-flow{margin-top:23px}
+.flow-step{display:grid;grid-template-columns:37px 1fr;gap:11px;min-height:96px}
+.flow-step:last-child{min-height:0}
+.flow-rail{display:flex;flex-direction:column;align-items:center;gap:4px;height:100%}
+.flow-count{display:grid;place-items:center;width:31px;height:31px;font-size:10px;font-weight:900;color:#627480;background:#f3f5f5;border:1px solid #e0e5e4;border-radius:7px}
+.flow-count.middle{background:#e8eeff;color:#2452df;border-color:#afc0fc}
+.flow-count.after{background:#e5f4e9;color:#267049;border-color:#b8dec5}
+.flow-connector{height:100%;width:1px;background:#d9e2e0;min-height:29px}
+.flow-label{font-size:10px;font-weight:900;letter-spacing:.12em;color:#6b7984;margin:0 0 6px}
+.flow-step p{margin:0;color:#223746;font-size:13px;line-height:1.55;max-width:360px;font-weight:600}
+.demo-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #e4e9e7;padding-top:20px;margin-top:20px}
+.demo-action{padding:13px 14px;border:none;background:#142d3c;color:#fff;font-size:12px;font-weight:800;border-radius:6px;display:flex;gap:9px;align-items:center}
+.demo-copy{border:0;background:transparent;color:#2859a4;text-decoration:underline;text-underline-offset:4px;font-weight:800;font-size:11px;padding:10px 0}
+.demo-caption{color:#89969b;font-size:10px;line-height:1.55;margin:12px 0 0}
+@media(max-width:1040px){
+ .solution-layout{gap:27px;grid-template-columns:minmax(0,1fr) minmax(0,.96fr)}
+ .solution-copy h1{font-size:clamp(42px,5vw,55px)}
+ .solution-intro{font-size:15px}
+ .solution-demo{padding:22px}
+ .demo-heading{margin-bottom:17px}
+}
+@media(max-width:790px){
+ .solution-layout{grid-template-columns:1fr;gap:32px}
+ .solution-hero{padding:44px 0 64px}
+ .solution-copy h1{font-size:clamp(43px,7.8vw,66px)}
+ .solution-guides{margin-top:28px}
+ .solution-demo{width:100%;max-width:590px}
+}
+@media(max-width:530px){
+ .solution-hero{padding:36px 0 47px}
+ .solution-eyebrow{font-size:9px;margin-bottom:19px}
+ .solution-copy h1{font-size:clamp(39px,9.2vw,49px);line-height:1.12;letter-spacing:-.073em;margin-bottom:21px}
+ .solution-intro{font-size:14px;line-height:1.65;margin-bottom:22px}
+ .solution-actions{gap:15px}
+ .solution-primary{width:100%;padding:16px 17px}
+ .solution-secondary{font-size:12px}
+ .solution-assurance{margin-top:13px}
+ .solution-guides{gap:12px;margin-top:24px;padding-top:16px}
+ .solution-demo{border-radius:10px;padding:20px;box-shadow:5px 5px 0 #e4eae6}
+ .solution-demo h2{font-size:31px}
+ .flow-step{min-height:96px}
+ .demo-heading{gap:10px}
+ .demo-live{font-size:9px}
+ .demo-footer{align-items:stretch;flex-wrap:wrap}
+ .demo-action{flex:1;justify-content:center}
+ .demo-copy{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.solution-hero .btn:hover{transform:none}}
 </style>
 </head>
 <body>
 <header><div class="shell nav"><a class="logo" href="#home" aria-label="Archiebase home">archie<span class="logo-dot">●</span>base</a><nav class="navlinks" aria-label="Main navigation"><a href="#problems">What we fix</a><a href="#how">How it works</a><a href="#tools">Free tools</a><a href="#contact">About</a></nav><a class="btn btn-blue" href="#first-fix">Get your first fix ↗</a></div></header>
 <main>
-<section class="hero editorial-hero" id="home">
-  <div class="shell hero-inner">
-    <div class="hero-copy">
-      <div class="eyebrow"><span class="statusdot"></span> A SMALL WIN, ON US.</div>
-      <h1>One less thing <em>slowing your business down.</em></h1>
-      <p class="lead">Missed calls. Unsent follow-ups. Too much admin. Pick the headache and get a practical fix you can use today, with simple instructions to make it stick.</p>
-      <div class="hero-actions">
-        <a class="btn btn-blue" href="#first-fix">Get my free first fix <span aria-hidden="true">↗</span></a>
-        <a class="btn hero-text-link" href="#problems">Explore common headaches <span aria-hidden="true">→</span></a>
-      </div>
-      <div class="hero-small"><span>✓ No signup</span><span>✓ No sales call</span><span>✓ Keep what you get</span></div>
-      <p class="hero-human">Archie helps you find it. Aaron can build it for you, if you'd rather not.</p>
+<section class="hero solution-hero" id="home">
+<div class="shell solution-layout">
+  <div class="solution-copy">
+    <div class="solution-eyebrow"><span class="solution-mark"></span> AI &amp; AUTOMATION FOR SMALL BUSINESSES</div>
+    <h1>Less busywork.<br><span>Fewer missed customers.</span><br>More time to grow.</h1>
+    <p class="solution-intro"><strong>Archiebase helps small-business owners find and fix what's slowing them down.</strong> Missed calls, forgotten follow-ups, repetitive admin, websites that aren't pulling their weight. We use practical AI and simple automations to make your business easier to run.</p>
+    <div class="solution-actions">
+      <a class="btn solution-primary" href="#first-fix">Find my first fix <span aria-hidden="true">↗</span></a>
+      <a class="solution-secondary" href="#problems">See what we can fix <span aria-hidden="true">→</span></a>
     </div>
-    <div class="fix-workbench" aria-label="Try a free first fix">
-      <div class="workbench-top"><div class="wb-title"><span class="wb-eyebrow">THE FIRST FIX / WORKBENCH 001</span><h2>Pick a headache.</h2><p>No business jargon. Start where it hurts.</p></div><div class="archie-mini" role="img" aria-label="Archie, your friendly digital helper"><span class="archie-eyes"><i></i><i></i></span></div></div>
-      <div class="hero-choices" role="group" aria-label="Choose a business bottleneck">
-        <button type="button" data-hero-issue="calls" aria-pressed="true">Missed calls</button>
-        <button type="button" data-hero-issue="reviews" aria-pressed="false">Not enough reviews</button>
-        <button type="button" data-hero-issue="quotes" aria-pressed="false">Quotes go quiet</button>
-        <button type="button" data-hero-issue="admin" aria-pressed="false">Too much admin</button>
-      </div>
-      <div class="hero-sample" aria-live="polite">
-        <div class="sample-tag"><span class="sample-dot"></span> A REAL STARTING POINT</div>
-        <h3 id="hero-sample-title">A reply for missed callers</h3>
-        <p id="hero-sample-copy">“Hi! Thanks for calling. Sorry we missed you. What can we help you with?”</p>
-      </div>
-      <div class="workbench-actions">
-        <button type="button" id="hero-build" class="btn btn-blue">Make this mine <span aria-hidden="true">↗</span></button>
-        <button type="button" id="hero-copy" class="wb-copy">Copy example</button>
-      </div>
-      <div class="wb-footnote">Real templates, not invented audit scores. Personalized after you tell us what your business does.</div>
-    </div>
+    <p class="solution-assurance"><strong>Free to start.</strong> No signup. No obligation. A practical fix you can keep.</p>
+    <div class="solution-guides"><span class="guides-marker" aria-hidden="true">a<span>•</span></span><p><strong>Real help, not another app to figure out.</strong><br>Archie is your free digital guide. Aaron is the person who can build the solution for you.</p></div>
   </div>
-  <div class="shell hero-bottomline"><span>NOT ANOTHER AI TOOL TO LEARN.</span><span>JUST SOMETHING THAT WORKS BETTER.</span></div>
+  <div class="solution-demo" aria-label="See an example of how Archiebase improves a real business process">
+    <div class="demo-heading"><span class="demo-label">WHAT WE ACTUALLY FIX / 01</span><span class="demo-live"><span></span> WORKING EXAMPLE</span></div>
+    <h2>Small changes.<br>Better days.</h2>
+    <p class="demo-intro">See the difference one simple system can make.</p>
+    <div class="demo-tabs" role="group" aria-label="Choose a business problem">
+      <button type="button" data-hero-issue="calls" aria-pressed="true">Missed calls</button>
+      <button type="button" data-hero-issue="quotes" aria-pressed="false">Quote follow-ups</button>
+      <button type="button" data-hero-issue="reviews" aria-pressed="false">Reviews</button>
+      <button type="button" data-hero-issue="admin" aria-pressed="false">Admin</button>
+    </div>
+    <div class="change-flow" aria-live="polite">
+      <div class="flow-step">
+        <div class="flow-rail"><span class="flow-count">01</span><span class="flow-connector"></span></div>
+        <div><div class="flow-label">THE PROBLEM</div><p id="hero-before">You're on a job. A new customer calls. Nobody answers.</p></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-rail"><span class="flow-count middle">02</span><span class="flow-connector"></span></div>
+        <div><div class="flow-label">WHAT WE SET UP</div><p id="hero-fix">A friendly automatic text asks what they need.</p></div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-rail"><span class="flow-count after">03</span></div>
+        <div><div class="flow-label">WHAT CHANGES</div><p id="hero-after">The customer hears back promptly. You have a chance to win the job.</p></div>
+      </div>
+    </div>
+    <div class="demo-footer"><button type="button" class="demo-action" id="hero-build">Get a free fix for this <span aria-hidden="true">↗</span></button><button type="button" id="hero-copy" class="demo-copy">Copy sample message</button></div>
+    <p class="demo-caption">Illustrative example, not a claim about your business. Tell Archie about your situation for a tailored starter fix.</p>
+  </div>
+</div>
 </section>
 <div class="statbar"><div class="shell statbar-inner"><div class="trustline"><span>✓</span> Useful before you pay</div><div class="trustline"><span>✓</span> Plain-English instructions</div><div class="trustline"><span>✓</span> No unnecessary software</div></div></div>
 <section class="section" id="problems"><div class="shell"><div class="section-heading"><div class="blue-tag">START WITH THE PROBLEM</div><h2>Sound familiar?</h2><p class="dek">You shouldn't need to be an AI expert to improve your business. Pick the frustration that feels most familiar. Archie helps you start with something practical.</p></div><div class="problem-cards" id="problem-grid"><button class="problem" data-problem="calls" aria-pressed="true"><span aria-hidden="true">☎</span><strong>I'm missing calls or leads</strong><small>People reach out, but follow-up doesn't always happen.</small></button><button class="problem" data-problem="reviews" aria-pressed="false"><span aria-hidden="true">★</span><strong>We need more reviews</strong><small>Happy customers rarely remember to leave them.</small></button><button class="problem" data-problem="admin" aria-pressed="false"><span aria-hidden="true">⚙</span><strong>Too much repetitive work</strong><small>We're doing the same little tasks over and over.</small></button><button class="problem" data-problem="website" aria-pressed="false"><span aria-hidden="true">▣</span><strong>My website isn't helping</strong><small>People visit, but it's not clear what to do next.</small></button><button class="problem" data-problem="quotes" aria-pressed="false"><span aria-hidden="true">▤</span><strong>Quotes go quiet</strong><small>We send estimates and never hear back.</small></button><button class="problem" data-problem="questions" aria-pressed="false"><span aria-hidden="true">✦</span><strong>Same questions all day</strong><small>Our team keeps answering the same things.</small></button></div></div></section>
@@ -190,24 +281,25 @@ $('lead-form').addEventListener('submit',async e=>{
 });
 
 const heroSamples={
- calls:{title:"A reply for missed callers",copy:"“Hi! Thanks for calling. Sorry we missed you. What can we help you with?”"},
- reviews:{title:"Ask for reviews without awkwardness",copy:"“Thanks for choosing us! If you have a minute, we'd appreciate an honest Google review. Here's our review link.”"},
- quotes:{title:"A follow-up that feels human",copy:"“Hi! Just checking whether you had any questions about the quote. Happy to help whenever you're ready.”"},
- admin:{title:"One less admin task",copy:"New enquiry arrives → save the details → notify the right person → send an acknowledgement. One simple workflow, no copy-and-paste."}
+ calls:{before:"You're on a job. A new customer calls. Nobody answers.",fix:"A friendly automatic text asks what they need.",after:"They hear back promptly. You have a chance to win the job.",copy:"Hi! Thanks for calling. Sorry we missed you. What can we help you with?"},
+ quotes:{before:"You send an estimate and get no response.",fix:"A polite, scheduled follow-up checks whether they have questions.",after:"More conversations stay alive, without you remembering every check-in.",copy:"Hi! Just checking if you had any questions about the estimate. Happy to help whenever you're ready."},
+ reviews:{before:"You finish great work, but few customers leave reviews.",fix:"Send every customer a simple review link or show a printable QR sign.",after:"It's easier for customers to share their honest experience.",copy:"Thanks for choosing us! Would you mind sharing an honest review? Here's the link: [your Google review link]"},
+ admin:{before:"You copy new customer details between email, forms and spreadsheets.",fix:"Connect the intake form to a tracker and a notification.",after:"Requests get captured and routed without repetitive data entry.",copy:"Workflow: New enquiry → record details → notify staff → send acknowledgement."}
 };
 let heroCurrent="calls";
 function selectHeroIssue(id){
  if(!heroSamples[id])return;
  heroCurrent=id;
  document.querySelectorAll('[data-hero-issue]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.heroIssue===id)));
- document.getElementById('hero-sample-title').textContent=heroSamples[id].title;
- document.getElementById('hero-sample-copy').textContent=heroSamples[id].copy;
+ document.getElementById('hero-before').textContent=heroSamples[id].before;
+ document.getElementById('hero-fix').textContent=heroSamples[id].fix;
+ document.getElementById('hero-after').textContent=heroSamples[id].after;
  selected=id;
  document.getElementById('issue').value=id;
 }
 document.querySelectorAll('[data-hero-issue]').forEach(b=>b.addEventListener('click',()=>selectHeroIssue(b.dataset.heroIssue)));
-document.getElementById('hero-build').addEventListener('click',()=>{choose(heroCurrent,true);});
-document.getElementById('hero-copy').addEventListener('click',()=>copy(heroSamples[heroCurrent].copy.replace(/[“”]/g,''),'Example copied'));
+document.getElementById('hero-build').addEventListener('click',()=>choose(heroCurrent,true));
+document.getElementById('hero-copy').addEventListener('click',()=>copy(heroSamples[heroCurrent].copy,'Example copied'));
 </script>
 </body>
 </html>
