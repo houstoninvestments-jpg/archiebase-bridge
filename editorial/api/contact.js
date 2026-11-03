@@ -3,6 +3,7 @@
 const MAX_BODY_BYTES = 10_000;
 const allowOrigin = new Set([
   'https://archiebase-public.vercel.app',
+  'https://archiebase-editorial-2026.vercel.app',
   'https://archiebase.com',
   'https://www.archiebase.com'
 ]);
@@ -18,7 +19,7 @@ export default async function handler(req, res) {
   }
   const origin = clean(req.headers.origin, 256);
   // Vercel preview URLs remain accessible for QA; public deployment has a fixed hostname.
-  if (origin && !allowOrigin.has(origin) && !/^https:\/\/archiebase-public-[a-z0-9-]+\.vercel\.app$/.test(origin)) {
+  if (origin && !allowOrigin.has(origin) && !/^https:\/\/archiebase-public-[a-z0-9-]+\.vercel\.app$/.test(origin) && !/^https:\/\/archiebase-editorial-2026-[a-z0-9-]+\.vercel\.app$/.test(origin)) {
     return res.status(403).json({ ok: false, error: 'Invalid website origin.' });
   }
   if (!String(req.headers['content-type'] || '').includes('application/json')) {
