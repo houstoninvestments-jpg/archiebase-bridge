@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111e21">
+<meta name="description" content="Archiebase is a small-business AI implementation studio. Get a free written bottleneck audit, then choose practical, fixed-price fixes for your website, leads or admin.">
+<title>Archiebase — Practical AI fixes for small business</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#142628;--black:#102123;--cream:#f6f5ef;--paper:#fffefa;--blue:#245cf1;--acid:#dafa71;--orange:#fe8456;--muted:#596b68;--border:#d6ded7;--line:#cfdbd2;--max:1190px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.55 'DM Sans',system-ui,sans-serif;overflow-x:hidden}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;letter-spacing:-.055em;line-height:1.1}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-offset:3px}button:disabled{opacity:.65;cursor:not-allowed}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.mono,.eyebrow,.number,.audit-tag,.spec-label{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}header{position:relative;background:var(--cream);border-bottom:1px solid var(--border)}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:81px}.logo{font-family:'Space Grotesk',sans-serif;font-size:27px;font-weight:700;letter-spacing:-.09em;white-space:nowrap}.logo span{color:var(--orange)}.nav-links{display:flex;gap:27px;align-items:center;font-weight:700;font-size:13px;color:#36514c}.nav-links a:hover{text-decoration:underline;text-underline-offset:5px}.nav-btn{background:var(--ink);color:#fff;padding:11px 17px;border-radius:4px;font-size:13px;font-weight:800;white-space:nowrap}.nav-btn:hover{background:#234c44}.skip{position:absolute;top:-100px;background:white;padding:10px;z-index:50}.skip:focus{top:0}
+.hero{border-bottom:1px solid var(--border);background:var(--cream)}.hero-grid{display:grid;grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);gap:clamp(28px,5vw,80px);align-items:center;padding-top:65px;padding-bottom:77px}.hero-copy{min-width:0}.eyebrow{display:flex;align-items:center;gap:11px;color:#4b7061}.eyebrow:before{content:"";width:10px;height:10px;flex:none;background:var(--orange)}.hero h1{font-size:clamp(49px,5.55vw,80px);font-weight:700;margin:24px 0 22px;max-width:625px}.hero h1 em{color:var(--blue);font-style:normal}.hero-lead{max-width:550px;font-size:17px;color:#4b615a;line-height:1.7}.hero-lead strong{color:var(--ink)}.proof{display:grid;grid-template-columns:1fr;gap:11px;padding:23px 0;margin:26px 0 17px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-size:14px;font-weight:700}.proof span{display:flex;align-items:center;gap:12px}.proof b{color:#12674e;font-size:17px}.why{font-size:13px;color:#62746c;line-height:1.65}.why strong{color:var(--ink)}
+.audit{background:var(--black);color:white;border:1px solid #274545;box-shadow:14px 14px 0 #dbe4d8}.audit-top{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:20px 26px;border-bottom:1px solid #395250}.audit-tag{color:#d0eba2}.audit-top .audit-num{color:#9ab4ab;font-size:12px;font-weight:800}.audit-body{padding:28px 27px 27px}.audit h2{font-size:clamp(30px,2.75vw,43px);margin-bottom:10px;letter-spacing:-.06em}.audit-description{font-size:14px;line-height:1.6;color:#bbd0ca;margin:0 0 19px}.deliverables{display:grid;gap:8px;margin:0 0 22px;padding:0;list-style:none}.deliverables li{display:flex;gap:10px;align-items:start;font-size:13px;font-weight:600;color:#e5f3e7}.deliverables li:before{content:"↳";font-weight:800;color:var(--acid)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{margin-bottom:13px;min-width:0}.field label{display:block;color:#d8e8df;font-size:12px;font-weight:800;margin:0 0 6px}.field small{color:#a4bab0;font-weight:500}.field input,.field select,.field textarea{width:100%;padding:12px 12px;min-height:46px;background:#fafbf8;color:#112628;border:1px solid #e0e4df;border-radius:4px;font-size:14px}.field textarea{min-height:73px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#6a7b78}.send{display:flex;width:100%;justify-content:space-between;align-items:center;gap:10px;background:var(--acid);color:#122323;padding:14px 17px;border:none;border-radius:4px;font-weight:800}.send:hover{background:#e8ffae}.form-status{margin:10px 0 0;min-height:14px;font-size:13px;color:#d8f7da}.form-status.error{color:#ffb7a5}.disclaimer{font-size:11px;line-height:1.55;color:#afc6ba;margin:12px 0 0}.hp{position:absolute;left:-10000px;opacity:0;pointer-events:none}
+.strip{border-bottom:1px solid var(--border);background:#e7eee6}.strip-inner{display:grid;grid-template-columns:repeat(3,1fr)}.strip-item{padding:23px 22px;border-left:1px solid #d2dfd5}.strip-item:last-child{border-right:1px solid #d2dfd5}.strip-item b{display:block;font-size:14px}.strip-item small{display:block;color:#536b5f;font-size:12px;margin-top:4px}.strip-item .number{color:#2f7460;display:block;margin-bottom:8px}
+section.content{padding:92px 0}section.content.alt{background:#fffefa;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:26px;margin-bottom:35px}.section-head>div{max-width:735px}.section-head .eyebrow{margin-bottom:16px}.section-head h2{font-size:clamp(36px,4vw,58px);margin-bottom:10px}.section-head p{color:#586d65;margin:0;max-width:650px;font-size:16px}.little-link{font-size:13px;color:#1b50bf;text-decoration:underline;text-underline-offset:4px;flex-shrink:0;font-weight:800}
+.problem-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.problem-card{border:1px solid var(--border);padding:29px;background:#fff;min-height:218px;position:relative}.problem-card:before{content:"";position:absolute;height:4px;left:0;top:0;width:54px;background:var(--orange)}.problem-card .number{color:#758f85}.problem-card h3{font-size:25px;line-height:1.17;margin:21px 0 10px}.problem-card p{font-size:14px;color:#52685c;margin:0;line-height:1.6}.problem-card .result{font-size:12px;font-weight:800;color:#15624c;margin-top:18px;display:block}
+.offer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.offer{border:1px solid var(--border);background:#fff;display:flex;flex-direction:column;min-width:0}.offer .offer-top{padding:24px 25px 0}.offer .category{font-size:11px;font-weight:800;letter-spacing:.11em;color:#44685d;text-transform:uppercase}.offer h3{font-size:27px;margin:12px 0}.offer .description{font-size:14px;color:#576a62;line-height:1.65;min-height:70px}.price{font:700 clamp(36px,3.5vw,49px)/1 'Space Grotesk',sans-serif;letter-spacing:-.07em;margin:6px 0 22px}.price small{font:600 11px 'DM Sans',sans-serif;letter-spacing:0;color:#64766e}.included{padding:19px 25px;flex:1;border-top:1px solid #e2e9e3}.included h4{font-size:11px;letter-spacing:.1em;margin:0 0 11px;text-transform:uppercase;color:#486758}.included ul{padding-left:19px;margin:0;color:#3c5248;font-size:13px;line-height:1.8}.scope{margin:0;padding:15px 25px;border-top:1px solid #e2e9e3;background:#f6f8f3;font-size:12px;color:#67796e;line-height:1.55}.scope strong{color:#3a5348}.offer button{margin:18px 25px 23px;background:var(--ink);border:0;border-radius:4px;color:white;padding:14px 16px;text-align:left;font-size:13px;font-weight:800;display:flex;justify-content:space-between;gap:12px}.offer button:hover{background:#27564c}.offer.featured{border-color:#658d7c;box-shadow:7px 7px 0 #deeadb}.package-note{font-size:12px;color:#5b7065;margin:24px 0 0}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.step{border-top:2px solid #385b50;padding:21px 3px}.step b{font-size:11px;letter-spacing:.11em;color:#547165}.step h3{font-size:25px;margin:15px 0}.step p{color:#4e675d;font-size:14px;line-height:1.7}
+.about{display:grid;grid-template-columns:1fr .95fr;gap:70px;align-items:center}.about h2{font-size:clamp(40px,4.5vw,65px);margin:15px 0 23px}.about p{font-size:16px;color:#547067;line-height:1.8}.note-card{background:#19372e;color:#f3f9ef;padding:32px;border-radius:2px}.note-card .eyebrow{color:#c1e890}.note-card h3{font-size:30px;margin:22px 0 13px}.note-card p{color:#c8ded0;margin-bottom:0;font-size:15px}.note-card .monogram{margin-top:32px;font-size:13px;font-weight:800;color:#d1f393}.monogram span{display:inline-grid;place-items:center;width:44px;height:44px;border:1px solid #85a59c;margin-right:11px;color:white;border-radius:50%;font-size:26px;font-family:'Space Grotesk'}
+.free-tools{display:flex;justify-content:space-between;align-items:center;gap:28px;padding:36px 42px;border:1px solid #b9d1bf;background:#ecf3e7}.free-tools h3{font-size:29px;margin:8px 0}.free-tools p{color:#546a5e;margin:0;font-size:14px}.free-tools a{background:#2256e4;color:white;padding:16px 20px;font-size:13px;font-weight:800;white-space:nowrap;border-radius:4px}
+.faq{max-width:840px;margin:auto}.faq details{border-top:1px solid #cdd9d0;padding:20px 0}.faq details:last-child{border-bottom:1px solid #cdd9d0}.faq summary{font-size:17px;font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}.faq summary:after{content:"+";font-size:24px;color:#265c4e}.faq details[open] summary:after{content:"−"}.faq details p{max-width:760px;font-size:14px;color:#566b60;line-height:1.75;padding-top:13px;margin:0}
+footer{padding:35px 0;background:var(--black);color:#fff}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-row p{margin:0;color:#b3c9bb;font-size:12px}.footer-row .logo{font-size:24px}
+dialog{border:0;padding:0;background:transparent;max-height:calc(100vh - 28px);max-width:min(550px,calc(100vw - 24px));width:100%;overflow:visible}dialog::backdrop{background:rgba(6,20,18,.78)}.modal{background:#fff;max-height:calc(100vh - 28px);overflow:auto;padding:clamp(21px,4vw,35px);box-shadow:0 35px 90px #07120f50}.modal-head{display:flex;justify-content:space-between;gap:20px;align-items:start}.modal h2{font-size:35px;margin:14px 0 9px}.modal p{font-size:14px;color:#5b7066;line-height:1.6}.modal .field label{color:#203b31}.modal .field input,.modal .field textarea{border-color:#c8d6cd}.modal .send{background:var(--blue);color:#fff}.modal-status{color:#295b4e;min-height:16px;font-size:13px;margin:9px 0 0}.modal-status.error{color:#ad3434}.close{background:transparent;border:1px solid #c5d6cd;width:38px;height:38px;font-size:22px}
+@media(max-width:1080px){.hero-grid{gap:36px}.hero h1{font-size:clamp(45px,5vw,70px)}.audit-body{padding:23px}.problem-card{padding:23px}.offer .offer-top{padding:20px 20px 0}.included{padding:18px 20px}.scope{padding:15px 20px}.offer button{margin:17px 20px 20px}}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr;padding-top:38px;gap:35px}.hero h1{max-width:650px}.hero-lead{max-width:660px}.audit{max-width:670px}.problem-grid,.offer-grid,.steps{grid-template-columns:1fr 1fr}.about{gap:35px}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:610px){.wrap{width:calc(100% - 34px)}.nav{min-height:67px}.logo{font-size:24px}.nav-links{display:none}.nav-btn{font-size:12px;padding:10px}.hero-grid{padding-top:28px;padding-bottom:42px}.hero h1{font-size:clamp(43px,10vw,59px);margin:17px 0 15px}.hero-lead{font-size:15px}.proof{gap:7px;margin:21px 0 13px;padding:17px 0}.proof span{font-size:12px}.audit{box-shadow:5px 5px 0 #dbe4d8}.audit-top{padding:15px}.audit-body{padding:18px}.audit h2{font-size:31px}.form-grid{grid-template-columns:1fr;gap:0}.deliverables{gap:6px}.strip-inner{grid-template-columns:1fr}.strip-item{border-left:0;border-bottom:1px solid var(--line);padding:12px 0}.strip-item:last-child{border-right:0;border-bottom:0}.strip-item .number{display:inline;margin-right:10px}.strip-item b{display:inline}.strip-item small{margin:2px 0 0 26px}.content{padding:62px 0!important}.section-head{margin-bottom:25px}.section-head h2{font-size:38px}.section-head p{font-size:14px}.problem-grid,.offer-grid,.steps{grid-template-columns:1fr}.problem-card{min-height:0}.offer .description{min-height:0}.about{grid-template-columns:1fr}.about h2{font-size:42px}.free-tools{display:block;padding:24px}.free-tools a{display:inline-block;margin-top:20px;white-space:normal}.footer-row{display:block}.footer-row p{margin-top:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap nav"><a href="#top" class="logo" aria-label="Archiebase home">archie<span>●</span>base</a><nav class="nav-links" aria-label="Main navigation"><a href="#problems">The problems</a><a href="#services">What I build</a><a href="#how">The process</a><a href="#about">About</a></nav><a class="nav-btn" href="#audit">Free written audit ↗</a></div></header>
+<main id="main">
+<section id="top" class="hero"><div class="wrap hero-grid">
+<div class="hero-copy">
+ <div class="eyebrow">PRACTICAL AI + AUTOMATION FOR SMALL BUSINESS</div>
+ <h1>Your business has bottlenecks.<br><em>I build the fixes.</em></h1>
+ <p class="hero-lead"><strong>I'm Aaron. I help small-business owners get more from the tools they already use.</strong> Faster lead follow-up, a website that brings in inquiries, and less time spent copying, chasing, and managing the same tasks every day.</p>
+ <div class="proof"><span><b>✓</b> See what to fix before you spend anything.</span><span><b>✓</b> Clear project prices. No mystery retainer.</span><span><b>✓</b> Written updates, without the meeting marathon.</span></div>
+ <p class="why">The goal is simple: <strong>customers get answered, work stops falling through the cracks, and you get more time to run your business.</strong></p>
+</div>
+<div class="audit" id="audit">
+ <div class="audit-top"><span class="audit-tag">FREE WRITTEN BUSINESS AUDIT</span><span class="audit-num">01 / START HERE</span></div>
+ <div class="audit-body">
+  <h2>Tell me what's getting in the way.</h2>
+  <p class="audit-description">I'll review what you share and any relevant public website details, then email you three practical improvement ideas. No call required.</p>
+  <ul class="deliverables"><li>3 prioritized opportunities to improve</li><li>What I'd tackle first and why</li><li>A practical DIY next step and optional implementation path</li></ul>
+  <form id="audit-form">
+   <div class="form-grid"><div class="field"><label for="audit-name">Your name</label><input id="audit-name" name="name" autocomplete="name" maxlength="90" required placeholder="First name"></div>
+   <div class="field"><label for="audit-email">Email for your results</label><input id="audit-email" name="email" autocomplete="email" type="email" required maxlength="180" placeholder="you@business.com"></div></div>
+   <div class="form-grid"><div class="field"><label for="audit-business">Business name</label><input id="audit-business" name="business" required maxlength="120" placeholder="Your business"></div>
+   <div class="field"><label for="audit-url">Website <small>(optional)</small></label><input id="audit-url" name="url" type="url" maxlength="400" placeholder="https://yourbusiness.com"></div></div>
+   <div class="field"><label for="audit-problem">Biggest headache</label><select id="audit-problem" name="problem" required><option value="">Choose one</option><option value="Not enough inquiries or bookings">Not enough inquiries or bookings</option><option value="Missed calls and forgotten follow-ups">Missed calls and forgotten follow-ups</option><option value="Too much repetitive admin">Too much repetitive admin</option><option value="Website is not converting">Website is not converting</option><option value="Something else">Something else</option></select></div>
+   <div class="field"><label for="audit-notes">Anything useful to know? <small>(optional)</small></label><textarea id="audit-notes" name="notes" maxlength="700" placeholder="A sentence or two is enough."></textarea></div>
+   <input class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" type="text" id="audit-trap" name="website">
+   <button class="send" id="audit-submit" type="submit"><span>Request my free written audit</span><span aria-hidden="true">↗</span></button>
+   <p id="audit-status" class="form-status" role="status" aria-live="polite"></p>
+   <p class="disclaimer">Reviewed personally. Not an automated business scan. Recommendations depend on the information available; please don't send passwords or confidential customer records.</p>
+  </form>
+ </div>
+</div>
+</div></section>
+<div class="strip"><div class="wrap strip-inner"><div class="strip-item"><span class="number">01 / IDENTIFY</span><b>Find the costly friction.</b><small>Where customers or hours get lost</small></div><div class="strip-item"><span class="number">02 / RECOMMEND</span><b>Choose the smallest useful fix.</b><small>Know the work and the price</small></div><div class="strip-item"><span class="number">03 / IMPLEMENT</span><b>Make it work. Keep it simple.</b><small>Testing and a clear handoff</small></div></div></div>
+<section id="problems" class="content alt"><div class="wrap">
+ <div class="section-head"><div><div class="eyebrow">FAMILIAR PROBLEMS. FIXABLE SYSTEMS.</div><h2>Where's the drag?</h2><p>Small service businesses lose time and opportunities in everyday handoffs. These are the kinds of problems I solve.</p></div></div>
+ <div class="problem-grid">
+  <article class="problem-card"><span class="number">01 / WEBSITE</span><h3>People visit, but don't reach out.</h3><p>Make the offer clear, show the next step, and give visitors a direct way to contact you.</p><span class="result">THE GOAL: More useful inquiries.</span></article>
+  <article class="problem-card"><span class="number">02 / FOLLOW-UP</span><h3>Leads arrive. Replies fall behind.</h3><p>Capture inquiries, notify the right person, and send timely, permission-based follow-ups.</p><span class="result">THE GOAL: Fewer missed conversations.</span></article>
+  <article class="problem-card"><span class="number">03 / ADMIN</span><h3>The same tasks eat your week.</h3><p>Connect simple steps so details move once, without endless copying and retyping.</p><span class="result">THE GOAL: More time back.</span></article>
+ </div>
+</div></section>
+<section class="content" id="services"><div class="wrap">
+ <div class="section-head"><div><div class="eyebrow">THREE STARTING POINTS, NOT FIFTY-SEVEN PACKAGES</div><h2>Clear deliverables. Fixed prices.</h2><p>Start with one focused project. If your situation needs something more involved, I'll explain why before quoting anything custom.</p></div></div>
+ <div class="offer-grid">
+  <article class="offer"><div class="offer-top"><div class="category">01 / GET FOUND & CONTACTED</div><h3>Conversion Page</h3><p class="description">A clear, mobile-friendly landing page that helps visitors understand what you offer and contact your business.</p><div class="price">$750 <small>one-time setup</small></div></div>
+   <div class="included"><h4>What's included</h4><ul><li>One custom responsive landing page</li><li>One primary call, text, or inquiry action</li><li>Basic on-page SEO and analytics hookup</li><li>Testing, handoff, and one revision</li></ul></div>
+   <p class="scope"><strong>Keep it simple:</strong> One page. You supply business information and assets. Hosting, domain, and extra pages aren't included.</p>
+   <button type="button" data-service="Conversion Page — $750">Ask about this build <span aria-hidden="true">↗</span></button></article>
+  <article class="offer featured"><div class="offer-top"><div class="category">02 / NEVER FORGET AN INQUIRY</div><h3>Lead Follow-Up</h3><p class="description">Connect one lead source to a simple follow-up workflow so new enquiries don't vanish into an inbox.</p><div class="price">$950 <small>one-time setup</small></div></div>
+   <div class="included"><h4>What's included</h4><ul><li>One approved form or lead source</li><li>One CRM or contact tracker connection</li><li>One acknowledgement and two follow-up steps</li><li>Testing, handoff, and one revision</li></ul></div>
+   <p class="scope"><strong>Keep it simple:</strong> Existing supported tools only. Phone/SMS charges, carrier registration, and ongoing subscriptions are separate.</p>
+   <button type="button" data-service="Lead Follow-Up — $950">Ask about this build <span aria-hidden="true">↗</span></button></article>
+  <article class="offer"><div class="offer-top"><div class="category">03 / GIVE YOUR HOURS BACK</div><h3>Admin Quick Win</h3><p class="description">Take one annoying repetitive task and turn it into a simple, reliable automation.</p><div class="price">$650 <small>one-time setup</small></div></div>
+   <div class="included"><h4>What's included</h4><ul><li>One clearly defined recurring task</li><li>Up to two supported app connections</li><li>One trigger-to-action workflow</li><li>Testing, handoff, and one revision</li></ul></div>
+   <p class="scope"><strong>Keep it simple:</strong> No complex bookkeeping, regulated records, or multi-system rebuilds in this package.</p>
+   <button type="button" data-service="Admin Quick Win — $650">Ask about this build <span aria-hidden="true">↗</span></button></article>
+ </div>
+ <p class="package-note">Software and usage charges are paid directly by the business. Prices assume a standard scope and compatible existing tools; anything outside that scope requires a separate written quote. No results or revenue guarantees.</p>
+</div></section>
+<section class="content alt" id="how"><div class="wrap">
+ <div class="section-head"><div><div class="eyebrow">TEXT-FIRST BY DESIGN</div><h2>No unnecessary meetings. No mystery process.</h2><p>You already have a business to run. We'll keep the process straightforward and documented.</p></div></div>
+ <div class="steps"><div class="step"><b>STEP 01 / SEND</b><h3>Show me the bottleneck.</h3><p>Fill out the short form and tell me what isn't working. If you have a website, include it. No Zoom scheduling required.</p></div><div class="step"><b>STEP 02 / DECIDE</b><h3>Get a written plan.</h3><p>I'll send three practical opportunities and explain which I'd fix first. You can use the advice yourself or request an implementation.</p></div><div class="step"><b>STEP 03 / BUILD</b><h3>Approve one clear scope.</h3><p>If you want me to build it, you'll get a written price and deliverables before work starts, plus testing and handoff when it’s done.</p></div></div>
+</div></section>
+<section class="content" id="about"><div class="wrap about">
+ <div><div class="eyebrow">THE PERSON BEHIND THE SYSTEMS</div><h2>A little less agency. A lot more useful.</h2><p>I'm Aaron, the builder behind Archiebase. I work directly with small-business owners to find the tedious or easily missed parts of the day and make them work better with practical AI, websites, and automation.</p><p>No stack of unnecessary subscriptions or elaborate presentations. Just a clear problem, a sensible plan, and a working result.</p></div>
+ <div class="note-card"><div class="eyebrow">MEET ARCHIE</div><h3>A friendly guide. A real human behind the work.</h3><p>Archie is the digital helper that makes the first step easy. I'm the one who reviews your request and can build and test the solution. Nothing is pretending to be an employee or a full-time AI consultant.</p><div class="monogram"><span>a</span> Archie guides. Aaron builds.</div></div>
+</div></section>
+<section class="content alt" id="free-tools"><div class="wrap">
+ <div class="free-tools"><div><div class="eyebrow">USEFUL BEFORE YOU HIRE ANYONE</div><h3>Free tools you can use today.</h3><p>Need a Google review QR sign or a better missed-call reply? Keep the starter tools, whether you hire me or not.</p></div><a href="/tools.html">Explore free business tools ↗</a></div>
+</div></section>
+<section class="content" id="faq"><div class="wrap faq">
+ <div class="section-head"><div><div class="eyebrow">THE SIMPLE ANSWERS</div><h2>Good to know.</h2></div></div>
+ <details><summary>Is the written audit really free?</summary><p>Yes. You'll receive a short, practical response based on what you tell me and any public business information I can verify. It isn't an automated grade or a full internal operational review. You don't need to buy anything.</p></details>
+ <details><summary>Do I have to schedule a call?</summary><p>No. Standard projects are text-first. Requirements, recommendations, quotes, and updates can happen through written messages and forms. If a project needs specialist access or a deeper discussion, we'll agree on the simplest secure way to handle it.</p></details>
+ <details><summary>Are software subscriptions included?</summary><p>No. Any hosting, phone number, texting, CRM, or automation platform is owned and paid for by your business whenever possible. I'll explain these costs before you approve a project.</p></details>
+ <details><summary>What if my problem doesn't fit a package?</summary><p>I'll tell you. You can still ask for a written audit. If a custom build makes sense, I'll quote its scope separately. I won't turn a simple project into a complicated rebuild.</p></details>
+</div></section>
+</main>
+<footer><div class="wrap footer-row"><a href="#top" class="logo">archie<span>●</span>base</a><p>Practical AI systems for small business. Built by Aaron.</p><p>© 2026 Archiebase</p></div></footer>
+<dialog id="inquiry-dialog" aria-labelledby="inquiry-title"><div class="modal">
+ <div class="modal-head"><div><div class="eyebrow">WRITTEN REQUEST / NO SALES CALL</div><h2 id="inquiry-title">Ask about a build.</h2></div><button type="button" class="close" id="inquiry-close" aria-label="Close">×</button></div>
+ <p id="inquiry-package">Let me know the basic details and I'll reply with the right next step.</p>
+ <form id="inquiry-form">
+  <div class="form-grid"><div class="field"><label for="inquiry-name">Your name</label><input id="inquiry-name" autocomplete="name" maxlength="90" required></div><div class="field"><label for="inquiry-email">Email</label><input id="inquiry-email" type="email" autocomplete="email" maxlength="180" required></div></div>
+  <div class="field"><label for="inquiry-business">Business name</label><input id="inquiry-business" maxlength="120" required></div>
+  <div class="field"><label for="inquiry-notes">What would you like done?</label><textarea id="inquiry-notes" maxlength="1500" minlength="10" required placeholder="A short description is fine."></textarea></div>
+  <input class="hp" id="inquiry-trap" tabindex="-1" autocomplete="off">
+  <button class="send" type="submit" id="inquiry-submit"><span>Send written request</span><span aria-hidden="true">↗</span></button>
+  <p id="inquiry-status" class="modal-status" role="status" aria-live="polite"></p>
+ </form>
+ <p class="disclaimer" style="color:#65786d">Please don't include passwords, banking details, or sensitive customer records. Your request uses a third-party email delivery service.</p>
+</div></dialog>
+<script>
+(function(){
+  'use strict';
+  const auditForm=document.getElementById('audit-form');
+  const inquiryForm=document.getElementById('inquiry-form');
+  const dialog=document.getElementById('inquiry-dialog');
+  const packageLabel=document.getElementById('inquiry-package');
+  let currentService='General business implementation';
+
+  async function sendLead(payload) {
+    const response=await fetch('/api/contact', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(payload)
+    });
+    const data=await response.json().catch(function(){return {ok:false};});
+    if(!response.ok || !data.ok) throw new Error(data.error||'Could not send the request. Please try again.');
+    return data;
+  }
+  function setStatus(el, msg, error) {
+    el.textContent=msg;
+    el.classList.toggle('error',Boolean(error));
+  }
+
+  auditForm.addEventListener('submit', async function(event){
+    event.preventDefault();
+    if(!auditForm.reportValidity()) return;
+    const button=document.getElementById('audit-submit');
+    const status=document.getElementById('audit-status');
+    const problem=document.getElementById('audit-problem').value;
+    const url=document.getElementById('audit-url').value.trim();
+    const notes=document.getElementById('audit-notes').value.trim();
+    const message='FREE WRITTEN AUDIT REQUEST\nBusiness website: '+(url||'Not provided')+'\nPrimary issue: '+problem+'\nOwner notes: '+(notes||'No additional notes')+'\nRequested output: three prioritized opportunities, a first practical step, and an optional implementation recommendation.';
+    button.disabled=true;
+    setStatus(status,'Sending your request…',false);
+    try {
+      await sendLead({
+        name:document.getElementById('audit-name').value.trim(),
+        email:document.getElementById('audit-email').value.trim(),
+        business:document.getElementById('audit-business').value.trim(),
+        issue:'FREE WRITTEN AUDIT: '+problem,
+        message:message,
+        website:document.getElementById('audit-trap').value
+      });
+      auditForm.reset();
+      setStatus(status,'Request submitted. Your written audit will be reviewed personally and sent by email.',false);
+      button.textContent='Request submitted ✓';
+    } catch(error) {
+      button.disabled=false;
+      setStatus(status,error.message||'Could not send. Please try again.',true);
+    }
+  });
+
+  document.querySelectorAll('[data-service]').forEach(function(button){
+    button.addEventListener('click', function(){
+      currentService=button.getAttribute('data-service');
+      packageLabel.textContent='Interested in '+currentService+'? Tell me what you need and I will respond in writing.';
+      const business=document.getElementById('audit-business').value.trim();
+      const name=document.getElementById('audit-name').value.trim();
+      const email=document.getElementById('audit-email').value.trim();
+      if(business) document.getElementById('inquiry-business').value=business;
+      if(name) document.getElementById('inquiry-name').value=name;
+      if(email) document.getElementById('inquiry-email').value=email;
+      setStatus(document.getElementById('inquiry-status'),'',false);
+      document.getElementById('inquiry-submit').disabled=false;
+      document.getElementById('inquiry-submit').textContent='Send written request ↗';
+      inquiryForm.hidden=false;
+      dialog.showModal();
+    });
+  });
+  document.getElementById('inquiry-close').addEventListener('click',function(){dialog.close();});
+  dialog.addEventListener('click',function(event){if(event.target===dialog)dialog.close();});
+
+  inquiryForm.addEventListener('submit',async function(event) {
+    event.preventDefault();
+    if(!inquiryForm.reportValidity())return;
+    const button=document.getElementById('inquiry-submit');
+    const status=document.getElementById('inquiry-status');
+    button.disabled=true;
+    setStatus(status,'Sending…',false);
+    try {
+      await sendLead({
+        name:document.getElementById('inquiry-name').value.trim(),
+        email:document.getElementById('inquiry-email').value.trim(),
+        business:document.getElementById('inquiry-business').value.trim(),
+        issue:'PAID PROJECT ENQUIRY: '+currentService,
+        message:'Interested service: '+currentService+'\nProject details: '+document.getElementById('inquiry-notes').value.trim(),
+        website:document.getElementById('inquiry-trap').value
+      });
+      inquiryForm.hidden=true;
+      setStatus(status,'Request submitted. I’ll follow up by email with the next step.',false);
+    } catch(error) {
+      button.disabled=false;
+      setStatus(status,error.message||'Unable to send. Try again.',true);
+    }
+  });
+})();
+</script>
+</body>
+</html>
