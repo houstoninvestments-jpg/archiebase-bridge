@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#081321"/>
+<meta name="description" content="Archiebase helps small businesses find practical fixes for missed leads, reviews, website friction and repetitive work. Get a useful first fix for free."/>
+<title>Archiebase | Small business, fewer bottlenecks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071322;--navy2:#102338;--ink:#122333;--muted:#5c6875;--paper:#f4f7f8;--line:#dce5e9;--electric:#215dff;--acid:#dcff59;--radius:20px;--shadow:0 16px 48px rgba(13,35,53,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;font-family:'DM Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Manrope','DM Sans',sans-serif;letter-spacing:-.055em}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #7baaff;outline-offset:4px}button:disabled{opacity:.5;cursor:default}.shell{width:min(1170px,calc(100% - 42px));margin:auto}.hide{display:none!important}header{position:absolute;top:0;left:0;right:0;z-index:20;color:white}.nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-family:Manrope,sans-serif;font-size:25px;font-weight:800;letter-spacing:-.075em;display:flex;align-items:center}.logo-dot{color:var(--acid)}.navlinks{display:flex;align-items:center;gap:28px;font-size:13px;color:#cdd6de}.navlinks a:hover{color:white}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid transparent;font-weight:800;font-size:14px;letter-spacing:-.015em;border-radius:13px;padding:15px 22px;transition:transform .18s,background .18s;max-width:100%;text-align:center}.btn:hover{transform:translateY(-2px)}.btn-blue{background:var(--electric);color:white;box-shadow:0 10px 24px #0f54ec33}.btn-light{background:white;color:var(--ink)}.btn-outline{background:transparent;color:inherit;border-color:currentColor}.btn-lime{background:var(--acid);color:var(--ink)}.nav .btn{padding:12px 17px}.eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:11px}.hero{background:radial-gradient(circle at 69% 49%,#173a60 0,transparent 39%),linear-gradient(125deg,#071321,#0b1b30 69%,#081321);color:white;position:relative;overflow:hidden;padding:148px 0 93px}.hero:before{content:"";position:absolute;inset:0;opacity:.16;pointer-events:none;background-image:linear-gradient(#48627b55 1px,transparent 1px),linear-gradient(90deg,#48627b55 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to right,transparent 26%,#000)}.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr .93fr;min-height:465px;align-items:center;gap:25px}.hero-copy{position:relative;z-index:4;max-width:645px}.hero .eyebrow{display:inline-flex;gap:8px;align-items:center;color:#d6e5ee;background:#17304a;border:1px solid #2c4560;border-radius:100px;padding:9px 13px;margin-bottom:24px;letter-spacing:.07em}.statusdot{height:7px;width:7px;border-radius:100%;background:var(--acid)}.hero h1{font-size:clamp(49px,5.5vw,82px);font-weight:800;line-height:1.04;margin-bottom:23px;letter-spacing:-.075em}.hero h1 em{font-style:normal;color:var(--acid)}.hero .lead{font-size:18px;line-height:1.65;color:#c2d3e0;max-width:520px;margin-bottom:25px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}.hero-small{font-size:12px;color:#aebfcf;margin-top:16px;display:flex;gap:10px;align-items:center}.hero-small b{color:var(--acid)}.hero-art{position:relative;min-height:475px;align-self:end}.hero-art:before{content:"";position:absolute;width:395px;height:395px;max-width:90%;border:1px solid #3c6384;border-radius:50%;left:10%;top:8%;box-shadow:0 0 0 36px #1534524d,0 0 0 72px #15345225}.archie{width:min(100%,540px);position:absolute;bottom:-66px;left:-15px;filter:drop-shadow(0 36px 60px rgba(0,0,0,.25));object-fit:contain}.bubble{position:absolute;background:#f9fcff;border:1px solid #ffffff90;border-radius:16px;padding:13px 15px;color:#19293c;box-shadow:0 16px 45px #0004;display:flex;align-items:center;gap:12px;font-size:13px;font-weight:800;min-width:196px}.bubble .bicon{display:grid;place-items:center;background:#edf4ff;width:37px;height:37px;border-radius:12px;color:var(--electric);font-size:21px}.b1{top:22px;right:-7px}.b2{top:143px;right:-32px}.b3{bottom:71px;right:-10px}.bubble small{font-size:11px;font-weight:500;color:#6d7886;display:block;margin-top:2px}.statbar{background:#fff;border-bottom:1px solid var(--line)}.statbar-inner{min-height:82px;display:flex;justify-content:center;align-items:center;gap:clamp(20px,6vw,100px);flex-wrap:wrap;padding:15px 0}.trustline{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:700}.trustline span{background:#e9f7df;border-radius:50%;color:#307b3b;font-weight:900;display:grid;place-items:center;width:22px;height:22px}.section{padding:90px 0}.section-heading{max-width:700px;margin-bottom:35px}.section h2{font-size:clamp(32px,4vw,55px);line-height:1.09;margin:8px 0 17px}.section .dek{font-size:17px;line-height:1.65;color:var(--muted)}.blue-tag{color:var(--electric);font-weight:800;text-transform:uppercase;letter-spacing:.15em;font-size:11px}.problem-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.problem{border:1px solid #d9e2e7;background:#fff;padding:25px;border-radius:18px;min-height:185px;text-align:left;transition:box-shadow .18s,transform .18s,border-color .18s}.problem:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#a4baf0}.problem span{font-size:28px;display:block;margin-bottom:17px}.problem strong{font-size:17px;display:block;line-height:1.3;letter-spacing:-.03em}.problem small{color:var(--muted);display:block;font-size:13px;line-height:1.5;margin-top:9px}.problem[aria-pressed=true]{border:2px solid var(--electric);box-shadow:0 0 0 4px #215dff13}.fix-panel{display:grid;grid-template-columns:1fr 1fr;border-radius:24px;overflow:hidden;margin-top:22px;box-shadow:var(--shadow);background:white;border:1px solid var(--line)}.fix-left{padding:35px;background:var(--navy);color:white}.fix-left h3{font-size:29px;margin:5px 0 11px}.fix-left p{color:#c3d3de;line-height:1.6;font-size:14px;margin-bottom:27px}.fix-left label{display:block;font-size:12px;font-weight:800;margin:13px 0 7px}.fix-left input,.fix-left select,.fix-left textarea{border:1px solid #406078;border-radius:11px;background:#13283f;color:white;width:100%;padding:13px 14px;min-height:48px}.fix-left input::placeholder{color:#8fa4b5}.fix-left select option{color:white}.fix-left .btn{margin-top:20px;width:100%}.fix-right{padding:35px;background:linear-gradient(145deg,#f8fbfe,#eef5f5)}.result-label{font-size:12px;text-transform:uppercase;color:#758596;letter-spacing:.14em;font-weight:800}.result-card{margin-top:15px;background:white;border:1px solid #d8e3e7;border-radius:17px;min-height:285px;padding:25px}.result-card h3{font-size:24px;margin:0 0 10px}.result-card p{line-height:1.6;font-size:14px;color:#536579}.result-example{padding:16px;border-radius:12px;background:#eff4fb;border:1px solid #dde5ef;font-size:14px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}.result-steps{margin:15px 0 10px;padding-left:20px;color:#43586a;font-size:13px;line-height:1.65}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.result-actions .btn{padding:12px 15px;font-size:12px}.note{font-size:11px!important;color:#758798!important;margin-top:15px}.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.mini-card{border:1px solid var(--line);border-radius:18px;background:white;padding:28px;min-height:220px}.mini-card .number{display:grid;place-items:center;height:41px;width:41px;border-radius:12px;background:#e9f1fd;color:var(--electric);font-weight:900;margin-bottom:25px}.mini-card h3{font-size:20px}.mini-card p{font-size:14px;line-height:1.65;color:var(--muted);margin-bottom:0}.dark-section{background:var(--navy);color:white}.dark-section .dek{color:#b7c8d4}.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.offer{border-radius:19px;border:1px solid #335069;padding:27px;background:#12283d}.offer h3{font-size:19px;margin:0 0 12px}.offer p{font-size:13px;line-height:1.65;color:#b7c9d8}.offer .tag{display:inline-block;margin-bottom:16px;font-size:12px;color:var(--acid);font-weight:800}.offer a{font-size:13px;color:var(--acid);font-weight:800}.printkit{display:none}.contact-banner{background:#deff69;border-radius:24px;padding:43px 46px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px}.contact-banner h2{font-size:clamp(31px,4vw,49px);margin:0 0 8px}.contact-banner p{color:#3e4c37;font-size:15px;line-height:1.6;margin:0}.contact-banner .btn{background:var(--navy);color:white}.footer{padding:40px 0 50px;border-top:1px solid var(--line)}.footrow{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}.footer p{color:#7a8a95;font-size:12px;margin-top:12px}.footer a{color:var(--electric)}.tool-dialog{position:fixed;inset:0;background:#061322bd;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}.tool-dialog.open{display:flex}.modal{background:white;border-radius:24px;padding:32px;max-width:600px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 30px 100px #0005}.modal h2{font-size:32px}.modal input{width:100%;padding:14px;border:1px solid #bfcad4;border-radius:12px;margin:8px 0 15px}.modal label{font-size:13px;font-weight:800}.modal .close{float:right;border:0;background:#eff4f7;border-radius:50%;font-size:22px;width:37px;height:37px}.modal .qr-box{width:260px;min-height:250px;max-width:100%;margin:10px auto;display:flex;align-items:center;justify-content:center;background:white}.modal .qr-box img{width:240px;height:240px}.modal .qr-box canvas{max-width:100%;height:auto}.printcard{border:1px solid #d6e0e8;border-radius:15px;padding:23px;text-align:center}.printcard h3{font-size:26px;margin-bottom:6px}.printcard p{font-size:13px;color:var(--muted);margin:7px 0}.printcard .qr-box{margin:auto}.tool-dialog small{color:var(--muted)}
+@media (max-width:950px){.hero-inner{grid-template-columns:1fr .7fr}.hero h1{font-size:clamp(47px,6vw,66px)}.bubble{min-width:160px;padding:10px}.b2{right:-7px}.b3{right:8px}.hero-art:before{width:300px;height:300px}.archie{bottom:-50px;width:460px}.navlinks{gap:18px}}
+@media(max-width:700px){.shell{width:calc(100% - 36px)}.nav{min-height:72px}.navlinks{display:none}.nav .btn{font-size:12px;padding:10px 12px}.logo{font-size:23px}.hero{padding:128px 0 0}.hero-inner{display:block;min-height:0}.hero h1{font-size:clamp(45px,10vw,63px);max-width:560px}.hero .lead{font-size:16px}.hero-art{height:365px;min-height:365px;max-width:450px;margin:10px auto 0}.archie{width:370px;max-width:110%;bottom:-35px;left:-30px}.hero-art:before{width:265px;height:265px;left:4%;top:30px}.bubble{font-size:11px;min-width:150px}.bubble .bicon{width:32px;height:32px}.b1{right:-2px;top:20px}.b2{right:-3px;top:130px}.b3{right:0;bottom:30px}.statbar-inner{gap:12px 22px;justify-content:flex-start;padding:18px 0}.trustline{font-size:11px}.section{padding:60px 0}.section h2{font-size:clamp(31px,8.8vw,44px)}.section .dek{font-size:15px}.problem-cards{grid-template-columns:1fr 1fr;gap:10px}.problem{padding:17px;min-height:172px}.problem span{font-size:24px;margin-bottom:13px}.problem strong{font-size:14px}.problem small{font-size:12px}.fix-panel{display:block}.fix-left,.fix-right{padding:24px}.result-card{min-height:0;padding:20px}.card-grid,.offer-grid{grid-template-columns:1fr}.mini-card{min-height:0}.contact-banner{grid-template-columns:1fr;padding:26px;gap:20px}.footrow{display:block}.footer .logo{margin-bottom:15px}}
+@media (max-width:365px){.problem-cards{grid-template-columns:1fr}.hero .btn{width:100%}.hero-art{height:310px}.archie{width:325px}.bubble{min-width:145px}.b3{display:none}}
+@media print{header,.hero,.statbar,#problems,.dark-section,#how,#contact,.footer,.result-actions,.fix-left{display:none!important}body{background:white}#first-fix{display:block!important;padding:0}.section-heading{display:none}.fix-panel{border:0;box-shadow:none;display:block}.fix-right{padding:0;background:white}#first-result{border:0;padding:0}}
+.help-links{display:flex;gap:10px;flex-wrap:wrap}.help-links .btn{flex-shrink:0}.ask-btn{border:2px solid var(--navy);color:var(--navy);background:transparent}.ask-btn:hover{background:var(--navy);color:#fff}
+.lead-backdrop{position:fixed;inset:0;z-index:250;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(5,15,28,.81)}.lead-backdrop.open{display:flex}
+.lead-card{width:min(100%,540px);max-height:94vh;overflow-y:auto;background:#fff;padding:clamp(22px,4vw,35px);border-radius:23px;box-shadow:0 30px 90px #0005}
+.lead-card h2{font-size:clamp(27px,5vw,37px);margin:8px 0 9px}.lead-card p{font-size:14px;color:#526476;line-height:1.5}
+.lead-x{float:right;width:39px;height:39px;border-radius:50%;font-size:24px;background:#f7f9fa;border:1px solid #d5dce4;cursor:pointer}
+.lead-card label{display:block;font-size:12px;font-weight:800;color:var(--navy);margin:14px 0 6px}
+.lead-card input,.lead-card textarea{width:100%;padding:13px;border:1px solid #c6d0da;border-radius:10px;color:var(--ink);background:#fff;font:inherit;font-size:15px}
+.lead-card textarea{min-height:110px;resize:vertical}.lead-card input:focus,.lead-card textarea:focus{outline:2px solid var(--electric);outline-offset:1px}
+.lead-fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}.lead-card #lead-submit{margin-top:16px;width:100%;justify-content:center}
+.lead-note{font-size:11px!important;color:#71808d!important;margin:9px 0 0!important}.lead-feedback{min-height:20px;font-size:13px;font-weight:700;margin-top:12px}.lead-feedback.error{color:#af2739}.lead-feedback.success{color:#15784a}
+@media(max-width:550px){.lead-fields{display:block}.help-links{width:100%}.help-links .btn{flex:1}}
+
+/* Archiebase / Editorial First Fix hero: no giant mascots, neon fog or floating feature cards */
+header{position:relative;background:#f7f8f4;color:#152532;border-bottom:1px solid #d8e0df}
+.nav{min-height:74px}.navlinks{color:#41515a}.navlinks a:hover{color:var(--electric)}
+.logo-dot{color:#c6e83c}.nav .btn{background:#172838;color:#fff;box-shadow:none;border-radius:9px}
+.hero{background:#f7f8f4;color:#152532;padding:68px 0 0;overflow:hidden}
+.hero:before{display:none}
+.hero-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,0.90fr);gap:clamp(32px,5vw,76px);min-height:0;align-items:center;padding-bottom:58px}
+.hero-copy{max-width:605px;align-self:center}
+.hero .eyebrow{border:0;border-radius:0;padding:0;background:none;letter-spacing:.17em;color:#4b5960;margin-bottom:27px;font-size:11px}
+.hero .statusdot{background:var(--electric);width:8px;height:8px}
+.hero h1{font-size:clamp(48px,5.6vw,77px);color:#142334;max-width:680px;letter-spacing:-.075em;line-height:1.08;font-weight:800;margin:0 0 25px}
+.hero h1 em{font-style:normal;color:#152532;background:linear-gradient(transparent 65%,#e4f58a 65% 88%,transparent 88%);box-decoration-break:clone}
+.hero .lead{color:#4e5b63;font-size:17px;line-height:1.7;max-width:565px;margin-bottom:29px}
+.hero-actions{gap:18px}.hero .btn-blue{border-radius:9px;box-shadow:none;background:#1959fa;padding:17px 23px}
+.hero .hero-text-link{background:none;border:0;color:#293b47;padding:14px 0;text-decoration:underline;text-decoration-color:#92a5ae;text-underline-offset:6px;text-decoration-thickness:1px;border-radius:0;font-size:13px}
+.hero .hero-small{display:flex;flex-wrap:wrap;gap:11px 19px;margin-top:23px;color:#53616a;font-weight:700;font-size:12px}
+.hero .hero-small span{white-space:nowrap}
+.hero-human{font-size:12px;color:#67747a;margin:23px 0 0;max-width:380px;line-height:1.5}
+.fix-workbench{min-width:0;background:white;border:1px solid #cfd9da;border-radius:16px;padding:clamp(21px,2.7vw,32px);box-shadow:12px 12px 0 #e5ebe7}
+.workbench-top{display:flex;gap:12px;align-items:start;justify-content:space-between;border-bottom:1px solid #e5e9e7;padding-bottom:20px;margin-bottom:17px}
+.wb-eyebrow{font:700 10px 'DM Sans',sans-serif;letter-spacing:.14em;color:#4b697b}
+.workbench-top h2{color:#142334;font-size:clamp(25px,2.7vw,32px);line-height:1.15;letter-spacing:-.06em;margin:10px 0 8px}
+.workbench-top p{color:#63717b;font-size:13px;margin:0}
+.archie-mini{width:54px;height:47px;border:3px solid #d0dce1;box-shadow:inset 0 -3px 0 #586d77;background:#101d2b;border-radius:19px 19px 17px 17px;display:grid;place-items:center;flex-shrink:0;position:relative}
+.archie-mini:before{content:"";position:absolute;width:5px;height:7px;border-radius:3px 3px 0 0;background:#8db9d1;top:-9px}
+.archie-eyes{display:flex;gap:8px}.archie-eyes i{width:10px;height:7px;border-bottom:3px solid #5ec7fe;border-radius:0 0 9px 9px;transform:rotate(-5deg)}
+.hero-choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.hero-choices button{background:#f8faf8;border:1px solid #dce3e2;border-radius:7px;padding:12px 9px;font-size:12px;font-weight:800;color:#334653;min-width:0}
+.hero-choices button:hover,.hero-choices button[aria-pressed="true"]{background:#e9f2ff;color:#174acc;border-color:#7e9eed}
+.hero-sample{border:1px solid #d9e5e3;background:#f1f6f4;border-radius:10px;padding:22px 20px;min-height:178px}
+.sample-tag{display:flex;gap:8px;align-items:center;color:#36635c;font-size:10px;letter-spacing:.12em;font-weight:800}
+.sample-dot{width:7px;height:7px;background:#24a67f;border-radius:50%}
+.hero-sample h3{font-size:20px;letter-spacing:-.045em;margin:15px 0 9px;color:#182d33}
+.hero-sample p{color:#40565b;font-size:14px;line-height:1.55;margin:0;min-height:49px}
+.workbench-actions{display:flex;gap:10px;align-items:center;justify-content:space-between;margin:16px 0 12px}
+.workbench-actions .btn{box-shadow:none;border-radius:8px;font-size:13px;padding:14px 17px}
+.wb-copy{background:none;border:0;color:#2055b7;text-decoration:underline;text-underline-offset:4px;font-weight:800;font-size:12px;padding:10px}
+.wb-footnote{font-size:11px;line-height:1.5;color:#72808a}
+.hero-bottomline{display:flex;justify-content:space-between;gap:15px;border-top:1px solid #dce3df;padding:15px 0;color:#5d6971;font-weight:800;letter-spacing:.11em;font-size:10px}
+@media(max-width:980px){
+ .hero{padding:46px 0 0}
+ .hero-inner{gap:25px;grid-template-columns:minmax(0,1fr) minmax(0,.95fr)}
+ .hero h1{font-size:clamp(42px,5.5vw,57px)}
+ .hero .lead{font-size:15px}
+ .fix-workbench{padding:21px}
+}
+@media(max-width:700px){
+ .hero{padding:44px 0 0}
+ .hero-inner{display:flex;flex-direction:column;align-items:stretch;gap:29px;padding-bottom:38px}
+ .hero-copy{max-width:100%;width:100%}
+ .hero .eyebrow{font-size:10px;margin-bottom:18px}
+ .hero h1{font-size:clamp(43px,9.5vw,58px);margin-bottom:18px;letter-spacing:-.065em}
+ .hero .lead{font-size:16px;line-height:1.55;margin-bottom:19px}
+ .hero-actions{gap:8px}
+ .hero-actions .btn-blue{width:100%;padding:15px 19px}
+ .hero .hero-text-link{padding:12px 4px}
+ .hero .hero-small{gap:7px 13px;margin-top:13px;font-size:11px}
+ .hero-human{font-size:11px;margin-top:15px}
+ .fix-workbench{width:100%;box-shadow:5px 5px 0 #e0e7e3;padding:20px}
+ .hero-sample{min-height:0;padding:18px}
+ .hero-bottomline{flex-direction:column;gap:4px;font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* Archiebase v3: outcomes-first hero, pragmatic and editorial */
+header{position:relative;background:#f7f8f5;color:#142434;border-bottom:1px solid #dde3e1}
+.nav{min-height:76px}
+.navlinks{color:#4b5e68}.navlinks a:hover{color:#1759ea}
+.nav .btn{background:#1746d5;border-radius:7px;color:white;box-shadow:none}
+.solution-hero{background:#f7f8f5;color:#152331;padding:65px 0 82px;overflow:hidden}
+.solution-hero:before{display:none}
+.solution-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:center;gap:clamp(36px,5vw,75px)}
+.solution-copy{min-width:0}
+.solution-eyebrow{display:flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.145em;font-weight:900;color:#37576a;margin:0 0 31px}
+.solution-mark{display:block;width:9px;height:9px;background:#2257f5;box-shadow:9px 0 0 #c2e764;margin-right:9px}
+.solution-copy h1{color:#101f2d;font-family:'Manrope','DM Sans',sans-serif;font-weight:800;font-size:clamp(43px,4.7vw,68px);letter-spacing:-.075em;line-height:1.13;margin:0 0 25px}
+.solution-copy h1 span{color:#2257f5}
+.solution-intro{max-width:620px;color:#52616b;font-size:16px;line-height:1.75;margin:0 0 27px}
+.solution-intro strong{color:#263d4d;font-weight:800}
+.solution-actions{display:flex;align-items:center;flex-wrap:wrap;gap:21px}
+.solution-primary{background:#2257f5;color:#fff;border-radius:8px;padding:16px 22px;font-size:14px;box-shadow:0 6px 15px #163ccf1b}
+.solution-secondary{color:#203e52;font-size:13px;font-weight:800;text-decoration:underline;text-decoration-color:#90a6b4;text-decoration-thickness:1px;text-underline-offset:6px;padding:9px 0}
+.solution-assurance{color:#647782;font-size:12px;margin:16px 0 0;line-height:1.5}
+.solution-assurance strong{color:#31556a}
+.solution-guides{display:flex;gap:14px;align-items:center;border-top:1px solid #dae1df;margin-top:35px;padding-top:19px}
+.guides-marker{flex:none;background:#162c3b;border:1px solid #28495e;border-radius:11px;width:45px;height:45px;display:flex;align-items:center;justify-content:center;font:800 25px 'Manrope',sans-serif;color:#fff;letter-spacing:-.16em;padding-right:6px}
+.guides-marker span{color:#cde757;font-size:17px;align-self:flex-start;margin-top:8px;letter-spacing:0}
+.solution-guides p{margin:0;color:#687680;font-size:12px;line-height:1.6}
+.solution-guides strong{color:#253c4a}
+.solution-demo{min-width:0;border:1px solid #ccd6d7;border-radius:12px;background:#fff;box-shadow:12px 12px 0 #e4eae6;padding:clamp(22px,2.4vw,34px)}
+.demo-heading{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 25px}
+.demo-label{font-size:10px;color:#59707c;font-weight:800;letter-spacing:.13em}
+.demo-live{font-size:9px;letter-spacing:.08em;font-weight:800;color:#407068;display:flex;align-items:center;gap:7px}
+.demo-live span{width:7px;height:7px;border-radius:50%;background:#28af80}
+.solution-demo h2{font-size:clamp(30px,3.1vw,42px);letter-spacing:-.065em;line-height:1.12;margin:0 0 9px;color:#102536}
+.demo-intro{margin:0 0 23px;color:#657581;font-size:13px;line-height:1.6}
+.demo-tabs{display:flex;flex-wrap:wrap;gap:6px;padding-bottom:20px;border-bottom:1px solid #e1e6e6}
+.demo-tabs button{border:1px solid #d9e0e2;background:#f9faf9;color:#3d5362;font-weight:800;font-size:11px;border-radius:5px;padding:9px 10px}
+.demo-tabs button:hover,.demo-tabs button[aria-pressed="true"]{background:#eaf0ff;border-color:#8bafff;color:#1749b8}
+.change-flow{margin-top:23px}
+.flow-step{display:grid;grid-template-columns:37px 1fr;gap:11px;min-height:96px}
+.flow-step:last-child{min-height:0}
+.flow-rail{display:flex;flex-direction:column;align-items:center;gap:4px;height:100%}
+.flow-count{display:grid;place-items:center;width:31px;height:31px;font-size:10px;font-weight:900;color:#627480;background:#f3f5f5;border:1px solid #e0e5e4;border-radius:7px}
+.flow-count.middle{background:#e8eeff;color:#2452df;border-color:#afc0fc}
+.flow-count.after{background:#e5f4e9;color:#267049;border-color:#b8dec5}
+.flow-connector{height:100%;width:1px;background:#d9e2e0;min-height:29px}
+.flow-label{font-size:10px;font-weight:900;letter-spacing:.12em;color:#6b7984;margin:0 0 6px}
+.flow-step p{margin:0;color:#223746;font-size:13px;line-height:1.55;max-width:360px;font-weight:600}
+.demo-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #e4e9e7;padding-top:20px;margin-top:20px}
+.demo-action{padding:13px 14px;border:none;background:#142d3c;color:#fff;font-size:12px;font-weight:800;border-radius:6px;display:flex;gap:9px;align-items:center}
+.demo-copy{border:0;background:transparent;color:#2859a4;text-decoration:underline;text-underline-offset:4px;font-weight:800;font-size:11px;padding:10px 0}
+.demo-caption{color:#89969b;font-size:10px;line-height:1.55;margin:12px 0 0}
+@media(max-width:1040px){
+ .solution-layout{gap:27px;grid-template-columns:minmax(0,1fr) minmax(0,.96fr)}
+ .solution-copy h1{font-size:clamp(42px,5vw,55px)}
+ .solution-intro{font-size:15px}
+ .solution-demo{padding:22px}
+ .demo-heading{margin-bottom:17px}
+}
+@media(max-width:790px){
+ .solution-layout{grid-template-columns:1fr;gap:32px}
+ .solution-hero{padding:44px 0 64px}
+ .solution-copy h1{font-size:clamp(43px,7.8vw,66px)}
+ .solution-guides{margin-top:28px}
+ .solution-demo{width:100%;max-width:590px}
+}
+@media(max-width:530px){
+ .solution-hero{padding:36px 0 47px}
+ .solution-eyebrow{font-size:9px;margin-bottom:19px}
+ .solution-copy h1{font-size:clamp(39px,9.2vw,49px);line-height:1.12;letter-spacing:-.073em;margin-bottom:21px}
+ .solution-intro{font-size:14px;line-height:1.65;margin-bottom:22px}
+ .solution-actions{gap:15px}
+ .solution-primary{width:100%;padding:16px 17px}
+ .solution-secondary{font-size:12px}
+ .solution-assurance{margin-top:13px}
+ .solution-guides{gap:12px;margin-top:24px;padding-top:16px}
+ .solution-demo{border-radius:10px;padding:20px;box-shadow:5px 5px 0 #e4eae6}
+ .solution-demo h2{font-size:31px}
+ .flow-step{min-height:96px}
+ .demo-heading{gap:10px}
+ .demo-live{font-size:9px}
+ .demo-footer{align-items:stretch;flex-wrap:wrap}
+ .demo-action{flex:1;justify-content:center}
+ .demo-copy{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.solution-hero .btn:hover{transform:none}}
+
+/* Workday hero v4 · anti-template system · a useful, human-first offer */
+header{position:relative;background:#f8f6ef;color:#132929;border-bottom:1px solid #e3e1d7}
+.nav{min-height:77px}
+.navlinks{color:#334e4b}.navlinks a:hover{color:#105ea5}
+.nav .btn{background:#203a34;color:#fff;box-shadow:none;border-radius:4px}
+.logo-dot{color:#fd7b45}
+.workday-hero{background:#f8f6ef;color:#152b29;position:relative;padding:64px 0 82px;overflow:hidden}
+.workday-hero:before{display:none}
+.wd-hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(32px,5vw,78px);align-items:center}
+.wd-story{min-width:0}
+.wd-kicker{color:#49685b;font-size:10px;font-weight:900;letter-spacing:.16em;display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:27px}
+.wd-square{display:inline-block;width:10px;height:10px;background:#fa7940;margin-right:3px}
+.wd-slash{color:#a5b2ab}
+.wd-story h1{font-family:'Manrope',system-ui,sans-serif;font-size:clamp(50px,5.45vw,84px);letter-spacing:-.082em;line-height:1.06;margin:0 0 26px;font-weight:800;color:#19342e}
+.wd-handled{display:inline-block;color:#195cf5;position:relative}
+.wd-stop{color:#fc7644}
+.wd-who{color:#49605d;font-size:clamp(15px,1.18vw,17px);line-height:1.7;max-width:592px;margin-bottom:22px}
+.wd-who strong{color:#1c3934;font-weight:800}
+.wd-after{border-left:4px solid #fa7940;padding:2px 0 3px 18px;margin:0 0 29px;max-width:600px}
+.wd-after-label{font-size:10px;letter-spacing:.16em;color:#6c7c6f;font-weight:900}
+.wd-after p{margin:7px 0 0;color:#465c55;font-size:14px;line-height:1.65}
+.wd-after strong{color:#19352f}
+.wd-actions{display:flex;align-items:center;gap:19px;flex-wrap:wrap}
+.wd-primary{background:#195cf5!important;color:#fff;border-radius:5px;padding:16px 21px;font-size:14px;box-shadow:none!important}
+.wd-link{font-weight:800;color:#213d36;text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:#7b9085;text-underline-offset:5px;font-size:13px}
+.wd-reassurance{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:14px 0 0;color:#63756b;font-size:11px;font-weight:700}
+.wd-tick{color:#258c67}.wd-mid{color:#a3b0a5}
+.wd-people{display:flex;align-items:center;gap:13px;border-top:1px solid #dedfd5;margin-top:29px;padding-top:16px;max-width:575px}
+.wd-persona-mark{flex:none;background:#19342e;color:#fff;width:41px;height:41px;display:grid;place-items:center;position:relative;font-family:'Manrope',sans-serif;font-weight:800;font-size:26px;border-radius:7px;letter-spacing:-.13em}
+.wd-persona-mark span{color:#f5c365;position:absolute;font-size:15px;top:3px;right:7px}
+.wd-people>div{color:#6d7b72;font-size:12px;line-height:1.6}.wd-people strong{color:#1c3e34}
+.wd-live{background:#1c3530;border:1px solid #1c3530;color:#fff;min-width:0}
+.wd-live-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 25px;border-bottom:1px solid #476159}
+.wd-live-id{display:flex;gap:9px;align-items:center;color:#f3f6ee;font-size:10px;font-weight:900;letter-spacing:.105em}
+.wd-live-indicator{display:block;width:9px;height:9px;background:#ec8651}
+.wd-live-serial{color:#8fae9d;font:700 10px 'DM Sans',sans-serif;letter-spacing:.08em}
+.wd-live-inner{padding:clamp(20px,3vw,37px) clamp(21px,3vw,37px) 24px}
+.wd-live h2{font-family:'Manrope',sans-serif;font-size:clamp(31px,3vw,47px);letter-spacing:-.07em;line-height:1.13;font-weight:800;margin:0 0 11px;color:#fbfaf3}
+.wd-live-sub{font-size:13px;color:#b5c6b8;line-height:1.5;margin:0 0 22px}
+.wd-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid #506c60;margin-bottom:24px}
+.wd-options button{color:#d0e3d7;background:transparent;border:0;border-right:1px solid #506c60;padding:12px 5px;font-weight:800;font-size:11px;text-align:center}
+.wd-options button:last-child{border-right:0}
+.wd-options button[aria-pressed="true"],.wd-options button:hover{background:#f0f5de;color:#183a30}
+.wd-ticket{background:#f5f5ec;color:#1c352f;border-left:5px solid #f27e45;position:relative}
+.wd-ticket-row{display:grid;grid-template-columns:42px 1fr;gap:8px;padding:21px 19px 21px 15px;border-bottom:1px solid #d9e2d8}
+.wd-ticket-row:last-child{border-bottom:0}
+.wd-ordinal{font-size:12px;color:#73877d;font-weight:900;letter-spacing:-.02em}
+.wd-row-label{display:block;color:#718274;font-weight:900;letter-spacing:.12em;font-size:10px;margin-bottom:8px}
+.wd-ticket-row p{font-size:14px;line-height:1.55;color:#2a403a;margin:0;font-weight:700}
+.wd-is-fix{background:#e5eddc}.wd-is-fix .wd-ordinal,.wd-is-fix .wd-row-label{color:#436752}
+.wd-is-after .wd-ordinal{color:#1657a7}.wd-is-after .wd-row-label{color:#2e6c65}
+.wd-live-bottom{display:flex;align-items:center;gap:10px;justify-content:space-between;margin-top:22px}
+.wd-live-bottom .wd-row-label{color:#b8cebd;font-size:9px;margin-bottom:4px}
+.wd-live-bottom strong{font-size:12px;color:#edf4e8}
+.wd-demo-go{font-size:12px;font-weight:900;color:#172d24;background:#d7ec87;border:0;padding:14px 16px;white-space:nowrap}
+.wd-example-note{color:#9db3a5;font-size:10px;line-height:1.55;margin:17px 0 0}
+.wd-valuebar{background:#e9ede6;border-top:1px solid #dce3d8;border-bottom:1px solid #dce3d8}
+.wd-valuebar-inner{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}
+.wd-valuebar-inner>span{font-size:12px;font-weight:900;color:#4c7362;letter-spacing:.04em}
+.wd-valuebar-inner strong{font-weight:800;color:#18362f;letter-spacing:0;margin-left:6px}
+@media(max-width:1050px){.wd-hero-grid{gap:28px}.wd-story h1{font-size:clamp(49px,5vw,68px)}.wd-who{font-size:15px}.wd-live-inner{padding:24px}.wd-options button{font-size:10px}}
+@media(max-width:800px){.workday-hero{padding:42px 0 54px}.wd-hero-grid{grid-template-columns:1fr;align-items:stretch;gap:35px}.wd-story h1{font-size:clamp(51px,9vw,77px)}.wd-live{max-width:610px}.wd-valuebar-inner{flex-wrap:wrap;gap:12px}}
+@media(max-width:520px){
+ .workday-hero{padding:34px 0 42px}.wd-kicker{font-size:9px;margin-bottom:18px}
+ .wd-story h1{font-size:clamp(45px,10.7vw,59px);line-height:1.08;letter-spacing:-.074em;margin-bottom:21px}
+ .wd-who{font-size:15px;line-height:1.65;margin-bottom:19px}
+ .wd-after{padding-left:13px;margin-bottom:21px}.wd-after p{font-size:13px}
+ .wd-primary{width:100%}.wd-reassurance{font-size:10px}
+ .wd-people{margin-top:22px;padding-top:14px}.wd-people>div{font-size:11px}
+ .wd-live-header{padding:15px 17px}.wd-live-serial{font-size:9px}.wd-live-id{font-size:9px}
+ .wd-live-inner{padding:20px 17px}.wd-live h2{font-size:33px}
+ .wd-options{grid-template-columns:1fr 1fr}.wd-options button{font-size:11px;border-bottom:1px solid #506c60}.wd-options button:nth-child(2){border-right:0}.wd-options button:nth-child(n+3){border-bottom:0}
+ .wd-ticket-row{padding:16px 11px;grid-template-columns:32px 1fr;gap:5px}.wd-ticket-row p{font-size:13px}
+ .wd-live-bottom{align-items:stretch;flex-direction:column;gap:12px}.wd-demo-go{width:100%}
+ .wd-valuebar-inner{padding:15px 0;gap:11px}.wd-valuebar-inner>span{width:100%;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.wd-primary:hover{transform:none}}
+</style>
+</head>
+<body>
+<header><div class="shell nav"><a class="logo" href="#home" aria-label="Archiebase home">archie<span class="logo-dot">●</span>base</a><nav class="navlinks" aria-label="Main navigation"><a href="#problems">What we fix</a><a href="#how">How it works</a><a href="#tools">Free tools</a><a href="#contact">About</a></nav><a class="btn btn-blue" href="#first-fix">Get your first fix ↗</a></div></header>
+<main>
+<section class="hero workday-hero" id="home">
+ <div class="shell wd-hero-grid">
+   <div class="wd-story">
+     <div class="wd-kicker"><span class="wd-square"></span> ARCHIEBASE <span class="wd-slash">//</span> AI &amp; AUTOMATION FOR SMALL BUSINESSES</div>
+     <h1>The calls.<br>The follow-ups.<br>The admin.<br><span class="wd-handled">Handled<span class="wd-stop">.</span></span></h1>
+     <p class="wd-who"><strong>We make small businesses easier to run.</strong> Archiebase finds the missed opportunities and repetitive work stealing your time, then builds simple AI, automation, and website fixes to take care of them.</p>
+     <div class="wd-after">
+       <span class="wd-after-label">WHAT GETS BETTER</span>
+       <p>Customers hear back. Quotes get followed up. The little things stop slipping through the cracks. <strong>You get more time for the work that actually matters.</strong></p>
+     </div>
+     <div class="wd-actions">
+       <a class="btn wd-primary" href="#first-fix">Find my first fix <span aria-hidden="true">↗</span></a>
+       <a class="wd-link" href="#problems">See what we can fix <span aria-hidden="true">→</span></a>
+     </div>
+     <div class="wd-reassurance"><span class="wd-tick">✓</span> Free practical starting point <span class="wd-mid">/</span> No signup or sales call</div>
+     <div class="wd-people"><span class="wd-persona-mark" aria-hidden="true">a<span>•</span></span><div><strong>Meet Archiebase.</strong> Archie is your free digital guide. Aaron is the real person who can build the fix when you want it done for you.</div></div>
+   </div>
+   <div class="wd-live" aria-label="Interactive example of a small-business automation">
+     <div class="wd-live-header">
+       <div class="wd-live-id"><span class="wd-live-indicator"></span> THIS IS WHAT A FIX LOOKS LIKE</div>
+       <span class="wd-live-serial">EXAMPLE 001 / 004</span>
+     </div>
+     <div class="wd-live-inner">
+       <h2>One problem.<br>One practical fix.</h2>
+       <p class="wd-live-sub">Choose a familiar headache and see how it changes.</p>
+       <div class="wd-options" role="group" aria-label="Explore examples">
+         <button type="button" data-hero-issue="calls" aria-pressed="true">Missed calls</button>
+         <button type="button" data-hero-issue="quotes" aria-pressed="false">Cold quotes</button>
+         <button type="button" data-hero-issue="reviews" aria-pressed="false">Reviews</button>
+         <button type="button" data-hero-issue="admin" aria-pressed="false">Busywork</button>
+       </div>
+       <div class="wd-ticket">
+         <div class="wd-ticket-row wd-is-before"><span class="wd-ordinal">01</span><div><span class="wd-row-label">WITHOUT A SYSTEM</span><p id="hero-before">You're on a job. A new customer calls, but nobody can answer.</p></div></div>
+         <div class="wd-ticket-row wd-is-fix"><span class="wd-ordinal">02</span><div><span class="wd-row-label">THE FIX WE BUILD</span><p id="hero-fix">A helpful automatic text asks what they need.</p></div></div>
+         <div class="wd-ticket-row wd-is-after"><span class="wd-ordinal">03</span><div><span class="wd-row-label">LIFE AFTER</span><p id="hero-after">The customer gets a response while you stay focused on the job.</p></div></div>
+       </div>
+       <div class="wd-live-bottom">
+         <div><span class="wd-row-label">YOUR FIRST STEP</span><strong>Try a version for your own business.</strong></div>
+         <button type="button" class="wd-demo-go" id="hero-build">Get my free fix ↗</button>
+       </div>
+       <p class="wd-example-note">Illustrative example, not a scan of your business. DIY instructions are free. Implementation is optional.</p>
+     </div>
+   </div>
+ </div>
+</section>
+<div class="statbar wd-valuebar"><div class="shell wd-valuebar-inner"><span>01 <strong>Find the bottleneck.</strong></span><span>02 <strong>Get a practical fix.</strong></span><span>03 <strong>Build it yourself or have us handle it.</strong></span></div></div>
+<section class="section" id="problems"><div class="shell"><div class="section-heading"><div class="blue-tag">START WITH THE PROBLEM</div><h2>Sound familiar?</h2><p class="dek">You shouldn't need to be an AI expert to improve your business. Pick the frustration that feels most familiar. Archie helps you start with something practical.</p></div><div class="problem-cards" id="problem-grid"><button class="problem" data-problem="calls" aria-pressed="true"><span aria-hidden="true">☎</span><strong>I'm missing calls or leads</strong><small>People reach out, but follow-up doesn't always happen.</small></button><button class="problem" data-problem="reviews" aria-pressed="false"><span aria-hidden="true">★</span><strong>We need more reviews</strong><small>Happy customers rarely remember to leave them.</small></button><button class="problem" data-problem="admin" aria-pressed="false"><span aria-hidden="true">⚙</span><strong>Too much repetitive work</strong><small>We're doing the same little tasks over and over.</small></button><button class="problem" data-problem="website" aria-pressed="false"><span aria-hidden="true">▣</span><strong>My website isn't helping</strong><small>People visit, but it's not clear what to do next.</small></button><button class="problem" data-problem="quotes" aria-pressed="false"><span aria-hidden="true">▤</span><strong>Quotes go quiet</strong><small>We send estimates and never hear back.</small></button><button class="problem" data-problem="questions" aria-pressed="false"><span aria-hidden="true">✦</span><strong>Same questions all day</strong><small>Our team keeps answering the same things.</small></button></div></div></section>
+<section class="section" id="first-fix" style="padding-top:0"><div class="shell"><div class="fix-panel"><div class="fix-left"><div class="eyebrow" style="color:var(--acid)">YOUR FREE FIRST FIX</div><h3>Let's make one thing easier.</h3><p>Two quick details. Archie will put together a starter fix, a ready-to-use template, and clear next steps. No email or account.</p><form id="fix-form"><label for="business">Business name</label><input id="business" maxlength="90" placeholder="Example: Northside Plumbing" required><label for="kind">What do you do?</label><input id="kind" maxlength="90" placeholder="Example: residential plumbing" required><label for="issue">What's slowing you down?</label><select id="issue"><option value="calls">Missed calls and leads</option><option value="reviews">Getting customer reviews</option><option value="admin">Repetitive tasks</option><option value="website">Website enquiries</option><option value="quotes">Quote follow-ups</option><option value="questions">Common customer questions</option></select><button type="submit" class="btn btn-lime">Build my first fix →</button></form></div><div class="fix-right"><div class="result-label">A real starting point, not a sales report</div><div class="result-card" id="first-result" aria-live="polite"><div style="font-size:32px;margin-bottom:13px" aria-hidden="true">✳</div><h3>Here's what you'll get.</h3><p>A ready-to-use message, workflow, or website improvement based on your answers, plus three steps to put it into action.</p><div class="result-example">For example: a follow-up text you can copy and use today, plus instructions for automating it later.</div><p class="note">This is a starter recommendation based on your answers. It is not a scan of your Google listing, website, or private business systems.</p></div></div></div></div></section>
+<section class="section" id="how"><div class="shell"><div class="section-heading"><div class="blue-tag">NO COMPLICATED PROCESS</div><h2>Small fixes. Real progress.</h2><p class="dek">AI is the toolkit, not the pitch. The best fix is the one you can actually use.</p></div><div class="card-grid"><div class="mini-card"><span class="number">01</span><h3>Tell Archie what's stuck.</h3><p>Choose a real headache in your business. No tech jargon, worksheets, or discovery call.</p></div><div class="mini-card"><span class="number">02</span><h3>Get something useful.</h3><p>Receive a practical starter fix you can copy, share, print, or try today.</p></div><div class="mini-card"><span class="number">03</span><h3>DIY or get help.</h3><p>Keep your free instructions. If you'd rather have it implemented, a human can help you do it.</p></div></div></div></section>
+<section class="section dark-section" id="tools"><div class="shell"><div class="section-heading"><div class="blue-tag" style="color:var(--acid)">FREE TOOLS, NO GATEKEEPING</div><h2>Use the tools. Keep the value.</h2><p class="dek">A few small things that can make a surprisingly big difference.</p></div><div class="offer-grid"><div class="offer"><span class="tag">01 · REPUTATION</span><h3>Free review growth kit</h3><p>Bring your official review link. Get a printable QR sign and customer-friendly review request.</p><button id="open-qr" type="button" class="btn btn-light">Create my kit →</button></div><div class="offer"><span class="tag">02 · SALES</span><h3>Missed-call reply</h3><p>A personalized follow-up text your business can use immediately, even before automation.</p><button type="button" class="btn btn-light jump-issue" data-issue="calls">Write my text →</button></div><div class="offer"><span class="tag">03 · WEBSITE</span><h3>Better homepage copy</h3><p>Get a clear headline and call to action instead of generic “welcome to our website” messaging.</p><button type="button" class="btn btn-light jump-issue" data-issue="website">Try it →</button></div></div></div></section>
+<section class="section" id="contact"><div class="shell"><div class="contact-banner"><div><div class="eyebrow" style="margin-bottom:13px">ARCHIE + A REAL PERSON</div><h2>Archie finds the bottleneck.<br>Aaron helps fix it.</h2><p>Archie is your free digital guide. Aaron is the human behind the builds, automations, and practical solutions. Start with a free fix. Keep it, even if you never hire anyone.</p></div><div class="help-links"><a href="#first-fix" class="btn">Start for free →</a><button type="button" class="btn ask-btn" id="ask-aaron-general">Ask Aaron for help</button></div></div></div></section>
+</main>
+<footer class="footer"><div class="shell footrow"><div><a class="logo" href="#home">archie<span class="logo-dot" style="color:#4db2b0">●</span>base</a><p>Useful technology. Less friction. More room to grow.</p></div><p>Built for small businesses. Made to be useful first.</p></div></footer>
+<div class="tool-dialog" id="qr-dialog" role="dialog" aria-modal="true" aria-labelledby="qr-heading"><div class="modal"><button class="close" type="button" id="close-qr" aria-label="Close">×</button><div class="blue-tag">FREE REVIEW TOOL</div><h2 id="qr-heading">Your review growth kit</h2><p style="color:var(--muted);font-size:14px;line-height:1.5">Paste your official Google review link from your Business Profile. We turn it into a printable sign and polite customer request.</p><label for="review-business">Business name</label><input id="review-business" maxlength="90" placeholder="Your business name"><label for="review-url">Your Google review link</label><input id="review-url" type="url" placeholder="https://g.page/r/.../review"><button class="btn btn-blue" type="button" id="make-qr">Make my kit →</button><div id="review-kit" class="hide" style="margin-top:22px"><div class="printcard" id="print-card"><h3 id="kit-name">Your business</h3><p>Had a good experience? We'd love your honest review.</p><div class="qr-box" id="qr-box"></div><p>Scan to share your feedback. Thank you for supporting a local business!</p></div><p id="review-msg" class="result-example" style="margin:16px 0"></p><button class="btn btn-outline" style="color:var(--ink)" type="button" id="copy-review">Copy review request</button> <button type="button" class="btn btn-blue" id="print-kit">Print the sign</button><p class="note">QR generation runs in your browser using a free JavaScript library. Never offer incentives or filter customers based on expected star ratings.</p></div><p class="note" id="qr-help">To find your link: open your verified Google Business Profile → Read reviews → Get more reviews → Copy link.</p></div></div>
+<div class="lead-backdrop" id="lead-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lead-title"><div class="lead-card"><button type="button" id="lead-x" class="lead-x" aria-label="Close">×</button><div class="blue-tag">REAL HUMAN HELP · NO OBLIGATION</div><h2 id="lead-title">Want me to build this for you?</h2><p>Tell me a little about what you need. I'll reply personally with a practical next step.</p><form id="lead-form"><div class="lead-fields"><div><label for="lead-name">Your name</label><input id="lead-name" name="name" autocomplete="name" maxlength="90" required placeholder="Your name"></div><div><label for="lead-email">Your email</label><input id="lead-email" name="email" autocomplete="email" type="email" maxlength="180" required placeholder="you@business.com"></div></div><label for="lead-company">Business name</label><input id="lead-company" name="business" maxlength="120" required placeholder="Your business"><label for="lead-message">What would you like help with?</label><textarea id="lead-message" name="message" minlength="10" maxlength="2000" required placeholder="What’s slowing you down? What would you like fixed?"></textarea><input id="lead-trap" name="website" type="text" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true"><button id="lead-submit" type="submit" class="btn btn-blue">Send request →</button><p class="lead-note">No sales pressure. Please don't include passwords or private financial or customer records. Messages are delivered using a third-party form service.</p></form><p class="lead-feedback" id="lead-feedback" role="status" aria-live="polite"></p></div></div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" defer></script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);const clean=s=>String(s||'').replace(/[<>]/g,'').trim();const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let selected='calls';let lastText='';let reviewMessage='';
+const issues={
+ calls:{title:'Never leave a missed caller hanging.',desc:'Start by sending this friendly, clear follow-up.',template:(b,k)=>`Hi! Thanks for reaching out to ${b}. Sorry we missed your call. What can we help you with? Reply here and we’ll get back to you as soon as we can.`,steps:['Use this text as a saved quick reply right away.','Choose an approved business phone or CRM tool that supports missed-call text-back.','Test with your own phone, and make sure replies reach a real person.'],next:'A missed-call text-back automation can send this immediately when you cannot answer.'},
+ reviews:{title:'Make leaving a review easy.',desc:'Use this natural request after a real customer interaction.',template:(b,k)=>`Thanks for choosing ${b}! If you have a moment, would you share your honest experience in a Google review? Here’s the link: [PASTE YOUR OFFICIAL REVIEW LINK] It really helps our small business. Thank you!`,steps:['Find your official review link in your Google Business Profile.','Send the message to genuine customers without offering incentives.','Put a QR sign at your counter or on receipts using the free kit below.'],next:'A simple post-service workflow can request reviews consistently without chasing.'},
+ admin:{title:'Find your first repeatable automation.',desc:'Here is a simple workflow to start with. No complicated AI agent required.',template:(b,k)=>`WHEN a new customer request arrives → ADD it to one tracking sheet → NOTIFY the right person → REMIND someone if there is no response within 1 business day.`,steps:['Write down one task that happens at least five times a week.','Identify its trigger, the information it uses, and what should happen next.','Test the workflow manually, then connect it with an approved automation tool if worthwhile.'],next:'Start with one low-risk, repetitive task before connecting sensitive systems.'},
+ website:{title:'Make your homepage easier to act on.',desc:'Try a simple, clear headline and call to action.',template:(b,k)=>`${b}: Reliable ${k} without the runaround.\n\nTell us what you need. We’ll explain your options and the next step.\n\nBUTTON: Get in touch`,steps:['Replace vague opening copy with what you do and who you help.','Put one clear call or booking button at the top, especially on mobile.','Test whether a first-time visitor can contact you in under 10 seconds.'],next:'A website conversion review can identify more specific improvements once the real site is examined.'},
+ quotes:{title:'Bring quiet estimates back to life.',desc:'A helpful follow-up beats a pushy sales message.',template:(b,k)=>`Hi, it’s ${b}. Just checking that you received our estimate. Any questions I can answer, or anything you’d like clarified before deciding? Happy to help.`,steps:['Send one friendly follow-up after an appropriate waiting period.','Track the quote, follow-up date, and whether the customer replied.','Use a CRM reminder so nothing is missed, and stop if the customer declines.'],next:'Simple quote tracking and reminders can save time and keep opportunities from disappearing.'},
+ questions:{title:'Answer once, reuse everywhere.',desc:'Turn recurring questions into simple, accurate answers.',template:(b,k)=>`${b} — quick answer template\n\nQUESTION: How does your ${k} service work?\nANSWER: Tell us what you need and we’ll explain the process, availability, and next steps. If your situation is unusual, a team member will help you directly.`,steps:['List your ten most frequently asked customer questions.','Write approved answers and check them with the owner or team.','Add them to your website, saved replies, or an approved knowledge assistant.'],next:'A searchable FAQ assistant can reuse these answers without making up policies.'}
+};
+function choose(type,scroll){selected=type;document.querySelectorAll('[data-problem]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.problem===type)));$('issue').value=type;if(scroll)$('first-fix').scrollIntoView({behavior:'smooth'});}
+document.querySelectorAll('[data-problem]').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.problem,true)));
+document.querySelectorAll('.jump-issue').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.issue,true)));
+$('issue').addEventListener('change',e=>choose(e.target.value,false));
+$('fix-form').addEventListener('submit',e=>{e.preventDefault();const b=clean($('business').value).slice(0,90);const k=clean($('kind').value).slice(0,90);if(!b||!k)return;const x=issues[selected],msg=x.template(b,k);lastText=`${x.title}\n${msg}\n\nSteps:\n${x.steps.map((s,i)=>`${i+1}. ${s}`).join('\n')}\n\nNext option: ${x.next}`;const dest=$('first-result');dest.innerHTML=`<div style="font-size:31px;margin-bottom:12px" aria-hidden="true">✳</div><h3>${escapeHtml(x.title)}</h3><p>${escapeHtml(x.desc)}</p><div class="result-example">${escapeHtml(msg)}</div><ol class="result-steps">${x.steps.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ol><p style="font-size:13px;color:#405d71"><strong>Want to automate it?</strong> ${escapeHtml(x.next)}</p><div class="result-actions"><button class="btn btn-blue" type="button" id="copy-fix">Copy my first fix</button><button class="btn btn-outline" style="color:var(--ink)" type="button" id="print-fix">Save / Print</button><button class="btn btn-lime" type="button" id="ask-aaron-result">Have Aaron fix this →</button></div><p class="note">Created from what you entered, not an inspection of your business or a guaranteed revenue estimate.</p>`;$('copy-fix').addEventListener('click',()=>copy(lastText,'First fix copied'));$('print-fix').addEventListener('click',()=>window.print());$('ask-aaron-result').addEventListener('click',openLead);dest.scrollIntoView({behavior:'smooth',block:'nearest'});});
+async function copy(v,ok){try{await navigator.clipboard.writeText(v);alert(ok)}catch{const ta=document.createElement('textarea');ta.value=v;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');alert(ok)}catch{alert('Select and copy the text manually.')}ta.remove()}}
+$('open-qr').addEventListener('click',()=>{$('qr-dialog').classList.add('open');$('review-business').value=$('business').value||'';$('review-business').focus()});function closeQr(){$('qr-dialog').classList.remove('open')};$('close-qr').addEventListener('click',closeQr);$('qr-dialog').addEventListener('click',e=>{if(e.target===$('qr-dialog'))closeQr()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeQr()});
+$('make-qr').addEventListener('click',()=>{const name=clean($('review-business').value);const url=$('review-url').value.trim();if(!name){$('review-business').focus();return}try{const u=new URL(url);if(u.protocol!=='https:')throw Error()}catch{alert('Please enter a valid HTTPS link copied from your Google Business Profile.');return}const qr=$('qr-box');qr.innerHTML='';if(window.QRCode){new QRCode(qr,{text:url,width:220,height:220,colorDark:'#0b1727',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}else{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent='QR library unavailable. Open your review link instead';qr.append(a)}$('kit-name').textContent=name;reviewMessage=`Thanks for choosing ${name}! Would you be willing to share your honest experience with us? Here's our Google review link: ${url} Thank you for supporting our small business!`;$('review-msg').textContent=reviewMessage;$('review-kit').classList.remove('hide')});$('copy-review').addEventListener('click',()=>copy(reviewMessage,'Review request copied'));$('print-kit').addEventListener('click',()=>{const node=$('print-card').cloneNode(true),q=node.querySelector('#qr-box');if(q){let canvas=q.querySelector('canvas');if(canvas){let img=document.createElement('img');img.src=canvas.toDataURL();q.replaceChildren(img)}}const w=window.open('','_blank');if(!w){alert('Enable popups to print the sign.');return}w.document.write('<!doctype html><html><head><title>Review sign</title><style>body{font:18px system-ui;text-align:center;padding:40px;color:#0b1727}h3{font-size:34px}img{width:270px;height:270px}p{margin:20px auto;max-width:460px}</style></head><body>'+node.innerHTML+'</body></html>');w.document.close();w.focus();setTimeout(()=>w.print(),350)});
+
+function openLead(){
+  const form=$('lead-form');
+  form.hidden=false;$('lead-feedback').textContent='';$('lead-feedback').className='lead-feedback';
+  $('lead-submit').disabled=false;$('lead-submit').textContent='Send request →';
+  const b=clean($('business').value);if(b)$('lead-company').value=b;
+  $('lead-backdrop').classList.add('open');$('lead-backdrop').setAttribute('aria-hidden','false');$('lead-name').focus();
+}
+function closeLead(){$('lead-backdrop').classList.remove('open');$('lead-backdrop').setAttribute('aria-hidden','true')}
+$('lead-x').addEventListener('click',closeLead);
+$('lead-backdrop').addEventListener('click',e=>{if(e.target===$('lead-backdrop'))closeLead()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLead()});
+$('ask-aaron-general').addEventListener('click',openLead);
+$('lead-form').addEventListener('submit',async e=>{
+ e.preventDefault();if(!e.target.reportValidity())return;
+ const btn=$('lead-submit'),fb=$('lead-feedback');btn.disabled=true;btn.textContent='Sending…';fb.className='lead-feedback';fb.textContent='';
+ try{
+  const response=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({
+   name:clean($('lead-name').value),email:clean($('lead-email').value),business:clean($('lead-company').value),
+   message:clean($('lead-message').value),issue:issues[selected]?.title||'General help',website:$('lead-trap').value
+  })});
+  const data=await response.json().catch(()=>({ok:false}));
+  if(!response.ok||!data.ok)throw Error(data.error||'Unable to send. Please try again.');
+  e.target.hidden=true;fb.className='lead-feedback success';fb.textContent="Request submitted. Thanks! I'll get back to you by email.";
+ }catch(err){fb.className='lead-feedback error';fb.textContent=err.message||'Unable to send.';btn.disabled=false;btn.textContent='Try again →'}
+});
+
+// Working examples. Do not present hypothetical outcomes as completed client results.
+const heroSamples={
+ calls:{before:"You're on a job. A new customer calls, but nobody can answer.",fix:"A helpful automatic text asks what they need.",after:"The customer gets a response while you stay focused on the job."},
+ quotes:{before:"You send an estimate. The prospect goes quiet.",fix:"A polite reminder goes out at the right time.",after:"The conversation can continue without another task on your list."},
+ reviews:{before:"You do good work. Customers forget to leave a review.",fix:"Send an honest review request with one simple link or QR sign.",after:"It's easier for customers to share their experience."},
+ admin:{before:"New requests show up across email, forms, and text messages.",fix:"A connected workflow captures the details and notifies the right person.",after:"Fewer messages get buried and there’s less manual copying."}
+};
+let heroCurrent="calls";
+function selectHeroIssue(id){
+ if(!heroSamples[id])return;
+ heroCurrent=id;
+ document.querySelectorAll('[data-hero-issue]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.heroIssue===id)));
+ document.getElementById('hero-before').textContent=heroSamples[id].before;
+ document.getElementById('hero-fix').textContent=heroSamples[id].fix;
+ document.getElementById('hero-after').textContent=heroSamples[id].after;
+ selected=id;
+ document.getElementById('issue').value=id;
+ const serial=['calls','quotes','reviews','admin'].indexOf(id)+1;
+ document.querySelector('.wd-live-serial').textContent='EXAMPLE '+String(serial).padStart(3,'0')+' / 004';
+}
+document.querySelectorAll('[data-hero-issue]').forEach(b=>b.addEventListener('click',()=>selectHeroIssue(b.dataset.heroIssue)));
+document.getElementById('hero-build').addEventListener('click',()=>choose(heroCurrent,true));
+</script>
+</body>
+</html>
