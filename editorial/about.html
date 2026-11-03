@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
-<meta name="theme-color" content="#f7f6f0"><meta name="description" content="The curious, unconventional story behind Archiebase: many jobs, many places, one lifelong love of building things that make the world work better."><title>My long way here — Archiebase</title>
+<meta name="theme-color" content="#F7F5EE"><meta name="description" content="The curious, unconventional story behind Archiebase: many jobs, many places, one lifelong love of building things that make the world work better."><title>My long way here — Archiebase</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
 <style>
@@ -22,6 +22,34 @@ footer{background:#122a23;color:#daeadc;padding:30px 0}.footer-in{display:flex;a
 @media(max-width:560px){.wrap{width:calc(100% - 36px)}.nav-inner{height:68px}.wordmark{font-size:25px}.nav-links{gap:12px}.nav-links a:not(.nav-btn){display:none}.nav-btn{padding:9px 11px;font-size:11px}.hero{padding:39px 0 48px}.hero-top .index{display:none}.hero h1{font-size:clamp(53px,12.2vw,72px);margin:28px 0 32px}.hero-bottom{display:block}.hero-lead{font-size:17px}.small-note{font-size:13px;margin-top:18px}.journey{padding:22px 0}.journey-places{gap:11px}.journey-places b{font-size:20px}.chapter{padding:71px 0}.chapter-grid{display:block}.chapter-mark{position:static;display:block;margin-bottom:21px}.chapter h2{font-size:clamp(44px,10vw,63px);margin-bottom:22px}.prose p{font-size:16px;line-height:1.73}.statement{padding:75px 0}.statement blockquote{font-size:clamp(48px,12vw,68px)}.perspective{padding:74px 0}.perspective h2{font-size:55px}.origin{padding:77px 0}.origin h2{font-size:66px}.origin-copy p{font-size:17px}.promise{padding:73px 0}.promise h2{font-size:56px}.promise p{font-size:15px}.outro{padding:68px 0}.outro h2{font-size:62px}.outro p{font-size:15px}.footer-in{align-items:start;flex-direction:column;gap:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none}}
 .primary:active,.nav-btn:active{transform:translateY(1px) scale(.986)}.anchor:active{opacity:.65}
+
+/* Archiebase / Tide + Sun — About page continuity */
+:root{--paper:#F7F5EE;--ink:#102632;--blue:#006BA4;--orange:#F3C44D;--lime:#F9D55B;--line:#BCCBD0;--mute:#506976}
+body{color:var(--ink);background:var(--paper)}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.033;z-index:130;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.79' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.52'/%3E%3C/svg%3E");mix-blend-mode:multiply}
+#progress{height:4px;background:var(--lime)}
+.nav{background:rgba(247,245,238,.97);border-bottom:1px solid #A9BDBF;backdrop-filter:blur(18px)}
+.nav-inner{height:86px}.wordmark{color:#0C2935;font-size:29px;letter-spacing:-.095em}.wordmark span{color:#E8B42E}
+.nav-btn,.primary{background:#0B3145;color:#fff;border-radius:4px;box-shadow:0 6px 0 #C4D9DD;transition:background .25s,transform .25s,box-shadow .25s}
+.nav-btn:hover,.primary:hover{background:#006BA4;transform:translateY(-3px);box-shadow:0 9px 0 #C4D9DD}
+.hero{padding:105px 0 110px;position:relative;overflow:hidden;background:#F7F5EE}
+.hero:before{content:"";position:absolute;width:48vw;height:48vw;max-width:680px;max-height:680px;right:-15vw;top:7vw;border:0;pointer-events:none;opacity:.1;background:repeating-radial-gradient(circle,transparent 0 21px,#156085 22px 23px,transparent 24px 45px);mask-image:linear-gradient(90deg,transparent,#000)}
+.hero-top{border-bottom:1px solid #B9CBCD;padding-bottom:27px}.hero-top .index{color:#517083;letter-spacing:.12em}
+.hero h1{color:#0A2532;font-size:clamp(65px,8.9vw,143px);line-height:.98;margin:58px 0 54px}
+.hero h1 em{color:#006BA4}.hero h1 .shift{padding-left:clamp(0px,7vw,100px)}
+.hero-lead{color:#526976;font-size:clamp(20px,2.2vw,28px)}.hero-lead strong{color:#0E2F41}
+.small-note{color:#637C87;line-height:1.6}.anchor{color:#095F8C;text-decoration-color:#095F8C;font-weight:800}
+.journey{background:#DFEBEC;border-color:#AECBD1;padding:40px 0}.journey span{color:#285770}.journey-places b{color:#0E384A;font-weight:900}
+.chapter{background:#FFFEFA;padding:135px 0}.chapter-mark{color:#2A789D}.prose{color:#405A64}.prose strong{color:#143443}
+.statement{background:#082637;color:#FFFEF6;padding:140px 0;border-top:5px solid #1C81AD;border-bottom:5px solid #F9D55B}.statement blockquote{color:#FFFCED}.statement blockquote em{color:#FAD967}
+.perspective{background:#E8F0F1;padding:130px 0}.perspective h2{color:#0C2C3B}.lesson{border-color:#A4BCC1}.lesson .num{color:#11678E}
+.origin{background:#F9F7EE;padding:132px 0 142px}.origin h2{color:#0D2B3B}.origin h2 em{color:#006BA4}.origin-punch{color:#D09F24}.legend{border-top-color:#B5C9CB}.bot{border-color:#0E2D43}
+.promise{background:#E3EFF0;padding:130px 0}.promise h2{color:#0C2A3A}.promise h2 em{color:#006BA4}.promise p{color:#496672}.promise-points{border-color:#ADC5CA}
+.outro{background:#075B87;color:#FBFDFE;border-top:5px solid #F9D55B;padding:128px 0}.outro h2{color:#FFFDF6}.outro h2 em{color:#FAD967}.outro p{color:#D6E9F2}.outro .primary{background:#FAD967;color:#072A3C;box-shadow:0 6px 0 #073E60}
+footer{background:#071D29;color:#E3EEF0;border-top:1px solid #2D657B;padding:43px 0}.footer-in p{color:#B5CBD0}
+@media(max-width:800px){.hero{padding:70px 0}.hero h1{margin:37px 0}.chapter,.perspective,.origin,.promise{padding:90px 0}.statement{padding:105px 0}}
+@media(max-width:560px){.nav-inner{height:70px}.hero{padding:48px 0 60px}.hero:before{right:-40%;top:17%;opacity:.08}.hero h1{font-size:clamp(53px,12.2vw,73px);margin:32px 0}.hero h1 .shift{padding-left:0}.hero-lead{font-size:19px}.journey{padding:25px 0}.chapter,.perspective,.origin,.promise{padding:82px 0}.statement{padding:92px 0}.outro{padding:90px 0}}
+@media(prefers-reduced-motion:reduce){.nav-btn,.primary{transition:none;transform:none!important}}
 </style></head>
 <body>
 <a href="#main" class="skip">Skip to content</a><div id="progress" aria-hidden="true"></div>
