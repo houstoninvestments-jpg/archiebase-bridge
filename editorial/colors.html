@@ -143,9 +143,9 @@ footer{border-top:1px solid var(--line);padding:23px 0 38px;font-size:12px;color
  <button type="button" data-select="10">Try Night Current on the site <span aria-hidden="true">↗</span></button>
  </div>
  </article></section>
-</main><footer><div class="wrap">These are design options for Archiebase. Selecting a palette saves it in this browser only. Production default is Atlantic / Sun until we choose a winner.</div></footer>
+</main><footer><div class="wrap">These are design options for Archiebase. Selecting a palette saves it in this browser only. Chosen direction: Night Current. It is now the default on both pages; the other palettes remain available for comparison.</div></footer>
 <script>
-(function(){try{var chosen=localStorage.getItem('archiebase-palette')||'01';document.querySelectorAll('[data-id]').forEach(function(el){el.setAttribute('aria-current',String(el.dataset.id===chosen))})}catch(e){}
+(function(){try{var chosen=localStorage.getItem('archiebase-theme-launch')==='night-current-2026'?(localStorage.getItem('archiebase-palette')||'10'):'10';document.querySelectorAll('[data-id]').forEach(function(el){el.setAttribute('aria-current',String(el.dataset.id===chosen))})}catch(e){}
 document.querySelectorAll('[data-select]').forEach(function(btn){btn.addEventListener('click',function(){var id=btn.dataset.select;try{localStorage.setItem('archiebase-palette',id)}catch(e){}window.location.href='/?palette='+encodeURIComponent(id)})});
 })();
 </script></body></html>
