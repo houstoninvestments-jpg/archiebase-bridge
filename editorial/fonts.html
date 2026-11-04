@@ -60,11 +60,13 @@ footer{padding:24px 0 45px;border-top:1px solid var(--line);font-size:12px;color
 @media(max-width:940px){.grid{grid-template-columns:1fr;max-width:690px;margin-inline:auto}.sample-type h3{font-size:clamp(33px,5.5vw,56px)}.specimen[data-pair="01"] h3{font-size:clamp(29px,4.6vw,45px)}.specimen[data-pair="06"] h3{font-size:clamp(55px,8vw,88px)}.specimen[data-pair="07"] h3{font-size:clamp(58px,8vw,84px)}}
 @media(max-width:560px){.shell{width:calc(100% - 30px)}.nav{min-height:63px}.logo{font-size:21px}.nav a:last-child{font-size:10px}.hero{padding:43px 0 35px}.hero h1{font-size:clamp(40px,9.2vw,54px)}.hero-bottom{display:block}.hero-bottom p{font-size:14px}.hint{display:block;margin-top:18px}.legend{font-size:11px}.grid{padding-top:17px;gap:17px}.specimen-main{min-height:340px;padding:19px 19px 0}.sample-type{min-height:245px}.sample-type h3{font-size:clamp(30px,7vw,43px)}.sample-type p{font-size:13px}.specimen[data-pair="01"] h3{font-size:clamp(23px,5.35vw,34px)}.specimen[data-pair="03"] h3{font-size:clamp(29px,6.8vw,41px)}.specimen[data-pair="06"] h3{font-size:clamp(50px,12vw,70px)}.specimen[data-pair="07"] h3{font-size:clamp(55px,13vw,78px)}.specimen[data-pair="09"] h3{font-size:clamp(30px,6.5vw,40px)}.specimen-details{padding:18px 19px 21px}.family-meta{flex-direction:column;gap:5px}.family-meta span{text-align:left}.font-roles strong{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.specimen,.preview-link{transition:none}.specimen:hover{transform:none}}
+.specimen.is-default{outline:2px solid var(--yellow);outline-offset:-2px}
+.specimen.is-default .index,.specimen.is-default .category{color:var(--yellow)}
 </style></head>
 <body>
 <header><div class="shell nav"><a href="/" class="logo">archie<b>•</b>base</a><a href="/">Back to website ↗</a></div></header>
 <main>
- <section class="hero"><div class="shell"><div class="eyebrow">ARCHIEBASE / TYPOGRAPHY RESEARCH 001</div><h1>Ten ways to<br><span>sound like yourself.</span></h1><div class="hero-bottom"><p><strong>Same business. Ten distinct voices.</strong> Each pairing shows the actual fonts on real service copy. Use the preview link to see it on the Archiebase homepage. The existing font stays unchanged until you choose a direction.</p><span class="hint">10 SPECIMENS / LIVE TYPE</span></div></div></section>
+ <section class="hero"><div class="shell"><div class="eyebrow">ARCHIEBASE / TYPOGRAPHY RESEARCH 001</div><h1>Ten ways to<br><span>sound like yourself.</span></h1><div class="hero-bottom"><p><strong>Same business. Ten distinct voices.</strong> Each pairing shows the actual fonts on real service copy. Use the preview link to see it on the Archiebase homepage. Saira + Onest (09) is now the Archiebase default. The other directions remain reversible previews.</p><span class="hint">10 SPECIMENS / LIVE TYPE</span></div></div></section>
  <div class="shell legend"><span><b>Headline</b> establishes personality.</span><span><b>Body font</b> earns trust through readability.</span><span><b>Preview</b> is reversible.</span></div>
  <section class="shell grid" aria-label="Ten Archiebase font pairings"><article class="specimen" id="pair-01" data-pair="01" style="--head:'Unbounded';--body:'Inter Tight';--weight:800">
  <div class="specimen-main">
@@ -210,9 +212,9 @@ footer{padding:24px 0 45px;border-top:1px solid var(--line);font-size:12px;color
   <a class="preview-link" href="/?font=08&palette=10" aria-label="Preview Chivo plus Alegreya Sans on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="specimen" id="pair-09" data-pair="09" style="--head:'Saira';--body:'Onest';--weight:800">
+<article class="specimen is-default" id="pair-09" data-pair="09" style="--head:'Saira';--body:'Onest';--weight:800">
  <div class="specimen-main">
-  <div class="specimen-top"><span class="index">09 / 10</span><span class="category">DISTINCTLY TECHNICAL</span></div>
+  <div class="specimen-top"><span class="index">09 / 10</span><span class="category">SELECTED DEFAULT · DISTINCTLY TECHNICAL</span></div>
   <div class="sample-type">
    <h3>TURN IDEAS<br><em>INTO MOMENTUM.</em></h3>
    <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
@@ -247,5 +249,5 @@ footer{padding:24px 0 45px;border-top:1px solid var(--line);font-size:12px;color
  </div>
 </article></section>
 </main>
-<footer><div class="shell">Live font specimens. Typefaces are loaded from Google Fonts; a fallback font is shown while they load. Choosing a preview changes typography only in your browser and does not publish a new default.</div></footer>
+<footer><div class="shell">Live font specimens. Typefaces are loaded from Google Fonts; a fallback font is shown while they load. Saira + Onest (09) is the live default. Previewing other pairings changes only your browser, not the published design.</div></footer>
 </body></html>
