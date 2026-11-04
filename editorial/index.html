@@ -264,6 +264,24 @@ footer p{color:#AECAD2}
 </style>
 <script>(function(){try{var fromUrl=new URLSearchParams(location.search).get('palette');var valid=function(x){return /^(0[1-9]|10)$/.test(x||'')};var launch='night-current-2026';if(localStorage.getItem('archiebase-theme-launch')!==launch){localStorage.setItem('archiebase-palette','10');localStorage.setItem('archiebase-theme-launch',launch)}var saved=localStorage.getItem('archiebase-palette');var v=valid(fromUrl)?fromUrl:(valid(saved)?saved:'10');document.documentElement.setAttribute('data-palette',v);if(valid(fromUrl))localStorage.setItem('archiebase-palette',v);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',v==='10'?'#101B2A':'#F8F7F0')}catch(e){document.documentElement.setAttribute('data-palette','10')}})();</script>
 <link rel="stylesheet" href="/assets/themes.css">
+<script>(function(){try{
+var q=new URLSearchParams(location.search),id=q.get('font');
+var isValid=function(v){return /^(0[1-9]|10)$/.test(v||'')};
+if(id==='reset'){localStorage.removeItem('archiebase-font-preview');return}
+if(isValid(id))localStorage.setItem('archiebase-font-preview',id);
+var saved=localStorage.getItem('archiebase-font-preview'),chosen=isValid(id)?id:(isValid(saved)?saved:null);
+if(!chosen)return;
+var fonts={"10":"https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700;800;900&family=Lora:wght@400;500;600;700&display=swap","01":"https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Inter+Tight:wght@400;500;600;700&display=swap","02":"https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap","03":"https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3:wght@400;500;600;700&display=swap","04":"https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&display=swap","05":"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap","06":"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap","07":"https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap","08":"https://fonts.googleapis.com/css2?family=Chivo:wght@600;700;800;900&family=Alegreya+Sans:wght@400;500;600;700&display=swap","09":"https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Onest:wght@400;500;600;700&display=swap"};
+document.documentElement.setAttribute('data-font',chosen);
+var link=document.createElement('link');link.rel='stylesheet';link.href=fonts[chosen];document.head.appendChild(link);
+document.addEventListener('DOMContentLoaded',function(){
+var b=document.createElement('aside');b.className='font-preview-ribbon';b.setAttribute('aria-label','Font preview controls');
+b.innerHTML='<span>TYPE TEST '+chosen+'/10</span><a href="/fonts.html">Compare all 10</a><button type="button">Reset</button>';
+b.querySelector('button').addEventListener('click',function(){localStorage.removeItem('archiebase-font-preview');location.href=location.pathname+'?palette=10&font=reset'});
+document.body.appendChild(b)
+});
+}catch(e){}})();</script>
+<link rel="stylesheet" href="/assets/fonts.css">
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
