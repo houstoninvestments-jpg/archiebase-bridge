@@ -118,7 +118,7 @@ footer .wordmark{color:#fff!important} footer p,footer a:not(.wordmark){color:#d
 .ab-hero:before{display:none!important}
 .ab-hero .hero-top{border-color:var(--t-border)!important}
 .ab-hero .hero-top .index,.ab-hero .eyebrow{color:var(--t-accent)!important}
-.ab-hero h1{font-size:clamp(47px,6.35vw,105px)!important;line-height:1.135!important;letter-spacing:-.055em!important;max-width:1150px!important;margin:clamp(30px,4vw,58px) 0 28px!important;overflow-wrap:break-word}
+.ab-hero h1{color:var(--t-ink)!important;font-size:clamp(47px,6.35vw,105px)!important;line-height:1.135!important;letter-spacing:-.055em!important;max-width:1150px!important;margin:clamp(30px,4vw,58px) 0 28px!important;overflow-wrap:break-word}
 .ab-hero h1 span{display:block!important;padding:0!important}
 .ab-hero h1 em{color:var(--t-accent)!important;line-height:1.15!important;font-family:'Newsreader',Georgia,serif!important;font-weight:500!important}
 .ab-hero .hero-bottom{margin:0!important;max-width:930px!important;grid-template-columns:1fr!important;gap:15px!important}
