@@ -29,11 +29,11 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
 .mock{background:var(--floor);padding:24px 29px 30px;min-height:390px;display:flex;flex-direction:column}
 .system:nth-child(3n) .mock{background:#0D2030}.system:nth-child(4n) .mock{background:#0A1928}
 .mini-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #304354;padding-bottom:17px;margin-bottom:31px}
-.mini-nav b{font-family:var(--show-head),system-ui,sans-serif;font-size:21px;line-height:1;font-weight:800;letter-spacing:-.06em}.mini-nav b span{color:var(--blue)}
+.mini-nav b{font-family:var(--show-head),system-ui,sans-serif;font-size:21px;line-height:1;font-weight:var(--head-w);letter-spacing:-.06em}.mini-nav b span{color:var(--blue)}
 .mini-nav>span{font:700 9px/1.3 var(--show-body),system-ui,sans-serif;letter-spacing:.11em;text-align:right;color:#C6D7E0}
 .mock .micro{font-family:var(--show-body),sans-serif;font-size:9px}
 .mock h3{margin:17px 0 21px;max-width:100%;line-height:1;letter-spacing:var(--hero-track)}
-.mock h3>span{display:block;font-family:var(--show-head),sans-serif;font-size:clamp(33px,3.65vw,55px);font-weight:800;line-height:1.05;overflow-wrap:normal}
+.mock h3>span{display:block;font-family:var(--show-head),sans-serif;font-size:clamp(33px,3.65vw,55px);font-weight:var(--head-w);line-height:1.05;overflow-wrap:normal}
 .mock h3 em{display:block;margin-top:10px;font-family:var(--show-accent),sans-serif;font-size:clamp(25px,2.9vw,42px);font-style:var(--accent-style);font-weight:var(--accent-w);line-height:1.12;color:var(--yellow);letter-spacing:var(--hero-track);text-wrap:balance;overflow-wrap:normal}
 .mock p{font-family:var(--show-body),sans-serif;color:#C3D2DD;font-size:14px;line-height:1.58;max-width:435px}
 .mini-cta{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;margin-top:23px;background:var(--yellow);color:#132238;padding:10px 14px;border-radius:3px;font:700 12px/1.4 var(--show-body),sans-serif}
@@ -56,7 +56,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
 <main><section class="intro wrap"><div><span class="kicker">TYPE LAB / FULL SYSTEM REVIEW</span><h1>Not font swaps.<br><em>Complete systems.</em></h1></div><div class="intro-copy"><p><strong>Every option changes the entire typographic voice.</strong> Display, expressive line, paragraph text, buttons and tiny labels are designed to belong together. The third line is no longer stuck in the original serif. Compare the same copy on every system, then see the complete live website.</p><span class="note">30 DIRECTIONS · 1 SHARED NIGHT CURRENT PALETTE · NO DEFAULT CHANGES</span></div></section>
 <div class="wrap criteria"><span><strong>30</strong> designed systems</span><span><strong>3</strong> typographic roles per system</span><span><strong>09</strong> current baseline, kept untouched</span></div>
 <div class="wrap"><nav class="filters" aria-label="Filter typography systems"><button type="button" data-filter="all" class="active" aria-pressed="true">All 30</button><button type="button" data-filter="confident" class="" aria-pressed="false">Confident & clean</button><button type="button" data-filter="creative" class="" aria-pressed="false">Creative & human</button><button type="button" data-filter="editorial" class="" aria-pressed="false">Editorial</button><button type="button" data-filter="industrial" class="" aria-pressed="false">Bold & industrial</button><button type="button" data-filter="precision" class="" aria-pressed="false">Modern & technical</button><button type="button" data-filter="baseline" class="" aria-pressed="false">Current baseline</button></nav><div class="count" id="count" aria-live="polite">Showing all 30 systems</div></div>
-<section class="grid wrap" aria-label="Thirty Archiebase typography systems"><article class="system" id="system-01" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&amp;family=Inter+Tight:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,700&amp;display=swap" style="--show-head:'Unbounded';--show-body:'Inter Tight';--show-accent:'Inter Tight';--accent-style:italic;--accent-w:700;--hero-track:-.058em;--acc-scale:0.79">
+<section class="grid wrap" aria-label="Thirty Archiebase typography systems"><article class="system" id="system-01" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&amp;family=Inter+Tight:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,700&amp;display=swap" style="--head-w:800;--show-head:'Unbounded';--show-body:'Inter Tight';--show-accent:'Inter Tight';--accent-style:italic;--accent-w:700;--hero-track:-.058em;--acc-scale:0.79">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 01</div>
@@ -71,7 +71,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=01&amp;palette=10">View complete website in system 01<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-02" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&amp;display=swap" style="--show-head:'Fraunces';--show-body:'Manrope';--show-accent:'Fraunces';--accent-style:italic;--accent-w:600;--hero-track:-.045em;--acc-scale:0.94">
+<article class="system" id="system-02" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&amp;display=swap" style="--head-w:700;--show-head:'Fraunces';--show-body:'Manrope';--show-accent:'Fraunces';--accent-style:italic;--accent-w:600;--hero-track:-.045em;--acc-scale:0.94">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 02</div>
@@ -86,7 +86,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=02&amp;palette=10">View complete website in system 02<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-03" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@1,700&amp;display=swap" style="--show-head:'Archivo Black';--show-body:'Source Sans 3';--show-accent:'Source Sans 3';--accent-style:italic;--accent-w:700;--hero-track:-.06em;--acc-scale:0.82">
+<article class="system" id="system-03" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@1,700&amp;display=swap" style="--head-w:400;--show-head:'Archivo Black';--show-body:'Source Sans 3';--show-accent:'Source Sans 3';--accent-style:italic;--accent-w:700;--hero-track:-.06em;--acc-scale:0.82">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 03</div>
@@ -101,7 +101,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=03&amp;palette=10">View complete website in system 03<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-04" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Syne';--show-body:'Atkinson Hyperlegible Next';--show-accent:'Syne';--accent-style:normal;--accent-w:600;--hero-track:-.055em;--acc-scale:0.88">
+<article class="system" id="system-04" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--head-w:800;--show-head:'Syne';--show-body:'Atkinson Hyperlegible Next';--show-accent:'Syne';--accent-style:normal;--accent-w:600;--hero-track:-.055em;--acc-scale:0.88">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 04</div>
@@ -116,7 +116,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=04&amp;palette=10">View complete website in system 04<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-05" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Space Grotesk';--show-body:'IBM Plex Sans';--show-accent:'IBM Plex Sans';--accent-style:italic;--accent-w:700;--hero-track:-.05em;--acc-scale:0.85">
+<article class="system" id="system-05" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,700&amp;display=swap" style="--head-w:700;--show-head:'Space Grotesk';--show-body:'IBM Plex Sans';--show-accent:'IBM Plex Sans';--accent-style:italic;--accent-w:700;--hero-track:-.05em;--acc-scale:0.85">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 05</div>
@@ -131,7 +131,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=05&amp;palette=10">View complete website in system 05<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-06" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Barlow Condensed';--show-body:'Public Sans';--show-accent:'Barlow Condensed';--accent-style:normal;--accent-w:700;--hero-track:-.018em;--acc-scale:0.97">
+<article class="system" id="system-06" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--head-w:800;--show-head:'Barlow Condensed';--show-body:'Public Sans';--show-accent:'Barlow Condensed';--accent-style:normal;--accent-w:700;--hero-track:-.018em;--acc-scale:0.97">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 06</div>
@@ -146,7 +146,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=06&amp;palette=10">View complete website in system 06<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-07" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&amp;display=swap" style="--show-head:'Instrument Serif';--show-body:'Outfit';--show-accent:'Instrument Serif';--accent-style:italic;--accent-w:400;--hero-track:-.035em;--acc-scale:0.96">
+<article class="system" id="system-07" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&amp;display=swap" style="--head-w:400;--show-head:'Instrument Serif';--show-body:'Outfit';--show-accent:'Instrument Serif';--accent-style:italic;--accent-w:400;--hero-track:-.035em;--acc-scale:0.96">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 07</div>
@@ -161,7 +161,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=07&amp;palette=10">View complete website in system 07<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-08" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Chivo:wght@600;700;800;900&amp;family=Alegreya+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Chivo';--show-body:'Alegreya Sans';--show-accent:'Alegreya Sans';--accent-style:italic;--accent-w:700;--hero-track:-.047em;--acc-scale:0.85">
+<article class="system" id="system-08" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Chivo:wght@600;700;800;900&amp;family=Alegreya+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,700&amp;display=swap" style="--head-w:800;--show-head:'Chivo';--show-body:'Alegreya Sans';--show-accent:'Alegreya Sans';--accent-style:italic;--accent-w:700;--hero-track:-.047em;--acc-scale:0.85">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 08</div>
@@ -176,7 +176,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=08&amp;palette=10">View complete website in system 08<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-09" data-mood="baseline" data-font-url="https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&amp;family=Onest:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Saira';--show-body:'Onest';--show-accent:'Newsreader';--accent-style:italic;--accent-w:500;--hero-track:-.05em;--acc-scale:0.98">
+<article class="system" id="system-09" data-mood="baseline" data-font-url="https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&amp;family=Onest:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--head-w:800;--show-head:'Saira';--show-body:'Onest';--show-accent:'Newsreader';--accent-style:italic;--accent-w:500;--hero-track:-.05em;--acc-scale:0.98">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 09</div>
@@ -191,7 +191,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=09&amp;palette=10">View complete website in system 09<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-10" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700;800;900&amp;family=Lora:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&amp;display=swap" style="--show-head:'Red Hat Display';--show-body:'Lora';--show-accent:'Lora';--accent-style:italic;--accent-w:600;--hero-track:-.046em;--acc-scale:0.89">
+<article class="system" id="system-10" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700;800;900&amp;family=Lora:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&amp;display=swap" style="--head-w:800;--show-head:'Red Hat Display';--show-body:'Lora';--show-accent:'Lora';--accent-style:italic;--accent-w:600;--hero-track:-.046em;--acc-scale:0.89">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 10</div>
@@ -206,7 +206,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=10&amp;palette=10">View complete website in system 10<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-11" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Bricolage Grotesque';--show-body:'Plus Jakarta Sans';--show-accent:'Plus Jakarta Sans';--accent-style:italic;--accent-w:700;--hero-track:-.05em;--acc-scale:0.83">
+<article class="system" id="system-11" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@1,700&amp;display=swap" style="--head-w:800;--show-head:'Bricolage Grotesque';--show-body:'Plus Jakarta Sans';--show-accent:'Plus Jakarta Sans';--accent-style:italic;--accent-w:700;--hero-track:-.05em;--acc-scale:0.83">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 11</div>
@@ -221,7 +221,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=11&amp;palette=10">View complete website in system 11<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-12" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Dela Gothic One';--show-body:'Work Sans';--show-accent:'Work Sans';--accent-style:italic;--accent-w:700;--hero-track:-.055em;--acc-scale:0.78">
+<article class="system" id="system-12" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&amp;display=swap" style="--head-w:400;--show-head:'Dela Gothic One';--show-body:'Work Sans';--show-accent:'Work Sans';--accent-style:italic;--accent-w:700;--hero-track:-.055em;--acc-scale:0.78">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 12</div>
@@ -236,7 +236,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=12&amp;palette=10">View complete website in system 12<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-13" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;700;800&amp;family=Urbanist:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,600&amp;display=swap" style="--show-head:'Bodoni Moda';--show-body:'Urbanist';--show-accent:'Bodoni Moda';--accent-style:italic;--accent-w:600;--hero-track:-.05em;--acc-scale:0.91">
+<article class="system" id="system-13" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;700;800&amp;family=Urbanist:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,600&amp;display=swap" style="--head-w:700;--show-head:'Bodoni Moda';--show-body:'Urbanist';--show-accent:'Bodoni Moda';--accent-style:italic;--accent-w:600;--hero-track:-.05em;--acc-scale:0.91">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 13</div>
@@ -251,7 +251,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=13&amp;palette=10">View complete website in system 13<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-14" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Big Shoulders Display';--show-body:'Hanken Grotesk';--show-accent:'Hanken Grotesk';--accent-style:normal;--accent-w:700;--hero-track:-.013em;--acc-scale:0.77">
+<article class="system" id="system-14" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--head-w:800;--show-head:'Big Shoulders Display';--show-body:'Hanken Grotesk';--show-accent:'Hanken Grotesk';--accent-style:normal;--accent-w:700;--hero-track:-.013em;--acc-scale:0.77">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 14</div>
@@ -266,7 +266,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=14&amp;palette=10">View complete website in system 14<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-15" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@1,700&amp;display=swap" style="--show-head:'Gabarito';--show-body:'Figtree';--show-accent:'Figtree';--accent-style:italic;--accent-w:700;--hero-track:-.06em;--acc-scale:0.83">
+<article class="system" id="system-15" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@1,700&amp;display=swap" style="--head-w:800;--show-head:'Gabarito';--show-body:'Figtree';--show-accent:'Figtree';--accent-style:italic;--accent-w:700;--hero-track:-.06em;--acc-scale:0.83">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 15</div>
@@ -281,7 +281,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=15&amp;palette=10">View complete website in system 15<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-16" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&amp;family=Karla:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,700&amp;display=swap" style="--show-head:'Chakra Petch';--show-body:'Karla';--show-accent:'Karla';--accent-style:italic;--accent-w:700;--hero-track:-.035em;--acc-scale:0.79">
+<article class="system" id="system-16" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&amp;family=Karla:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,700&amp;display=swap" style="--head-w:700;--show-head:'Chakra Petch';--show-body:'Karla';--show-accent:'Karla';--accent-style:italic;--accent-w:700;--hero-track:-.035em;--acc-scale:0.79">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 16</div>
@@ -296,7 +296,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=16&amp;palette=10">View complete website in system 16<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-17" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700;800;900&amp;family=Jost:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,700&amp;display=swap" style="--show-head:'Darker Grotesque';--show-body:'Jost';--show-accent:'Jost';--accent-style:italic;--accent-w:700;--hero-track:-.045em;--acc-scale:0.85">
+<article class="system" id="system-17" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700;800;900&amp;family=Jost:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,700&amp;display=swap" style="--head-w:800;--show-head:'Darker Grotesque';--show-body:'Jost';--show-accent:'Jost';--accent-style:italic;--accent-w:700;--hero-track:-.045em;--acc-scale:0.85">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 17</div>
@@ -311,7 +311,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=17&amp;palette=10">View complete website in system 17<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-18" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Cabin:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&amp;display=swap" style="--show-head:'DM Serif Display';--show-body:'Cabin';--show-accent:'DM Serif Display';--accent-style:italic;--accent-w:400;--hero-track:-.033em;--acc-scale:0.92">
+<article class="system" id="system-18" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Cabin:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&amp;display=swap" style="--head-w:400;--show-head:'DM Serif Display';--show-body:'Cabin';--show-accent:'DM Serif Display';--accent-style:italic;--accent-w:400;--hero-track:-.033em;--acc-scale:0.92">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 18</div>
@@ -326,7 +326,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=18&amp;palette=10">View complete website in system 18<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-19" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&amp;family=Mulish:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,700&amp;display=swap" style="--show-head:'League Spartan';--show-body:'Mulish';--show-accent:'Mulish';--accent-style:italic;--accent-w:700;--hero-track:-.06em;--acc-scale:0.83">
+<article class="system" id="system-19" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&amp;family=Mulish:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,700&amp;display=swap" style="--head-w:800;--show-head:'League Spartan';--show-body:'Mulish';--show-accent:'Mulish';--accent-style:italic;--accent-w:700;--hero-track:-.06em;--acc-scale:0.83">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 19</div>
@@ -341,7 +341,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=19&amp;palette=10">View complete website in system 19<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-20" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@600;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Azeret Mono';--show-body:'Geist';--show-accent:'Azeret Mono';--accent-style:normal;--accent-w:600;--hero-track:-.036em;--acc-scale:0.84">
+<article class="system" id="system-20" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@600;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--head-w:700;--show-head:'Azeret Mono';--show-body:'Geist';--show-accent:'Azeret Mono';--accent-style:normal;--accent-w:600;--hero-track:-.036em;--acc-scale:0.84">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 20</div>
@@ -356,7 +356,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=20&amp;palette=10">View complete website in system 20<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-21" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Anton&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Roboto+Flex:ital,wght@1,700&amp;display=swap" style="--show-head:'Anton';--show-body:'Roboto Flex';--show-accent:'Roboto Flex';--accent-style:italic;--accent-w:700;--hero-track:-.027em;--acc-scale:0.81">
+<article class="system" id="system-21" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Anton&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Roboto+Flex:ital,wght@1,700&amp;display=swap" style="--head-w:400;--show-head:'Anton';--show-body:'Roboto Flex';--show-accent:'Roboto Flex';--accent-style:italic;--accent-w:700;--hero-track:-.027em;--acc-scale:0.81">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 21</div>
@@ -371,7 +371,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=21&amp;palette=10">View complete website in system 21<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-22" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,800&amp;display=swap" style="--show-head:'Bowlby One SC';--show-body:'Nunito Sans';--show-accent:'Nunito Sans';--accent-style:italic;--accent-w:800;--hero-track:-.048em;--acc-scale:0.79">
+<article class="system" id="system-22" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,800&amp;display=swap" style="--head-w:400;--show-head:'Bowlby One SC';--show-body:'Nunito Sans';--show-accent:'Nunito Sans';--accent-style:italic;--accent-w:800;--hero-track:-.048em;--acc-scale:0.79">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 22</div>
@@ -386,7 +386,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=22&amp;palette=10">View complete website in system 22<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-23" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&amp;display=swap" style="--show-head:'Alfa Slab One';--show-body:'Barlow';--show-accent:'Barlow';--accent-style:italic;--accent-w:700;--hero-track:-.04em;--acc-scale:0.83">
+<article class="system" id="system-23" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&amp;display=swap" style="--head-w:400;--show-head:'Alfa Slab One';--show-body:'Barlow';--show-accent:'Barlow';--accent-style:italic;--accent-w:700;--hero-track:-.04em;--acc-scale:0.83">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 23</div>
@@ -401,7 +401,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=23&amp;palette=10">View complete website in system 23<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-24" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&amp;family=Overpass:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,700&amp;display=swap" style="--show-head:'Teko';--show-body:'Overpass';--show-accent:'Overpass';--accent-style:italic;--accent-w:700;--hero-track:-.012em;--acc-scale:0.76">
+<article class="system" id="system-24" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&amp;family=Overpass:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,700&amp;display=swap" style="--head-w:700;--show-head:'Teko';--show-body:'Overpass';--show-accent:'Overpass';--accent-style:italic;--accent-w:700;--hero-track:-.012em;--acc-scale:0.76">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 24</div>
@@ -416,7 +416,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=24&amp;palette=10">View complete website in system 24<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-25" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700;800&amp;family=Lexend:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700&amp;display=swap" style="--show-head:'Kanit';--show-body:'Lexend';--show-accent:'Kanit';--accent-style:italic;--accent-w:700;--hero-track:-.04em;--acc-scale:0.83">
+<article class="system" id="system-25" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700;800&amp;family=Lexend:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700&amp;display=swap" style="--head-w:800;--show-head:'Kanit';--show-body:'Lexend';--show-accent:'Kanit';--accent-style:italic;--accent-w:700;--hero-track:-.04em;--acc-scale:0.83">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 25</div>
@@ -431,7 +431,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=25&amp;palette=10">View complete website in system 25<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-26" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Paytone+One&amp;family=Assistant:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Paytone One';--show-body:'Assistant';--show-accent:'Assistant';--accent-style:normal;--accent-w:700;--hero-track:-.041em;--acc-scale:0.78">
+<article class="system" id="system-26" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Paytone+One&amp;family=Assistant:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--head-w:400;--show-head:'Paytone One';--show-body:'Assistant';--show-accent:'Assistant';--accent-style:normal;--accent-w:700;--hero-track:-.041em;--acc-scale:0.78">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 26</div>
@@ -446,7 +446,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=26&amp;palette=10">View complete website in system 26<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-27" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Readex+Pro:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@1,700&amp;display=swap" style="--show-head:'Anybody';--show-body:'Readex Pro';--show-accent:'Anybody';--accent-style:italic;--accent-w:700;--hero-track:-.053em;--acc-scale:0.8">
+<article class="system" id="system-27" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Readex+Pro:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@1,700&amp;display=swap" style="--head-w:900;--show-head:'Anybody';--show-body:'Readex Pro';--show-accent:'Anybody';--accent-style:italic;--accent-w:700;--hero-track:-.053em;--acc-scale:0.8">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 27</div>
@@ -461,7 +461,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=27&amp;palette=10">View complete website in system 27<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-28" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@600;700;800&amp;family=Funnel+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Funnel Display';--show-body:'Funnel Sans';--show-accent:'Funnel Sans';--accent-style:italic;--accent-w:700;--hero-track:-.05em;--acc-scale:0.83">
+<article class="system" id="system-28" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@600;700;800&amp;family=Funnel+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@1,700&amp;display=swap" style="--head-w:800;--show-head:'Funnel Display';--show-body:'Funnel Sans';--show-accent:'Funnel Sans';--accent-style:italic;--accent-w:700;--hero-track:-.05em;--acc-scale:0.83">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 28</div>
@@ -476,7 +476,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=28&amp;palette=10">View complete website in system 28<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-29" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&amp;display=swap" style="--show-head:'Rubik Mono One';--show-body:'Roboto';--show-accent:'Roboto';--accent-style:italic;--accent-w:700;--hero-track:-.052em;--acc-scale:0.79">
+<article class="system" id="system-29" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&amp;display=swap" style="--head-w:400;--show-head:'Rubik Mono One';--show-body:'Roboto';--show-accent:'Roboto';--accent-style:italic;--accent-w:700;--hero-track:-.052em;--acc-scale:0.79">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 29</div>
@@ -491,7 +491,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=29&amp;palette=10">View complete website in system 29<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-30" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Oxanium';--show-body:'Noto Sans';--show-accent:'Noto Sans';--accent-style:italic;--accent-w:700;--hero-track:-.043em;--acc-scale:0.78">
+<article class="system" id="system-30" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&amp;display=swap" style="--head-w:800;--show-head:'Oxanium';--show-body:'Noto Sans';--show-accent:'Noto Sans';--accent-style:italic;--accent-w:700;--hero-track:-.043em;--acc-scale:0.78">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 30</div>
