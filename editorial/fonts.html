@@ -1,0 +1,251 @@
+<!doctype html><html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101B2A">
+<meta name="robots" content="noindex,nofollow">
+<title>Archiebase / Ten typography directions</title>
+<meta name="description" content="Ten type systems designed for Archiebase, shown using actual headlines, calls to action, and readable body copy.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&amp;family=Inter+Tight:wght@400;500;600;700&amp;family=Fraunces:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;family=Archivo+Black&amp;family=Source+Sans+3:wght@400;500;600;700&amp;family=Syne:wght@700;800&amp;family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Barlow+Condensed:wght@700;800;900&amp;family=Public+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=Outfit:wght@400;500;600;700&amp;family=Chivo:wght@600;700;800;900&amp;family=Alegreya+Sans:wght@400;500;600;700&amp;family=Saira:wght@600;700;800&amp;family=Onest:wght@400;500;600;700&amp;family=Red+Hat+Display:wght@600;700;800;900&amp;family=Lora:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101B2A;--deep:#081522;--panel:#182A3D;--paper:#F3F9FC;--muted:#B7C9D2;--line:#344D60;--cyan:#4EBCE6;--yellow:#FCE174}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--paper);font:16px/1.55 system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}h1,h2,h3,p{margin-top:0}
+.shell{width:min(1280px,calc(100% - 44px));margin-inline:auto}
+header{position:sticky;top:0;z-index:10;background:#0c1724f5;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{display:flex;gap:18px;justify-content:space-between;align-items:center;min-height:69px}
+.logo{font:800 25px/1.1 'Space Grotesk',system-ui,sans-serif;letter-spacing:-.085em}.logo b{color:var(--yellow)}
+.nav a:last-child{color:var(--cyan);font-size:12px;font-weight:800;border-bottom:1px solid var(--cyan);padding-bottom:3px}
+.hero{padding:clamp(46px,6vw,88px) 0 clamp(38px,5vw,60px);border-bottom:1px solid var(--line)}
+.eyebrow,.index,.category,.kicker{font-weight:800;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.eyebrow{color:var(--yellow);margin:0 0 24px}
+.hero h1{font-family:system-ui,sans-serif;font-weight:850;letter-spacing:-.07em;line-height:1.02;font-size:clamp(43px,6.3vw,91px);max-width:1060px;margin-bottom:24px}
+.hero h1 span{color:var(--cyan)}
+.hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.hero-bottom p{margin:0;max-width:640px;color:var(--muted);font-size:16px;line-height:1.7}
+.hero-bottom strong{color:var(--paper)}
+.hint{white-space:nowrap;color:var(--yellow);font-size:11px;font-weight:800;letter-spacing:.05em}
+.legend{display:flex;flex-wrap:wrap;justify-content:space-between;gap:15px;padding:21px 0;color:var(--muted);font-size:12px;border-bottom:1px solid var(--line)}
+.legend b{color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:26px 0 85px}
+.specimen{border:1px solid var(--line);background:var(--deep);min-width:0;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s}
+.specimen:hover{border-color:#65B9D8;transform:translateY(-3px);box-shadow:0 14px 28px #0004}
+.specimen-main{padding:24px clamp(19px,2.4vw,31px) 0;min-height:370px;display:flex;flex-direction:column;position:relative;isolation:isolate}
+.specimen-main:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.18;pointer-events:none;background:repeating-linear-gradient(105deg,transparent 0 36px,#26547a 37px,transparent 38px 72px);mask-image:linear-gradient(90deg,transparent 50%,#000)}
+.specimen:nth-child(4n+2) .specimen-main{background:linear-gradient(120deg,#182c3d,#0a1a28)}
+.specimen:nth-child(4n+3) .specimen-main{background:#142638}
+.specimen:nth-child(4n) .specimen-main{background:#1b3042}
+.specimen-top{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted)}
+.index{color:var(--yellow)}.category{text-align:right}
+.sample-type{margin:auto 0;min-height:250px;display:flex;justify-content:center;flex-direction:column}
+.sample-type h3{font-family:var(--head),system-ui,sans-serif;font-weight:var(--weight);letter-spacing:-.06em;line-height:1.09;font-size:clamp(29px,3.7vw,51px);margin:18px 0 16px;color:#f5fbfe;overflow-wrap:break-word}
+.sample-type h3 em{font-style:normal;color:var(--cyan)}
+.sample-type p{font-family:var(--body),system-ui,sans-serif;color:#C3D4DD;font-size:clamp(13px,1.1vw,15px);line-height:1.6;max-width:485px;margin:0 0 17px}
+.specimen[data-pair="01"] h3{font-size:clamp(28px,2.7vw,39px)}
+.specimen[data-pair="03"] h3{font-size:clamp(30px,3.4vw,47px)}
+.specimen[data-pair="06"] h3{font-size:clamp(51px,5.1vw,74px);line-height:.92;letter-spacing:-.035em}
+.specimen[data-pair="07"] h3{font-size:clamp(57px,5.6vw,81px);font-weight:400;letter-spacing:-.045em;line-height:.98}
+.specimen[data-pair="09"] h3{font-size:clamp(30px,3.5vw,48px)}
+.specimen-cta{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#203E4C;padding:14px 16px;color:var(--yellow);font-size:10px;letter-spacing:.09em;font-weight:800}
+.specimen-details{padding:20px clamp(19px,2.4vw,31px) 24px;background:#152739}
+.family-meta{display:flex;justify-content:space-between;align-items:start;gap:18px}
+.family-meta b{font-size:17px;letter-spacing:-.035em}
+.family-meta span{color:#B7C9D2;font-size:11px;text-align:right;max-width:220px;line-height:1.55}
+.font-roles{margin:20px 0 21px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.font-roles>div{border-top:1px solid #426077;padding-top:10px;min-width:0}
+.font-roles small{display:block;color:#90AFC1;font-size:9px;font-weight:800;letter-spacing:.1em;margin-bottom:4px}
+.font-roles strong{font-size:12px;line-height:1.25;overflow-wrap:break-word}
+.preview-link{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px solid var(--cyan);color:#E6F8FF;padding:13px 16px;font-size:12px;font-weight:800;transition:background .18s,color .18s}
+.preview-link:hover{background:var(--cyan);color:#082133}
+footer{padding:24px 0 45px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media(max-width:940px){.grid{grid-template-columns:1fr;max-width:690px;margin-inline:auto}.sample-type h3{font-size:clamp(33px,5.5vw,56px)}.specimen[data-pair="01"] h3{font-size:clamp(29px,4.6vw,45px)}.specimen[data-pair="06"] h3{font-size:clamp(55px,8vw,88px)}.specimen[data-pair="07"] h3{font-size:clamp(58px,8vw,84px)}}
+@media(max-width:560px){.shell{width:calc(100% - 30px)}.nav{min-height:63px}.logo{font-size:21px}.nav a:last-child{font-size:10px}.hero{padding:43px 0 35px}.hero h1{font-size:clamp(40px,9.2vw,54px)}.hero-bottom{display:block}.hero-bottom p{font-size:14px}.hint{display:block;margin-top:18px}.legend{font-size:11px}.grid{padding-top:17px;gap:17px}.specimen-main{min-height:340px;padding:19px 19px 0}.sample-type{min-height:245px}.sample-type h3{font-size:clamp(30px,7vw,43px)}.sample-type p{font-size:13px}.specimen[data-pair="01"] h3{font-size:clamp(23px,5.35vw,34px)}.specimen[data-pair="03"] h3{font-size:clamp(29px,6.8vw,41px)}.specimen[data-pair="06"] h3{font-size:clamp(50px,12vw,70px)}.specimen[data-pair="07"] h3{font-size:clamp(55px,13vw,78px)}.specimen[data-pair="09"] h3{font-size:clamp(30px,6.5vw,40px)}.specimen-details{padding:18px 19px 21px}.family-meta{flex-direction:column;gap:5px}.family-meta span{text-align:left}.font-roles strong{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.specimen,.preview-link{transition:none}.specimen:hover{transform:none}}
+</style></head>
+<body>
+<header><div class="shell nav"><a href="/" class="logo">archie<b>•</b>base</a><a href="/">Back to website ↗</a></div></header>
+<main>
+ <section class="hero"><div class="shell"><div class="eyebrow">ARCHIEBASE / TYPOGRAPHY RESEARCH 001</div><h1>Ten ways to<br><span>sound like yourself.</span></h1><div class="hero-bottom"><p><strong>Same business. Ten distinct voices.</strong> Each pairing shows the actual fonts on real service copy. Use the preview link to see it on the Archiebase homepage. The existing font stays unchanged until you choose a direction.</p><span class="hint">10 SPECIMENS / LIVE TYPE</span></div></div></section>
+ <div class="shell legend"><span><b>Headline</b> establishes personality.</span><span><b>Body font</b> earns trust through readability.</span><span><b>Preview</b> is reversible.</span></div>
+ <section class="shell grid" aria-label="Ten Archiebase font pairings"><article class="specimen" id="pair-01" data-pair="01" style="--head:'Unbounded';--body:'Inter Tight';--weight:800">
+ <div class="specimen-main">
+  <div class="specimen-top"><span class="index">01 / 10</span><span class="category">LOUD GEOMETRY</span></div>
+  <div class="sample-type">
+   <h3>Build something<br><em>worth noticing.</em></h3>
+   <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
+  </div>
+  <div class="specimen-cta"><span>START WITH A FREE WRITTEN REVIEW</span><span aria-hidden="true">↗</span></div>
+ </div>
+ <div class="specimen-details">
+  <div class="family-meta"><b>The Headliner</b><span>For big, unmistakable ideas</span></div>
+  <div class="font-roles">
+   <div><small>HEADLINE</small><strong>Unbounded</strong></div>
+   <div><small>BODY / UI</small><strong>Inter Tight</strong></div>
+  </div>
+  <a class="preview-link" href="/?font=01&palette=10" aria-label="Preview Unbounded plus Inter Tight on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="specimen" id="pair-02" data-pair="02" style="--head:'Fraunces';--body:'Manrope';--weight:700">
+ <div class="specimen-main">
+  <div class="specimen-top"><span class="index">02 / 10</span><span class="category">WARM EDITORIAL</span></div>
+  <div class="sample-type">
+   <h3>A better way<br><em>to work.</em></h3>
+   <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
+  </div>
+  <div class="specimen-cta"><span>START WITH A FREE WRITTEN REVIEW</span><span aria-hidden="true">↗</span></div>
+ </div>
+ <div class="specimen-details">
+  <div class="family-meta"><b>The Storyteller</b><span>For a brand with a real human behind it</span></div>
+  <div class="font-roles">
+   <div><small>HEADLINE</small><strong>Fraunces</strong></div>
+   <div><small>BODY / UI</small><strong>Manrope</strong></div>
+  </div>
+  <a class="preview-link" href="/?font=02&palette=10" aria-label="Preview Fraunces plus Manrope on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="specimen" id="pair-03" data-pair="03" style="--head:'Archivo Black';--body:'Source Sans 3';--weight:400">
+ <div class="specimen-main">
+  <div class="specimen-top"><span class="index">03 / 10</span><span class="category">INDUSTRIAL IMPACT</span></div>
+  <div class="sample-type">
+   <h3>LESS BUSYWORK.<br><em>MORE BUSINESS.</em></h3>
+   <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
+  </div>
+  <div class="specimen-cta"><span>START WITH A FREE WRITTEN REVIEW</span><span aria-hidden="true">↗</span></div>
+ </div>
+ <div class="specimen-details">
+  <div class="family-meta"><b>The Workhorse</b><span>For real-world business, no posturing</span></div>
+  <div class="font-roles">
+   <div><small>HEADLINE</small><strong>Archivo Black</strong></div>
+   <div><small>BODY / UI</small><strong>Source Sans 3</strong></div>
+  </div>
+  <a class="preview-link" href="/?font=03&palette=10" aria-label="Preview Archivo Black plus Source Sans 3 on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="specimen" id="pair-04" data-pair="04" style="--head:'Syne';--body:'Atkinson Hyperlegible Next';--weight:800">
+ <div class="specimen-main">
+  <div class="specimen-top"><span class="index">04 / 10</span><span class="category">ART-DIRECTED CLARITY</span></div>
+  <div class="sample-type">
+   <h3>GOOD WORK<br><em>DESERVES BETTER.</em></h3>
+   <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
+  </div>
+  <div class="specimen-cta"><span>START WITH A FREE WRITTEN REVIEW</span><span aria-hidden="true">↗</span></div>
+ </div>
+ <div class="specimen-details">
+  <div class="family-meta"><b>The Artist</b><span>For expressive visuals that stay usable</span></div>
+  <div class="font-roles">
+   <div><small>HEADLINE</small><strong>Syne</strong></div>
+   <div><small>BODY / UI</small><strong>Atkinson Hyperlegible Next</strong></div>
+  </div>
+  <a class="preview-link" href="/?font=04&palette=10" aria-label="Preview Syne plus Atkinson Hyperlegible Next on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="specimen" id="pair-05" data-pair="05" style="--head:'Space Grotesk';--body:'IBM Plex Sans';--weight:700">
+ <div class="specimen-main">
+  <div class="specimen-top"><span class="index">05 / 10</span><span class="category">INTELLIGENT UTILITY</span></div>
+  <div class="sample-type">
+   <h3>Make the complicated<br><em>feel simple.</em></h3>
+   <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
+  </div>
+  <div class="specimen-cta"><span>START WITH A FREE WRITTEN REVIEW</span><span aria-hidden="true">↗</span></div>
+ </div>
+ <div class="specimen-details">
+  <div class="family-meta"><b>The Architect</b><span>For apps, AI tools and trustworthy systems</span></div>
+  <div class="font-roles">
+   <div><small>HEADLINE</small><strong>Space Grotesk</strong></div>
+   <div><small>BODY / UI</small><strong>IBM Plex Sans</strong></div>
+  </div>
+  <a class="preview-link" href="/?font=05&palette=10" aria-label="Preview Space Grotesk plus IBM Plex Sans on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="specimen" id="pair-06" data-pair="06" style="--head:'Barlow Condensed';--body:'Public Sans';--weight:800">
+ <div class="specimen-main">
+  <div class="specimen-top"><span class="index">06 / 10</span><span class="category">TALL AND DIRECT</span></div>
+  <div class="sample-type">
+   <h3>GET BACK TO<br><em>THE GOOD WORK.</em></h3>
+   <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
+  </div>
+  <div class="specimen-cta"><span>START WITH A FREE WRITTEN REVIEW</span><span aria-hidden="true">↗</span></div>
+ </div>
+ <div class="specimen-details">
+  <div class="family-meta"><b>The Operator</b><span>For trades, industry and decisive messaging</span></div>
+  <div class="font-roles">
+   <div><small>HEADLINE</small><strong>Barlow Condensed</strong></div>
+   <div><small>BODY / UI</small><strong>Public Sans</strong></div>
+  </div>
+  <a class="preview-link" href="/?font=06&palette=10" aria-label="Preview Barlow Condensed plus Public Sans on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="specimen" id="pair-07" data-pair="07" style="--head:'Instrument Serif';--body:'Outfit';--weight:400">
+ <div class="specimen-main">
+  <div class="specimen-top"><span class="index">07 / 10</span><span class="category">QUIET LUXURY</span></div>
+  <div class="sample-type">
+   <h3>Some ideas deserve<br><em>a little magic.</em></h3>
+   <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
+  </div>
+  <div class="specimen-cta"><span>START WITH A FREE WRITTEN REVIEW</span><span aria-hidden="true">↗</span></div>
+ </div>
+ <div class="specimen-details">
+  <div class="family-meta"><b>The Editor</b><span>For beautiful, surprising storytelling</span></div>
+  <div class="font-roles">
+   <div><small>HEADLINE</small><strong>Instrument Serif</strong></div>
+   <div><small>BODY / UI</small><strong>Outfit</strong></div>
+  </div>
+  <a class="preview-link" href="/?font=07&palette=10" aria-label="Preview Instrument Serif plus Outfit on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="specimen" id="pair-08" data-pair="08" style="--head:'Chivo';--body:'Alegreya Sans';--weight:800">
+ <div class="specimen-main">
+  <div class="specimen-top"><span class="index">08 / 10</span><span class="category">SOLID WITH WARMTH</span></div>
+  <div class="sample-type">
+   <h3>Built with care.<br><em>Made to work.</em></h3>
+   <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
+  </div>
+  <div class="specimen-cta"><span>START WITH A FREE WRITTEN REVIEW</span><span aria-hidden="true">↗</span></div>
+ </div>
+ <div class="specimen-details">
+  <div class="family-meta"><b>The Craftsman</b><span>For hands-on work and generous service</span></div>
+  <div class="font-roles">
+   <div><small>HEADLINE</small><strong>Chivo</strong></div>
+   <div><small>BODY / UI</small><strong>Alegreya Sans</strong></div>
+  </div>
+  <a class="preview-link" href="/?font=08&palette=10" aria-label="Preview Chivo plus Alegreya Sans on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="specimen" id="pair-09" data-pair="09" style="--head:'Saira';--body:'Onest';--weight:800">
+ <div class="specimen-main">
+  <div class="specimen-top"><span class="index">09 / 10</span><span class="category">DISTINCTLY TECHNICAL</span></div>
+  <div class="sample-type">
+   <h3>TURN IDEAS<br><em>INTO MOMENTUM.</em></h3>
+   <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
+  </div>
+  <div class="specimen-cta"><span>START WITH A FREE WRITTEN REVIEW</span><span aria-hidden="true">↗</span></div>
+ </div>
+ <div class="specimen-details">
+  <div class="family-meta"><b>The Innovator</b><span>For forward-thinking, inventive builders</span></div>
+  <div class="font-roles">
+   <div><small>HEADLINE</small><strong>Saira</strong></div>
+   <div><small>BODY / UI</small><strong>Onest</strong></div>
+  </div>
+  <a class="preview-link" href="/?font=09&palette=10" aria-label="Preview Saira plus Onest on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="specimen" id="pair-10" data-pair="10" style="--head:'Red Hat Display';--body:'Lora';--weight:800">
+ <div class="specimen-main">
+  <div class="specimen-top"><span class="index">10 / 10</span><span class="category">MODERN EDITORIAL</span></div>
+  <div class="sample-type">
+   <h3>Less friction.<br><em>More possibility.</em></h3>
+   <p>I'm Aaron. I help small-business owners turn everyday bottlenecks into elegant websites, useful AI tools and practical automations. You run the business. I'll make the parts around it easier.</p>
+  </div>
+  <div class="specimen-cta"><span>START WITH A FREE WRITTEN REVIEW</span><span aria-hidden="true">↗</span></div>
+ </div>
+ <div class="specimen-details">
+  <div class="family-meta"><b>The Signature</b><span>For a capable, personal creative studio</span></div>
+  <div class="font-roles">
+   <div><small>HEADLINE</small><strong>Red Hat Display</strong></div>
+   <div><small>BODY / UI</small><strong>Lora</strong></div>
+  </div>
+  <a class="preview-link" href="/?font=10&palette=10" aria-label="Preview Red Hat Display plus Lora on the actual Archiebase homepage">Try this on Archiebase <span aria-hidden="true">↗</span></a>
+ </div>
+</article></section>
+</main>
+<footer><div class="shell">Live font specimens. Typefaces are loaded from Google Fonts; a fallback font is shown while they load. Choosing a preview changes typography only in your browser and does not publish a new default.</div></footer>
+</body></html>
