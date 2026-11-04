@@ -1,0 +1,151 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0F2B3D">
+<title>Archiebase / Ten color directions</title>
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F6F1;--ink:#142A34;--muted:#5D7176;--line:#C9D5D4;--sun:#F4CC62}*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button,a{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:3px solid #0E72B5;outline-offset:4px}
+.wrap{width:min(1350px,calc(100% - 48px));margin:auto}header{border-bottom:1px solid var(--line);background:#FEFEFA}
+.header{display:flex;align-items:center;gap:15px;justify-content:space-between;padding:19px 0}.brand{font:800 25px 'Sora',sans-serif;letter-spacing:-.08em}.brand b{color:#EAA93A}
+.header a:last-child{font-weight:800;font-size:13px;border:1px solid #243945;padding:10px 15px}
+.intro{padding:64px 0 40px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;border-bottom:1px solid var(--line)}
+.kicker{font:800 11px 'DM Sans',sans-serif;letter-spacing:.16em;color:#316E83}.intro h1{font:800 clamp(45px,6vw,85px)/1.08 'Sora',sans-serif;letter-spacing:-.07em;margin:22px 0}.intro h1 em{font:italic 500 1.07em 'Newsreader',serif;color:#0E78AE}
+.intro p{font-size:17px;color:var(--muted);max-width:490px;margin:35px 0 0}.intro p strong{color:var(--ink)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding:44px 0 74px}
+.palette{border:1px solid var(--line);background:#FFFEFA;overflow:hidden}
+.preview{background:var(--p);color:var(--i);min-height:340px;display:flex;flex-direction:column;position:relative;isolation:isolate;overflow:hidden}
+.preview:after{content:"";position:absolute;right:-14%;top:-23%;width:70%;height:140%;border-radius:50%;border:2px solid var(--a);opacity:.10;pointer-events:none}
+.preview-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:22px 27px;border-bottom:1px solid color-mix(in srgb,var(--i) 20%,transparent)}
+.preview-head span{font:800 21px 'Sora',sans-serif;letter-spacing:-.08em}.preview-head i{font-style:normal;color:var(--a)}.preview-head small,.preview-footer{font:800 9px 'DM Sans',sans-serif;letter-spacing:.13em}
+.preview-body{padding:30px 27px 33px;flex:1}.mark{font-size:10px;font-weight:800;letter-spacing:.13em;opacity:.68}
+.preview h3{font:800 clamp(30px,3.45vw,50px)/1.1 'Sora',sans-serif;letter-spacing:-.06em;margin:14px 0}.preview h3 em{color:var(--a);font:italic 500 1.08em 'Newsreader',serif}
+.preview p{font-size:13px;max-width:320px;margin:0 0 19px;opacity:.76}.demo-button{display:inline-flex;background:var(--a);color:white;padding:10px 13px;font-weight:800;font-size:12px;box-shadow:4px 4px 0 var(--y)}
+.preview-footer{padding:15px 27px;background:var(--s);display:flex;gap:15px;justify-content:space-between;color:var(--i)}
+.palette-info{padding:24px 27px 26px}.idx{font-size:10px;color:#6C8286;letter-spacing:.13em;font-weight:800}.palette-info h2{font:700 23px 'Sora',sans-serif;letter-spacing:-.05em;margin:5px 0 7px}.palette-info p{margin:0;color:#657478;font-size:13px;line-height:1.6;max-width:500px;min-height:41px}
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin:20px 0}.swatches span{display:flex;align-items:end;min-height:41px;padding:4px 6px;border:1px solid #e6e6e6}.swatches b{font-size:8px;line-height:1;color:#0F2430;background:#FFFFFFCC;padding:3px;border-radius:2px}
+.palette-info button{background:#132D3B;color:white;border:none;width:100%;display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:13px;font-weight:800;padding:14px 16px}.palette-info button:hover{background:#0E6695}
+.palette[aria-current="true"]{outline:3px solid #EFBF4D;outline-offset:3px}.palette[aria-current="true"] button{background:#116E93}
+footer{border-top:1px solid var(--line);padding:23px 0 38px;font-size:12px;color:var(--muted)}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.intro{grid-template-columns:1fr;gap:0}.intro p{margin:0 0 10px}}
+@media(max-width:600px){.wrap{width:calc(100% - 30px)}.header a:last-child{font-size:11px;padding:9px}.intro{padding:39px 0 33px}.intro h1{font-size:clamp(40px,10vw,58px)}.intro p{font-size:15px}.grid{gap:19px;padding-top:25px}.preview{min-height:315px}.preview-head,.preview-footer{padding-left:20px;padding-right:20px}.preview-body{padding:25px 20px}.preview h3{font-size:37px}.palette-info{padding:21px}.swatches b{font-size:7px}}
+</style>
+</head><body>
+<header><div class="wrap header"><a href="/" class="brand">archie<b>•</b>base</a><a href="/">Back to website ↗</a></div></header>
+<main><section class="wrap intro"><div><span class="kicker">DESIGN STUDIO / COLOR EXPERIMENTS</span><h1>10 ways to make<br>Archiebase <em>feel different.</em></h1></div><p>No color-wheel homework. Click any direction and the actual Archiebase homepage and About page will use that palette in your browser. <strong>These are live prototypes, not static screenshots.</strong></p></section>
+<section class="wrap grid" aria-label="Ten color palette choices"><article class="palette" data-id="01">
+ <div class="preview" style="--p:#F8F7F0;--i:#0F2B3D;--a:#086FAD;--y:#F4C94D;--s:#E8F3F4">
+ <div class="preview-head"><span>archie<i>•</i>base</span><small>AI + CREATIVE SOLUTIONS</small></div>
+ <div class="preview-body"><div class="mark">001/ PALETTE EXPERIMENT</div><h3>Make the busywork<br><em>disappear.</em></h3><p>Useful technology for the parts of business nobody has time for.</p><span class="demo-button">Find your first fix ↗</span></div>
+ <div class="preview-footer"><span>BUILT DIFFERENT</span><span>COASTAL INTELLIGENCE</span></div>
+ </div>
+ <div class="palette-info"><div><span class="idx">01 / 10</span><h2>Atlantic / Sun</h2><p>Deep ocean blue, natural paper and real sunlight. Grounded, confident and inviting.</p></div>
+ <div class="swatches" aria-label="Five colors"><span style="background:#F8F7F0" title="#F8F7F0"><b>#F8F7F0</b></span><span style="background:#0F2B3D" title="#0F2B3D"><b>#0F2B3D</b></span><span style="background:#086FAD" title="#086FAD"><b>#086FAD</b></span><span style="background:#F4C94D" title="#F4C94D"><b>#F4C94D</b></span><span style="background:#E8F3F4" title="#E8F3F4"><b>#E8F3F4</b></span></div>
+ <button type="button" data-select="01">Try Atlantic / Sun on the site <span aria-hidden="true">↗</span></button>
+ </div>
+ </article>
+<article class="palette" data-id="02">
+ <div class="preview" style="--p:#FBF5E9;--i:#222C29;--a:#C95231;--y:#E9BA4B;--s:#F4E9DC">
+ <div class="preview-head"><span>archie<i>•</i>base</span><small>AI + CREATIVE SOLUTIONS</small></div>
+ <div class="preview-body"><div class="mark">002/ PALETTE EXPERIMENT</div><h3>Make the busywork<br><em>disappear.</em></h3><p>Useful technology for the parts of business nobody has time for.</p><span class="demo-button">Find your first fix ↗</span></div>
+ <div class="preview-footer"><span>BUILT DIFFERENT</span><span>ENERGETIC EDITORIAL</span></div>
+ </div>
+ <div class="palette-info"><div><span class="idx">02 / 10</span><h2>Citrus Press</h2><p>Ink, persimmon and saffron. Warm, confident and slightly irreverent.</p></div>
+ <div class="swatches" aria-label="Five colors"><span style="background:#FBF5E9" title="#FBF5E9"><b>#FBF5E9</b></span><span style="background:#222C29" title="#222C29"><b>#222C29</b></span><span style="background:#C95231" title="#C95231"><b>#C95231</b></span><span style="background:#E9BA4B" title="#E9BA4B"><b>#E9BA4B</b></span><span style="background:#F4E9DC" title="#F4E9DC"><b>#F4E9DC</b></span></div>
+ <button type="button" data-select="02">Try Citrus Press on the site <span aria-hidden="true">↗</span></button>
+ </div>
+ </article>
+<article class="palette" data-id="03">
+ <div class="preview" style="--p:#F4F2E8;--i:#23362E;--a:#A94936;--y:#C4B47A;--s:#E7E6DA">
+ <div class="preview-head"><span>archie<i>•</i>base</span><small>AI + CREATIVE SOLUTIONS</small></div>
+ <div class="preview-body"><div class="mark">003/ PALETTE EXPERIMENT</div><h3>Make the busywork<br><em>disappear.</em></h3><p>Useful technology for the parts of business nobody has time for.</p><span class="demo-button">Find your first fix ↗</span></div>
+ <div class="preview-footer"><span>BUILT DIFFERENT</span><span>CRAFTED, HUMAN</span></div>
+ </div>
+ <div class="palette-info"><div><span class="idx">03 / 10</span><h2>Redwood Workshop</h2><p>Forest, brick and khaki. Honest, material and hands-on.</p></div>
+ <div class="swatches" aria-label="Five colors"><span style="background:#F4F2E8" title="#F4F2E8"><b>#F4F2E8</b></span><span style="background:#23362E" title="#23362E"><b>#23362E</b></span><span style="background:#A94936" title="#A94936"><b>#A94936</b></span><span style="background:#C4B47A" title="#C4B47A"><b>#C4B47A</b></span><span style="background:#E7E6DA" title="#E7E6DA"><b>#E7E6DA</b></span></div>
+ <button type="button" data-select="03">Try Redwood Workshop on the site <span aria-hidden="true">↗</span></button>
+ </div>
+ </article>
+<article class="palette" data-id="04">
+ <div class="preview" style="--p:#F2F4F6;--i:#15253B;--a:#285CF2;--y:#F1B65F;--s:#E2E8ED">
+ <div class="preview-head"><span>archie<i>•</i>base</span><small>AI + CREATIVE SOLUTIONS</small></div>
+ <div class="preview-body"><div class="mark">004/ PALETTE EXPERIMENT</div><h3>Make the busywork<br><em>disappear.</em></h3><p>Useful technology for the parts of business nobody has time for.</p><span class="demo-button">Find your first fix ↗</span></div>
+ <div class="preview-footer"><span>BUILT DIFFERENT</span><span>ARCHITECTURAL MODERN</span></div>
+ </div>
+ <div class="palette-info"><div><span class="idx">04 / 10</span><h2>Cobalt / Concrete</h2><p>Chalk, cobalt and amber. Crisp, modern, high-contrast.</p></div>
+ <div class="swatches" aria-label="Five colors"><span style="background:#F2F4F6" title="#F2F4F6"><b>#F2F4F6</b></span><span style="background:#15253B" title="#15253B"><b>#15253B</b></span><span style="background:#285CF2" title="#285CF2"><b>#285CF2</b></span><span style="background:#F1B65F" title="#F1B65F"><b>#F1B65F</b></span><span style="background:#E2E8ED" title="#E2E8ED"><b>#E2E8ED</b></span></div>
+ <button type="button" data-select="04">Try Cobalt / Concrete on the site <span aria-hidden="true">↗</span></button>
+ </div>
+ </article>
+<article class="palette" data-id="05">
+ <div class="preview" style="--p:#F8F7F3;--i:#1C1E1C;--a:#202421;--y:#F0DC57;--s:#EEEFE9">
+ <div class="preview-head"><span>archie<i>•</i>base</span><small>AI + CREATIVE SOLUTIONS</small></div>
+ <div class="preview-body"><div class="mark">005/ PALETTE EXPERIMENT</div><h3>Make the busywork<br><em>disappear.</em></h3><p>Useful technology for the parts of business nobody has time for.</p><span class="demo-button">Find your first fix ↗</span></div>
+ <div class="preview-footer"><span>BUILT DIFFERENT</span><span>GRAPHIC UNDERSTATEMENT</span></div>
+ </div>
+ <div class="palette-info"><div><span class="idx">05 / 10</span><h2>Ink & Highlighter</h2><p>Printshop minimalism with one unapologetic yellow gesture.</p></div>
+ <div class="swatches" aria-label="Five colors"><span style="background:#F8F7F3" title="#F8F7F3"><b>#F8F7F3</b></span><span style="background:#1C1E1C" title="#1C1E1C"><b>#1C1E1C</b></span><span style="background:#202421" title="#202421"><b>#202421</b></span><span style="background:#F0DC57" title="#F0DC57"><b>#F0DC57</b></span><span style="background:#EEEFE9" title="#EEEFE9"><b>#EEEFE9</b></span></div>
+ <button type="button" data-select="05">Try Ink & Highlighter on the site <span aria-hidden="true">↗</span></button>
+ </div>
+ </article>
+<article class="palette" data-id="06">
+ <div class="preview" style="--p:#EAF7F6;--i:#103341;--a:#008EA4;--y:#D5ED67;--s:#D8ECEC">
+ <div class="preview-head"><span>archie<i>•</i>base</span><small>AI + CREATIVE SOLUTIONS</small></div>
+ <div class="preview-body"><div class="mark">006/ PALETTE EXPERIMENT</div><h3>Make the busywork<br><em>disappear.</em></h3><p>Useful technology for the parts of business nobody has time for.</p><span class="demo-button">Find your first fix ↗</span></div>
+ <div class="preview-footer"><span>BUILT DIFFERENT</span><span>FRESH AND TECHNICAL</span></div>
+ </div>
+ <div class="palette-info"><div><span class="idx">06 / 10</span><h2>Marine Electric</h2><p>Mineral aqua, deep teal and high-voltage citrus.</p></div>
+ <div class="swatches" aria-label="Five colors"><span style="background:#EAF7F6" title="#EAF7F6"><b>#EAF7F6</b></span><span style="background:#103341" title="#103341"><b>#103341</b></span><span style="background:#008EA4" title="#008EA4"><b>#008EA4</b></span><span style="background:#D5ED67" title="#D5ED67"><b>#D5ED67</b></span><span style="background:#D8ECEC" title="#D8ECEC"><b>#D8ECEC</b></span></div>
+ <button type="button" data-select="06">Try Marine Electric on the site <span aria-hidden="true">↗</span></button>
+ </div>
+ </article>
+<article class="palette" data-id="07">
+ <div class="preview" style="--p:#FFF8EF;--i:#29221F;--a:#CE4534;--y:#E4AA80;--s:#F6E9DE">
+ <div class="preview-head"><span>archie<i>•</i>base</span><small>AI + CREATIVE SOLUTIONS</small></div>
+ <div class="preview-body"><div class="mark">007/ PALETTE EXPERIMENT</div><h3>Make the busywork<br><em>disappear.</em></h3><p>Useful technology for the parts of business nobody has time for.</p><span class="demo-button">Find your first fix ↗</span></div>
+ <div class="preview-footer"><span>BUILT DIFFERENT</span><span>BOLD CREATIVE STUDIO</span></div>
+ </div>
+ <div class="palette-info"><div><span class="idx">07 / 10</span><h2>Vermilion / Ivory</h2><p>Museum-paper warmth with a punchy red-orange signature.</p></div>
+ <div class="swatches" aria-label="Five colors"><span style="background:#FFF8EF" title="#FFF8EF"><b>#FFF8EF</b></span><span style="background:#29221F" title="#29221F"><b>#29221F</b></span><span style="background:#CE4534" title="#CE4534"><b>#CE4534</b></span><span style="background:#E4AA80" title="#E4AA80"><b>#E4AA80</b></span><span style="background:#F6E9DE" title="#F6E9DE"><b>#F6E9DE</b></span></div>
+ <button type="button" data-select="07">Try Vermilion / Ivory on the site <span aria-hidden="true">↗</span></button>
+ </div>
+ </article>
+<article class="palette" data-id="08">
+ <div class="preview" style="--p:#F8EEE5;--i:#3C302D;--a:#A65C43;--y:#DEB66F;--s:#EFE0D1">
+ <div class="preview-head"><span>archie<i>•</i>base</span><small>AI + CREATIVE SOLUTIONS</small></div>
+ <div class="preview-body"><div class="mark">008/ PALETTE EXPERIMENT</div><h3>Make the busywork<br><em>disappear.</em></h3><p>Useful technology for the parts of business nobody has time for.</p><span class="demo-button">Find your first fix ↗</span></div>
+ <div class="preview-footer"><span>BUILT DIFFERENT</span><span>WARM AND CONSIDERED</span></div>
+ </div>
+ <div class="palette-info"><div><span class="idx">08 / 10</span><h2>Clay & Copper</h2><p>Terra-cotta, rich brown ink, worn gold. Organic but precise.</p></div>
+ <div class="swatches" aria-label="Five colors"><span style="background:#F8EEE5" title="#F8EEE5"><b>#F8EEE5</b></span><span style="background:#3C302D" title="#3C302D"><b>#3C302D</b></span><span style="background:#A65C43" title="#A65C43"><b>#A65C43</b></span><span style="background:#DEB66F" title="#DEB66F"><b>#DEB66F</b></span><span style="background:#EFE0D1" title="#EFE0D1"><b>#EFE0D1</b></span></div>
+ <button type="button" data-select="08">Try Clay & Copper on the site <span aria-hidden="true">↗</span></button>
+ </div>
+ </article>
+<article class="palette" data-id="09">
+ <div class="preview" style="--p:#F3F1F8;--i:#25243E;--a:#6D4FE8;--y:#DEA4C2;--s:#E8E3F5">
+ <div class="preview-head"><span>archie<i>•</i>base</span><small>AI + CREATIVE SOLUTIONS</small></div>
+ <div class="preview-body"><div class="mark">009/ PALETTE EXPERIMENT</div><h3>Make the busywork<br><em>disappear.</em></h3><p>Useful technology for the parts of business nobody has time for.</p><span class="demo-button">Find your first fix ↗</span></div>
+ <div class="preview-footer"><span>BUILT DIFFERENT</span><span>EXPRESSIVE FUTURE</span></div>
+ </div>
+ <div class="palette-info"><div><span class="idx">09 / 10</span><h2>Studio Violet</h2><p>Cloud white, saturated violet and blush. Inventive without neon slop.</p></div>
+ <div class="swatches" aria-label="Five colors"><span style="background:#F3F1F8" title="#F3F1F8"><b>#F3F1F8</b></span><span style="background:#25243E" title="#25243E"><b>#25243E</b></span><span style="background:#6D4FE8" title="#6D4FE8"><b>#6D4FE8</b></span><span style="background:#DEA4C2" title="#DEA4C2"><b>#DEA4C2</b></span><span style="background:#E8E3F5" title="#E8E3F5"><b>#E8E3F5</b></span></div>
+ <button type="button" data-select="09">Try Studio Violet on the site <span aria-hidden="true">↗</span></button>
+ </div>
+ </article>
+<article class="palette" data-id="10">
+ <div class="preview" style="--p:#101B2A;--i:#F3F9FC;--a:#4EBCE6;--y:#FCE174;--s:#1B3042">
+ <div class="preview-head"><span>archie<i>•</i>base</span><small>AI + CREATIVE SOLUTIONS</small></div>
+ <div class="preview-body"><div class="mark">010/ PALETTE EXPERIMENT</div><h3>Make the busywork<br><em>disappear.</em></h3><p>Useful technology for the parts of business nobody has time for.</p><span class="demo-button">Find your first fix ↗</span></div>
+ <div class="preview-footer"><span>BUILT DIFFERENT</span><span>AFTER-HOURS LAB</span></div>
+ </div>
+ <div class="palette-info"><div><span class="idx">10 / 10</span><h2>Night Current</h2><p>A precise dark interface with cyan signals and sunlight.</p></div>
+ <div class="swatches" aria-label="Five colors"><span style="background:#101B2A" title="#101B2A"><b>#101B2A</b></span><span style="background:#F3F9FC" title="#F3F9FC"><b>#F3F9FC</b></span><span style="background:#4EBCE6" title="#4EBCE6"><b>#4EBCE6</b></span><span style="background:#FCE174" title="#FCE174"><b>#FCE174</b></span><span style="background:#1B3042" title="#1B3042"><b>#1B3042</b></span></div>
+ <button type="button" data-select="10">Try Night Current on the site <span aria-hidden="true">↗</span></button>
+ </div>
+ </article></section>
+</main><footer><div class="wrap">These are design options for Archiebase. Selecting a palette saves it in this browser only. Production default is Atlantic / Sun until we choose a winner.</div></footer>
+<script>
+(function(){try{var chosen=localStorage.getItem('archiebase-palette')||'01';document.querySelectorAll('[data-id]').forEach(function(el){el.setAttribute('aria-current',String(el.dataset.id===chosen))})}catch(e){}
+document.querySelectorAll('[data-select]').forEach(function(btn){btn.addEventListener('click',function(){var id=btn.dataset.select;try{localStorage.setItem('archiebase-palette',id)}catch(e){}window.location.href='/?palette='+encodeURIComponent(id)})});
+})();
+</script></body></html>
