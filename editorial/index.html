@@ -7,7 +7,7 @@
 <meta name="description" content="Archiebase helps small businesses make everyday work easier. Beautiful websites, useful automations, smart follow-up, and creative solutions, built personally by Aaron. Start with a free written business review.">
 <title>Archiebase — Make room for the good work.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#f7f6f0;--milk:#fffdf7;--ink:#17332f;--soft:#45605a;--line:#dce1d8;--blue:#2e59f2;--orange:#f7794e;--lime:#daf08a;--mint:#e4eedd;--display:'Bricolage Grotesque',system-ui,sans-serif;--body:'DM Sans',system-ui,sans-serif;--serif:'Newsreader',Georgia,serif;--max:1250px}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}h1,h2,h3,p,blockquote{margin:0}h1,h2,h3{font-family:var(--display);letter-spacing:-.065em;line-height:1.05}h1{font-weight:800}::selection{background:var(--lime);color:var(--ink)}:focus-visible{outline:3px solid var(--blue);outline-offset:4px}.wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.eyebrow::before{content:"";width:8px;height:8px;background:var(--orange);transform:rotate(45deg)}.tag{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.skip{position:absolute;left:16px;top:-100px;background:#fff;padding:12px;z-index:100}.skip:focus{top:10px}.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}.js .reveal.shown{opacity:1;transform:none}
@@ -262,21 +262,46 @@ footer p{color:#AECAD2}
  .endcap p{font-size:16px}
 }
 </style>
+<script>(function(){try{var fromUrl=new URLSearchParams(location.search).get('palette');var v=fromUrl||localStorage.getItem('archiebase-palette')||'01';if(/^(0[1-9]|10)$/.test(v)){document.documentElement.setAttribute('data-palette',v);if(fromUrl)localStorage.setItem('archiebase-palette',v)}}catch(e){document.documentElement.setAttribute('data-palette','01')}})();</script>
+<link rel="stylesheet" href="/assets/themes.css">
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
 <div id="progress" aria-hidden="true"></div>
 <header class="site-nav">
-<div class="wrap nav-inner"><a href="#top" class="wordmark" aria-label="Archiebase home">archie<span>•</span>base</a><nav class="desktop-nav" aria-label="Main navigation"><a href="#solutions">What we can do</a><a href="#pricing">Prices</a><a href="/about.html">My story</a><a href="/tools.html">Free tools</a><a class="nav-cta" href="#audit">Free business review ↗</a></nav><button id="menu-button" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">☰</button></div>
+<div class="wrap nav-inner"><a href="#top" class="wordmark" aria-label="Archiebase home">archie<span>•</span>base</a><nav class="desktop-nav" aria-label="Main navigation"><a href="#solutions">What we can do</a><a href="#how-it-works">How it works</a><a href="#pricing">Prices</a><a href="/about.html">My story</a><a href="/tools.html">Free tools</a><a class="nav-cta" href="#audit">Free business review ↗</a></nav><button id="menu-button" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">☰</button></div>
 <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation"><a href="#solutions">What we can do</a><a href="#pricing">Prices</a><a href="/about.html">My story</a><a href="/tools.html">Free tools</a><a href="#audit">Free business review ↗</a></nav>
 </header>
 <main id="main">
-<section class="hero" id="top"><div class="wrap hero-wrap">
-<div class="hero-top"><span class="eyebrow">Small-business websites, custom AI agents & automation</span><span class="hero-index">INDEPENDENT STUDIO / 2026</span></div>
-<h1><span class="line">Great at your work.</span><span class="line">Let's make <span class="serif">the rest</span></span><span class="line"><span class="squiggle">easier.</span></span></h1>
-<div class="hero-intro"><p><strong>You run the business. I make the parts around it work better.</strong> Clearer websites, helpful AI agents, connected workflows, and creative solutions for the ideas you've been putting off.</p><div class="hero-cta"><a href="#audit" class="solid-btn">Find my first fix, free <span aria-hidden="true">↗</span></a><a href="#solutions" class="text-link">See what I can build <span aria-hidden="true">→</span></a><div class="proofline"><span>No sales call</span><span>No jargon</span><span>Keep the recommendations</span></div></div></div>
-<div class="hero-bottom"><span class="small">BUILT BY AARON · GUIDED BY ARCHIE</span><span class="scroll-cue">SEE HOW IT WORKS <i aria-hidden="true">↓</i></span></div>
+<section class="hero sb-hero" id="top" aria-labelledby="sb-hero-title"><div class="wrap">
+  <div class="sb-topline"><span>ARCHIEBASE / A PRACTICAL CREATIVE &amp; AI STUDIO</span><span>BUILT FOR PEOPLE RUNNING REAL BUSINESSES</span></div>
+  <div class="sb-hero-layout">
+    <div class="sb-hero-copy">
+      <p class="sb-kicker">For the business owners doing a little bit of everything</p>
+      <h1 id="sb-hero-title"><span>You built the business.</span><span class="sb-impact">Let's make it easier to run.</span></h1>
+      <p class="sb-dek">You've got customers to look after, a business to grow, and about a hundred things demanding your attention. <strong>I'm Aaron. I build websites, AI helpers, automations, and creative tools that take the friction out of your day.</strong> Less chasing. Fewer things slipping through the cracks. More time for the work you actually want to do.</p>
+      <div class="sb-cta"><a href="#audit" class="solid-btn">Get my free written review <span aria-hidden="true">↗</span></a><a href="#solutions" class="text-link">See what I can build <span aria-hidden="true">→</span></a></div>
+      <div class="sb-micro-proof"><span>Useful recommendations you keep</span><span>No pressure or required call</span><span>Clear implementation prices</span></div>
+    </div>
+    <aside class="sb-aside" aria-label="Business problems Archiebase helps solve">
+      <span class="sb-aside-label">A BETTER WORKDAY LOOKS LIKE</span>
+      <h2>More of your energy going to the right things.</h2>
+      <p>No jargon. No unnecessary software. Just thoughtfully designed ways to make your business work better.</p>
+      <ol>
+        <li><small>01</small><span>Customers know exactly how to reach you.</span></li>
+        <li><small>02</small><span>Enquiries get answers before they go cold.</span></li>
+        <li><small>03</small><span>Repetitive tasks happen without another reminder.</span></li>
+        <li><small>04</small><span>That idea you've been sitting on gets built.</span></li>
+      </ol>
+      <p class="sb-signoff">You run the business. I build what helps.</p>
+    </aside>
+  </div>
 </div></section>
+<div class="sb-journey" id="how-it-works"><div class="wrap" aria-label="How working together works">
+  <div class="step"><b>01</b><p><strong>Tell me what's not working.</strong><small>A few sentences about your business is enough.</small></p></div>
+  <div class="step"><b>02</b><p><strong>Get a practical written plan.</strong><small>Three opportunities and the first fix I'd make.</small></p></div>
+  <div class="step"><b>03</b><p><strong>DIY or have me build it.</strong><small>Keep the advice or choose a clear, quoted project.</small></p></div>
+</div></div>
 <section class="workday" id="workday"><div class="wrap workday-inner"><div class="reveal"><span class="eyebrow workday-label">A familiar Tuesday</span><h2>You're on the job.<br><em>The business keeps moving.</em></h2><p class="workday-lead">This is what one small automation can change. No magic. Just fewer moments slipping through the cracks.</p></div><div class="story-track reveal"><article class="story"><span class="node" aria-hidden="true"></span><b>01 / THE MOMENT</b><h3>A customer calls.</h3><p>You're busy doing the actual work. You can't answer, and the call goes to voicemail.</p></article><article class="story"><span class="node" aria-hidden="true"></span><b>02 / THE FIX</b><h3>A helpful reply goes out.</h3><p>A simple approved message asks what they need and keeps the conversation open.</p></article><article class="story"><span class="node" aria-hidden="true"></span><b>03 / THE DIFFERENCE</b><h3>You finish the job. They get a response.</h3><p>The opportunity doesn't vanish just because both your hands were full.</p></article></div></div></section>
 <section class="solutions" id="solutions"><div class="wrap"><div class="section-heading reveal"><div><span class="eyebrow">The problems I love fixing</span><h2>What would you like<br>off your plate?</h2></div><p>Most business owners don't need to learn AI. They need the thing that's annoying them to work better. Pick where it hurts.</p></div><div class="solution-list">
 <a href="#audit" class="solution-row reveal" data-intent="More customer inquiries"><span class="sol-no">01</span><h3>Get more of the right customers.</h3><p>Websites, clearer offers, Google presence, and easier ways for people to reach you.<br><span class="outcome">Outcome: more useful enquiries, less guessing.</span></p><span class="end-arrow" aria-hidden="true">↗</span></a>
