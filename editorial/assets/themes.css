@@ -286,3 +286,11 @@ html[data-palette="10"] .pricing{padding-bottom:clamp(85px,8vw,125px)!important}
  html[data-palette="10"] .love-note p{font-size:15px!important;line-height:1.68!important}
  html[data-palette="10"] .pricing{padding-bottom:78px!important}
 }
+
+/* Remove dead arrow-only columns after the decoration is retired. */
+.solution-row{grid-template-columns:clamp(38px,5vw,68px) minmax(180px,1fr) minmax(0,1fr)!important}
+.solution-row .end-arrow{display:none!important}
+@media(max-width:800px){
+ .solution-row{grid-template-columns:32px minmax(0,1fr)!important}
+ .solution-row > p{grid-column:2!important}
+}
