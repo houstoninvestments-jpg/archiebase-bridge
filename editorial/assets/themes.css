@@ -209,3 +209,80 @@ html[data-palette="10"] .chapter .micro,
 html[data-palette="10"] .origin .micro{color:var(--t-sun)!important}
 html[data-palette="10"] .lesson h3,
 html[data-palette="10"] .promise-points h3{color:var(--t-ink)!important}
+
+/* NIGHT CURRENT CONTRAST FIX / 2026-11-04
+   The earlier cream-yellow refinement card inherited light-on-dark text
+   and became unreadable on mobile. Keep the card within the navy visual system,
+   use accessible light text, and replace overused yellow with coral and cyan. */
+html[data-palette="10"]{
+ --t-sun:#FF9682;
+ --lime:#FF9682;
+}
+html[data-palette="10"] .love-note{
+ background:#1A3447!important;
+ border:1px solid #49677A!important;
+ border-left:5px solid #69CEE9!important;
+ color:#F5F9FC!important;
+ border-radius:4px;
+ box-shadow:none!important;
+ gap:clamp(17px,3vw,34px);
+ padding:clamp(25px,3.3vw,45px)!important;
+}
+html[data-palette="10"] .love-note .handwritten{
+ color:#79D9F3!important;
+ font-size:clamp(29px,3.3vw,44px);
+ line-height:1.22!important;
+}
+html[data-palette="10"] .love-note h3{
+ color:#FFFFFF!important;
+ font-size:clamp(22px,2.3vw,31px)!important;
+ line-height:1.28!important;
+ letter-spacing:-.03em!important;
+ overflow-wrap:break-word;
+ text-wrap:balance;
+ margin-bottom:15px;
+}
+html[data-palette="10"] .love-note p{
+ color:#DEEAF2!important;
+ font-size:clamp(15px,1.2vw,17px)!important;
+ line-height:1.7!important;
+ max-width:68ch;
+}
+html[data-palette="10"] .love-note p strong{color:#FFFFFF!important}
+html[data-palette="10"] .workday{border-bottom-color:#FF9682!important}
+html[data-palette="10"] .workday-label,
+html[data-palette="10"] .workday h2 em{color:#FFAB97!important}
+html[data-palette="10"] .story-track:before{
+ background:linear-gradient(90deg,#67CBE8 0%,#FF9682 100%)!important
+}
+html[data-palette="10"] .story .node{
+ background:#FF9682!important;
+ border-color:#FF9682!important;
+}
+html[data-palette="10"] .price-item:nth-child(3n){border-top-color:#FF9682!important}
+html[data-palette="10"] .make h2 em,
+html[data-palette="10"] .endcap h2 em{color:#79D9F3!important}
+html[data-palette="10"] .make-quote{border-left-color:#FF9682!important}
+html[data-palette="10"] .make-bits span:hover{border-color:#FF9682!important}
+html[data-palette="10"] .make a,
+html[data-palette="10"] .footer-links a:hover{color:#79D9F3!important}
+html[data-palette="10"] .endcap{border-top-color:#69CEE9!important}
+html[data-palette="10"] .endcap .solid-btn{
+ background:#FF9682!important;
+ color:#152435!important;
+ box-shadow:0 6px 0 #0C4260!important;
+}
+html[data-palette="10"] .endcap .solid-btn:hover{background:#FFB4A5!important}
+html[data-palette="10"] .pricing{padding-bottom:clamp(85px,8vw,125px)!important}
+@media(max-width:800px){
+ html[data-palette="10"] .love-note{
+  display:grid;
+  grid-template-columns:minmax(0,1fr)!important;
+  gap:13px!important;
+  margin-top:40px!important;
+ }
+ html[data-palette="10"] .love-note .handwritten{font-size:clamp(27px,6.3vw,39px)!important}
+ html[data-palette="10"] .love-note h3{font-size:clamp(21px,5.1vw,28px)!important}
+ html[data-palette="10"] .love-note p{font-size:15px!important;line-height:1.68!important}
+ html[data-palette="10"] .pricing{padding-bottom:78px!important}
+}
