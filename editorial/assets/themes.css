@@ -15,7 +15,7 @@ html[data-palette="06"]{--t-paper:#EAF7F6;--t-ink:#103341;--t-accent:#008EA4;--t
 html[data-palette="07"]{--t-paper:#FFF8EF;--t-ink:#29221F;--t-accent:#CE4534;--t-sun:#E4AA80;--t-soft:#F6E9DE;--t-surface:#FFFEFB;--t-dark:#102B3C;--t-muted:#566C73;--t-border:#CBDAD9;--t-accent-text:#FFFFFF}
 html[data-palette="08"]{--t-paper:#F8EEE5;--t-ink:#3C302D;--t-accent:#A65C43;--t-sun:#DEB66F;--t-soft:#EFE0D1;--t-surface:#FFFEFB;--t-dark:#342521;--t-muted:#566C73;--t-border:#CBDAD9;--t-accent-text:#FFFFFF}
 html[data-palette="09"]{--t-paper:#F3F1F8;--t-ink:#25243E;--t-accent:#6D4FE8;--t-sun:#DEA4C2;--t-soft:#E8E3F5;--t-surface:#FFFEFB;--t-dark:#102B3C;--t-muted:#566C73;--t-border:#D1CADF;--t-accent-text:#FFFFFF}
-html[data-palette="10"]{--t-paper:#101B2A;--t-ink:#F3F9FC;--t-accent:#4EBCE6;--t-sun:#FCE174;--t-soft:#1B3042;--t-surface:#19293A;--t-dark:#07121E;--t-muted:#BBCCD6;--t-border:#385369;--t-accent-text:#FFFFFF}
+html[data-palette="10"]{--t-paper:#101B2A;--t-ink:#F3F9FC;--t-accent:#4EBCE6;--t-sun:#FCE174;--t-soft:#1B3042;--t-surface:#19293A;--t-dark:#07121E;--t-muted:#BBCCD6;--t-border:#385369;--t-accent-text:#071B2B}
 body{background:var(--t-paper)!important;color:var(--t-ink);font-family:'DM Sans',system-ui,sans-serif}
 h1,h2,h3{font-family:'Sora','DM Sans',system-ui,sans-serif!important;letter-spacing:-.045em}
 .serif,em.editorial, .wd-accent, .ab-serif{font-family:'Newsreader',Georgia,serif!important;font-style:italic;font-weight:500;letter-spacing:-.028em}
@@ -173,3 +173,39 @@ footer .wordmark{color:#fff!important} footer p,footer a:not(.wordmark){color:#d
  .pricing-list{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){.sb-cta .solid-btn,.sb-cta .solid-btn:hover{transform:none!important;transition:none!important}}
+
+
+/* NIGHT CURRENT — deliberate contrast and section rhythm */
+html[data-palette="10"]{color-scheme:dark;--t-depth:rgba(0,0,0,.22)}
+html[data-palette="10"] .sb-hero:before{opacity:.12}
+html[data-palette="10"] .sb-kicker,
+html[data-palette="10"] .sb-aside-label,
+html[data-palette="10"] .price-item .tier{color:var(--t-sun)!important}
+html[data-palette="10"] .sb-aside{border-color:var(--t-sun)!important}
+html[data-palette="10"] .sb-journey{background:#172A3C!important;border-color:var(--t-border)!important}
+html[data-palette="10"] .sb-journey .step,
+html[data-palette="10"] .sb-aside li{border-color:var(--t-border)!important}
+html[data-palette="10"] .sb-cta .solid-btn,
+html[data-palette="10"] .audit-form .solid-btn{color:#071B2B!important}
+html[data-palette="10"] .sb-hero .sb-micro-proof,
+html[data-palette="10"] .sb-aside li,
+html[data-palette="10"] .sb-aside .sb-signoff{color:var(--t-ink)!important}
+html[data-palette="10"] .price-item .money small,
+html[data-palette="10"] .price-item>p,
+html[data-palette="10"] .price-item li{color:#C5D5DF!important}
+html[data-palette="10"] .audit-form input,
+html[data-palette="10"] .audit-form textarea,
+html[data-palette="10"] .audit-form select{color:#F3F9FC!important;background:#122436!important;border-color:#4B667B!important}
+html[data-palette="10"] .audit-form input::placeholder,
+html[data-palette="10"] .audit-form textarea::placeholder{color:#A8BFCC!important}
+html[data-palette="10"] .solution-row .outcome{color:#8ADAF7!important}
+html[data-palette="10"] .faq summary:after,
+html[data-palette="10"] .solution-row .end-arrow{color:var(--t-sun)!important}
+html[data-palette="10"] .ab-hero .hero-lead strong{color:var(--t-ink)!important}
+html[data-palette="10"] .ab-hero .small-note strong,
+html[data-palette="10"] .prose strong{color:#E9F5FB!important}
+html[data-palette="10"] .chapter .chapter-mark,
+html[data-palette="10"] .chapter .micro,
+html[data-palette="10"] .origin .micro{color:var(--t-sun)!important}
+html[data-palette="10"] .lesson h3,
+html[data-palette="10"] .promise-points h3{color:var(--t-ink)!important}
