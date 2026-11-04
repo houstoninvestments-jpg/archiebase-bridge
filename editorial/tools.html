@@ -253,7 +253,27 @@ header{position:relative;background:#f8f6ef;color:#132929;border-bottom:1px soli
  .wd-valuebar-inner{padding:15px 0;gap:11px}.wd-valuebar-inner>span{width:100%;font-size:11px}
 }
 @media(prefers-reduced-motion:reduce){.wd-primary:hover{transform:none}}
+
+/* ARCHIEBASE BIG CHARACTER SELECTED / consistent studio typography.
+   Free Tools uses a tighter scale for its denser interface and longer labels. */
+body{font-family:'Nunito Sans',system-ui,sans-serif!important}
+:is(h1,h2,h3,.logo,.wd-story h1,.wd-live h2){
+ font-family:'Bowlby One SC',system-ui,sans-serif!important;
+ font-weight:400!important;
+ letter-spacing:-.035em!important;
+ line-height:1.14!important;
+}
+:is(p,li,button,input,textarea,select,.btn,.navlinks,.eyebrow,.wd-kicker,.wd-who,.wd-after p,.wd-live-sub){
+ font-family:'Nunito Sans',system-ui,sans-serif!important;
+}
+:is(h1,h2,h3) em{font-family:'Nunito Sans',system-ui,sans-serif!important;font-style:italic!important;font-weight:800!important}
+.wd-story h1{font-size:clamp(33px,3.9vw,53px)!important;line-height:1.18!important;letter-spacing:-.045em!important;overflow-wrap:normal}
+.wd-live h2{font-size:clamp(25px,2.2vw,34px)!important;line-height:1.2!important}
+.logo{font-size:21px!important;letter-spacing:-.06em!important}
+@media(max-width:800px){.wd-story h1{font-size:clamp(33px,7.3vw,52px)!important}}
+@media(max-width:520px){.wd-story h1{font-size:clamp(28px,7.7vw,40px)!important}.wd-live h2{font-size:clamp(24px,6vw,29px)!important}.logo{font-size:19px!important}}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet">
 </head>
 <body>
 <header><div class="shell nav"><a class="logo" href="#home" aria-label="Archiebase home">archie<span class="logo-dot">●</span>base</a><nav class="navlinks" aria-label="Main navigation"><a href="#problems">What we fix</a><a href="#how">How it works</a><a href="#tools">Free tools</a><a href="#contact">About</a></nav><a class="btn btn-blue" href="#first-fix">Get your first fix ↗</a></div></header>
