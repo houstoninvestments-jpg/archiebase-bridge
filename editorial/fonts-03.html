@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Archiebase / Bold type lab 03</title>
+<meta name="description" content="Ten new bold and high-impact font pairings for Archiebase. Click to see each on the real website.">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#101B2A">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+:root{--night:#101B2A;--deep:#0B1826;--panel:#1B3042;--cyan:#4EBCE6;--sun:#FCE174;--white:#F3F9FC;--mute:#B7C9D2;--line:#35546B}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--night);color:var(--white);font:16px/1.55 'DM Sans',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid var(--sun);outline-offset:4px}h1,h2,h3,p{margin-top:0}
+.wrap{width:min(1320px,calc(100% - 48px));margin:auto}
+header{border-bottom:1px solid var(--line);background:#0B1724}
+nav{min-height:73px;display:flex;gap:20px;align-items:center;justify-content:space-between}.logo{font-weight:800;letter-spacing:-.075em;font-size:25px}.logo b{color:var(--sun)}
+nav a:last-child{font-size:13px;color:var(--cyan);border-bottom:1px solid var(--cyan);font-weight:800;padding-bottom:3px}
+.intro{padding:75px 0 50px;display:grid;grid-template-columns:1.1fr .8fr;align-items:end;gap:56px;border-bottom:1px solid var(--line)}
+.label,.eyebrow,.code,.index{font-size:10px;letter-spacing:.12em;font-weight:800}
+.label{color:var(--sun)}
+.intro h1{font-size:clamp(44px,6.4vw,93px);line-height:1.04;letter-spacing:-.08em;margin:22px 0 0;font-weight:800}
+.intro h1 em{font-style:normal;color:var(--cyan)}
+.intro-copy{border-left:3px solid var(--sun);padding-left:24px}
+.intro-copy p{color:#C4D5DF;font-size:16px;line-height:1.7;margin-bottom:15px}
+.intro-copy b{color:white}
+.intro-copy span{color:var(--sun);font-size:11px;font-weight:800;letter-spacing:.1em}
+.band{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;padding:21px 0;border-bottom:1px solid var(--line);font-size:12px;font-weight:800;color:var(--mute)}
+.band b{color:var(--sun)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding:37px 0 95px}
+.specimen{border:1px solid var(--line);background:#13283A;min-width:0;transition:border-color .25s,transform .25s}
+.specimen:hover{border-color:var(--cyan);transform:translateY(-3px)}
+.specimen-screen{background:var(--deep);min-height:395px;display:flex;flex-direction:column;position:relative;isolation:isolate;overflow:hidden}
+.specimen-screen:before{content:"";position:absolute;pointer-events:none;inset:0;z-index:-1;opacity:.12;background:repeating-linear-gradient(110deg,transparent 0 32px,#61b6d8 33px,transparent 34px 65px);mask-image:linear-gradient(90deg,transparent 20%,#000)}
+.specimen:nth-child(even) .specimen-screen{background:#1C3043}
+.specimen:nth-child(3n) .specimen-screen{background:#122738}
+.screen-top,.screen-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:17px 25px;border-bottom:1px solid #355169}
+.screen-top{color:var(--sun)}
+.screen-top span:last-child{text-align:right;color:#B6CBD4}
+.screen-center{flex:1;min-height:260px;padding:25px;display:flex;justify-content:center;flex-direction:column}
+.screen-center h3{font-family:var(--display),sans-serif;font-weight:var(--w);font-size:clamp(32px,3.65vw,56px);line-height:1.05;letter-spacing:-.06em;margin:0 0 23px;overflow-wrap:normal}
+.screen-center h3 em{color:var(--cyan);font-style:normal}
+.screen-center p{font-family:var(--body),sans-serif;color:#C9D7E1;font-size:clamp(13px,1.12vw,15px);line-height:1.6;max-width:480px;margin:0}
+.screen-bottom{font-size:10px;font-weight:800;letter-spacing:.1em;border-top:1px solid #355169;border-bottom:0;color:#9EB8C7;padding:13px 25px}
+.screen-bottom span:last-child{color:var(--sun);font-size:20px}
+.meta-top{display:flex;justify-content:space-between;gap:15px}
+.specimen-meta{padding:27px 25px 24px}
+.meta-top h2{font-size:26px;letter-spacing:-.05em;line-height:1.2;margin:6px 0 14px}
+.meta-top .index{color:#78CDEB;text-align:right}
+.eyebrow{color:var(--sun)}
+.specimen-meta p{font-size:14px;line-height:1.65;color:var(--mute);min-height:48px}
+.font-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:19px 0;border-top:1px solid var(--line);padding-top:15px}
+.font-pair span{display:block;font-size:10px;color:#83ACC1;letter-spacing:.09em;font-weight:800;margin-bottom:6px}
+.font-pair b{display:block;font-size:13px;color:#ECF6FB;overflow-wrap:anywhere}
+.fit{font-size:10px;color:#90AFC1;font-weight:800;margin-bottom:16px;letter-spacing:.06em}.fit b{color:var(--white);letter-spacing:0;margin-left:6px}
+.view{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--cyan);color:#102030;padding:14px 15px;font-size:13px;font-weight:800;transition:background .2s}
+.view:hover{background:var(--sun)}
+.specimen.anton h3{font-size:clamp(56px,7vw,100px);line-height:.94}
+.specimen.bowlby h3{font-size:clamp(26px,2.9vw,44px);line-height:1.16}
+.specimen.slab h3{font-size:clamp(29px,3.15vw,47px);line-height:1.17}
+.specimen.teko h3{font-size:clamp(72px,9vw,122px);line-height:.82;letter-spacing:-.025em}
+.specimen.kanit h3{font-size:clamp(31px,3.5vw,54px)}
+.specimen.paytone h3{font-size:clamp(31px,3.4vw,51px)}
+.specimen.anybody h3{font-size:clamp(32px,3.65vw,57px)}
+.specimen.funnel h3{font-size:clamp(36px,3.9vw,59px)}
+.specimen.rubik h3{font-size:clamp(24px,2.9vw,41px)}
+.specimen.oxanium h3{font-size:clamp(38px,4.3vw,64px)}
+footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--mute);font-size:12px}
+@media(max-width:970px){.grid{grid-template-columns:1fr;max-width:690px;margin-inline:auto}.intro{grid-template-columns:1fr;gap:22px}.intro-copy{max-width:700px}.screen-center h3{font-size:clamp(33px,6.4vw,57px)}}
+@media(max-width:600px){.wrap{width:calc(100% - 30px)}nav{min-height:65px}.logo{font-size:22px}nav a:last-child{font-size:11px}.intro{padding:48px 0 33px}.intro h1{font-size:clamp(43px,10.2vw,60px)}.intro-copy{padding-left:17px}.intro-copy p{font-size:14px}.grid{gap:18px;padding-top:24px}.specimen-screen{min-height:345px}.screen-top,.screen-bottom{padding:14px 18px}.screen-center{min-height:240px;padding:20px 18px}.screen-center h3{font-size:clamp(30px,7vw,43px);margin-bottom:19px}.screen-center p{font-size:13px}.specimen.anton h3{font-size:clamp(61px,15vw,92px)}.specimen.bowlby h3{font-size:clamp(25px,6vw,37px)}.specimen.slab h3{font-size:clamp(27px,6.6vw,40px)}.specimen.teko h3{font-size:clamp(74px,18vw,108px)}.specimen.kanit h3{font-size:clamp(30px,7.2vw,44px)}.specimen.paytone h3{font-size:clamp(29px,7vw,43px)}.specimen.anybody h3{font-size:clamp(30px,7.2vw,45px)}.specimen.funnel h3{font-size:clamp(34px,8vw,48px)}.specimen.rubik h3{font-size:clamp(21px,5.4vw,33px)}.specimen.oxanium h3{font-size:clamp(36px,8.5vw,52px)}.specimen-meta{padding:21px}.meta-top h2{font-size:24px}.specimen-meta p{min-height:0}}
+@media(prefers-reduced-motion:reduce){.specimen,.view{transition:none}.specimen:hover{transform:none}}
+</style></head>
+<body>
+<header><nav class="wrap"><a href="/" class="logo">archie<b>•</b>base</a><a href="/fonts-02.html">Previous collection ↗</a></nav></header>
+<main>
+<section class="wrap intro"><div><span class="label">TYPOGRAPHY LAB / COLLECTION 03</span><h1>Turn up<br><em>the bold.</em></h1></div><div class="intro-copy"><p><b>Ten fresh pairings, with more muscle and personality.</b> These are real fonts on real Archiebase copy, not generic font names in a list. Try each on the actual homepage and About page.</p><span>10 NEW / ZERO DEFAULT CHANGES</span></div></section>
+<div class="wrap band"><span><b>30</b> TOTAL DIRECTIONS</span><span><b>10</b> NEW BOLD PAIRINGS</span><span>DEFAULT STILL <b>SAIRA + ONEST / NIGHT CURRENT</b></span></div>
+<section class="wrap grid" aria-label="Ten bold typography examples"><article class="specimen anton" data-font-url="https://fonts.googleapis.com/css2?family=Anton&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" id="type-21" style="--display:'Anton';--body:'Roboto Flex';--w:400">
+ <div class="specimen-screen">
+  <div class="screen-top"><span class="code">ARCHIEBASE® / 21</span><span class="code">BOLD / DIRECT</span></div>
+  <div class="screen-center"><h3>BRING YOUR<br><em>BIG IDEAS.</em></h3><p>Your customers don't need to know how AI works. They need someone to make the frustrating parts of their business work better. That's what Archiebase is for.</p></div>
+  <div class="screen-bottom"><span>AI AGENTS · WORKFLOWS · WEB · CREATIVE</span><span>↗</span></div>
+ </div>
+ <div class="specimen-meta">
+  <div class="meta-top"><div><span class="eyebrow">21 / FRESH BOLD PAIRING</span><h2>The Billboard</h2></div><span class="index">BOLD<br>TYPE</span></div>
+  <p>Huge, clean impact. Gets to the point in one glance.</p>
+  <div class="font-pair"><div><span>HEADLINE</span><b>Anton</b></div><div><span>BODY / UI</span><b>Roboto Flex</b></div></div>
+  <div class="fit">BEST FOR <b>Immediate impact</b></div>
+  <a href="/?font=21&amp;palette=10" class="view">Try #21 on Archiebase <span aria-hidden="true">↗</span></a>
+ </div></article>
+<article class="specimen bowlby" data-font-url="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:wght@400;500;600;700&amp;display=swap" id="type-22" style="--display:'Bowlby One SC';--body:'Nunito Sans';--w:400">
+ <div class="specimen-screen">
+  <div class="screen-top"><span class="code">ARCHIEBASE® / 22</span><span class="code">CHUNKY / PLAYFUL</span></div>
+  <div class="screen-center"><h3>LESS WORK.<br><em>MORE WOW.</em></h3><p>Your customers don't need to know how AI works. They need someone to make the frustrating parts of their business work better. That's what Archiebase is for.</p></div>
+  <div class="screen-bottom"><span>AI AGENTS · WORKFLOWS · WEB · CREATIVE</span><span>↗</span></div>
+ </div>
+ <div class="specimen-meta">
+  <div class="meta-top"><div><span class="eyebrow">22 / FRESH BOLD PAIRING</span><h2>The Heavy Hitter</h2></div><span class="index">BOLD<br>TYPE</span></div>
+  <p>Unmistakable and full of character, without looking like a startup template.</p>
+  <div class="font-pair"><div><span>HEADLINE</span><b>Bowlby One SC</b></div><div><span>BODY / UI</span><b>Nunito Sans</b></div></div>
+  <div class="fit">BEST FOR <b>Memorable identity</b></div>
+  <a href="/?font=22&amp;palette=10" class="view">Try #22 on Archiebase <span aria-hidden="true">↗</span></a>
+ </div></article>
+<article class="specimen slab" data-font-url="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" id="type-23" style="--display:'Alfa Slab One';--body:'Barlow';--w:400">
+ <div class="specimen-screen">
+  <div class="screen-top"><span class="code">ARCHIEBASE® / 23</span><span class="code">SLAB / CRAFT</span></div>
+  <div class="screen-center"><h3>BUILT WITH<br><em>MORE HEART.</em></h3><p>Your customers don't need to know how AI works. They need someone to make the frustrating parts of their business work better. That's what Archiebase is for.</p></div>
+  <div class="screen-bottom"><span>AI AGENTS · WORKFLOWS · WEB · CREATIVE</span><span>↗</span></div>
+ </div>
+ <div class="specimen-meta">
+  <div class="meta-top"><div><span class="eyebrow">23 / FRESH BOLD PAIRING</span><h2>The New Heritage</h2></div><span class="index">BOLD<br>TYPE</span></div>
+  <p>A warm, hard-working personality with real vintage craftsmanship.</p>
+  <div class="font-pair"><div><span>HEADLINE</span><b>Alfa Slab One</b></div><div><span>BODY / UI</span><b>Barlow</b></div></div>
+  <div class="fit">BEST FOR <b>Real-world credibility</b></div>
+  <a href="/?font=23&amp;palette=10" class="view">Try #23 on Archiebase <span aria-hidden="true">↗</span></a>
+ </div></article>
+<article class="specimen teko" data-font-url="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&amp;family=Overpass:wght@400;500;600;700&amp;display=swap" id="type-24" style="--display:'Teko';--body:'Overpass';--w:700">
+ <div class="specimen-screen">
+  <div class="screen-top"><span class="code">ARCHIEBASE® / 24</span><span class="code">CONDENSED / TALL</span></div>
+  <div class="screen-center"><h3>YOUR BUSINESS.<br><em>UNSTUCK.</em></h3><p>Your customers don't need to know how AI works. They need someone to make the frustrating parts of their business work better. That's what Archiebase is for.</p></div>
+  <div class="screen-bottom"><span>AI AGENTS · WORKFLOWS · WEB · CREATIVE</span><span>↗</span></div>
+ </div>
+ <div class="specimen-meta">
+  <div class="meta-top"><div><span class="eyebrow">24 / FRESH BOLD PAIRING</span><h2>The Tall Order</h2></div><span class="index">BOLD<br>TYPE</span></div>
+  <p>A powerful industrial headline, light-footed and editorial underneath.</p>
+  <div class="font-pair"><div><span>HEADLINE</span><b>Teko</b></div><div><span>BODY / UI</span><b>Overpass</b></div></div>
+  <div class="fit">BEST FOR <b>Striking mobile headlines</b></div>
+  <a href="/?font=24&amp;palette=10" class="view">Try #24 on Archiebase <span aria-hidden="true">↗</span></a>
+ </div></article>
+<article class="specimen kanit" data-font-url="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700;800&amp;family=Lexend:wght@400;500;600;700&amp;display=swap" id="type-25" style="--display:'Kanit';--body:'Lexend';--w:800">
+ <div class="specimen-screen">
+  <div class="screen-top"><span class="code">ARCHIEBASE® / 25</span><span class="code">MODERN / SHARP</span></div>
+  <div class="screen-center"><h3>NOT JUST IDEAS.<br><em>REAL SOLUTIONS.</em></h3><p>Your customers don't need to know how AI works. They need someone to make the frustrating parts of their business work better. That's what Archiebase is for.</p></div>
+  <div class="screen-bottom"><span>AI AGENTS · WORKFLOWS · WEB · CREATIVE</span><span>↗</span></div>
+ </div>
+ <div class="specimen-meta">
+  <div class="meta-top"><div><span class="eyebrow">25 / FRESH BOLD PAIRING</span><h2>The Forward Thinker</h2></div><span class="index">BOLD<br>TYPE</span></div>
+  <p>Strong, modern, and system-minded with excellent body text.</p>
+  <div class="font-pair"><div><span>HEADLINE</span><b>Kanit</b></div><div><span>BODY / UI</span><b>Lexend</b></div></div>
+  <div class="fit">BEST FOR <b>Serious AI + development</b></div>
+  <a href="/?font=25&amp;palette=10" class="view">Try #25 on Archiebase <span aria-hidden="true">↗</span></a>
+ </div></article>
+<article class="specimen paytone" data-font-url="https://fonts.googleapis.com/css2?family=Paytone+One&amp;family=Assistant:wght@400;500;600;700&amp;display=swap" id="type-26" style="--display:'Paytone One';--body:'Assistant';--w:400">
+ <div class="specimen-screen">
+  <div class="screen-top"><span class="code">ARCHIEBASE® / 26</span><span class="code">HUMAN / FRIENDLY</span></div>
+  <div class="screen-center"><h3>MAKE THE<br><em>GOOD STUFF.</em></h3><p>Your customers don't need to know how AI works. They need someone to make the frustrating parts of their business work better. That's what Archiebase is for.</p></div>
+  <div class="screen-bottom"><span>AI AGENTS · WORKFLOWS · WEB · CREATIVE</span><span>↗</span></div>
+ </div>
+ <div class="specimen-meta">
+  <div class="meta-top"><div><span class="eyebrow">26 / FRESH BOLD PAIRING</span><h2>The Good Trouble</h2></div><span class="index">BOLD<br>TYPE</span></div>
+  <p>Approachable but substantial. Big personality, little pretension.</p>
+  <div class="font-pair"><div><span>HEADLINE</span><b>Paytone One</b></div><div><span>BODY / UI</span><b>Assistant</b></div></div>
+  <div class="fit">BEST FOR <b>Warm creative energy</b></div>
+  <a href="/?font=26&amp;palette=10" class="view">Try #26 on Archiebase <span aria-hidden="true">↗</span></a>
+ </div></article>
+<article class="specimen anybody" data-font-url="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Readex+Pro:wght@400;500;600;700&amp;display=swap" id="type-27" style="--display:'Anybody';--body:'Readex Pro';--w:900">
+ <div class="specimen-screen">
+  <div class="screen-top"><span class="code">ARCHIEBASE® / 27</span><span class="code">EXPERIMENTAL / BOLD</span></div>
+  <div class="screen-center"><h3>BETTER IDEAS.<br><em>BIGGER IMPACT.</em></h3><p>Your customers don't need to know how AI works. They need someone to make the frustrating parts of their business work better. That's what Archiebase is for.</p></div>
+  <div class="screen-bottom"><span>AI AGENTS · WORKFLOWS · WEB · CREATIVE</span><span>↗</span></div>
+ </div>
+ <div class="specimen-meta">
+  <div class="meta-top"><div><span class="eyebrow">27 / FRESH BOLD PAIRING</span><h2>The Shape Shifter</h2></div><span class="index">BOLD<br>TYPE</span></div>
+  <p>A punchy, muscular display voice with a clever supporting font.</p>
+  <div class="font-pair"><div><span>HEADLINE</span><b>Anybody</b></div><div><span>BODY / UI</span><b>Readex Pro</b></div></div>
+  <div class="fit">BEST FOR <b>One-of-one expression</b></div>
+  <a href="/?font=27&amp;palette=10" class="view">Try #27 on Archiebase <span aria-hidden="true">↗</span></a>
+ </div></article>
+<article class="specimen funnel" data-font-url="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@600;700;800&amp;family=Funnel+Sans:wght@400;500;600;700&amp;display=swap" id="type-28" style="--display:'Funnel Display';--body:'Funnel Sans';--w:800">
+ <div class="specimen-screen">
+  <div class="screen-top"><span class="code">ARCHIEBASE® / 28</span><span class="code">DESIGNED / PRECISE</span></div>
+  <div class="screen-center"><h3>LESS FRICTION.<br><em>MORE FREEDOM.</em></h3><p>Your customers don't need to know how AI works. They need someone to make the frustrating parts of their business work better. That's what Archiebase is for.</p></div>
+  <div class="screen-bottom"><span>AI AGENTS · WORKFLOWS · WEB · CREATIVE</span><span>↗</span></div>
+ </div>
+ <div class="specimen-meta">
+  <div class="meta-top"><div><span class="eyebrow">28 / FRESH BOLD PAIRING</span><h2>The Precision Move</h2></div><span class="index">BOLD<br>TYPE</span></div>
+  <p>Smooth, finely tuned, and confidently bold without becoming noisy.</p>
+  <div class="font-pair"><div><span>HEADLINE</span><b>Funnel Display</b></div><div><span>BODY / UI</span><b>Funnel Sans</b></div></div>
+  <div class="fit">BEST FOR <b>Premium universal brand</b></div>
+  <a href="/?font=28&amp;palette=10" class="view">Try #28 on Archiebase <span aria-hidden="true">↗</span></a>
+ </div></article>
+<article class="specimen rubik" data-font-url="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" id="type-29" style="--display:'Rubik Mono One';--body:'Roboto';--w:400">
+ <div class="specimen-screen">
+  <div class="screen-top"><span class="code">ARCHIEBASE® / 29</span><span class="code">MONO / ICONIC</span></div>
+  <div class="screen-center"><h3>MAKE IT<br><em>WORK.</em></h3><p>Your customers don't need to know how AI works. They need someone to make the frustrating parts of their business work better. That's what Archiebase is for.</p></div>
+  <div class="screen-bottom"><span>AI AGENTS · WORKFLOWS · WEB · CREATIVE</span><span>↗</span></div>
+ </div>
+ <div class="specimen-meta">
+  <div class="meta-top"><div><span class="eyebrow">29 / FRESH BOLD PAIRING</span><h2>The Block</h2></div><span class="index">BOLD<br>TYPE</span></div>
+  <p>An unexpected technical signature with deliberately bold texture.</p>
+  <div class="font-pair"><div><span>HEADLINE</span><b>Rubik Mono One</b></div><div><span>BODY / UI</span><b>Roboto</b></div></div>
+  <div class="fit">BEST FOR <b>Coding and systems identity</b></div>
+  <a href="/?font=29&amp;palette=10" class="view">Try #29 on Archiebase <span aria-hidden="true">↗</span></a>
+ </div></article>
+<article class="specimen oxanium" data-font-url="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" id="type-30" style="--display:'Oxanium';--body:'Noto Sans';--w:800">
+ <div class="specimen-screen">
+  <div class="screen-top"><span class="code">ARCHIEBASE® / 30</span><span class="code">FUTURE / ENGINEERED</span></div>
+  <div class="screen-center"><h3>BUILD WHAT<br><em>COMES NEXT.</em></h3><p>Your customers don't need to know how AI works. They need someone to make the frustrating parts of their business work better. That's what Archiebase is for.</p></div>
+  <div class="screen-bottom"><span>AI AGENTS · WORKFLOWS · WEB · CREATIVE</span><span>↗</span></div>
+ </div>
+ <div class="specimen-meta">
+  <div class="meta-top"><div><span class="eyebrow">30 / FRESH BOLD PAIRING</span><h2>The Machine Shop</h2></div><span class="index">BOLD<br>TYPE</span></div>
+  <p>Angular but readable, at the intersection of technology and practical work.</p>
+  <div class="font-pair"><div><span>HEADLINE</span><b>Oxanium</b></div><div><span>BODY / UI</span><b>Noto Sans</b></div></div>
+  <div class="fit">BEST FOR <b>Advanced AI experience</b></div>
+  <a href="/?font=30&amp;palette=10" class="view">Try #30 on Archiebase <span aria-hidden="true">↗</span></a>
+ </div></article></section>
+</main>
+<footer><div class="wrap">Preview any font on Archiebase by selecting its button. Your current default remains unchanged until you choose one.</div></footer>
+<script>(function(){var cards=document.querySelectorAll('[data-font-url]');function load(card){if(card.dataset.loaded)return;card.dataset.loaded='yes';var f=document.createElement('link');f.rel='stylesheet';f.href=card.dataset.fontUrl;document.head.appendChild(f)}
+if('IntersectionObserver' in window){var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){load(e.target);obs.unobserve(e.target)}})},{rootMargin:'650px 0px'});cards.forEach(function(c){obs.observe(c)})}else{cards.forEach(load)}})();</script>
+</body></html>
