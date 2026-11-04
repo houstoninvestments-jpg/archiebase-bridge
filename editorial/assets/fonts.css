@@ -1,0 +1,41 @@
+/* ARCHIEBASE FONT EXPLORATION. No change unless data-font is selected. */
+html[data-font="01"]{--ab-head:'Unbounded',sans-serif;--ab-body:'Inter Tight',sans-serif;--ab-headweight:800;--ab-headtrack:-.07em}
+html[data-font="02"]{--ab-head:'Fraunces',sans-serif;--ab-body:'Manrope',sans-serif;--ab-headweight:700;--ab-headtrack:-.055em}
+html[data-font="03"]{--ab-head:'Archivo Black',sans-serif;--ab-body:'Source Sans 3',sans-serif;--ab-headweight:400;--ab-headtrack:-.075em}
+html[data-font="04"]{--ab-head:'Syne',sans-serif;--ab-body:'Atkinson Hyperlegible Next',sans-serif;--ab-headweight:800;--ab-headtrack:-.07em}
+html[data-font="05"]{--ab-head:'Space Grotesk',sans-serif;--ab-body:'IBM Plex Sans',sans-serif;--ab-headweight:700;--ab-headtrack:-.065em}
+html[data-font="06"]{--ab-head:'Barlow Condensed',sans-serif;--ab-body:'Public Sans',sans-serif;--ab-headweight:800;--ab-headtrack:-.035em}
+html[data-font="07"]{--ab-head:'Instrument Serif',sans-serif;--ab-body:'Outfit',sans-serif;--ab-headweight:400;--ab-headtrack:-.045em}
+html[data-font="08"]{--ab-head:'Chivo',sans-serif;--ab-body:'Alegreya Sans',sans-serif;--ab-headweight:800;--ab-headtrack:-.07em}
+html[data-font="09"]{--ab-head:'Saira',sans-serif;--ab-body:'Onest',sans-serif;--ab-headweight:800;--ab-headtrack:-.05em}
+html[data-font="10"]{--ab-head:'Red Hat Display',sans-serif;--ab-body:'Lora',sans-serif;--ab-headweight:800;--ab-headtrack:-.065em}
+html[data-font] body{font-family:var(--ab-body)!important}
+html[data-font] :is(h1,h2,h3,.wordmark,.logo){font-family:var(--ab-head)!important;font-weight:var(--ab-headweight)!important;letter-spacing:var(--ab-headtrack)!important}
+html[data-font] :is(.sb-hero h1,.ab-hero h1){font-family:var(--ab-head)!important;font-weight:var(--ab-headweight)!important;letter-spacing:var(--ab-headtrack)!important;line-height:1.12!important}
+html[data-font] :is(.sb-hero h1 span,.ab-hero h1 span){font-family:var(--ab-head)!important}
+html[data-font] :is(.sb-hero .sb-signoff,.ab-hero h1 em,.serif,.handwritten,.make-quote){font-family:var(--ab-head)!important;font-style:normal!important}
+html[data-font] :is(p,li,button,input,select,textarea,a,small,.eyebrow,.micro,.section-heading p){font-family:var(--ab-body)!important}
+html[data-font] .wordmark{font-weight:var(--ab-headweight)!important;letter-spacing:-.08em!important}
+html[data-font="01"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(36px,4.55vw,70px)!important}
+html[data-font="03"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(42px,5vw,78px)!important}
+html[data-font="06"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(62px,6.6vw,102px)!important}
+html[data-font="07"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(60px,7.1vw,112px)!important}
+html[data-font="09"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(42px,5.05vw,80px)!important}
+html[data-font] .sb-hero h1{overflow-wrap:break-word!important;word-break:normal;hyphens:manual}
+html[data-font] .ab-hero h1{overflow-wrap:break-word!important;word-break:normal}
+html[data-font] .sb-hero-layout{grid-template-columns:minmax(0,1.5fr) minmax(0,.5fr)}
+html[data-font] .sb-hero .sb-dek{font-family:var(--ab-body)!important}
+html[data-font] .ab-hero .hero-lead{font-family:var(--ab-body)!important}
+.font-preview-ribbon{position:fixed;z-index:300;bottom:15px;right:16px;left:auto;max-width:calc(100% - 32px);padding:11px 15px;border:1px solid #5ab8d0;border-radius:10px;background:#0b1b2beF;color:#fff;box-shadow:0 14px 40px #0006;display:flex;gap:16px;align-items:center;justify-content:space-between;font:600 12px 'DM Sans',sans-serif}
+.font-preview-ribbon a{color:#b9eafe!important;text-decoration:underline;text-underline-offset:3px;font-weight:800}
+.font-preview-ribbon button{color:#ffe08c!important;background:none;border:0;font:inherit;font-weight:800;cursor:pointer;padding:4px 0;text-decoration:underline}
+@media(max-width:850px){html[data-font] .sb-hero-layout{grid-template-columns:1fr}}
+@media(max-width:600px){
+ html[data-font] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(39px,9.3vw,58px)!important;line-height:1.16!important}
+ html[data-font="01"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(33px,7.45vw,48px)!important}
+ html[data-font="03"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(38px,8.7vw,54px)!important}
+ html[data-font="06"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(52px,11vw,72px)!important}
+ html[data-font="07"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(56px,11.5vw,74px)!important}
+ .font-preview-ribbon{font-size:11px;bottom:8px;left:8px;right:8px;max-width:unset;gap:10px}
+}
+@media(prefers-reduced-motion:reduce){.font-preview-ribbon{animation:none}}
