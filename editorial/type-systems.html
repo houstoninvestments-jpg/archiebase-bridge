@@ -24,7 +24,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
 .count{margin:17px 0 17px;color:var(--blue);font-size:12px;font-weight:700}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px;padding:0 0 105px}
 .system{border:1px solid var(--line);min-width:0;background:var(--panel);transition:border-color .18s,transform .18s}
-.system:hover{border-color:#89B3C9;transform:translateY(-2px)}
+.system:hover{border-color:#89B3C9;transform:translateY(-2px)}.system.selected{border-color:var(--yellow)}
 .system[hidden]{display:none!important}
 .mock{background:var(--floor);padding:24px 29px 30px;min-height:390px;display:flex;flex-direction:column}
 .system:nth-child(3n) .mock{background:#0D2030}.system:nth-child(4n) .mock{background:#0A1928}
@@ -53,8 +53,8 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
 </style></head>
 <body>
 <header class="top"><div class="wrap top-inner"><a class="logo" href="/">archie<span>•</span>base</a><a class="back" href="/">Back to Archiebase</a></div></header>
-<main><section class="intro wrap"><div><span class="kicker">TYPE LAB / FULL SYSTEM REVIEW</span><h1>Not font swaps.<br><em>Complete systems.</em></h1></div><div class="intro-copy"><p><strong>Every option changes the entire typographic voice.</strong> Display, expressive line, paragraph text, buttons and tiny labels are designed to belong together. The third line is no longer stuck in the original serif. Compare the same copy on every system, then see the complete live website.</p><span class="note">30 DIRECTIONS · 1 SHARED NIGHT CURRENT PALETTE · NO DEFAULT CHANGES</span></div></section>
-<div class="wrap criteria"><span><strong>30</strong> designed systems</span><span><strong>3</strong> typographic roles per system</span><span><strong>09</strong> current baseline, kept untouched</span></div>
+<main><section class="intro wrap"><div><span class="kicker">TYPE LAB / FULL SYSTEM REVIEW</span><h1>Not font swaps.<br><em>Complete systems.</em></h1></div><div class="intro-copy"><p><strong>Every option changes the entire typographic voice.</strong> Display, expressive line, paragraph text, buttons and tiny labels are designed to belong together. The third line is no longer stuck in the original serif. Compare the same copy on every system, then see the complete live website.</p><span class="note">30 DIRECTIONS · NIGHT CURRENT PALETTE · BIG CHARACTER #22 SELECTED</span></div></section>
+<div class="wrap criteria"><span><strong>30</strong> designed systems</span><span><strong>3</strong> typographic roles per system</span><span><strong>22</strong> Big Character selected</span></div>
 <div class="wrap"><nav class="filters" aria-label="Filter typography systems"><button type="button" data-filter="all" class="active" aria-pressed="true">All 30</button><button type="button" data-filter="confident" class="" aria-pressed="false">Confident & clean</button><button type="button" data-filter="creative" class="" aria-pressed="false">Creative & human</button><button type="button" data-filter="editorial" class="" aria-pressed="false">Editorial</button><button type="button" data-filter="industrial" class="" aria-pressed="false">Bold & industrial</button><button type="button" data-filter="precision" class="" aria-pressed="false">Modern & technical</button><button type="button" data-filter="baseline" class="" aria-pressed="false">Current baseline</button></nav><div class="count" id="count" aria-live="polite">Showing all 30 systems</div></div>
 <section class="grid wrap" aria-label="Thirty Archiebase typography systems"><article class="system" id="system-01" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&amp;family=Inter+Tight:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,700&amp;display=swap" style="--head-w:800;--show-head:'Unbounded';--show-body:'Inter Tight';--show-accent:'Inter Tight';--accent-style:italic;--accent-w:700;--hero-track:-.058em;--acc-scale:0.79">
  <div class="mock">
@@ -185,8 +185,8 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
  </div>
  <div class="info">
-  <div class="info-head"><div><small>TYPE SYSTEM 09 / 30 · CURRENT</small><h2>Current Baseline</h2></div><span class="mood">Current baseline</span></div>
-  <p class="rationale">The existing published Saira, Onest and Newsreader treatment, retained for reference.</p>
+  <div class="info-head"><div><small>TYPE SYSTEM 09 / 30 · PREVIOUS</small><h2>Previous Baseline</h2></div><span class="mood">Previous design</span></div>
+  <p class="rationale">The earlier Saira, Onest and Newsreader treatment, retained for comparison.</p>
   <div class="roles"><div><span>DISPLAY</span><strong>Saira</strong></div><div><span>EMPHASIS</span><strong>Newsreader italic</strong></div><div><span>BODY + UI</span><strong>Onest</strong></div></div>
   <a class="try" href="/?font=09&amp;palette=10">View complete website in system 09<span aria-hidden="true">↗</span></a>
  </div>
@@ -371,7 +371,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=21&amp;palette=10">View complete website in system 21<span aria-hidden="true">↗</span></a>
  </div>
 </article>
-<article class="system" id="system-22" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,800&amp;display=swap" style="--head-w:400;--show-head:'Bowlby One SC';--show-body:'Nunito Sans';--show-accent:'Nunito Sans';--accent-style:italic;--accent-w:800;--hero-track:-.048em;--acc-scale:0.79">
+<article class="system selected" id="system-22" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,800&amp;display=swap" style="--head-w:400;--show-head:'Bowlby One SC';--show-body:'Nunito Sans';--show-accent:'Nunito Sans';--accent-style:italic;--accent-w:800;--hero-track:-.048em;--acc-scale:0.79">
  <div class="mock">
   <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
   <div class="micro">A BETTER WAY TO WORK / 22</div>
@@ -380,7 +380,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
  </div>
  <div class="info">
-  <div class="info-head"><div><small>TYPE SYSTEM 22 / 30 </small><h2>Big Character</h2></div><span class="mood">Creative & human</span></div>
+  <div class="info-head"><div><small>TYPE SYSTEM 22 / 30 · SELECTED</small><h2>Big Character</h2></div><span class="mood">Creative & human</span></div>
   <p class="rationale">Friendly rounded shapes give the accent a natural relationship with the headline.</p>
   <div class="roles"><div><span>DISPLAY</span><strong>Bowlby One SC</strong></div><div><span>EMPHASIS</span><strong>Nunito Sans italic</strong></div><div><span>BODY + UI</span><strong>Nunito Sans</strong></div></div>
   <a class="try" href="/?font=22&amp;palette=10">View complete website in system 22<span aria-hidden="true">↗</span></a>
@@ -506,7 +506,7 @@ h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto
   <a class="try" href="/?font=30&amp;palette=10">View complete website in system 30<span aria-hidden="true">↗</span></a>
  </div>
 </article></section>
-</main><footer class="foot"><div class="wrap">All previews are experiments. The currently published type system stays unchanged until an alternative is selected. Fonts load on demand as you browse.</div></footer>
+</main><footer class="foot"><div class="wrap">All previews are experiments. Big Character (#22) is now the selected Archiebase type system. Other options remain reversible previews. Fonts load on demand as you browse.</div></footer>
 <script>
 (function(){
  var cards=Array.prototype.slice.call(document.querySelectorAll('.system'));
