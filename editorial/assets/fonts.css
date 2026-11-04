@@ -39,3 +39,37 @@ html[data-font] .ab-hero .hero-lead{font-family:var(--ab-body)!important}
  .font-preview-ribbon{font-size:11px;bottom:8px;left:8px;right:8px;max-width:unset;gap:10px}
 }
 @media(prefers-reduced-motion:reduce){.font-preview-ribbon{animation:none}}
+
+/* NEW TYPOGRAPHY COLLECTION 02 — archived default 09 remains Saira + Onest */
+html[data-font="11"]{--ab-head:'Bricolage Grotesque';--ab-body:'Plus Jakarta Sans';--ab-headweight:800;--ab-headtrack:-.055em;--display:'Bricolage Grotesque',sans-serif;--body:'Plus Jakarta Sans',sans-serif}
+html[data-font="12"]{--ab-head:'Dela Gothic One';--ab-body:'Work Sans';--ab-headweight:400;--ab-headtrack:-.075em;--display:'Dela Gothic One',sans-serif;--body:'Work Sans',sans-serif}
+html[data-font="13"]{--ab-head:'Bodoni Moda';--ab-body:'Urbanist';--ab-headweight:700;--ab-headtrack:-.058em;--display:'Bodoni Moda',sans-serif;--body:'Urbanist',sans-serif}
+html[data-font="14"]{--ab-head:'Big Shoulders Display';--ab-body:'Hanken Grotesk';--ab-headweight:800;--ab-headtrack:-.015em;--display:'Big Shoulders Display',sans-serif;--body:'Hanken Grotesk',sans-serif}
+html[data-font="15"]{--ab-head:'Gabarito';--ab-body:'Figtree';--ab-headweight:800;--ab-headtrack:-.07em;--display:'Gabarito',sans-serif;--body:'Figtree',sans-serif}
+html[data-font="16"]{--ab-head:'Chakra Petch';--ab-body:'Karla';--ab-headweight:700;--ab-headtrack:-.045em;--display:'Chakra Petch',sans-serif;--body:'Karla',sans-serif}
+html[data-font="17"]{--ab-head:'Darker Grotesque';--ab-body:'Jost';--ab-headweight:800;--ab-headtrack:-.08em;--display:'Darker Grotesque',sans-serif;--body:'Jost',sans-serif}
+html[data-font="18"]{--ab-head:'DM Serif Display';--ab-body:'Cabin';--ab-headweight:400;--ab-headtrack:-.05em;--display:'DM Serif Display',sans-serif;--body:'Cabin',sans-serif}
+html[data-font="19"]{--ab-head:'League Spartan';--ab-body:'Mulish';--ab-headweight:800;--ab-headtrack:-.075em;--display:'League Spartan',sans-serif;--body:'Mulish',sans-serif}
+html[data-font="20"]{--ab-head:'Azeret Mono';--ab-body:'Geist';--ab-headweight:700;--ab-headtrack:-.055em;--display:'Azeret Mono',sans-serif;--body:'Geist',sans-serif}
+html[data-font="11"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(38px,4.65vw,75px)!important}
+html[data-font="12"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(34px,4.2vw,67px)!important;line-height:1.17!important}
+html[data-font="13"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(60px,6.7vw,104px)!important;line-height:1.06!important}
+html[data-font="14"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(70px,8.8vw,135px)!important;line-height:1.0!important}
+html[data-font="15"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(52px,5.9vw,93px)!important}
+html[data-font="16"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(47px,5.5vw,87px)!important}
+html[data-font="17"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(64px,7.1vw,110px)!important;line-height:.98!important}
+html[data-font="18"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(59px,6.7vw,109px)!important;line-height:1.04!important}
+html[data-font="19"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(54px,6.3vw,98px)!important}
+html[data-font="20"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(37px,4.5vw,73px)!important;line-height:1.18!important}
+@media(max-width:600px){
+html[data-font="11"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(35px,8vw,47px)!important}
+html[data-font="12"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(29px,7.1vw,42px)!important}
+html[data-font="13"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(49px,10.4vw,63px)!important}
+html[data-font="14"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(63px,14.4vw,88px)!important}
+html[data-font="15"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(40px,9.4vw,55px)!important}
+html[data-font="16"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(37px,8.6vw,51px)!important}
+html[data-font="17"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(58px,11.4vw,71px)!important}
+html[data-font="18"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(50px,11vw,64px)!important}
+html[data-font="19"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(46px,10.4vw,62px)!important}
+html[data-font="20"] :is(.sb-hero h1,.ab-hero h1){font-size:clamp(32px,7.35vw,43px)!important}
+}
