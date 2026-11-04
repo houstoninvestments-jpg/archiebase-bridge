@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#101B2A">
+<meta name="description" content="Thirty intentionally paired Archiebase typography systems, each with display, emphasis, body, scale and real-site preview.">
+<title>Archiebase — Typography systems, not font swaps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--night:#101B2A;--floor:#071523;--panel:#15283A;--line:#3A4E5F;--text:#F5F8FB;--muted:#B7C8D5;--yellow:#FFE06C;--blue:#6BD2F3;--font:'DM Sans',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--night);color:var(--text);margin:0;font:16px/1.55 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+h1,h2,h3,p{margin:0}.wrap{width:min(1330px,calc(100% - 48px));margin-inline:auto}
+.top{border-bottom:1px solid var(--line);background:#0C1927}.top-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+.logo{font-size:27px;letter-spacing:-.075em;font-weight:800}.logo span{color:var(--blue)}.back{font-size:12px;font-weight:700;border-bottom:1px solid var(--blue);color:var(--blue);padding-bottom:4px}
+.intro{padding:84px 0 42px;display:grid;grid-template-columns:1.35fr .7fr;gap:clamp(30px,6vw,90px);align-items:end}
+.kicker,.micro{font-size:11px;font-weight:800;letter-spacing:.13em;color:var(--yellow)}
+.intro h1{font-size:clamp(44px,6.8vw,100px);line-height:.97;letter-spacing:-.085em;margin:22px 0 0;font-weight:800}
+.intro h1 em{font-style:normal;color:var(--blue)}.intro-copy{border-left:3px solid var(--yellow);padding-left:23px}
+.intro-copy p{font-size:16px;color:#C5D5DF;line-height:1.67}.intro-copy strong{color:#FFF}.intro-copy .note{display:block;margin-top:15px;font-size:12px;color:var(--yellow);font-weight:700}
+.criteria{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:21px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;color:var(--muted);font-size:12px}
+.criteria strong{color:#FFF}.filters{display:flex;gap:9px;flex-wrap:wrap;padding:30px 0 5px}
+.filters button{border:1px solid var(--line);background:#15283A;color:#C4D3DF;padding:10px 16px;border-radius:100px;font-size:12px;font-weight:700}
+.filters button.active,.filters button:hover{background:var(--yellow);color:#142337;border-color:var(--yellow)}
+.count{margin:17px 0 17px;color:var(--blue);font-size:12px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px;padding:0 0 105px}
+.system{border:1px solid var(--line);min-width:0;background:var(--panel);transition:border-color .18s,transform .18s}
+.system:hover{border-color:#89B3C9;transform:translateY(-2px)}
+.system[hidden]{display:none!important}
+.mock{background:var(--floor);padding:24px 29px 30px;min-height:390px;display:flex;flex-direction:column}
+.system:nth-child(3n) .mock{background:#0D2030}.system:nth-child(4n) .mock{background:#0A1928}
+.mini-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #304354;padding-bottom:17px;margin-bottom:31px}
+.mini-nav b{font-family:var(--show-head),system-ui,sans-serif;font-size:21px;line-height:1;font-weight:800;letter-spacing:-.06em}.mini-nav b span{color:var(--blue)}
+.mini-nav>span{font:700 9px/1.3 var(--show-body),system-ui,sans-serif;letter-spacing:.11em;text-align:right;color:#C6D7E0}
+.mock .micro{font-family:var(--show-body),sans-serif;font-size:9px}
+.mock h3{margin:17px 0 21px;max-width:100%;line-height:1;letter-spacing:var(--hero-track)}
+.mock h3>span{display:block;font-family:var(--show-head),sans-serif;font-size:clamp(33px,3.65vw,55px);font-weight:800;line-height:1.05;overflow-wrap:normal}
+.mock h3 em{display:block;margin-top:10px;font-family:var(--show-accent),sans-serif;font-size:clamp(25px,2.9vw,42px);font-style:var(--accent-style);font-weight:var(--accent-w);line-height:1.12;color:var(--yellow);letter-spacing:var(--hero-track);text-wrap:balance;overflow-wrap:normal}
+.mock p{font-family:var(--show-body),sans-serif;color:#C3D2DD;font-size:14px;line-height:1.58;max-width:435px}
+.mini-cta{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;margin-top:23px;background:var(--yellow);color:#132238;padding:10px 14px;border-radius:3px;font:700 12px/1.4 var(--show-body),sans-serif}
+.info{padding:24px 29px 27px}.info-head{display:flex;align-items:start;justify-content:space-between;gap:12px}
+.info-head small{font-size:10px;color:var(--blue);letter-spacing:.095em;font-weight:800}
+.info h2{font-size:26px;letter-spacing:-.056em;line-height:1.13;margin:6px 0 12px}.mood{display:inline-block;font-size:10px;font-weight:700;color:var(--yellow);text-align:right;max-width:115px}
+.rationale{color:var(--muted);font-size:13px;line-height:1.5;min-height:50px}
+.roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:19px 0 21px;padding:16px 0}
+.roles span{display:block;color:#8DAABA;font-size:9px;font-weight:800;letter-spacing:.085em;margin-bottom:5px}
+.roles strong{display:block;font-size:12px;color:white;line-height:1.35;overflow-wrap:anywhere}
+.try{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:12px 15px;background:var(--blue);color:#082137;font-size:12px;font-weight:800}
+.try:hover{background:var(--yellow)}
+.foot{border-top:1px solid var(--line);padding:25px 0 50px;color:var(--muted);font-size:12px}
+@media(max-width:970px){.intro{grid-template-columns:1fr;gap:30px}.intro-copy{max-width:720px}.grid{grid-template-columns:1fr;max-width:715px;margin:auto}.mock h3>span{font-size:clamp(34px,7vw,60px)}.mock h3 em{font-size:clamp(27px,5.4vw,46px)}}
+@media(max-width:550px){.wrap{width:calc(100% - 28px)}.top-inner{min-height:65px}.logo{font-size:23px}.back{font-size:11px}.intro{padding:52px 0 30px}.intro h1{font-size:clamp(43px,9.5vw,64px)}.intro-copy{padding-left:16px}.criteria{font-size:11px}.filters{gap:7px}.filters button{font-size:11px;padding:8px 11px}.grid{gap:17px}.mock{padding:19px 19px 24px;min-height:365px}.mini-nav{margin-bottom:24px}.mock h3>span{font-size:clamp(33px,8.6vw,44px)}.mock h3 em{font-size:clamp(25px,7vw,35px)}.info{padding:20px}.roles{gap:7px}.roles strong{font-size:11px}.info h2{font-size:23px}.mood{font-size:9px}.rationale{min-height:0}}
+@media(prefers-reduced-motion:reduce){.system{transition:none}.system:hover{transform:none}}
+</style></head>
+<body>
+<header class="top"><div class="wrap top-inner"><a class="logo" href="/">archie<span>•</span>base</a><a class="back" href="/">Back to Archiebase</a></div></header>
+<main><section class="intro wrap"><div><span class="kicker">TYPE LAB / FULL SYSTEM REVIEW</span><h1>Not font swaps.<br><em>Complete systems.</em></h1></div><div class="intro-copy"><p><strong>Every option changes the entire typographic voice.</strong> Display, expressive line, paragraph text, buttons and tiny labels are designed to belong together. The third line is no longer stuck in the original serif. Compare the same copy on every system, then see the complete live website.</p><span class="note">30 DIRECTIONS · 1 SHARED NIGHT CURRENT PALETTE · NO DEFAULT CHANGES</span></div></section>
+<div class="wrap criteria"><span><strong>30</strong> designed systems</span><span><strong>3</strong> typographic roles per system</span><span><strong>09</strong> current baseline, kept untouched</span></div>
+<div class="wrap"><nav class="filters" aria-label="Filter typography systems"><button type="button" data-filter="all" class="active" aria-pressed="true">All 30</button><button type="button" data-filter="confident" class="" aria-pressed="false">Confident & clean</button><button type="button" data-filter="creative" class="" aria-pressed="false">Creative & human</button><button type="button" data-filter="editorial" class="" aria-pressed="false">Editorial</button><button type="button" data-filter="industrial" class="" aria-pressed="false">Bold & industrial</button><button type="button" data-filter="precision" class="" aria-pressed="false">Modern & technical</button><button type="button" data-filter="baseline" class="" aria-pressed="false">Current baseline</button></nav><div class="count" id="count" aria-live="polite">Showing all 30 systems</div></div>
+<section class="grid wrap" aria-label="Thirty Archiebase typography systems"><article class="system" id="system-01" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&amp;family=Inter+Tight:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,700&amp;display=swap" style="--show-head:'Unbounded';--show-body:'Inter Tight';--show-accent:'Inter Tight';--accent-style:italic;--accent-w:700;--hero-track:-.058em;--acc-scale:0.79">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 01</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 01 / 30 </small><h2>Geometry First</h2></div><span class="mood">Modern & technical</span></div>
+  <p class="rationale">A monumental geometric headline with a lean italic in the same visual language.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Unbounded</strong></div><div><span>EMPHASIS</span><strong>Inter Tight italic</strong></div><div><span>BODY + UI</span><strong>Inter Tight</strong></div></div>
+  <a class="try" href="/?font=01&amp;palette=10">View complete website in system 01<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-02" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&amp;display=swap" style="--show-head:'Fraunces';--show-body:'Manrope';--show-accent:'Fraunces';--accent-style:italic;--accent-w:600;--hero-track:-.045em;--acc-scale:0.94">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 02</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 02 / 30 </small><h2>Warm Intelligence</h2></div><span class="mood">Editorial</span></div>
+  <p class="rationale">Fraunces handles both display and expressive italic; Manrope keeps everything else crisp.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Fraunces</strong></div><div><span>EMPHASIS</span><strong>Fraunces italic</strong></div><div><span>BODY + UI</span><strong>Manrope</strong></div></div>
+  <a class="try" href="/?font=02&amp;palette=10">View complete website in system 02<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-03" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@1,700&amp;display=swap" style="--show-head:'Archivo Black';--show-body:'Source Sans 3';--show-accent:'Source Sans 3';--accent-style:italic;--accent-w:700;--hero-track:-.06em;--acc-scale:0.82">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 03</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 03 / 30 </small><h2>The Direct Answer</h2></div><span class="mood">Confident & clean</span></div>
+  <p class="rationale">Uncompromising sans display, softened by a humanist italic without adding a third personality.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Archivo Black</strong></div><div><span>EMPHASIS</span><strong>Source Sans 3 italic</strong></div><div><span>BODY + UI</span><strong>Source Sans 3</strong></div></div>
+  <a class="try" href="/?font=03&amp;palette=10">View complete website in system 03<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-04" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Syne';--show-body:'Atkinson Hyperlegible Next';--show-accent:'Syne';--accent-style:normal;--accent-w:600;--hero-track:-.055em;--acc-scale:0.88">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 04</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 04 / 30 </small><h2>Creative Current</h2></div><span class="mood">Creative & human</span></div>
+  <p class="rationale">Expressive curves repeat through headline and accent; legible body text grounds the energy.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Syne</strong></div><div><span>EMPHASIS</span><strong>Syne</strong></div><div><span>BODY + UI</span><strong>Atkinson Hyperlegible Next</strong></div></div>
+  <a class="try" href="/?font=04&amp;palette=10">View complete website in system 04<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-05" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Space Grotesk';--show-body:'IBM Plex Sans';--show-accent:'IBM Plex Sans';--accent-style:italic;--accent-w:700;--hero-track:-.05em;--acc-scale:0.85">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 05</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 05 / 30 </small><h2>A Better Workshop</h2></div><span class="mood">Confident & clean</span></div>
+  <p class="rationale">A characterful geometric headline matched to the practical voice of IBM Plex.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Space Grotesk</strong></div><div><span>EMPHASIS</span><strong>IBM Plex Sans italic</strong></div><div><span>BODY + UI</span><strong>IBM Plex Sans</strong></div></div>
+  <a class="try" href="/?font=05&amp;palette=10">View complete website in system 05<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-06" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Barlow Condensed';--show-body:'Public Sans';--show-accent:'Barlow Condensed';--accent-style:normal;--accent-w:700;--hero-track:-.018em;--acc-scale:0.97">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 06</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 06 / 30 </small><h2>The Working Type</h2></div><span class="mood">Bold & industrial</span></div>
+  <p class="rationale">One condensed family provides both strength and emphasis; Public Sans carries the details.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Barlow Condensed</strong></div><div><span>EMPHASIS</span><strong>Barlow Condensed</strong></div><div><span>BODY + UI</span><strong>Public Sans</strong></div></div>
+  <a class="try" href="/?font=06&amp;palette=10">View complete website in system 06<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-07" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&amp;display=swap" style="--show-head:'Instrument Serif';--show-body:'Outfit';--show-accent:'Instrument Serif';--accent-style:italic;--accent-w:400;--hero-track:-.035em;--acc-scale:0.96">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 07</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 07 / 30 </small><h2>Open Notebook</h2></div><span class="mood">Editorial</span></div>
+  <p class="rationale">A single literary display family with its own italic, contrasted against clean modern UI.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Instrument Serif</strong></div><div><span>EMPHASIS</span><strong>Instrument Serif italic</strong></div><div><span>BODY + UI</span><strong>Outfit</strong></div></div>
+  <a class="try" href="/?font=07&amp;palette=10">View complete website in system 07<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-08" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Chivo:wght@600;700;800;900&amp;family=Alegreya+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Chivo';--show-body:'Alegreya Sans';--show-accent:'Alegreya Sans';--accent-style:italic;--accent-w:700;--hero-track:-.047em;--acc-scale:0.85">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 08</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 08 / 30 </small><h2>Built on Trust</h2></div><span class="mood">Confident & clean</span></div>
+  <p class="rationale">Confident contemporary proportions, with a warm humanist italic for emphasis.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Chivo</strong></div><div><span>EMPHASIS</span><strong>Alegreya Sans italic</strong></div><div><span>BODY + UI</span><strong>Alegreya Sans</strong></div></div>
+  <a class="try" href="/?font=08&amp;palette=10">View complete website in system 08<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-09" data-mood="baseline" data-font-url="https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&amp;family=Onest:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Saira';--show-body:'Onest';--show-accent:'Newsreader';--accent-style:italic;--accent-w:500;--hero-track:-.05em;--acc-scale:0.98">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 09</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 09 / 30 · CURRENT</small><h2>Current Baseline</h2></div><span class="mood">Current baseline</span></div>
+  <p class="rationale">The existing published Saira, Onest and Newsreader treatment, retained for reference.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Saira</strong></div><div><span>EMPHASIS</span><strong>Newsreader italic</strong></div><div><span>BODY + UI</span><strong>Onest</strong></div></div>
+  <a class="try" href="/?font=09&amp;palette=10">View complete website in system 09<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-10" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700;800;900&amp;family=Lora:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&amp;display=swap" style="--show-head:'Red Hat Display';--show-body:'Lora';--show-accent:'Lora';--accent-style:italic;--accent-w:600;--hero-track:-.046em;--acc-scale:0.89">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 10</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 10 / 30 </small><h2>Modern Classic</h2></div><span class="mood">Editorial</span></div>
+  <p class="rationale">A capable workhorse display paired with Lora's matching text and italic family.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Red Hat Display</strong></div><div><span>EMPHASIS</span><strong>Lora italic</strong></div><div><span>BODY + UI</span><strong>Lora</strong></div></div>
+  <a class="try" href="/?font=10&amp;palette=10">View complete website in system 10<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-11" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Bricolage Grotesque';--show-body:'Plus Jakarta Sans';--show-accent:'Plus Jakarta Sans';--accent-style:italic;--accent-w:700;--hero-track:-.05em;--acc-scale:0.83">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 11</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 11 / 30 </small><h2>Friendly Disruption</h2></div><span class="mood">Creative & human</span></div>
+  <p class="rationale">Imperfect, lively shapes in the hero and a tidy modern sans for accents and body.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Bricolage Grotesque</strong></div><div><span>EMPHASIS</span><strong>Plus Jakarta Sans italic</strong></div><div><span>BODY + UI</span><strong>Plus Jakarta Sans</strong></div></div>
+  <a class="try" href="/?font=11&amp;palette=10">View complete website in system 11<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-12" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Dela Gothic One';--show-body:'Work Sans';--show-accent:'Work Sans';--accent-style:italic;--accent-w:700;--hero-track:-.055em;--acc-scale:0.78">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 12</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 12 / 30 </small><h2>Full-Volume Ideas</h2></div><span class="mood">Creative & human</span></div>
+  <p class="rationale">The hero gets the oversized personality; clean Work Sans italics keep the message human.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Dela Gothic One</strong></div><div><span>EMPHASIS</span><strong>Work Sans italic</strong></div><div><span>BODY + UI</span><strong>Work Sans</strong></div></div>
+  <a class="try" href="/?font=12&amp;palette=10">View complete website in system 12<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-13" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;700;800&amp;family=Urbanist:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,600&amp;display=swap" style="--show-head:'Bodoni Moda';--show-body:'Urbanist';--show-accent:'Bodoni Moda';--accent-style:italic;--accent-w:600;--hero-track:-.05em;--acc-scale:0.91">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 13</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 13 / 30 </small><h2>The Editorial Edge</h2></div><span class="mood">Editorial</span></div>
+  <p class="rationale">High-contrast display and true italic from one family, balanced with contemporary Urbanist.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Bodoni Moda</strong></div><div><span>EMPHASIS</span><strong>Bodoni Moda italic</strong></div><div><span>BODY + UI</span><strong>Urbanist</strong></div></div>
+  <a class="try" href="/?font=13&amp;palette=10">View complete website in system 13<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-14" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Big Shoulders Display';--show-body:'Hanken Grotesk';--show-accent:'Hanken Grotesk';--accent-style:normal;--accent-w:700;--hero-track:-.013em;--acc-scale:0.77">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 14</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 14 / 30 </small><h2>Shop Floor Bold</h2></div><span class="mood">Bold & industrial</span></div>
+  <p class="rationale">Narrow industrial display, with straightforward weight contrast from its robust body partner.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Big Shoulders Display</strong></div><div><span>EMPHASIS</span><strong>Hanken Grotesk</strong></div><div><span>BODY + UI</span><strong>Hanken Grotesk</strong></div></div>
+  <a class="try" href="/?font=14&amp;palette=10">View complete website in system 14<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-15" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@1,700&amp;display=swap" style="--show-head:'Gabarito';--show-body:'Figtree';--show-accent:'Figtree';--accent-style:italic;--accent-w:700;--hero-track:-.06em;--acc-scale:0.83">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 15</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 15 / 30 </small><h2>Bright Thinking</h2></div><span class="mood">Creative & human</span></div>
+  <p class="rationale">Warm rounded display and a friendly modern italic keep the character consistent.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Gabarito</strong></div><div><span>EMPHASIS</span><strong>Figtree italic</strong></div><div><span>BODY + UI</span><strong>Figtree</strong></div></div>
+  <a class="try" href="/?font=15&amp;palette=10">View complete website in system 15<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-16" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&amp;family=Karla:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,700&amp;display=swap" style="--show-head:'Chakra Petch';--show-body:'Karla';--show-accent:'Karla';--accent-style:italic;--accent-w:700;--hero-track:-.035em;--acc-scale:0.79">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 16</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 16 / 30 </small><h2>Precision with Pulse</h2></div><span class="mood">Modern & technical</span></div>
+  <p class="rationale">Angular technical headline, restrained human accent, easy-reading body copy.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Chakra Petch</strong></div><div><span>EMPHASIS</span><strong>Karla italic</strong></div><div><span>BODY + UI</span><strong>Karla</strong></div></div>
+  <a class="try" href="/?font=16&amp;palette=10">View complete website in system 16<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-17" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700;800;900&amp;family=Jost:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,700&amp;display=swap" style="--show-head:'Darker Grotesque';--show-body:'Jost';--show-accent:'Jost';--accent-style:italic;--accent-w:700;--hero-track:-.045em;--acc-scale:0.85">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 17</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 17 / 30 </small><h2>Room to Breathe</h2></div><span class="mood">Confident & clean</span></div>
+  <p class="rationale">Oversized narrow lettering makes a statement without asking the copy to shout.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Darker Grotesque</strong></div><div><span>EMPHASIS</span><strong>Jost italic</strong></div><div><span>BODY + UI</span><strong>Jost</strong></div></div>
+  <a class="try" href="/?font=17&amp;palette=10">View complete website in system 17<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-18" data-mood="editorial" data-font-url="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Cabin:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&amp;display=swap" style="--show-head:'DM Serif Display';--show-body:'Cabin';--show-accent:'DM Serif Display';--accent-style:italic;--accent-w:400;--hero-track:-.033em;--acc-scale:0.92">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 18</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 18 / 30 </small><h2>A Little Soul</h2></div><span class="mood">Editorial</span></div>
+  <p class="rationale">True roman and italic cuts of the same serif give an expressive but coherent identity.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>DM Serif Display</strong></div><div><span>EMPHASIS</span><strong>DM Serif Display italic</strong></div><div><span>BODY + UI</span><strong>Cabin</strong></div></div>
+  <a class="try" href="/?font=18&amp;palette=10">View complete website in system 18<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-19" data-mood="confident" data-font-url="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&amp;family=Mulish:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,700&amp;display=swap" style="--show-head:'League Spartan';--show-body:'Mulish';--show-accent:'Mulish';--accent-style:italic;--accent-w:700;--hero-track:-.06em;--acc-scale:0.83">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 19</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 19 / 30 </small><h2>Clean Momentum</h2></div><span class="mood">Confident & clean</span></div>
+  <p class="rationale">Structured geometric headlines, with a compact humanist voice beneath.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>League Spartan</strong></div><div><span>EMPHASIS</span><strong>Mulish italic</strong></div><div><span>BODY + UI</span><strong>Mulish</strong></div></div>
+  <a class="try" href="/?font=19&amp;palette=10">View complete website in system 19<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-20" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@600;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Azeret Mono';--show-body:'Geist';--show-accent:'Azeret Mono';--accent-style:normal;--accent-w:600;--hero-track:-.036em;--acc-scale:0.84">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 20</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 20 / 30 </small><h2>Maker's Manual</h2></div><span class="mood">Modern & technical</span></div>
+  <p class="rationale">A monospace rhythm for headlines and emphasis, paired with contemporary UI text.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Azeret Mono</strong></div><div><span>EMPHASIS</span><strong>Azeret Mono</strong></div><div><span>BODY + UI</span><strong>Geist</strong></div></div>
+  <a class="try" href="/?font=20&amp;palette=10">View complete website in system 20<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-21" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Anton&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Roboto+Flex:ital,wght@1,700&amp;display=swap" style="--show-head:'Anton';--show-body:'Roboto Flex';--show-accent:'Roboto Flex';--accent-style:italic;--accent-w:700;--hero-track:-.027em;--acc-scale:0.81">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 21</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 21 / 30 </small><h2>The Billboard</h2></div><span class="mood">Bold & industrial</span></div>
+  <p class="rationale">Big impact from Anton, with a flexible italic sans that still feels commercial and modern.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Anton</strong></div><div><span>EMPHASIS</span><strong>Roboto Flex italic</strong></div><div><span>BODY + UI</span><strong>Roboto Flex</strong></div></div>
+  <a class="try" href="/?font=21&amp;palette=10">View complete website in system 21<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-22" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,800&amp;display=swap" style="--show-head:'Bowlby One SC';--show-body:'Nunito Sans';--show-accent:'Nunito Sans';--accent-style:italic;--accent-w:800;--hero-track:-.048em;--acc-scale:0.79">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 22</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 22 / 30 </small><h2>Big Character</h2></div><span class="mood">Creative & human</span></div>
+  <p class="rationale">Friendly rounded shapes give the accent a natural relationship with the headline.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Bowlby One SC</strong></div><div><span>EMPHASIS</span><strong>Nunito Sans italic</strong></div><div><span>BODY + UI</span><strong>Nunito Sans</strong></div></div>
+  <a class="try" href="/?font=22&amp;palette=10">View complete website in system 22<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-23" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&amp;display=swap" style="--show-head:'Alfa Slab One';--show-body:'Barlow';--show-accent:'Barlow';--accent-style:italic;--accent-w:700;--hero-track:-.04em;--acc-scale:0.83">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 23</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 23 / 30 </small><h2>Hands-On Heritage</h2></div><span class="mood">Bold & industrial</span></div>
+  <p class="rationale">23 / Crafted, solid</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Alfa Slab One</strong></div><div><span>EMPHASIS</span><strong>Barlow italic</strong></div><div><span>BODY + UI</span><strong>Barlow</strong></div></div>
+  <a class="try" href="/?font=23&amp;palette=10">View complete website in system 23<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-24" data-mood="industrial" data-font-url="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&amp;family=Overpass:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,700&amp;display=swap" style="--show-head:'Teko';--show-body:'Overpass';--show-accent:'Overpass';--accent-style:italic;--accent-w:700;--hero-track:-.012em;--acc-scale:0.76">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 24</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 24 / 30 </small><h2>Cut Through</h2></div><span class="mood">Bold & industrial</span></div>
+  <p class="rationale">Extremely condensed typography with a straightforward contemporary sans for a natural release.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Teko</strong></div><div><span>EMPHASIS</span><strong>Overpass italic</strong></div><div><span>BODY + UI</span><strong>Overpass</strong></div></div>
+  <a class="try" href="/?font=24&amp;palette=10">View complete website in system 24<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-25" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700;800&amp;family=Lexend:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700&amp;display=swap" style="--show-head:'Kanit';--show-body:'Lexend';--show-accent:'Kanit';--accent-style:italic;--accent-w:700;--hero-track:-.04em;--acc-scale:0.83">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 25</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 25 / 30 </small><h2>The Modern Operator</h2></div><span class="mood">Modern & technical</span></div>
+  <p class="rationale">25 / Focused, modern</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Kanit</strong></div><div><span>EMPHASIS</span><strong>Kanit italic</strong></div><div><span>BODY + UI</span><strong>Lexend</strong></div></div>
+  <a class="try" href="/?font=25&amp;palette=10">View complete website in system 25<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-26" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Paytone+One&amp;family=Assistant:wght@400;500;600;700&amp;display=swap" data-accent-url="" style="--show-head:'Paytone One';--show-body:'Assistant';--show-accent:'Assistant';--accent-style:normal;--accent-w:700;--hero-track:-.041em;--acc-scale:0.78">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 26</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 26 / 30 </small><h2>Good Energy</h2></div><span class="mood">Creative & human</span></div>
+  <p class="rationale">26 / Open, friendly</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Paytone One</strong></div><div><span>EMPHASIS</span><strong>Assistant</strong></div><div><span>BODY + UI</span><strong>Assistant</strong></div></div>
+  <a class="try" href="/?font=26&amp;palette=10">View complete website in system 26<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-27" data-mood="creative" data-font-url="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Readex+Pro:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@1,700&amp;display=swap" style="--show-head:'Anybody';--show-body:'Readex Pro';--show-accent:'Anybody';--accent-style:italic;--accent-w:700;--hero-track:-.053em;--acc-scale:0.8">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 27</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 27 / 30 </small><h2>Shape Shift</h2></div><span class="mood">Creative & human</span></div>
+  <p class="rationale">One highly flexible display family provides both headline and italic contrast.</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Anybody</strong></div><div><span>EMPHASIS</span><strong>Anybody italic</strong></div><div><span>BODY + UI</span><strong>Readex Pro</strong></div></div>
+  <a class="try" href="/?font=27&amp;palette=10">View complete website in system 27<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-28" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@600;700;800&amp;family=Funnel+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Funnel Display';--show-body:'Funnel Sans';--show-accent:'Funnel Sans';--accent-style:italic;--accent-w:700;--hero-track:-.05em;--acc-scale:0.83">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 28</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 28 / 30 </small><h2>The Family Resemblance</h2></div><span class="mood">Modern & technical</span></div>
+  <p class="rationale">28 / Cohesive, current</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Funnel Display</strong></div><div><span>EMPHASIS</span><strong>Funnel Sans italic</strong></div><div><span>BODY + UI</span><strong>Funnel Sans</strong></div></div>
+  <a class="try" href="/?font=28&amp;palette=10">View complete website in system 28<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-29" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&amp;family=Roboto:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&amp;display=swap" style="--show-head:'Rubik Mono One';--show-body:'Roboto';--show-accent:'Roboto';--accent-style:italic;--accent-w:700;--hero-track:-.052em;--acc-scale:0.79">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 29</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 29 / 30 </small><h2>Hard Signal</h2></div><span class="mood">Modern & technical</span></div>
+  <p class="rationale">29 / Experimental</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Rubik Mono One</strong></div><div><span>EMPHASIS</span><strong>Roboto italic</strong></div><div><span>BODY + UI</span><strong>Roboto</strong></div></div>
+  <a class="try" href="/?font=29&amp;palette=10">View complete website in system 29<span aria-hidden="true">↗</span></a>
+ </div>
+</article>
+<article class="system" id="system-30" data-mood="precision" data-font-url="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" data-accent-url="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&amp;display=swap" style="--show-head:'Oxanium';--show-body:'Noto Sans';--show-accent:'Noto Sans';--accent-style:italic;--accent-w:700;--hero-track:-.043em;--acc-scale:0.78">
+ <div class="mock">
+  <div class="mini-nav"><b>archie<span>•</span>base</b><span>AI & CREATIVE SERVICES</span></div>
+  <div class="micro">A BETTER WAY TO WORK / 30</div>
+  <h3><span>You're on the job.</span><em>The business keeps moving.</em></h3>
+  <p>Fewer interruptions. Better follow-up. More room for the work you actually love.</p>
+  <span class="mini-cta">Free business review <span aria-hidden="true">↗</span></span>
+ </div>
+ <div class="info">
+  <div class="info-head"><div><small>TYPE SYSTEM 30 / 30 </small><h2>Digital Human</h2></div><span class="mood">Modern & technical</span></div>
+  <p class="rationale">30 / Futuristic, useful</p>
+  <div class="roles"><div><span>DISPLAY</span><strong>Oxanium</strong></div><div><span>EMPHASIS</span><strong>Noto Sans italic</strong></div><div><span>BODY + UI</span><strong>Noto Sans</strong></div></div>
+  <a class="try" href="/?font=30&amp;palette=10">View complete website in system 30<span aria-hidden="true">↗</span></a>
+ </div>
+</article></section>
+</main><footer class="foot"><div class="wrap">All previews are experiments. The currently published type system stays unchanged until an alternative is selected. Fonts load on demand as you browse.</div></footer>
+<script>
+(function(){
+ var cards=Array.prototype.slice.call(document.querySelectorAll('.system'));
+ var buttons=Array.prototype.slice.call(document.querySelectorAll('[data-filter]'));
+ var label=document.getElementById('count');
+ buttons.forEach(function(btn){btn.addEventListener('click',function(){
+  var key=btn.dataset.filter,shown=0;
+  cards.forEach(function(c){var yes=key==='all'||c.dataset.mood===key;c.hidden=!yes;if(yes)shown++});
+  buttons.forEach(function(b){b.classList.toggle('active',b===btn);b.setAttribute('aria-pressed',String(b===btn))});
+  label.textContent='Showing '+shown+' of 30 systems';
+ });});
+ function load(card){
+  if(card.dataset.loaded)return;card.dataset.loaded='yes';
+  [card.dataset.fontUrl,card.dataset.accentUrl].forEach(function(url){if(!url)return;var l=document.createElement('link');l.rel='stylesheet';l.href=url;document.head.appendChild(l)});
+ }
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){load(e.target);io.unobserve(e.target)}})},{rootMargin:'750px 0px'});cards.forEach(function(c){io.observe(c)})}else{cards.forEach(load)}
+})();
+</script>
+</body></html>
