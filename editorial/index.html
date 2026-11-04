@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <script>document.documentElement.classList.add("js")</script>
-<meta name="theme-color" content="#F7F5EE">
+<meta name="theme-color" content="#101B2A">
 <meta name="description" content="Archiebase helps small businesses make everyday work easier. Beautiful websites, useful automations, smart follow-up, and creative solutions, built personally by Aaron. Start with a free written business review.">
 <title>Archiebase — Make room for the good work.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -262,7 +262,7 @@ footer p{color:#AECAD2}
  .endcap p{font-size:16px}
 }
 </style>
-<script>(function(){try{var fromUrl=new URLSearchParams(location.search).get('palette');var v=fromUrl||localStorage.getItem('archiebase-palette')||'01';if(/^(0[1-9]|10)$/.test(v)){document.documentElement.setAttribute('data-palette',v);if(fromUrl)localStorage.setItem('archiebase-palette',v)}}catch(e){document.documentElement.setAttribute('data-palette','01')}})();</script>
+<script>(function(){try{var fromUrl=new URLSearchParams(location.search).get('palette');var valid=function(x){return /^(0[1-9]|10)$/.test(x||'')};var launch='night-current-2026';if(localStorage.getItem('archiebase-theme-launch')!==launch){localStorage.setItem('archiebase-palette','10');localStorage.setItem('archiebase-theme-launch',launch)}var saved=localStorage.getItem('archiebase-palette');var v=valid(fromUrl)?fromUrl:(valid(saved)?saved:'10');document.documentElement.setAttribute('data-palette',v);if(valid(fromUrl))localStorage.setItem('archiebase-palette',v);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',v==='10'?'#101B2A':'#F8F7F0')}catch(e){document.documentElement.setAttribute('data-palette','10')}})();</script>
 <link rel="stylesheet" href="/assets/themes.css">
 </head>
 <body>
