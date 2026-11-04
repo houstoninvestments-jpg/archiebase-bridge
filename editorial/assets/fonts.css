@@ -7,7 +7,7 @@ html[data-font="05"]{--ab-head:'Space Grotesk',sans-serif;--ab-body:'IBM Plex Sa
 html[data-font="06"]{--ab-head:'Barlow Condensed',sans-serif;--ab-body:'Public Sans',sans-serif;--ab-headweight:800;--ab-headtrack:-.035em}
 html[data-font="07"]{--ab-head:'Instrument Serif',sans-serif;--ab-body:'Outfit',sans-serif;--ab-headweight:400;--ab-headtrack:-.045em}
 html[data-font="08"]{--ab-head:'Chivo',sans-serif;--ab-body:'Alegreya Sans',sans-serif;--ab-headweight:800;--ab-headtrack:-.07em}
-html[data-font="09"]{--ab-head:'Saira',sans-serif;--ab-body:'Onest',sans-serif;--ab-headweight:800;--ab-headtrack:-.05em}
+html[data-font="09"]{--ab-head:'Saira',sans-serif;--ab-body:'Onest',sans-serif;--ab-headweight:800;--ab-headtrack:-.05em;--display:'Saira',system-ui,sans-serif;--body:'Onest',system-ui,sans-serif}
 html[data-font="10"]{--ab-head:'Red Hat Display',sans-serif;--ab-body:'Lora',sans-serif;--ab-headweight:800;--ab-headtrack:-.065em}
 html[data-font] body{font-family:var(--ab-body)!important}
 html[data-font] :is(h1,h2,h3,.wordmark,.logo){font-family:var(--ab-head)!important;font-weight:var(--ab-headweight)!important;letter-spacing:var(--ab-headtrack)!important}
