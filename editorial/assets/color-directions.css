@@ -25,7 +25,7 @@ html[data-colors] .site-nav .wordmark,html[data-colors] .site-nav .desktop-nav{c
 html[data-colors] .site-nav .wordmark .dot{color:var(--p-heroHi)!important}
 html[data-colors] .site-nav .wordmark small{color:var(--p-navText)!important;opacity:.85}
 html[data-colors] .site-nav .desktop-nav a:hover{color:var(--p-heroHi)!important}
-html[data-colors] .site-nav .nav-action{background:var(--p-cta)!important;border-color:var(--p-cta)!important;color:var(--p-ctaText)!important}
+html[data-colors] .site-nav .nav-action{background:var(--p-cta)!important;border-color:var(--p-cta)!important;color:var(--p-ctaText)!important;box-shadow:0 0 0 1px var(--p-navText)!important}
 html[data-colors] .site-nav .mobile-menu summary,html[data-colors] .site-nav .mobile-menu nav{background:var(--p-nav)!important;color:var(--p-navText)!important;border-color:color-mix(in srgb,var(--p-navText) 35%,var(--p-nav))!important}
 html[data-colors] .eyebrow:before{background:var(--p-heroHi)!important}
 html[data-colors] .hero{background:var(--p-hero)!important;color:var(--p-heroText)!important;border-color:var(--p-darkBorder)!important}
