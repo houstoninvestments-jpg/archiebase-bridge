@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#101E29"><meta name="description" content="Ten carefully designed Archiebase color systems, shown on the actual brand typography and real page section flow.">
+<title>Archiebase / Ten Color Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet">
+<style>
+:root{--base:#101E29;--panel:#1A2B36;--line:#385361;--text:#F1F7F6;--muted:#C2D3DC;--cyan:#8CD8E7;--pink:#EFAD98}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}body{background:var(--base);margin:0;color:var(--text);font:400 16px/1.55 'Nunito Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
+h1,h2,h3,p{margin:0}.wrap{width:min(1400px,calc(100% - 56px));margin-inline:auto}
+header{border-bottom:1px solid #314A58;background:#091720}
+.top-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:77px}
+.brand{font:900 26px/1 'Nunito Sans',sans-serif;letter-spacing:-.08em}.brand span{color:#80D6E3}
+.top-back{font-weight:800;font-size:13px;color:#BBD7E0;border-bottom:1px solid #5A8FA3;padding-bottom:4px}
+.intro{padding:clamp(55px,7vw,105px) 0 43px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.68fr);gap:35px 80px;align-items:end}
+.eyebrow{font-weight:900;font-size:11px;letter-spacing:.135em;color:#92DBE6}
+.intro h1{font:400 clamp(44px,6.1vw,87px)/1.08 'Bowlby One SC',system-ui,sans-serif;letter-spacing:-.06em;margin-top:21px}
+.intro h1 em{display:block;font:italic 800 .96em/1.13 'Nunito Sans',sans-serif;color:#9CE0E7;letter-spacing:-.045em;margin-top:10px}
+.intro-copy{border-left:2px solid #EFAF96;padding-left:25px}
+.intro-copy p{font-size:17px;line-height:1.75;color:#D1DDE4;max-width:560px}
+.intro-copy strong{color:#FFF}
+.note{display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin-bottom:32px;color:#B4C8D3;font-size:12px;font-weight:800}
+.note strong{color:var(--cyan)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;padding-bottom:120px}
+.specimen{min-width:0;border:1px solid #385260;background:var(--panel);transition:border-color .18s}
+.specimen:hover{border-color:#78BBD0}
+.site-mini{background:var(--c-night);color:var(--c-on-dark);min-width:0}
+.mini-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 23px;border-bottom:1px solid color-mix(in srgb,var(--c-on-dark) 22%,transparent)}
+.mini-brand{font:900 22px/1 'Nunito Sans',sans-serif;letter-spacing:-.08em}
+.mini-brand span{color:var(--c-accent)}
+.mini-navigation{font:800 9px/1.5 'Nunito Sans',sans-serif;letter-spacing:.08em;text-align:right;opacity:.82}
+.mini-hero{padding:clamp(24px,3.8vw,44px) 25px 36px;min-height:315px}
+.mini-hero small{display:block;color:var(--c-accent);font-size:10px;font-weight:900;letter-spacing:.1em}
+.mini-hero h3{font:400 clamp(23px,2.8vw,42px)/1.24 'Bowlby One SC',sans-serif;letter-spacing:-.045em;margin:19px 0 13px;max-width:600px;text-wrap:balance}
+.mini-hero h3 em{display:block;color:var(--c-accent);font:italic 800 1.05em/1.3 'Nunito Sans',sans-serif;letter-spacing:-.04em;margin-top:4px}
+.mini-hero p{color:var(--c-muted-dark);font-size:13px;line-height:1.6;max-width:380px}
+.mini-action{display:inline-flex;align-items:center;padding:9px 13px;margin-top:21px;background:var(--c-accent);color:var(--c-night);font-size:11px;font-weight:900;border-radius:3px}
+.scene-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.flow-stage{padding:15px 15px 17px;min-width:0;min-height:92px}
+.flow-stage strong{display:block;font-size:9px;line-height:1.5;font-weight:900;letter-spacing:.04em;margin-bottom:5px}
+.flow-stage span{display:block;font-size:12px;line-height:1.4;font-weight:700}
+.flow-stage.story{background:var(--c-light2);color:var(--c-ink)}
+.flow-stage.approach{background:var(--c-mid);color:var(--c-on-dark)}
+.flow-stage.time{background:var(--c-night);color:var(--c-accent)}
+.flow-stage.ai{background:var(--c-light);color:var(--c-ink)}
+.flow-stage.person{background:color-mix(in srgb,var(--c-light) 65%,var(--c-light2) 35%);color:var(--c-ink)}
+.flow-stage.contact{background:var(--c-mid);color:var(--c-on-dark)}
+.specimen-info{padding:26px 28px 28px}
+.specimen-title .number{font-size:10px;letter-spacing:.13em;color:#7ECEDF;font-weight:900}
+.specimen-title h2{font:800 27px/1.23 'Nunito Sans',sans-serif;letter-spacing:-.045em;color:#FFF;margin:7px 0 7px}
+.specimen-title p{color:#BCCFD7;font-size:14px;line-height:1.56}
+.tone{display:inline-block;margin-top:11px;font-size:11px;color:#9BD5E2;font-weight:900;text-transform:uppercase;letter-spacing:.055em}
+.swatches{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px;margin:20px 0}
+.swatches span{height:26px;border:1px solid #FFFFFF1B;min-width:0}
+.preview{display:flex;align-items:center;justify-content:space-between;gap:13px;padding:14px 17px;border:1px solid #8AB4C6;font-weight:900;font-size:13px;color:#F2F8F9}
+.preview:hover{background:#2A4655}
+.preview-mark{color:#97DAE8;font-size:11px;flex:none}
+footer{border-top:1px solid var(--line);padding:25px 0 55px;font-size:12px;color:var(--muted);line-height:1.7}
+@media(max-width:1020px){.grid{grid-template-columns:1fr;max-width:680px;margin-inline:auto}.intro{grid-template-columns:1fr;gap:28px}.intro-copy{max-width:740px}.mini-hero h3{font-size:clamp(27px,5.6vw,43px)}}
+@media(max-width:560px){.wrap{width:calc(100% - 30px)}.brand{font-size:23px}.top-nav{min-height:67px}.top-back{font-size:11px}.intro{padding-top:52px}.intro h1{font-size:clamp(36px,9vw,60px)}.intro-copy{padding-left:16px}.intro-copy p{font-size:15px}.grid{gap:18px;padding-bottom:80px}.mini-nav{padding:15px 17px}.mini-navigation{display:none}.mini-hero{padding:24px 19px 26px;min-height:285px}.mini-hero h3{font-size:clamp(25px,7.5vw,39px)}.flow-stage{padding:12px 10px;min-height:91px}.flow-stage strong{font-size:8px}.flow-stage span{font-size:11px}.specimen-info{padding:22px 20px}.specimen-title h2{font-size:25px}.preview{font-size:12px;padding:12px 13px}.preview-mark{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.specimen{transition:none}}
+</style>
+</head><body>
+<header><div class="wrap top-nav"><a href="/" class="brand">archie<span>•</span>base</a><a href="/" class="top-back">Back to site</a></div></header>
+<main><div class="wrap intro"><div><span class="eyebrow">ARCHIEBASE / COLOR STUDY 01–10</span><h1>Less white.<em>More feeling.</em></h1></div><div class="intro-copy"><p><strong>These are complete color systems, not random hex codes.</strong> Compare the hero, story backgrounds, dark sections, editorial breaks, and final invitation. Every direction keeps the typography and copy you selected.</p></div></div>
+<div class="wrap note"><span><strong>10</strong> NEW DIRECTIONS</span><span>BASED ON REAL ARCHIEBASE SECTIONS</span><span>CURRENT LIVE COLORS UNCHANGED UNTIL YOU CHOOSE</span></div>
+<div class="wrap grid"><article class="specimen" id="palette-01" style="--c-night:#081E2A;--c-mid:#123B46;--c-light:#CEE2E0;--c-light2:#BCD4D0;--c-accent:#85DFE1;--c-accent-dark:#11667A;--c-warm:#ED9E86;--c-ink:#133846;--c-on-dark:#F2F9F7;--c-muted-dark:#C5DBDD;--c-on-light:#355965">
+<div class="site-mini">
+  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
+  <div class="mini-hero"><small>STUDIO BY AARON / 01</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
+  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+</div>
+<div class="specimen-info">
+ <div class="specimen-title"><span class="number">01 / 10</span><h2>Harbor After Dark</h2><p>Cool water, deep ink, quiet warmth.</p><span class="tone">cool cinematic</span></div>
+ <div class="swatches"><span style="background:#081E2A" title="Deep base"></span><span style="background:#123B46" title="Midtone"></span><span style="background:#BCD4D0" title="Story background"></span><span style="background:#CEE2E0" title="Light tint"></span><span style="background:#85DFE1" title="Accent"></span><span style="background:#ED9E86" title="Warm detail"></span></div>
+ <a href="/?colors=01" class="preview">See Harbor After Dark on the actual Archiebase site <span class="preview-mark">Preview 01</span></a>
+</div></article>
+<article class="specimen" id="palette-02" style="--c-night:#171E22;--c-mid:#333B3B;--c-light:#DFD3C7;--c-light2:#CFBDAF;--c-accent:#EDAD86;--c-accent-dark:#865035;--c-warm:#A7D4CA;--c-ink:#342B29;--c-on-dark:#F8F2ED;--c-muted-dark:#DED2CA;--c-on-light:#614C45">
+<div class="site-mini">
+  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
+  <div class="mini-hero"><small>STUDIO BY AARON / 02</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
+  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+</div>
+<div class="specimen-info">
+ <div class="specimen-title"><span class="number">02 / 10</span><h2>Cinder & Copper</h2><p>Graphite, weathered stone, honest copper.</p><span class="tone">warm industrial</span></div>
+ <div class="swatches"><span style="background:#171E22" title="Deep base"></span><span style="background:#333B3B" title="Midtone"></span><span style="background:#CFBDAF" title="Story background"></span><span style="background:#DFD3C7" title="Light tint"></span><span style="background:#EDAD86" title="Accent"></span><span style="background:#A7D4CA" title="Warm detail"></span></div>
+ <a href="/?colors=02" class="preview">See Cinder & Copper on the actual Archiebase site <span class="preview-mark">Preview 02</span></a>
+</div></article>
+<article class="specimen" id="palette-03" style="--c-night:#1F1729;--c-mid:#3D2947;--c-light:#E4D6E3;--c-light2:#D5BFCE;--c-accent:#E0AFE2;--c-accent-dark:#7D3A75;--c-warm:#ECA98E;--c-ink:#38263B;--c-on-dark:#F9F4F8;--c-muted-dark:#DFCFE0;--c-on-light:#675069">
+<div class="site-mini">
+  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
+  <div class="mini-hero"><small>STUDIO BY AARON / 03</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
+  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+</div>
+<div class="specimen-info">
+ <div class="specimen-title"><span class="number">03 / 10</span><h2>Midnight Fig</h2><p>Inky plum, lavender haze, soft apricot.</p><span class="tone">rich editorial</span></div>
+ <div class="swatches"><span style="background:#1F1729" title="Deep base"></span><span style="background:#3D2947" title="Midtone"></span><span style="background:#D5BFCE" title="Story background"></span><span style="background:#E4D6E3" title="Light tint"></span><span style="background:#E0AFE2" title="Accent"></span><span style="background:#ECA98E" title="Warm detail"></span></div>
+ <a href="/?colors=03" class="preview">See Midnight Fig on the actual Archiebase site <span class="preview-mark">Preview 03</span></a>
+</div></article>
+<article class="specimen" id="palette-04" style="--c-night:#0C2420;--c-mid:#244138;--c-light:#D8E5CE;--c-light2:#BFCEB6;--c-accent:#C8E38B;--c-accent-dark:#3F672F;--c-warm:#F0A58C;--c-ink:#253B2F;--c-on-dark:#F5FAF0;--c-muted-dark:#D3E3D4;--c-on-light:#526654">
+<div class="site-mini">
+  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
+  <div class="mini-hero"><small>STUDIO BY AARON / 04</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
+  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+</div>
+<div class="specimen-info">
+ <div class="specimen-title"><span class="number">04 / 10</span><h2>Evergreen Voltage</h2><p>Forest shadows with an electric edge.</p><span class="tone">organic forward</span></div>
+ <div class="swatches"><span style="background:#0C2420" title="Deep base"></span><span style="background:#244138" title="Midtone"></span><span style="background:#BFCEB6" title="Story background"></span><span style="background:#D8E5CE" title="Light tint"></span><span style="background:#C8E38B" title="Accent"></span><span style="background:#F0A58C" title="Warm detail"></span></div>
+ <a href="/?colors=04" class="preview">See Evergreen Voltage on the actual Archiebase site <span class="preview-mark">Preview 04</span></a>
+</div></article>
+<article class="specimen" id="palette-05" style="--c-night:#172044;--c-mid:#33436C;--c-light:#D9DFFA;--c-light2:#C3CDEE;--c-accent:#AFC6FF;--c-accent-dark:#3555A1;--c-warm:#FFC0A4;--c-ink:#253059;--c-on-dark:#F3F6FF;--c-muted-dark:#D5DDF4;--c-on-light:#526086">
+<div class="site-mini">
+  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
+  <div class="mini-hero"><small>STUDIO BY AARON / 05</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
+  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+</div>
+<div class="specimen-info">
+ <div class="specimen-title"><span class="number">05 / 10</span><h2>Indigo & Peach</h2><p>Deep indigo, powder blue, warm sunrise.</p><span class="tone">creative confident</span></div>
+ <div class="swatches"><span style="background:#172044" title="Deep base"></span><span style="background:#33436C" title="Midtone"></span><span style="background:#C3CDEE" title="Story background"></span><span style="background:#D9DFFA" title="Light tint"></span><span style="background:#AFC6FF" title="Accent"></span><span style="background:#FFC0A4" title="Warm detail"></span></div>
+ <a href="/?colors=05" class="preview">See Indigo & Peach on the actual Archiebase site <span class="preview-mark">Preview 05</span></a>
+</div></article>
+<article class="specimen" id="palette-06" style="--c-night:#272123;--c-mid:#514044;--c-light:#E2D6D4;--c-light2:#D5C0C0;--c-accent:#F0B5AD;--c-accent-dark:#9A4D52;--c-warm:#C0D6C3;--c-ink:#3B2931;--c-on-dark:#FBF5F3;--c-muted-dark:#E9DADB;--c-on-light:#70565E">
+<div class="site-mini">
+  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
+  <div class="mini-hero"><small>STUDIO BY AARON / 06</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
+  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+</div>
+<div class="specimen-info">
+ <div class="specimen-title"><span class="number">06 / 10</span><h2>Oxide & Ash</h2><p>Soft black, dusty rose, eucalyptus.</p><span class="tone">moody human</span></div>
+ <div class="swatches"><span style="background:#272123" title="Deep base"></span><span style="background:#514044" title="Midtone"></span><span style="background:#D5C0C0" title="Story background"></span><span style="background:#E2D6D4" title="Light tint"></span><span style="background:#F0B5AD" title="Accent"></span><span style="background:#C0D6C3" title="Warm detail"></span></div>
+ <a href="/?colors=06" class="preview">See Oxide & Ash on the actual Archiebase site <span class="preview-mark">Preview 06</span></a>
+</div></article>
+<article class="specimen" id="palette-07" style="--c-night:#08252E;--c-mid:#19515A;--c-light:#CADFD9;--c-light2:#AFCDC6;--c-accent:#8AD9D1;--c-accent-dark:#135F64;--c-warm:#E7A47C;--c-ink:#193E43;--c-on-dark:#EFF9F6;--c-muted-dark:#D0E7E4;--c-on-light:#43696B">
+<div class="site-mini">
+  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
+  <div class="mini-hero"><small>STUDIO BY AARON / 07</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
+  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+</div>
+<div class="specimen-info">
+ <div class="specimen-title"><span class="number">07 / 10</span><h2>Deep Petrol</h2><p>Petrol green, verdigris, faded terracotta.</p><span class="tone">modern grounded</span></div>
+ <div class="swatches"><span style="background:#08252E" title="Deep base"></span><span style="background:#19515A" title="Midtone"></span><span style="background:#AFCDC6" title="Story background"></span><span style="background:#CADFD9" title="Light tint"></span><span style="background:#8AD9D1" title="Accent"></span><span style="background:#E7A47C" title="Warm detail"></span></div>
+ <a href="/?colors=07" class="preview">See Deep Petrol on the actual Archiebase site <span class="preview-mark">Preview 07</span></a>
+</div></article>
+<article class="specimen" id="palette-08" style="--c-night:#201C3D;--c-mid:#423B6A;--c-light:#DDD8EE;--c-light2:#C7C1E0;--c-accent:#C6B9FF;--c-accent-dark:#6250AD;--c-warm:#FFA998;--c-ink:#302C53;--c-on-dark:#FAF7FF;--c-muted-dark:#DDD7F2;--c-on-light:#655B86">
+<div class="site-mini">
+  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
+  <div class="mini-hero"><small>STUDIO BY AARON / 08</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
+  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+</div>
+<div class="specimen-info">
+ <div class="specimen-title"><span class="number">08 / 10</span><h2>Violet Hour</h2><p>Night indigo, iris light, coral spark.</p><span class="tone">bold creative</span></div>
+ <div class="swatches"><span style="background:#201C3D" title="Deep base"></span><span style="background:#423B6A" title="Midtone"></span><span style="background:#C7C1E0" title="Story background"></span><span style="background:#DDD8EE" title="Light tint"></span><span style="background:#C6B9FF" title="Accent"></span><span style="background:#FFA998" title="Warm detail"></span></div>
+ <a href="/?colors=08" class="preview">See Violet Hour on the actual Archiebase site <span class="preview-mark">Preview 08</span></a>
+</div></article>
+<article class="specimen" id="palette-09" style="--c-night:#261D1B;--c-mid:#5B3F39;--c-light:#E5D9C8;--c-light2:#D5C4AC;--c-accent:#E9B28F;--c-accent-dark:#8B4D38;--c-warm:#A9D2C4;--c-ink:#4A322C;--c-on-dark:#F9F3E9;--c-muted-dark:#E7D7C6;--c-on-light:#70574A">
+<div class="site-mini">
+  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
+  <div class="mini-hero"><small>STUDIO BY AARON / 09</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
+  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+</div>
+<div class="specimen-info">
+ <div class="specimen-title"><span class="number">09 / 10</span><h2>Coffee & Terracotta</h2><p>Espresso, fired clay, gentle sage.</p><span class="tone">crafted warm</span></div>
+ <div class="swatches"><span style="background:#261D1B" title="Deep base"></span><span style="background:#5B3F39" title="Midtone"></span><span style="background:#D5C4AC" title="Story background"></span><span style="background:#E5D9C8" title="Light tint"></span><span style="background:#E9B28F" title="Accent"></span><span style="background:#A9D2C4" title="Warm detail"></span></div>
+ <a href="/?colors=09" class="preview">See Coffee & Terracotta on the actual Archiebase site <span class="preview-mark">Preview 09</span></a>
+</div></article>
+<article class="specimen" id="palette-10" style="--c-night:#0F1C27;--c-mid:#2D4859;--c-light:#D4E3EB;--c-light2:#B7D2DF;--c-accent:#A4DCFC;--c-accent-dark:#1C6188;--c-warm:#D8B8E4;--c-ink:#223B4B;--c-on-dark:#F4F9FC;--c-muted-dark:#D0E2EC;--c-on-light:#546F80">
+<div class="site-mini">
+  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
+  <div class="mini-hero"><small>STUDIO BY AARON / 10</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
+  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+</div>
+<div class="specimen-info">
+ <div class="specimen-title"><span class="number">10 / 10</span><h2>Carbon Ice</h2><p>Black-blue, steel, cold light, violet edge.</p><span class="tone">precise contemporary</span></div>
+ <div class="swatches"><span style="background:#0F1C27" title="Deep base"></span><span style="background:#2D4859" title="Midtone"></span><span style="background:#B7D2DF" title="Story background"></span><span style="background:#D4E3EB" title="Light tint"></span><span style="background:#A4DCFC" title="Accent"></span><span style="background:#D8B8E4" title="Warm detail"></span></div>
+ <a href="/?colors=10" class="preview">See Carbon Ice on the actual Archiebase site <span class="preview-mark">Preview 10</span></a>
+</div></article></div>
+</main><footer><div class="wrap">Choose any direction to see it on the actual site. The color preview affects only pages opened with the palette parameter; it does not change the published default.</div></footer>
+</body></html>
