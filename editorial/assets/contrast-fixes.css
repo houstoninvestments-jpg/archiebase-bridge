@@ -1,0 +1,36 @@
+/* Contrast fixes. Every text color here meets WCAG AA (4.5:1 or better)
+   on its real background. Each color keeps its original hue, only darker
+   (or lighter on navy). Applies to the default palette only, so the
+   ?colors= preview palettes are left as they were. Load this file last. */
+
+/* ---------- index.html ---------- */
+html:not([data-colors]) .reality .cue{color:#377989!important}
+html:not([data-colors]) .real-outcome .human-stat{color:#5B757E!important}
+html:not([data-colors]) .worth-answer .worth-footnote{color:#526973!important}
+html:not([data-colors]) .ai-perspective .ai-overline{color:#186F88!important}
+html:not([data-colors]) .ai-perspective .ai-whisper a{color:#4B6C76!important}
+html:not([data-colors]) .contact-form .form-note{color:#5C6F77!important}
+
+/* ---------- tools.html ---------- */
+/* "See a fix in action" ticket. Row 02 sits on pale green, so it needs dark text. */
+html:not([data-colors]) .wd-ticket .wd-is-fix .wd-row-label{color:#436752!important}
+html:not([data-colors]) .wd-ticket .wd-is-fix p{color:#1C352F!important}
+html:not([data-colors]) .wd-ticket .wd-is-before .wd-ordinal{color:#93A39B!important}
+html:not([data-colors]) .wd-ticket .wd-is-after .wd-ordinal{color:#7DA1CE!important}
+html:not([data-colors]) .wd-tick{color:#207859!important}
+html:not([data-colors]) .wd-mid{color:#656D66!important}
+html:not([data-colors]) .fix-right .result-label{color:#5C6976!important}
+html:not([data-colors]) .result-card .note{color:#637381!important}
+html:not([data-colors]) .lead-card .lead-note{color:#66737F!important}
+
+/* ---------- studio-direction.html ---------- */
+.hero .hero-note{color:#545146!important}
+.problems .kicker{color:#405535!important}
+.problems .problem-no{color:#425340!important}
+.problems .quiet-source,.problems .quiet-source a{color:#405443!important}
+.owner h2 em{color:#974933!important}
+.promise .kicker{color:#694935!important}
+.contact .contact-intro{color:#3A241C!important}
+
+/* ---------- privacy links beside form notes ---------- */
+.privacy-link{color:inherit!important;text-decoration:underline!important;text-underline-offset:2px}
