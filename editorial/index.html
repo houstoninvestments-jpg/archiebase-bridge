@@ -1,367 +1,119 @@
 <!doctype html>
-<html lang="en" data-font="22">
+<html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<script>document.documentElement.classList.add("js")</script>
-<meta name="theme-color" content="#101B2A">
-<meta name="description" content="Archiebase helps small businesses make everyday work easier. Beautiful websites, useful automations, smart follow-up, and creative solutions, built personally by Aaron. Start with a free written business review.">
-<title>Archiebase — Make room for the good work.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet">
-<style>
-:root{--paper:#f7f6f0;--milk:#fffdf7;--ink:#17332f;--soft:#45605a;--line:#dce1d8;--blue:#2e59f2;--orange:#f7794e;--lime:#daf08a;--mint:#e4eedd;--display:'Bricolage Grotesque',system-ui,sans-serif;--body:'DM Sans',system-ui,sans-serif;--serif:'Newsreader',Georgia,serif;--max:1250px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}h1,h2,h3,p,blockquote{margin:0}h1,h2,h3{font-family:var(--display);letter-spacing:-.065em;line-height:1.05}h1{font-weight:800}::selection{background:var(--lime);color:var(--ink)}:focus-visible{outline:3px solid var(--blue);outline-offset:4px}.wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.eyebrow::before{content:"";width:8px;height:8px;background:var(--orange);transform:rotate(45deg)}.tag{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.skip{position:absolute;left:16px;top:-100px;background:#fff;padding:12px;z-index:100}.skip:focus{top:10px}.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}.js .reveal.shown{opacity:1;transform:none}
-/* navigation */
-#progress{position:fixed;z-index:200;top:0;left:0;width:0;height:3px;background:var(--orange);pointer-events:none}.site-nav{z-index:90;position:sticky;top:0;background:rgba(247,246,240,.94);backdrop-filter:blur(16px);border-bottom:1px solid #d4dbd1}.nav-inner{height:81px;display:flex;align-items:center;justify-content:space-between;gap:20px}.wordmark{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.085em;white-space:nowrap}.wordmark span{color:var(--orange)}.desktop-nav{display:flex;align-items:center;gap:26px;font-size:13px;font-weight:800}.desktop-nav a:not(.nav-cta){transition:color .2s}.desktop-nav a:not(.nav-cta):hover{color:var(--blue)}.nav-cta,.solid-btn{display:inline-flex;align-items:center;gap:16px;justify-content:center;border:0;background:var(--blue);color:white;padding:15px 20px;font-weight:800;font-size:13px;border-radius:7px;transition:background .22s,transform .22s,box-shadow .22s;box-shadow:0 7px 0 #2443a515}.nav-cta:hover,.solid-btn:hover{background:#153fce;transform:translateY(-2px);box-shadow:0 10px 0 #2443a512}.nav-cta{padding:11px 17px}.menu-btn{display:none;background:none;border:1px solid #b9c6bc;width:41px;height:41px;border-radius:9px;font-size:23px}.mobile-nav{display:none}
-/* hero, a composition with typography instead of the tired split-card formula */
-.hero{padding:71px 0 36px;position:relative}.hero-wrap{position:relative}.hero-top{display:flex;justify-content:space-between;align-items:center;gap:20px}.hero-index{font-size:11px;font-weight:800;color:#81918a;letter-spacing:.09em}.hero h1{font-size:clamp(60px,8.5vw,132px);line-height:.96;letter-spacing:-.096em;max-width:1140px;margin:38px 0 34px}.hero h1 .line{display:block}.hero h1 .line:nth-child(2){margin-left:clamp(0px,6.6vw,110px)}.hero h1 .serif{font:italic 500 .98em/.9 var(--serif);letter-spacing:-.085em;color:var(--blue)}.hero h1 .squiggle{display:inline-block;position:relative;white-space:nowrap}.hero h1 .squiggle:after{content:"";position:absolute;bottom:-10px;left:2%;right:2%;height:12px;border-radius:50%;border-top:4px solid var(--orange);transform:rotate(-2deg)}.hero-intro{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:end;max-width:1020px;margin:0 0 48px auto}.hero-intro p{font-size:clamp(17px,1.6vw,22px);line-height:1.55;color:var(--soft);font-weight:500}.hero-intro p strong{color:var(--ink)}.hero-cta{display:flex;flex-direction:column;gap:14px;align-items:flex-start}.text-link{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:800;border-bottom:1px solid currentColor;padding:4px 0;transition:gap .2s}.text-link:hover{gap:16px}.proofline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;color:#657a6e;font-weight:700}.proofline span{background:#e8efdf;padding:5px 9px;border-radius:20px}.micro-note{font-size:12px;font-weight:700;color:#6a7e71;max-width:330px;margin:22px 0 0}.hero-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding:20px 0 0;gap:20px;color:#61766d}.hero-bottom .small{font-size:11px;font-weight:800;letter-spacing:.13em}.scroll-cue{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:800}.scroll-cue i{width:27px;height:27px;border:1px solid #9bada1;display:grid;place-items:center;border-radius:50%;font-style:normal;animation:nudge 2s ease-in-out infinite}
-/* outcome scrollytelling */
-.workday{background:#1b3932;color:var(--milk);margin-top:36px;position:relative;overflow:hidden}.workday:before{content:"";position:absolute;right:-15%;top:-50%;height:1000px;width:1000px;border:1px solid #6a877931;border-radius:50%;box-shadow:0 0 0 90px #617d7621,0 0 0 200px #617d760f;pointer-events:none}.workday-inner{padding:99px 0 111px;position:relative;z-index:1}.workday-label{color:#b7d3bd}.workday h2{font-size:clamp(49px,6.7vw,91px);margin:24px 0 15px;max-width:1070px}.workday h2 em{color:var(--lime);font:italic 500 1.04em var(--serif)}.workday-lead{font-size:17px;color:#bcd0c5;max-width:635px;line-height:1.65}.story-track{margin-top:65px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}.story-track:before{content:"";height:2px;background:linear-gradient(90deg,#f87f54,#dced87);position:absolute;top:12px;left:6px;right:0;transform-origin:left;transform:scaleX(.01);transition:transform 1.5s cubic-bezier(.2,.7,.2,1)}.story-track.shown:before{transform:scaleX(1)}.story{padding:42px 24px 0 0;max-width:395px}.story .node{display:block;width:22px;height:22px;background:var(--ink);border:6px solid var(--orange);border-radius:100%;position:absolute;top:2px}.story:nth-child(2) .node{border-color:#b8bfc3}.story:nth-child(3) .node{border-color:var(--lime)}.story h3{font-size:28px;margin:0 0 12px;letter-spacing:-.065em}.story p{font-size:15px;color:#b1c7bc;line-height:1.7;max-width:345px}.story:nth-child(3) h3{color:var(--lime)}.story b{display:block;font-size:10px;letter-spacing:.15em;color:#a8b9af;margin-bottom:14px}.story:nth-child(1){position:relative}.story:nth-child(2){position:relative}.story:nth-child(3){position:relative}
-/* four-part experience, no product jargon */
-.solutions{padding:118px 0 110px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:39px}.section-heading h2{font-size:clamp(48px,5.8vw,77px);max-width:780px;margin:18px 0 0}.section-heading p{font-size:15px;line-height:1.7;max-width:330px;color:#5d7368}.solution-list{border-top:1px solid var(--line)}.solution-row{display:grid;grid-template-columns:68px minmax(200px,1fr) minmax(270px,1fr) 35px;gap:20px;align-items:start;border-bottom:1px solid var(--line);padding:31px 5px;transition:background .24s,padding .24s}.solution-row:hover{background:#ecf0e6;padding-left:17px;padding-right:17px}.sol-no{font-size:11px;font-weight:800;color:#7f9488;letter-spacing:.1em;padding-top:7px}.solution-row h3{font-size:clamp(27px,3vw,40px);margin:0 0 6px}.solution-row p{font-size:15px;color:#5c7167;line-height:1.6}.solution-row .outcome{color:#2457d6;font-weight:800;font-size:13px}.solution-row .end-arrow{font-size:24px;color:#789185;transition:transform .2s}.solution-row:hover .end-arrow{transform:rotate(45deg);color:var(--blue)}.wide-request{margin-top:29px;display:flex;justify-content:space-between;gap:23px;align-items:center;padding:23px 27px;background:#edf0e4}.wide-request p{font-size:16px;font-weight:700;max-width:695px}.wide-request p strong{color:#1752e6}.wide-request button{background:transparent;border:0;border-bottom:2px solid var(--ink);padding:8px 0;font-weight:800;color:var(--ink);white-space:nowrap}
-/* honest free audit, visually simple */
-.audit-section{background:#f0ede2;padding:112px 0 120px}.audit-grid{display:grid;grid-template-columns:.87fr 1.13fr;gap:clamp(40px,6vw,105px);align-items:start}.audit-copy h2{font-size:clamp(48px,5.6vw,77px);margin:20px 0}.audit-copy>p{font-size:17px;color:#5c7167;line-height:1.7;max-width:460px}.audit-give{margin-top:37px;border-top:1px solid #ced7ca}.audit-give div{border-bottom:1px solid #ced7ca;display:flex;align-items:center;gap:16px;padding:18px 0;font-size:14px;font-weight:700}.audit-give div b{color:#2761d8;font-size:11px;letter-spacing:.1em}.audit-give span{flex:1}.audit-hand{font:italic 500 28px/1.2 var(--serif);color:#21604b;margin-top:31px;transform:rotate(-3deg);max-width:370px}.audit-form{background:var(--milk);border:1px solid #d1d8ce;padding:clamp(21px,4vw,44px);border-radius:12px;box-shadow:10px 10px 0 #e1e4d8}.audit-form-head{display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid #dce3d9;padding-bottom:18px;margin-bottom:23px}.audit-form-head span{font-size:11px;font-weight:800;letter-spacing:.1em}.audit-form-head .status-dot{width:10px;height:10px;background:#6dc592;border-radius:50%}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{margin-bottom:17px}.field label{display:block;font-size:12px;font-weight:800;margin:0 0 7px}.field input,.field select,.field textarea{display:block;width:100%;padding:13px 14px;border:1px solid #cbd5cb;background:white;border-radius:6px;color:var(--ink);font-size:14px;min-height:48px}.field textarea{min-height:93px;resize:vertical}.field select{appearance:auto}.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid var(--blue);outline-offset:1px}.audit-form button[type=submit]{width:100%;text-align:left;justify-content:space-between}.form-note{font-size:11px;color:#6a7a70;line-height:1.5;margin-top:13px}.form-status{font-size:13px;font-weight:700;margin-top:11px;min-height:1em}.form-status.error{color:#af3238}.form-status.ok{color:#196443}.honeypot{position:absolute!important;left:-9999px!important;opacity:0!important;pointer-events:none!important}
-/* offers */
-.pricing{padding:115px 0 120px}.pricing-list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.price-item{padding:30px;display:flex;flex-direction:column;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fcfbf7;transition:background .3s}.price-item:hover{background:#f0f3e9}.price-item .tier{font-weight:800;color:#5c796a;font-size:11px;letter-spacing:.1em}.price-item h3{font-size:36px;line-height:1.12;margin:27px 0 12px}.price-item .money{font-family:var(--display);font-size:55px;letter-spacing:-.075em;font-weight:800;margin:6px 0}.price-item .money small{font-size:12px;letter-spacing:0;color:#5c7166;font-weight:600}.price-item>p{font-size:14px;color:#5b7065;line-height:1.65;min-height:69px}.price-item ul{list-style:none;padding:19px 0 14px;margin:21px 0 0;border-top:1px solid var(--line);flex:1}.price-item li{display:flex;gap:9px;margin:0 0 10px;font-size:13px;font-weight:600}.price-item li:before{content:"•";color:#235de6}.price-item button{display:flex;justify-content:space-between;gap:10px;width:100%;border:1px solid #183b31;background:transparent;color:#183b31;border-radius:6px;font-weight:800;padding:12px 13px;text-align:left;transition:background .2s,color .2s}.price-item button:hover{background:#183b31;color:#fff}.pricing-note{max-width:900px;font-size:12px;color:#64786c;line-height:1.6;margin-top:20px}.love-note{margin-top:56px;display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:center;padding:29px 0;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}.love-note .handwritten{font:italic 500 37px/1 var(--serif);color:#2b5eb5}.love-note h3{font-size:clamp(27px,3.4vw,40px);margin:0 0 8px}.love-note p{color:#5a6e63;font-size:14px;line-height:1.65}
-/* creative story */
-.make{background:#e8eee2;padding:105px 0 115px;overflow:hidden}.make-head{display:grid;grid-template-columns:.84fr 1.16fr;align-items:end;gap:30px}.make h2{font-size:clamp(50px,7vw,93px)}.make h2 em{font:italic 500 .95em var(--serif);color:#235adf}.make-lead{max-width:520px;color:#4b685e;font-size:17px;line-height:1.7}.make-bits{display:flex;gap:12px;flex-wrap:wrap;margin:40px 0 25px}.make-bits span{display:inline-block;padding:10px 14px;border:1px solid #aabdad;border-radius:100px;font-size:12px;font-weight:700;background:#f8f9f2;transition:transform .22s}.make-bits span:nth-child(even){transform:rotate(2deg)}.make-bits span:nth-child(odd){transform:rotate(-2deg)}.make-bits span:hover{transform:rotate(0) translateY(-3px)}.make-quote{border-left:4px solid var(--orange);padding:16px 22px;margin-top:30px;max-width:740px;font:italic 500 clamp(22px,3vw,38px)/1.3 var(--serif);color:#345b4f}.make a{margin-top:25px}
-/* faq and closing */
-.faq{padding:105px 0}.faq-layout{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px}.faq h2{font-size:clamp(47px,5.5vw,73px);margin-top:16px}.faq details{border-top:1px solid #cad9ce;padding:19px 0}.faq details:last-child{border-bottom:1px solid #cad9ce}.faq summary{font-size:16px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none}.faq summary:after{content:"+";font-size:25px;font-weight:400}.faq details[open] summary:after{content:"−"}.faq details p{margin:12px 0 0;font-size:14px;color:#536e60;line-height:1.7;max-width:690px}.endcap{background:#183b32;color:#f8f8f0;padding:95px 0 88px}.endcap h2{font-size:clamp(50px,8vw,110px);max-width:920px;margin:22px 0 26px}.endcap h2 em{font:italic 500 1em var(--serif);color:var(--lime)}.endcap p{font-size:16px;line-height:1.6;max-width:530px;color:#c0d8c8;margin:0 0 23px}.endcap .solid-btn{background:var(--lime);color:var(--ink)}.endcap .solid-btn:hover{background:#f3ffb9}footer{background:#132b25;color:#d5e5d7;padding:26px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}footer .wordmark{font-size:24px}footer p{font-size:12px;color:#a4bcac}.footer-links{display:flex;gap:21px;font-size:12px;font-weight:800}
-/* dialogs */
-dialog{border:0;max-width:min(560px,calc(100% - 22px));max-height:calc(100vh - 20px);padding:0;background:none}dialog::backdrop{background:#051a14ba;backdrop-filter:blur(4px)}.modal-inner{overflow:auto;max-height:calc(100vh - 20px);background:#fcfbf5;border-radius:13px;padding:clamp(20px,5vw,34px)}.modal-top{display:flex;align-items:start;gap:15px;justify-content:space-between}.modal-top h2{font-size:40px;margin:13px 0}.close-btn{background:none;border:1px solid #b7c5bd;width:40px;height:40px;border-radius:50%;font-size:23px;flex:none}.modal-inner>p{font-size:14px;color:#597066;margin-bottom:18px}.modal-submit{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;background:var(--blue);color:white;border-radius:6px;padding:13px 16px;font-weight:800}.modal-notice{min-height:20px;margin-top:9px;font-weight:700;font-size:13px}.modal-notice.error{color:#a32633}
-/* accessible motion */
-@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}@media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.js .reveal{opacity:1;transform:none}}
-@media (max-width:1020px){.hero h1{font-size:clamp(62px,8.5vw,112px)}.hero-intro{gap:32px}.price-item{padding:22px}.solution-row{grid-template-columns:48px 1fr 1fr 30px}}
-@media (max-width:800px){.nav-inner{height:70px}.desktop-nav{display:none}.menu-btn{display:grid;place-items:center}.mobile-nav{position:absolute;display:none;left:0;right:0;top:70px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 20px 30px #10281c14;padding:13px 24px;z-index:88}.mobile-nav.open{display:flex;flex-direction:column;gap:3px}.mobile-nav a{padding:11px 0;font-weight:800;font-size:14px}.hero{padding-top:51px}.hero h1{font-size:clamp(59px,10vw,97px);margin:28px 0}.hero h1 .line:nth-child(2){margin-left:0}.hero-intro{display:block;margin:0 0 32px}.hero-intro p{margin-bottom:21px}.workday-inner{padding:76px 0}.story-track{gap:16px}.story h3{font-size:24px}.section-heading{display:block}.section-heading p{margin-top:22px;max-width:590px}.solution-row{grid-template-columns:36px 1fr 30px;gap:12px}.solution-row p{grid-column:2}.solution-row .outcome{grid-column:2}.solution-row .end-arrow{grid-row:1;grid-column:3}.audit-grid,.make-head,.faq-layout{grid-template-columns:1fr;gap:32px}.pricing-list{grid-template-columns:1fr 1fr}.love-note{grid-template-columns:1fr;gap:12px}}
-@media (max-width:580px){.wrap{width:calc(100% - 36px)}.wordmark{font-size:26px}.hero{padding:35px 0 28px}.hero-index{display:none}.hero h1{font-size:clamp(49px,11.45vw,67px);margin:22px 0 29px;line-height:1}.hero h1 .squiggle:after{bottom:-7px;height:9px}.hero-intro p{font-size:16px;margin-bottom:19px}.hero-cta{align-items:stretch}.hero-cta .solid-btn{justify-content:space-between}.proofline{gap:6px}.proofline span{font-size:10px}.hero-bottom{padding-top:13px}.hero-bottom .small{font-size:10px}.workday{margin-top:16px}.workday-inner{padding:64px 0 72px}.workday h2{font-size:clamp(46px,10.5vw,64px)}.workday-lead{font-size:15px}.story-track{display:block;margin-top:44px;padding-left:13px}.story-track:before{width:2px;height:calc(100% - 40px);left:1px;right:auto;top:9px;transform:scaleY(.01);transform-origin:top}.story-track.shown:before{transform:scaleY(1)}.story{padding:0 0 40px 22px;max-width:100%}.story .node{left:-10px;top:0}.story h3{font-size:28px}.story p{font-size:14px}.solutions,.pricing,.faq{padding:70px 0}.section-heading h2{font-size:clamp(44px,9.9vw,57px)}.solution-row{grid-template-columns:26px 1fr 18px;padding:25px 0;gap:9px}.solution-row h3{font-size:29px}.solution-row p{font-size:14px}.wide-request{display:block;padding:21px}.wide-request p{font-size:14px}.wide-request button{margin-top:15px}.audit-section{padding:78px 0 83px}.audit-copy h2{font-size:51px}.audit-copy>p{font-size:15px}.audit-hand{font-size:24px}.audit-form{padding:21px;box-shadow:4px 4px 0 #dfe4d6}.form-grid{grid-template-columns:1fr;gap:0}.pricing-list{grid-template-columns:1fr}.price-item{padding:24px}.price-item>p{min-height:0}.love-note .handwritten{font-size:31px}.make{padding:73px 0}.make h2{font-size:60px}.make-lead{font-size:15px}.make-quote{font-size:25px}.faq h2{font-size:56px}.endcap{padding:73px 0}.endcap h2{font-size:59px}.footer-inner{align-items:start;flex-direction:column;gap:17px}}
-.solid-btn:active,.nav-cta:active,.price-item button:active,.modal-submit:active,.menu-btn:active{transform:translateY(1px) scale(.986);box-shadow:none}.solution-row:active{background:#e5ede0}.make-bits span:active{transform:scale(.96)}
-
-/* ARCHIEBASE — TIDE / SUN EDITION. 2026-11-03.
-   An intentionally restrained editorial system: ink, ocean, sunlight and paper. */
-:root{
- --paper:#F7F5EE;--milk:#FFFEF9;--ink:#102632;--soft:#48616C;
- --line:#BCCBD0;--orange:#F3C44D;--blue:#006BA4;--lime:#F9D55B;
- --green:#11384B;--black:#071D29;--mint:#E5F0EF;
-}
-body{background:var(--paper);color:var(--ink)}
-body::after{content:"";position:fixed;inset:0;z-index:150;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.79' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.52'/%3E%3C/svg%3E");mix-blend-mode:multiply}
-::selection{background:var(--lime);color:var(--ink)}
-:focus-visible{outline:3px solid #1784BD;outline-offset:4px}
-#progress{height:4px;background:var(--lime)}
-.site-nav{background:rgba(247,245,238,.97);border-bottom:1px solid #A9BDBF;backdrop-filter:blur(18px)}
-.site-nav .nav-inner{height:86px}
-.wordmark{letter-spacing:-.095em;font-weight:800;color:#0C2935;font-size:30px}
-.wordmark span{color:#E8B42E}
-.desktop-nav{gap:31px;font-size:13px;letter-spacing:-.02em}
-.desktop-nav a:not(.nav-cta){position:relative}
-.desktop-nav a:not(.nav-cta):after{content:"";position:absolute;bottom:-8px;left:0;width:100%;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
-.desktop-nav a:not(.nav-cta):hover:after{transform:scaleX(1)}
-.nav-cta,.solid-btn{background:#0B3145;color:#fff;border-radius:5px;box-shadow:0 6px 0 #c4d9dd;transition:transform .22s cubic-bezier(.2,.8,.3,1),background .22s,box-shadow .22s}
-.nav-cta:hover,.solid-btn:hover{background:#006BA4;box-shadow:0 9px 0 #C3DCE5;transform:translateY(-3px)}
-.nav-cta:active,.solid-btn:active{transform:translateY(2px) scale(.99);box-shadow:0 2px 0 #c4d9dd}
-/* HERO — No floating cards. Type is the artwork. */
-.hero{background:#F7F5EE;position:relative;isolation:isolate;padding:100px 0 47px;overflow:clip}
-.hero:before{content:"";position:absolute;right:-6%;top:7%;width:39vw;height:45vw;max-height:600px;max-width:600px;opacity:.13;z-index:-1;background:repeating-radial-gradient(circle at 50% 50%,transparent 0 17px,#1A5473 17.6px 18.4px,transparent 19px 39px);mask-image:linear-gradient(90deg,transparent,#000 60%);pointer-events:none}
-.hero .wrap{position:relative}
-.hero-top{padding-bottom:31px;border-bottom:1px solid #B7C7C9}
-.hero-kicker{color:#24536B;font-weight:900;letter-spacing:.15em}
-.hero-kicker .corner-tab{background:var(--lime);border:1px solid #D8AD2C;transform:rotate(45deg)}
-.hero-index{color:#657D89;letter-spacing:.12em;font-size:10px}
-.hero h1{font-size:clamp(61px,8.6vw,133px);line-height:.98;letter-spacing:-.095em;margin:52px 0 60px;font-weight:800;max-width:1200px;color:#091F2A;text-wrap:balance}
-.hero h1 .line:nth-child(2){margin-left:clamp(0px,5vw,85px)}
-.hero h1 .serif{color:#006BA4;font-style:italic}
-.hero h1 .squiggle{position:relative;z-index:0}
-.hero h1 .squiggle:after{background:var(--lime);height:10px;bottom:-6px;transform:rotate(-1.1deg);border-radius:0;z-index:-1;opacity:1}
-.hero-intro{gap:clamp(30px,5vw,95px);padding:0 0 12px;align-items:start}
-.hero-intro p{font-size:clamp(18px,1.7vw,22px);line-height:1.63;color:#506773;max-width:720px;font-weight:500}
-.hero-intro p strong{font-weight:800;color:#0D2937}
-.hero-cta{align-items:flex-start;gap:17px}
-.hero-cta .solid-btn{padding:17px 22px;font-size:15px;min-width:250px;display:flex;justify-content:space-between}
-.text-link{font-weight:800;text-decoration-color:#74959A;text-underline-offset:7px;color:#0F4158}
-.proofline{margin-top:7px;display:flex;flex-wrap:wrap;gap:10px 12px}
-.proofline span{background:transparent!important;border:1px solid #B9CAC8;padding:7px 10px;border-radius:4px;color:#466577!important;font-size:11px;letter-spacing:.01em}
-.hero-bottom{border-top:2px solid #0E3444;margin-top:56px;padding-top:20px;color:#506A77}
-.hero-bottom:before{content:"";position:absolute;bottom:0;right:0;width:64px;height:4px;background:var(--lime);transform:translateY(2px)}
-.hero-bottom .small,.scroll-cue{color:#426477;font-weight:900;letter-spacing:.12em;font-size:10px}
-.scroll-cue i{border-color:#0C5673;color:#0C5673;animation:nudge 2.5s ease-in-out infinite}
-/* THE WORKDAY — Deep ocean / illuminated lines */
-.workday{background:#082637;color:#F4F7F3;margin-top:0;border-top:5px solid #016D9B;border-bottom:5px solid var(--lime)}
-.workday:before{content:"";position:absolute;inset:0;right:0;top:0;width:auto;height:auto;border:0;border-radius:0;box-shadow:none;opacity:.2;background-image:linear-gradient(#5188A422 1px,transparent 1px),linear-gradient(90deg,#5188A422 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,transparent,#000 23%,#000 80%,transparent);pointer-events:none}
-.workday-inner{padding:130px 0 145px}
-.workday-label{color:#F6D56A!important;letter-spacing:.15em}
-.workday h2{font-weight:800;font-size:clamp(55px,6.9vw,98px);line-height:1.06;letter-spacing:-.075em;margin-top:27px}
-.workday h2 em{color:#F9D75C;font-weight:500}
-.workday-lead{font-size:clamp(16px,1.4vw,19px);color:#BDCFD8;max-width:700px;line-height:1.7}
-.story-track{margin-top:89px}
-.story-track:before{background:linear-gradient(90deg,#0AA8C7 0%,#FAD961 96%);height:2px}
-.story .node{background:#F7D85E!important;box-shadow:0 0 0 5px #102F42}
-.story b{color:#A5C8D8;font-size:11px;letter-spacing:.12em}
-.story h3{font-size:clamp(26px,2.55vw,37px);line-height:1.13;color:#FFFDF6;margin-top:17px}
-.story p{color:#B7CFD6;font-size:15px;line-height:1.7}
-/* SOLUTIONS — Strong typesetting and deliberate rules */
-.solutions{background:#FCFCF8;padding:140px 0 150px}
-.section-heading{margin-bottom:57px;gap:55px}
-.section-heading h2{font-size:clamp(51px,6vw,88px);line-height:1.04;color:#0A2734;letter-spacing:-.075em}
-.section-heading p{font-size:17px;color:#4F6771;line-height:1.75;max-width:380px}
-.eyebrow{font-weight:900;letter-spacing:.15em;color:#29607C}
-.solution-list{border-top:3px solid #0C2E3D}
-.solution-row{position:relative;border-bottom:1px solid #ADBDC1;padding:40px 5px;transition:padding .3s ease,background .3s ease}
-.solution-row:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--blue);transform:scaleY(0);transform-origin:top;transition:transform .3s ease}
-.solution-row:hover{background:#E8F2F4;padding-left:21px;padding-right:21px}
-.solution-row:hover:before{transform:scaleY(1)}
-.sol-no{color:#1C7EAB;font-weight:900;font-size:12px}
-.solution-row h3{color:#102C3C;font-size:clamp(30px,3.05vw,44px);font-weight:800;letter-spacing:-.07em}
-.solution-row p{color:#4D6672;font-size:15px;line-height:1.7}
-.solution-row .outcome{color:#105A80;font-weight:800}
-.end-arrow{color:#0C6094;font-size:25px}
-.wide-request{background:#E5F0F2;border-top:3px solid #0E5D80;padding:29px 31px;color:#173444}
-.wide-request p{color:#294D5E;font-size:17px;line-height:1.5}
-.wide-request button{background:#0A3651;color:white;border:1px solid #0A3651;border-radius:5px;padding:13px 18px;font-weight:800}
-.wide-request button:hover{background:var(--blue)}
-/* AUDIT — Light ocean-wash; simple, confident form */
-.audit-section{position:relative;background:#E6F0F1;border-top:1px solid #BED5D9;border-bottom:1px solid #BED5D9;padding:142px 0 152px}
-.audit-section:before{content:"";position:absolute;inset:0;opacity:.3;pointer-events:none;background-image:radial-gradient(#277D9D33 1px,transparent 1px);background-size:18px 18px;mask-image:linear-gradient(90deg,transparent 60%,#000)}
-.audit-grid{position:relative;z-index:1;gap:clamp(50px,7vw,120px)}
-.audit-copy h2{font-size:clamp(52px,6vw,85px);line-height:1.02;color:#0F2D3A;margin:27px 0 25px}
-.audit-copy h2 em{color:#006BA4!important}
-.audit-copy>p{color:#4F6975;font-size:18px}
-.audit-give{margin-top:49px;border-top:2px solid #97B7BE}
-.audit-give div{border-bottom:1px solid #A7C2C9;padding:17px 0;color:#163B4D}
-.audit-hand{color:#0F6390;font-size:28px}
-.audit-form{background:#FFFEFA;border-radius:2px;border:1px solid #709FAA;box-shadow:12px 12px 0 #C8DAE0;padding:clamp(24px,4vw,50px)}
-.audit-form-head{border-bottom:2px solid #163E52;padding-bottom:20px;margin-bottom:25px;color:#0F3B51}
-.audit-form-head .status-dot{background:var(--lime);box-shadow:0 0 0 4px #FAF0BE}
-.field label{color:#203F4B;font-weight:800}
-.field input,.field select,.field textarea{border:1px solid #B0C5C9;border-radius:3px;background:#FAFCFA;color:#0D2937;transition:border-color .2s,box-shadow .2s}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:#0A77B4;box-shadow:0 0 0 3px #C7E8F5;outline:none}
-.audit-form .solid-btn{background:#075B8E;border-radius:3px;box-shadow:0 6px 0 #C3D5DD;font-weight:900}
-/* PRICING — Six quiet editorial cards, no startup-glass aesthetics */
-.pricing{padding:145px 0 148px;background:#F8F7F1}
-.pricing-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;border:none}
-.price-item{border:1px solid #B5C8CB;border-top:4px solid #0C3143;background:#FFFEFA;padding:34px 31px;min-height:515px;transition:transform .3s,box-shadow .3s,border-color .3s,background .3s;box-shadow:none}
-.price-item:nth-child(3n+2){border-top-color:#066FA6}
-.price-item:nth-child(3n){border-top-color:#E7B936}
-.price-item:hover{background:#FFFDFC;transform:translateY(-5px);box-shadow:7px 9px 0 #DCE7E8;border-color:#477A90}
-.price-item .tier{color:#356D83;font-weight:900;letter-spacing:.13em;font-size:10px}
-.price-item h3{font-size:clamp(31px,2.7vw,40px);font-weight:800;letter-spacing:-.075em;line-height:1.12;margin-top:25px}
-.price-item>p{color:#4E6971;font-size:14px;line-height:1.75;min-height:75px}
-.price-item .money{color:#0D2E41;font-size:clamp(47px,4.3vw,62px);font-weight:800;letter-spacing:-.09em}
-.price-item .money small{color:#6A8490;font-size:12px}
-.price-item ul{border-top:1px solid #D4DEDF}
-.price-item li{color:#355362;font-size:13px;line-height:1.55}
-.price-item li:before{color:#016EA1}
-.price-item button{color:#0F3B52;border:1px solid #0F3B52;border-radius:3px;font-weight:900;padding:14px 14px}
-.price-item button:hover{background:#0F3B52;color:white}
-.pricing-note{color:#5A7079;max-width:970px}
-.love-note{background:#FFF1C7;border-top:4px solid #0E3142;border-bottom:1px solid #E7C868;display:grid;grid-template-columns:.87fr 2.13fr;gap:30px;padding:43px 47px;margin-top:64px}
-.love-note .handwritten{color:#095E8A;font-size:clamp(30px,3.6vw,46px);line-height:1.2}
-.love-note h3{color:#0D3040;font-weight:800}
-.love-note p{color:#49626C}
-/* CREATIVE — Ocean midnight backdrop, sunlit typographic accents */
-.make{background:#072638;color:#FEFDF6;position:relative;padding:143px 0 150px}
-.make:before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,#46738E1B 1px,transparent 1px);background-size:92px 92px;opacity:.5;pointer-events:none}
-.make .wrap{position:relative;z-index:1}
-.make h2{color:#FEFDF6;font-size:clamp(60px,7.6vw,106px);font-weight:800;line-height:1.02}
-.make h2 em{color:#F4D15B}
-.make .eyebrow{color:#A4CDDE}
-.make-lead{color:#C8DAE2;font-size:18px;max-width:590px;line-height:1.8}
-.make-bits{margin:58px 0 34px;gap:12px}
-.make-bits span{background:#113A52;border-color:#618294;border-radius:4px;color:#EDF7F8;font-weight:800;padding:13px 16px;transition:transform .26s,background .26s,border-color .26s}
-.make-bits span:nth-child(even){transform:rotate(1deg)}.make-bits span:nth-child(odd){transform:rotate(-1deg)}
-.make-bits span:hover{background:#174D6D;border-color:#F0D56C;transform:rotate(0) translateY(-4px)}
-.make-quote{color:#FEFAE7;border-left:4px solid #F9D65F;font-size:clamp(26px,3.3vw,42px);max-width:850px;padding:18px 29px}
-.make a{color:#F9D65F;text-decoration-color:#F9D65F}
-/* FAQ and closing — visually audible, visually quiet */
-.faq{background:#FCFCF8;padding:135px 0 145px}
-.faq h2{color:#112C3A}
-.faq details{border-color:#AFBFC3;padding:26px 0}
-.faq summary{color:#153747;font-size:18px;font-weight:800}
-.faq summary:after{color:#0B75A9}
-.faq details p{color:#566D79;font-size:15px}
-.endcap{background:#075C88;position:relative;border-top:6px solid #F6D052;padding:135px 0 140px}
-.endcap:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 22px,#FFFFFF08 23px 24px,transparent 25px 50px);mask-image:linear-gradient(90deg,transparent,#000);pointer-events:none}
-.endcap .wrap{position:relative;z-index:1}
-.endcap h2{font-size:clamp(62px,8.9vw,122px);max-width:1030px;font-weight:800;line-height:1}
-.endcap h2 em{color:#FFE079}
-.endcap p{color:#D6EDF5;font-size:18px;max-width:620px}
-.endcap .solid-btn{background:#F7D159;color:#0B2739;box-shadow:0 6px 0 #0C4260;font-weight:900}
-.endcap .solid-btn:hover{background:#FFE487;box-shadow:0 9px 0 #0C4260}
-footer{background:#071D29;color:#E1F0F3;border-top:1px solid #1A5067;padding:38px 0}
-footer p{color:#AECAD2}
-.footer-links a:hover{color:#FAD963}
-/* accessible transitions + haptics */
-.solution-row:active,.price-item button:active,.wide-request button:active,.make-bits span:active{transform:translateY(1px) scale(.99)}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.js .reveal{opacity:1;transform:none}.story-track:before{transition:none!important}.scroll-cue i{animation:none!important}.solution-row,.price-item,.nav-cta,.solid-btn,.make-bits span{transition:none!important}}
-@media (max-width:1050px){
- .hero{padding-top:79px}.hero h1{font-size:clamp(65px,8.3vw,114px)}.hero-intro p{font-size:18px}
- .solutions,.pricing{padding-top:111px;padding-bottom:118px}
- .price-item{padding:27px 23px;min-height:500px}.love-note{padding:32px}
- .make{padding:105px 0 115px}
-}
-@media (max-width:800px){
- .site-nav .nav-inner{height:72px}
- .hero{padding:62px 0 36px}
- .hero h1{font-size:clamp(62px,9.2vw,94px);margin:44px 0 47px}
- .hero h1 .line:nth-child(2){margin-left:0}
- .hero-intro{display:block;padding-bottom:0}
- .hero-intro p{font-size:18px;max-width:680px;margin-bottom:23px}
- .hero-cta{gap:15px}
- .workday-inner{padding:100px 0 110px}
- .story-track{margin-top:68px}
- .audit-section{padding:110px 0 125px}
- .pricing-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
- .price-item{min-height:0}
- .love-note{grid-template-columns:1fr;gap:14px}
- .make h2{font-size:clamp(60px,8.5vw,83px)}
- .faq{padding:100px 0}
-}
-@media (max-width:580px){
- .site-nav .nav-inner{height:70px}
- .wordmark{font-size:27px}
- .hero{padding:43px 0 28px}
- .hero:before{width:88vw;height:70vw;right:-30%;top:22%;opacity:.08}
- .hero-top{padding-bottom:19px}
- .hero h1{font-size:clamp(48px,11.1vw,68px);line-height:1.01;margin:35px 0 39px;letter-spacing:-.087em}
- .hero-intro p{font-size:16px;line-height:1.68;margin-bottom:21px}
- .hero-cta .solid-btn{width:100%;min-width:0;padding:16px 17px}
- .proofline span{font-size:10px}
- .hero-bottom{margin-top:40px;padding-top:16px}
- .workday-inner{padding:82px 0 95px}
- .workday h2{font-size:clamp(48px,10.6vw,70px)}
- .workday-lead{font-size:15px}
- .story-track{margin-top:52px}
- .story-track:before{height:calc(100% - 40px);width:2px;background:linear-gradient(180deg,#17A5C4,#F9D45C)}
- .story h3{font-size:28px}
- .solutions,.pricing{padding:90px 0 104px}
- .section-heading{margin-bottom:38px}
- .section-heading h2{font-size:clamp(43px,9.7vw,58px)}
- .section-heading p{font-size:15px}
- .solution-row{padding:31px 3px}
- .solution-row h3{font-size:clamp(26px,7.7vw,37px)}
- .solution-row p{font-size:14px}
- .wide-request{padding:23px}
- .wide-request p{font-size:15px}
- .audit-section{padding:90px 0 105px}
- .audit-copy h2{font-size:clamp(49px,11vw,70px)}
- .audit-copy>p{font-size:15px}
- .audit-form{padding:23px;box-shadow:5px 5px 0 #C8DAE0}
- .pricing-list{grid-template-columns:1fr;gap:13px}
- .price-item{padding:27px 23px;min-height:0}
- .price-item h3{font-size:35px}
- .love-note{margin-top:45px;padding:28px 23px}
- .love-note .handwritten{font-size:33px}
- .make{padding:90px 0 100px}
- .make h2{font-size:clamp(53px,11vw,73px)}
- .make-lead{font-size:16px}
- .make-bits{margin:43px 0 24px}
- .make-bits span{font-size:11px;padding:11px 13px}
- .faq{padding:87px 0 98px}
- .faq h2{font-size:53px}
- .endcap{padding:105px 0 110px}
- .endcap h2{font-size:clamp(52px,11.3vw,76px)}
- .endcap p{font-size:16px}
-}
-</style>
-<script>(function(){try{var fromUrl=new URLSearchParams(location.search).get('palette');var valid=function(x){return /^(0[1-9]|10)$/.test(x||'')};var launch='night-current-2026';if(localStorage.getItem('archiebase-theme-launch')!==launch){localStorage.setItem('archiebase-palette','10');localStorage.setItem('archiebase-theme-launch',launch)}var saved=localStorage.getItem('archiebase-palette');var v=valid(fromUrl)?fromUrl:(valid(saved)?saved:'10');document.documentElement.setAttribute('data-palette',v);if(valid(fromUrl))localStorage.setItem('archiebase-palette',v);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',v==='10'?'#101B2A':'#F8F7F0')}catch(e){document.documentElement.setAttribute('data-palette','10')}})();</script>
-<link rel="stylesheet" href="/assets/themes.css">
-<script>(function(){try{
-var q=new URLSearchParams(location.search),id=q.get('font');
-var valid=function(v){return /^(0[1-9]|[12][0-9]|30)$/.test(v||'')};
-var version='big-character-selected-2026';
-if(localStorage.getItem('archiebase-font-launch')!==version){
- localStorage.setItem('archiebase-font-launch',version);
- localStorage.setItem('archiebase-font-preview',valid(id)?id:'22');
-}
-if(id==='reset'){localStorage.setItem('archiebase-font-preview','22');id=null;}
-if(valid(id))localStorage.setItem('archiebase-font-preview',id);
-var saved=localStorage.getItem('archiebase-font-preview');
-var chosen=valid(id)?id:(valid(saved)?saved:'22');
-document.documentElement.setAttribute('data-font',chosen);
-var fonts={"10":"https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700;800;900&family=Lora:wght@400;500;600;700&display=swap","11":"https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap","12":"https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Work+Sans:wght@400;500;600;700&display=swap","13":"https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;700;800&family=Urbanist:wght@400;500;600;700&display=swap","14":"https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap","15":"https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap","16":"https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Karla:wght@400;500;600;700&display=swap","17":"https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700;800;900&family=Jost:wght@400;500;600;700&display=swap","18":"https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Cabin:wght@400;500;600;700&display=swap","19":"https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&family=Mulish:wght@400;500;600;700&display=swap","20":"https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@600;700&family=Geist:wght@400;500;600;700&display=swap","21":"https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Flex:wght@400;500;600;700&display=swap","22":"https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Nunito+Sans:wght@400;500;600;700&display=swap","23":"https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:wght@400;500;600;700&display=swap","24":"https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Overpass:wght@400;500;600;700&display=swap","25":"https://fonts.googleapis.com/css2?family=Kanit:wght@600;700;800&family=Lexend:wght@400;500;600;700&display=swap","26":"https://fonts.googleapis.com/css2?family=Paytone+One&family=Assistant:wght@400;500;600;700&display=swap","27":"https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&family=Readex+Pro:wght@400;500;600;700&display=swap","28":"https://fonts.googleapis.com/css2?family=Funnel+Display:wght@600;700;800&family=Funnel+Sans:wght@400;500;600;700&display=swap","29":"https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Roboto:wght@400;500;600;700&display=swap","30":"https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap","01":"https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Inter+Tight:wght@400;500;600;700&display=swap","02":"https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap","03":"https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3:wght@400;500;600;700&display=swap","04":"https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&display=swap","05":"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap","06":"https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap","07":"https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap","08":"https://fonts.googleapis.com/css2?family=Chivo:wght@600;700;800;900&family=Alegreya+Sans:wght@400;500;600;700&display=swap","09":"https://fonts.googleapis.com/css2?family=Saira:wght@600;700;800&family=Onest:wght@400;500;600;700&display=swap"};
-var accents={"09":"https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,500&display=swap","10":"https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap","11":"https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@1,700&display=swap","12":"https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&display=swap","13":"https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,600&display=swap","15":"https://fonts.googleapis.com/css2?family=Figtree:ital,wght@1,700&display=swap","16":"https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,700&display=swap","17":"https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,700&display=swap","18":"https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap","19":"https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,700&display=swap","21":"https://fonts.googleapis.com/css2?family=Roboto+Flex:ital,wght@1,700&display=swap","22":"https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,800&display=swap","23":"https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,700&display=swap","24":"https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,700&display=swap","25":"https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700&display=swap","27":"https://fonts.googleapis.com/css2?family=Anybody:ital,wght@1,700&display=swap","28":"https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@1,700&display=swap","29":"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap","30":"https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap","01":"https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,700&display=swap","02":"https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&display=swap","03":"https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@1,700&display=swap","05":"https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,700&display=swap","07":"https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap","08":"https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,700&display=swap"};
-if(chosen!=='22'){
- var link=document.createElement('link');link.rel='stylesheet';link.href=fonts[chosen];document.head.appendChild(link);
- if(accents[chosen]){var accentLink=document.createElement('link');accentLink.rel='stylesheet';accentLink.href=accents[chosen];document.head.appendChild(accentLink);}
- document.addEventListener('DOMContentLoaded',function(){
-  var b=document.createElement('aside');b.className='font-preview-ribbon';b.setAttribute('aria-label','Font preview controls');
-  b.innerHTML='<span>TYPE SYSTEM '+chosen+'/30</span><a href="/type-systems.html">Compare all 30</a><button type="button">Use default</button>';
-  b.querySelector('button').addEventListener('click',function(){localStorage.setItem('archiebase-font-preview','22');location.href=location.pathname+'?palette=10&font=reset'});
-  document.body.appendChild(b);
- });
-}
-}catch(e){document.documentElement.setAttribute('data-font','22')}})();</script>
-<link rel="stylesheet" href="/assets/fonts.css">
-<link rel="stylesheet" href="/assets/type-systems.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#F5F3ED">
+<meta name="description" content="Archiebase is Aaron's independent creative and technology studio. Personal help for small businesses: missed leads, follow-up, websites, repetitive tasks and ideas that need building. No pressure, no surprise upsells.">
+<title>Archiebase | Real help for people running real businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/owner-story.css">
 </head>
 <body>
-<a href="#main" class="skip">Skip to content</a>
-<div id="progress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
 <header class="site-nav">
-<div class="wrap nav-inner"><a href="#top" class="wordmark" aria-label="Archiebase home">archie<span>•</span>base</a><nav class="desktop-nav" aria-label="Main navigation"><a href="#solutions">Services</a><a href="#workday">How it works</a><a href="#pricing">Pricing</a><a href="/about.html">About</a><a class="nav-cta" href="#audit">Free business review</a></nav><button id="menu-button" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">☰</button></div>
-<nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation"><a href="#solutions">Services</a><a href="#workday">How it works</a><a href="#pricing">Pricing</a><a href="/about.html">About</a><a href="/tools.html">Free tools</a><a href="#audit">Free review</a></nav>
+ <div class="wrap nav-inner">
+  <a class="wordmark" href="/" aria-label="Archiebase, by Aaron">archie<span class="dot">•</span>base<small>by Aaron</small></a>
+  <nav class="desktop-nav" aria-label="Main navigation"><a href="#real-life">The problems</a><a href="#approach">How I work</a><a href="#me">Meet Aaron</a><a class="nav-action" href="#contact">Tell me what's stuck</a></nav>
+  <details class="mobile-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="#real-life">The problems</a><a href="#approach">How I work</a><a href="#me">Meet Aaron</a><a href="/tools.html">Free tools</a><a href="#contact">Send me a note</a></nav></details>
+ </div>
 </header>
 <main id="main">
-<section class="hero sb-hero" id="top" aria-labelledby="sb-hero-title"><div class="wrap"><div class="sb-hero-layout"><div class="sb-hero-copy">
-<p class="sb-kicker">Websites, automations and useful AI for small businesses</p>
-<h1 id="sb-hero-title"><span>Less busywork.</span><span class="sb-impact">More business.</span></h1>
-<p class="sb-dek">Missed calls, slow follow-ups and repetitive work steal time from your day. <strong>I build practical fixes that give it back.</strong></p>
-<div class="sb-cta"><a href="#audit" class="solid-btn">Get a free business review</a><a href="#solutions" class="text-link">Explore services</a></div>
-<p class="sb-micro-proof"><span>Personal recommendations</span><span>No call required</span></p>
-</div></div></div></section>
-<section class="solutions" id="solutions"><div class="wrap">
-<div class="section-heading reveal"><div><span class="eyebrow">What I build</span><h2>Make the hard parts easier.</h2></div><p>Start with the problem. We'll find the simplest useful solution.</p></div>
-<div class="solution-list">
-<a href="#audit" class="solution-row reveal" data-intent="More customer inquiries"><span class="sol-no">01</span><h3>Websites that bring in customers.</h3><p>Clear messaging, beautiful design and an easy way to get in touch.</p></a>
-<a href="#audit" class="solution-row reveal" data-intent="Better follow-up"><span class="sol-no">02</span><h3>Follow-up that doesn't fall behind.</h3><p>Missed-call replies, enquiries, reminders and quotes that keep moving.</p></a>
-<a href="#audit" class="solution-row reveal" data-intent="Automated workflows"><span class="sol-no">03</span><h3>Automations and AI that do real work.</h3><p>Connect your tools, cut repetitive tasks and give your team a useful AI helper.</p></a>
-<a href="#audit" class="solution-row reveal" data-intent="Something creative or custom"><span class="sol-no">04</span><h3>Custom tools and creative ideas.</h3><p>Small apps, content systems, brand work and things nobody has built for you yet.</p></a>
-</div><div class="wide-request reveal"><p>Not sure where to start? That's what the free review is for.</p><button type="button" id="open-custom">Tell me your idea</button></div></div></section>
-<section class="workday" id="workday"><div class="wrap workday-inner"><div class="reveal"><span class="eyebrow workday-label">How it works in real life</span><h2>You're working.<br><em>Your follow-up is too.</em></h2><p class="workday-lead">Here's what a simple missed-call reply can do.</p></div><div class="story-track reveal"><article class="story"><span class="node" aria-hidden="true"></span><b>01 / THE MOMENT</b><h3>A customer calls.</h3><p>You're busy and can't pick up.</p></article><article class="story"><span class="node" aria-hidden="true"></span><b>02 / THE FIX</b><h3>A helpful reply goes out.</h3><p>An automatic text asks how you can help.</p></article><article class="story"><span class="node" aria-hidden="true"></span><b>03 / THE DIFFERENCE</b><h3>You finish. They hear back.</h3><p>The conversation stays open while you work.</p></article></div></div></section>
-<section class="pricing" id="pricing"><div class="wrap"><div class="section-heading reveal"><div><span class="eyebrow">Pricing</span><h2>Straightforward pricing.</h2></div><p>Starting prices for common projects. Custom work gets a clear quote first.</p></div><div class="pricing-list">
-<article class="price-item reveal"><div class="tier">01 / ONE GREAT PAGE</div><h3>A better business website.</h3><p>A focused page built to turn visitors into enquiries.</p><div class="money">$650 <small>one-time starting price</small></div><ul><li>Mobile-first design and copy</li><li>A clear contact or booking action</li></ul><button type="button" data-service="Conversion Page — $650">Ask about a page </button></article>
-<article class="price-item reveal"><div class="tier">02 / NO MORE LOST REPLIES</div><h3>Customer follow-up.</h3><p>Keep enquiries moving, even on your busiest days.</p><div class="money">$850 <small>one-time starting price</small></div><ul><li>One lead source and simple tracker</li><li>Automatic reply and follow-up steps</li></ul><button type="button" data-service="Lead Follow-Up — $850">Ask about follow-up </button></article>
-<article class="price-item reveal"><div class="tier">03 / SMALL AUTOMATION, BIG RELIEF</div><h3>A simple automation.</h3><p>Take one repetitive task off your plate.</p><div class="money">$550 <small>one-time starting price</small></div><ul><li>One defined workflow</li><li>Up to two supported app connections</li></ul><button type="button" data-service="Admin Quick Win — $550">Ask about automation </button></article>
-<article class="price-item reveal"><div class="tier">04 / A USEFUL AI AGENT</div><h3>A custom AI assistant.</h3><p>Help customers or your team get answers faster.</p><div class="money">$1,250 <small>starting price · focused build</small></div><ul><li>One focused use case</li><li>Setup, testing and human handoff</li></ul><button type="button" data-service="Custom AI Agent — from $1,250">Ask about an AI agent </button></article>
-<article class="price-item reveal"><div class="tier">05 / CONNECT THE MOVING PARTS</div><h3>Connected workflows.</h3><p>Make the software you already use work together.</p><div class="money">$950 <small>starting price · one workflow</small></div><ul><li>One multi-step process</li><li>Up to three supported app connections</li></ul><button type="button" data-service="Multi-step Automated Workflow — from $950">Ask about a workflow </button></article>
-<article class="price-item reveal"><div class="tier">06 / IMPROVE WHAT YOU HAVE</div><h3>In-depth AI and website audit.</h3><p>Get a practical roadmap for improving what you have.</p><div class="money">$250 <small>starting price · focused audit</small></div><ul><li>One website or workflow review</li><li>Prioritized recommendations and next steps</li></ul><button type="button" data-service="AI Optimization Audit — from $250">Ask about an AI audit </button></article>
-</div><p class="pricing-note">Prices are starting points. Third-party software, hosting and usage costs are separate. You'll approve the scope before work begins.</p><div class="love-note reveal"><div><h3>Built together. Refined until it works.</h3><p>We'll improve the agreed project until it feels right. Any new scope is discussed before it costs more.</p></div></div></div></section>
-<section class="audit-section" id="audit"><div class="wrap audit-grid"><div class="audit-copy reveal"><span class="eyebrow">A good place to start</span><h2>Get a clear<br><em style="font:italic 500 1em var(--serif);color:var(--blue)">starting point.</em></h2><p>Tell me what's slowing your business down. I'll send a short written review with practical ways to improve it.</p><p class="audit-deliverable">Three opportunities. One clear priority. A next step you can use yourself.</p></div>
-<div class="audit-form reveal"><div class="audit-form-head"><span>FREE WRITTEN BUSINESS REVIEW</span><span class="status-dot" aria-hidden="true"></span></div><form id="audit-form"><div class="form-grid"><div class="field"><label for="audit-name">Your name</label><input id="audit-name" name="name" autocomplete="name" maxlength="90" required placeholder="Your name"></div><div class="field"><label for="audit-email">Where should I send the result?</label><input id="audit-email" name="email" autocomplete="email" type="email" maxlength="180" required placeholder="you@business.com"></div></div><div class="form-grid"><div class="field"><label for="audit-business">Business name</label><input id="audit-business" name="business" maxlength="120" required placeholder="Your business"></div><div class="field"><label for="audit-url">Website <span style="color:#87978a">(optional)</span></label><input id="audit-url" name="url" type="url" maxlength="400" placeholder="https://yourbusiness.com"></div></div><div class="field"><label for="audit-issue">What do you want to improve?</label><select id="audit-issue" name="issue" required><option value="">Choose what fits best</option><option value="More customer inquiries">Get more customer enquiries</option><option value="Better follow-up">Follow up with customers better</option><option value="Less repetitive work">Cut repetitive work</option><option value="Automated workflows">Connect my tools with automated workflows</option><option value="Custom AI agents">Build a custom AI agent</option><option value="AI optimization of our existing website or business">Optimize my existing website or business with AI</option><option value="Something creative or custom">Build something creative or custom</option><option value="Not sure, help me figure it out">Not sure yet, help me figure it out</option></select></div><div class="field"><label for="audit-notes">What's getting in the way? <span style="color:#87978a">(optional)</span></label><textarea id="audit-notes" maxlength="900" placeholder="A sentence or two is plenty."></textarea></div><input class="honeypot" name="website" autocomplete="off" tabindex="-1" id="audit-trap" aria-hidden="true"><button class="solid-btn" id="audit-submit" type="submit">Send my free review </button><p class="form-status" id="audit-status" role="status" aria-live="polite"></p><p class="form-note">Free and no call required. Please don't share passwords or private customer details.</p></form></div></div></section>
-<section class="make" id="make"><div class="wrap"><div class="make-head reveal"><div><span class="eyebrow">A little about me</span><h2>Curious since day one.</h2></div><div><p class="make-lead">I started my first business at eleven, towing a lawn mower behind my bike. I've been finding better ways to build and do things ever since.</p><a href="/about.html" class="text-link">Meet Aaron</a></div></div></div></section>
-<section class="faq" id="faq"><div class="wrap faq-layout"><div><span class="eyebrow">Before you start</span><h2>Good questions.</h2></div><div>
-<details><summary>Is the first review free?</summary><p>Yes. Tell me about your business and I'll send a short written review with useful recommendations you can keep.</p></details>
-<details><summary>Do I need to understand AI?</summary><p>No. You tell me the problem. I'll recommend what makes sense, whether that's AI, automation, a website or something simpler.</p></details>
-<details><summary>Do I need a call or monthly subscription?</summary><p>Not for a standard project. We can work through written messages. Any ongoing third-party software costs are explained before you approve them.</p></details>
-<details><summary>What if my idea isn't listed?</summary><p>Send it anyway. I love unusual projects, and I'll tell you what's realistic and what it could take.</p></details>
-</div></div></section>
-<section class="endcap"><div class="wrap reveal"><span class="eyebrow" style="color:#d0e4cd">The next step can be simple</span><h2>What's slowing you down?<br><em>Let's fix it.</em></h2><p>Start with a free written review. You'll leave with a clearer next step.</p><a href="#audit" class="solid-btn">Get my free review </a></div></section>
+<section class="hero" id="top" aria-labelledby="hero-title"><div class="wrap hero-grid">
+ <div>
+  <span class="eyebrow">For the people doing the actual work</span>
+  <h1 id="hero-title">Your business needs you.<em>It shouldn't need every minute of you.</em></h1>
+  <p class="lede">The phone rings when your hands are full. The estimate still needs a follow-up. You keep copying the same information into three different places. And that website you've been meaning to fix? Still on the list. <strong>I'm Aaron. I find practical ways to get that stuff off your plate.</strong></p>
+  <div class="hero-actions"><a class="primary-btn" href="#contact">Tell me what's driving you nuts</a><a class="secondary-link" href="#approach">Here's how I work</a></div>
+  <p class="hero-proof">Just me, Aaron. No sales team. No obligation to hire me.</p>
+ </div>
+ <aside class="field-note" aria-label="Common challenges for small business owners">
+  <span class="label">THE STUFF THAT ADDS UP</span><h2>Some days it's the little things.</h2>
+  <div class="little-thing"><strong>The call you couldn't answer.</strong>Because you were helping someone else.</div>
+  <div class="little-thing"><strong>The follow-up you meant to send.</strong>Because ten other things happened first.</div>
+  <div class="little-thing"><strong>The admin you do after dinner.</strong>Because it still has to get done.</div>
+  <p class="after">These are real problems worth solving.</p>
+ </aside>
+</div></section>
+<section class="real-life" id="real-life"><div class="wrap">
+ <div class="section-head"><div><span class="eyebrow">Sound familiar?</span><h2>I don't start with a list of AI services.</h2></div><p>I start with what's happening in your business. Sometimes the best fix uses AI. Sometimes it's a simple change that should have happened years ago.</p></div>
+ <div class="reality-list">
+  <div class="reality"><div><span class="cue">WHEN YOU'RE BUSY WITH CUSTOMERS</span><h3>"I missed another call while I was working."</h3></div><p>Maybe a short, approved text could ask what they need, so you can follow up when your hands are free. No complicated new system required.</p></div>
+  <div class="reality"><div><span class="cue">WHEN THERE'S NEVER ENOUGH TIME</span><h3>"I know I need to follow up. I just forget."</h3></div><p>A small reminder or follow-up workflow can handle the routine part, without asking you to keep another spreadsheet open.</p></div>
+  <div class="reality"><div><span class="cue">WHEN YOUR WEBSITE ISN'T DOING ITS JOB</span><h3>"People visit, but I'm not hearing from them."</h3></div><p>Let's make it obvious what you do, why it matters and how a customer can reach you. Better communication before more bells and whistles.</p></div>
+  <div class="reality"><div><span class="cue">WHEN SOMETHING'S JUST A PAIN</span><h3>"We do the same stupid task every single day."</h3></div><p>I like untangling the awkward parts: forms, messages, calendars, small tools and all the little handoffs that eat up an afternoon.</p></div>
+ </div>
+ <p class="hint"><strong>Have a completely different idea?</strong> Good. I like the unusual ones too.</p>
+</div></section>
+<section class="approach" id="approach"><div class="wrap">
+ <div class="section-head"><div><span class="eyebrow">How working with me works</span><h2>A conversation, not a sales funnel.</h2></div><p>You don't have to arrive knowing what software you need or which package to buy. That's the part I help figure out.</p></div>
+ <div class="steps">
+  <div class="step"><span class="number">01 / TELL ME WHAT'S HAPPENING</span><h3>Start with the messy version.</h3><p>Tell me what takes too long, what gets missed or what you've been wanting to build. Regular language is perfect.</p></div>
+  <div class="step"><span class="number">02 / I'LL LOOK FOR THE FIX</span><h3>Useful beats complicated.</h3><p>I'll suggest a practical way forward, including what you can do yourself and what I could help build.</p></div>
+  <div class="step"><span class="number">03 / YOU DECIDE</span><h3>No awkward sales conversation.</h3><p>If you'd like me to do the work, we'll agree on exactly what's included and the total price first. If not, no hard feelings.</p></div>
+ </div>
+ <div class="agreement"><div><h3>One clear price.<br><span>No gotchas.</span></h3></div>
+  <div class="agreement-copy"><p><strong>I don't do bait-and-switch teaser prices.</strong> I'll explain the work, what's included and what it costs before you commit. If software subscriptions or usage fees are needed, you'll know about those too.</p><p>If something new comes up halfway through, we talk about it first. You can say yes, no or not now. No surprise charges, artificial urgency or pressure to buy extras.</p><p>And if my first suggestion is something you can do yourself, I'll tell you that.</p></div>
+ </div>
+</div></section>
+<section class="person" id="me"><div class="wrap person-grid">
+ <div><span class="eyebrow">The human behind Archiebase</span><h2>Hi, I'm Aaron.</h2><span class="postscript">Curious since I was a kid.</span></div>
+ <div class="person-copy">
+  <p>I started my first business at eleven, towing a lawn mower behind my bike around the neighborhood. I was hooked on figuring things out and making things happen, and I never really stopped.</p>
+  <p>I've worked in hospitality, done hands-on work and built digital things. That mix has taught me to care about <strong>the people using a system as much as the system itself.</strong></p>
+  <p>I'm not a giant agency, and I don't want to pretend I am. I'm a curious builder with a wide range of skills. I can think about design, software, AI, workflow and customer experience together instead of trying to fit every problem into the same service. When something needs a specialist, I'll say so.</p>
+  <p><strong>Archiebase is the name. I'm the person you talk to.</strong></p>
+  <a class="small-link" href="/about.html">A little more of my story</a>
+ </div>
+</div></section>
+<section class="contact" id="contact"><div class="wrap contact-grid">
+ <div><span class="eyebrow">The easiest place to start</span><h2>What's been a pain lately?</h2><p class="opening">Tell me about it. A messy explanation is fine. I'll read it myself and reply with a practical first thought. If there's something I can build for you, I'll explain what that would involve. No pressure to go further.</p><div class="one-on-one">You're writing to an actual person. No long questionnaire, no obligatory sales call and no automated pitch sequence.</div></div>
+ <form id="contact-form" class="contact-form">
+  <p class="form-intro">A NOTE TO AARON / FREE FIRST LOOK</p>
+  <div class="fields">
+   <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required maxlength="90" placeholder="Your name"></div>
+   <div class="field"><label for="email">Email I can reply to</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="180" placeholder="you@yourbusiness.com"></div>
+  </div>
+  <div class="field"><label for="business">Your business</label><input id="business" name="business" required maxlength="120" placeholder="Business name"></div>
+  <div class="field"><label for="message">What keeps getting in your way?</label><textarea id="message" name="message" required minlength="12" maxlength="1800" placeholder="Tell me what happened. You can include your website or an idea you've had, too."></textarea></div>
+  <input class="trap" name="website" id="trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <button id="send-button" class="primary-btn" type="submit">Send it to Aaron</button>
+  <p id="form-status" class="status" aria-live="polite" role="status"></p>
+  <p class="form-note">No cost to reach out. Please don't send passwords or private customer information. Your note is delivered using a third-party email service.</p>
+ </form>
+</div></section>
+<section class="endnote"><div class="wrap endnote-inner"><h2>Go run your business. Let's make the other stuff easier.</h2><a href="/tools.html">Or explore the free tools</a></div></section>
 </main>
-<footer><div class="wrap footer-inner"><div><a href="#top" class="wordmark">archie<span>•</span>base</a><p>Practical technology, thoughtfully built. Independent studio by Aaron.</p></div><nav class="footer-links" aria-label="Footer"><a href="#audit">Free review</a><a href="#pricing">Prices</a><a href="/tools.html">Free tools</a><a href="/about.html">My story</a></nav></div></footer>
-<dialog id="quote-dialog" aria-labelledby="quote-title"><div class="modal-inner"><div class="modal-top"><div><span class="eyebrow">Written project enquiry</span><h2 id="quote-title">Tell me what you want to make.</h2></div><button class="close-btn" id="quote-close" type="button" aria-label="Close">×</button></div><p id="quote-description">A few details are enough. I'll reply personally with the next step.</p><form id="quote-form"><div class="form-grid"><div class="field"><label for="quote-name">Your name</label><input id="quote-name" type="text" autocomplete="name" required maxlength="90"></div><div class="field"><label for="quote-email">Your email</label><input id="quote-email" type="email" autocomplete="email" required maxlength="180"></div></div><div class="field"><label for="quote-business">Your business</label><input id="quote-business" required maxlength="120"></div><div class="field"><label for="quote-notes">What would you like built?</label><textarea id="quote-notes" required minlength="10" maxlength="1500" placeholder="Even a messy idea is fine."></textarea></div><input class="honeypot" id="quote-trap" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="modal-submit" type="submit" id="quote-submit">Send my idea </button><p id="quote-status" class="modal-notice" role="status" aria-live="polite"></p><p class="form-note">No obligation. Please don't send passwords, confidential customer details or banking information.</p></form></div></dialog>
+<footer><div class="wrap footer-inner"><a class="wordmark" href="/">archie<span class="dot">•</span>base</a><p>Independent studio. Built and run by Aaron.</p><nav class="footer-nav" aria-label="Footer"><a href="/about.html">About Aaron</a><a href="/tools.html">Free tools</a><a href="#contact">Say hello</a></nav></div></footer>
 <script>
 (function(){
-'use strict';
-const $=id=>document.getElementById(id);
-const menu=$('menu-button'),nav=$('mobile-navigation');
-function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}
-menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰';});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
-const progress=$('progress');let scrolling=false;
-function paintProgress(){const doc=document.documentElement,range=doc.scrollHeight-doc.clientHeight;progress.style.width=(range>0?window.scrollY/range*100:0)+'%';scrolling=false;}
-addEventListener('scroll',()=>{if(!scrolling){requestAnimationFrame(paintProgress);scrolling=true;}},{passive:true});paintProgress();
-if('IntersectionObserver' in window){const io=new IntersectionObserver(items=>{items.forEach(it=>{if(it.isIntersecting){it.target.classList.add('shown');io.unobserve(it.target);}})},{threshold:.09,rootMargin:'0px 0px -38px 0px'});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('shown'));}
-// Inferred intent is a form convenience, not an automatically generated audit.
-document.querySelectorAll('[data-intent]').forEach(a=>a.addEventListener('click',()=>{$('audit-issue').value=a.dataset.intent;}));
-const dialog=$('quote-dialog');let selected='Custom project';
-function openQuote(service){selected=service||'Custom project';$('quote-description').textContent=selected==='Custom project'?'Tell me the idea. If it makes sense to build, I’ll suggest a realistic scope and quote.':'Interested in '+selected+'? Tell me a little about your business and I’ll reply with next steps.';$('quote-name').value=$('audit-name').value;$('quote-email').value=$('audit-email').value;$('quote-business').value=$('audit-business').value;$('quote-status').textContent='';$('quote-status').className='modal-notice';$('quote-form').hidden=false;$('quote-submit').disabled=false;$('quote-submit').innerHTML='Send my idea ';dialog.showModal();}
-document.querySelectorAll('[data-service]').forEach(b=>b.addEventListener('click',()=>openQuote(b.dataset.service)));
-$('open-custom').addEventListener('click',()=>openQuote('Custom project'));
-$('quote-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
-async function send(payload){const res=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});const data=await res.json().catch(()=>({ok:false}));if(!res.ok||!data.ok)throw new Error(data.error||'Unable to send right now. Please try again.');}
-function state(el,message,error=false){el.textContent=message;el.classList.toggle('error',error);el.classList.toggle('ok',!error&&message.startsWith('Request submitted'));}
-$('audit-form').addEventListener('submit',async e=>{e.preventDefault();const form=e.currentTarget;if(!form.reportValidity())return;const btn=$('audit-submit'),status=$('audit-status');btn.disabled=true;state(status,'Sending your request…');const issue=$('audit-issue').value,notes=$('audit-notes').value.trim(),url=$('audit-url').value.trim();try{await send({name:$('audit-name').value.trim(),email:$('audit-email').value.trim(),business:$('audit-business').value.trim(),issue:'FREE WRITTEN REVIEW: '+issue,message:'Requested review. Website: '+(url||'Not supplied')+'\nPriority: '+issue+'\nNotes: '+(notes||'No notes')+'\nDeliverables: 3 practical opportunities, one immediate DIY action, optional build recommendation.',website:$('audit-trap').value});form.reset();state(status,'Request submitted. I’ll review it personally and email your recommendations.');btn.innerHTML='Request submitted ✓';}catch(err){btn.disabled=false;state(status,err.message||'Unable to send right now.',true);}});
-$('quote-form').addEventListener('submit',async e=>{e.preventDefault();const form=e.currentTarget;if(!form.reportValidity())return;const btn=$('quote-submit'),status=$('quote-status');btn.disabled=true;state(status,'Sending…');try{await send({name:$('quote-name').value.trim(),email:$('quote-email').value.trim(),business:$('quote-business').value.trim(),issue:'PAID PROJECT ENQUIRY: '+selected,message:'Interest: '+selected+'\nDescription: '+$('quote-notes').value.trim(),website:$('quote-trap').value});form.hidden=true;state(status,'Request submitted. I’ll follow up personally by email.');}catch(err){btn.disabled=false;state(status,err.message||'Unable to send.',true);}});
+ 'use strict';
+ var form=document.getElementById('contact-form');
+ var btn=document.getElementById('send-button');
+ var status=document.getElementById('form-status');
+ form.addEventListener('submit',async function(e){
+  e.preventDefault();
+  if(!form.reportValidity())return;
+  btn.disabled=true;status.className='status';status.textContent='Sending your note...';
+  var payload={
+   name:document.getElementById('name').value.trim(),
+   email:document.getElementById('email').value.trim(),
+   business:document.getElementById('business').value.trim(),
+   issue:'PERSONAL FIRST LOOK / FROM ARCHIEBASE WEBSITE',
+   message:document.getElementById('message').value.trim(),
+   website:document.getElementById('trap').value
+  };
+  try{
+   var response=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+   var data=await response.json().catch(function(){return {ok:false}});
+   if(!response.ok||!data.ok)throw Error(data.error||'Something went wrong. Please try again.');
+   form.reset();status.className='status';status.textContent="Message sent. I'll read it and reply by email.";btn.textContent='Message sent';
+  }catch(error){
+   status.className='status error';status.textContent=error.message||'Unable to send. Please try again.';btn.disabled=false;
+  }
+ });
 })();
 </script>
 </body></html>
