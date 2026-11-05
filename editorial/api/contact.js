@@ -51,6 +51,57 @@ export default async function handler(req, res) {
 
   const recipient = process.env.CONTACT_EMAIL;
   if (!recipient) return res.status(503).json({ ok: false, error: 'Contact service is not configured.' });
+  // Prefer Resend, which is designed for server-to-server email delivery.
+  // Vercel's Resend marketplace integration provisions RESEND_API_KEY privately.
+  if (process.env.RESEND_API_KEY) {
+    const from = process.env.RESEND_FROM_EMAIL || 'Archiebase <onboarding@resend.dev>';
+    const textBody = [
+      'New Archiebase business inquiry',
+      '',
+      'Name: ' + name,
+      'Business: ' + business,
+      'Reply-to: ' + email,
+      'Interest: ' + (issue || 'General help'),
+      '',
+      'Message:',
+      message,
+      '',
+      'Submitted via the Archiebase website.'
+    ].join('\n');
+    try {
+      const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer ' + process.env.RESEND_API_KEY,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          from,
+          to: [recipient],
+          reply_to: email,
+          subject: 'Archiebase | New small business inquiry',
+          text: textBody
+        }),
+        signal: AbortSignal.timeout(12000)
+      });
+      if (response.ok) {
+        const data = await response.json().catch(() => ({}));
+        if (data.id) return res.status(200).json({ ok: true });
+      }
+      const data = await response.json().catch(() => ({}));
+      console.warn('ARCHIEBASE_RESEND_DELIVERY_FAILED', {
+        status: response.status,
+        code: String(data && data.name || data && data.code || 'unknown').slice(0,60)
+      });
+    } catch (error) {
+      console.warn('ARCHIEBASE_RESEND_DELIVERY_EXCEPTION', {
+        kind: String(error && error.name || 'unknown').slice(0,48)
+      });
+    }
+    return res.status(502).json({ ok: false, error: 'We could not send your request. Please try again later.' });
+  }
+  // Legacy provider is retained only until Resend is connected.
   try {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 12000);
