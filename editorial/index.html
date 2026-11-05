@@ -57,11 +57,48 @@
    <div class="real-outcome"><span class="gain-label">WHAT COULD CHANGE</span><p>We can look for one hidden friction point. No overhaul. No new system just to have a new system. If a simple fix earns its place, keep it.</p><strong>Less friction without messing up what already works.</strong></div>
   </article>
  </div>
- <div class="time-math">
-  <div><span class="eyebrow">One tiny thing, repeated</span><strong>10 minutes <i>×</i> 6 times a day <i>=</i> <em>5 hours a week.</em></strong></div>
-  <p>That's how much time one recurring chore can eat across a five-day workweek. Before you count the interruptions, the context-switching or the "I'll do it tonight" pile.</p>
- </div>
  <p class="hint"><strong>This isn't about a perfect, automated business.</strong> It's about a business that's easier for you and your people to run.</p>
+</div></section>
+<section class="time-value" id="time-value" aria-labelledby="time-value-title"><div class="wrap">
+  <div class="time-value-story">
+    <span class="eyebrow">The hidden cost of doing it all</span>
+    <div class="time-value-head">
+      <h2 id="time-value-title">You built a business to have a life.<em>Somewhere along the way, it started taking over.</em></h2>
+      <div class="time-value-prose">
+        <p>At the end of the day, time is the most precious thing we have. You started this business to build something of your own, make a living and spend your days doing work you care about.</p>
+        <p>Then came the invoicing, scheduling, late-night emails, copying the same details, chasing payments and putting out one little fire after another. <strong>None of it is necessarily hard. It just never ends.</strong></p>
+        <p>Even a successful business can start to feel soul-sucking when the work you love gets buried under everything it takes to keep the place running.</p>
+      </div>
+    </div>
+    <p class="time-truth">Getting a few of those hours back doesn't just change your schedule. <strong>It changes what you have the freedom to do with your life.</strong></p>
+  </div>
+  <div class="worth-tool" aria-labelledby="worth-title">
+    <div class="worth-top">
+      <div><span class="eyebrow">Put a number on it</span><h3 id="worth-title">How much is your time worth?</h3></div>
+      <p>Ten minutes here and there doesn't sound like much. Six of those little tasks a day? That's five hours a week. See what your own numbers add up to.</p>
+    </div>
+    <div class="worth-layout">
+      <div class="worth-fields">
+        <div class="worth-field">
+          <label for="worth-hours">Hours you could get back each week</label>
+          <div class="worth-input"><input id="worth-hours" type="number" inputmode="decimal" min="0" max="80" step="0.5" value="5" aria-describedby="worth-hours-hint"><span class="worth-unit">hours</span></div>
+          <small id="worth-hours-hint">Routine admin, copying information, reminders, follow-ups.</small>
+        </div>
+        <div class="worth-field">
+          <label for="worth-rate">What an hour of your time is worth to you</label>
+          <div class="worth-input"><span class="worth-dollar">$</span><input id="worth-rate" type="number" inputmode="decimal" min="0" max="10000" step="5" value="50"><span class="worth-unit">per hour</span></div>
+        </div>
+      </div>
+      <div class="worth-answer" aria-live="polite" aria-atomic="true">
+        <span class="worth-overline">In a year, that adds up to</span>
+        <div class="worth-hours"><strong id="worth-annual-hours">260</strong><span>hours of your life</span></div>
+        <p class="worth-weeks">That's <strong id="worth-annual-weeks">6.5</strong> full 40-hour workweeks.</p>
+        <div class="worth-money"><strong id="worth-annual-value">$13,000</strong><span>in time you could put toward something more valuable to you.</span></div>
+        <small class="worth-footnote">The dollar number values your time. It's not a promise of extra revenue.</small>
+      </div>
+    </div>
+  </div>
+  <div class="time-value-close"><p>Maybe you spend those hours taking on more of the work you love. Maybe you get home for dinner, stop checking your phone at night or finally take a day off without feeling behind.</p><strong>All of that counts as getting ahead.</strong></div>
 </div></section>
 <section class="evidence" aria-label="The cost of being stretched thin"><div class="wrap">
  <div class="evidence-intro"><span class="eyebrow">This isn't just you</span><p>Owning a business is supposed to give you choices. These numbers tell a different story about where the hours are going.</p></div>
@@ -150,6 +187,34 @@
    status.className='status error';status.textContent=error.message||'Unable to send. Please try again.';btn.disabled=false;
   }
  });
+})();
+</script>
+<script>
+(function(){
+  'use strict';
+  var hours=document.getElementById('worth-hours');
+  var rate=document.getElementById('worth-rate');
+  var annualHours=document.getElementById('worth-annual-hours');
+  var annualWeeks=document.getElementById('worth-annual-weeks');
+  var annualValue=document.getElementById('worth-annual-value');
+  if(!hours||!rate||!annualHours||!annualWeeks||!annualValue)return;
+  var currency=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
+  var whole=new Intl.NumberFormat('en-US',{maximumFractionDigits:0});
+  function bound(value,maximum){
+    var n=Number(value);
+    return Number.isFinite(n)?Math.max(0,Math.min(maximum,n)):0;
+  }
+  function refresh(){
+    var week=bound(hours.value,80);
+    var hourRate=bound(rate.value,10000);
+    var total=week*52;
+    annualHours.textContent=whole.format(total);
+    annualWeeks.textContent=(total/40).toLocaleString('en-US',{maximumFractionDigits:1});
+    annualValue.textContent=currency.format(total*hourRate);
+  }
+  hours.addEventListener('input',refresh);
+  rate.addEventListener('input',refresh);
+  refresh();
 })();
 </script>
 </body></html>
