@@ -1,177 +1,123 @@
-/* ARCHIEBASE / COLOR DIRECTIONS. Preview only: opt-in with ?colors=01..10. */
-/* PALETTE_CONFIG:[{"id":"01","name":"Harbor After Dark","tone":"cool cinematic","line":"Cool water, deep ink, quiet warmth.","night":"#081E2A","mid":"#123B46","light":"#CEE2E0","light2":"#BCD4D0","accent":"#85DFE1","accentDark":"#115B6E","warm":"#ED9E86","ink":"#133846","onDark":"#F2F9F7","darkMute":"#C5DBDD","onLight":"#355965"},{"id":"02","name":"Cinder & Copper","tone":"warm industrial","line":"Graphite, weathered stone, honest copper.","night":"#171E22","mid":"#333B3B","light":"#DFD3C7","light2":"#CFBDAF","accent":"#EDAD86","accentDark":"#644231","warm":"#A7D4CA","ink":"#342B29","onDark":"#F8F2ED","darkMute":"#DED2CA","onLight":"#57453F"},{"id":"03","name":"Midnight Fig","tone":"rich editorial","line":"Inky plum, lavender haze, soft apricot.","night":"#1F1729","mid":"#3D2947","light":"#E4D6E3","light2":"#D5BFCE","accent":"#E0AFE2","accentDark":"#6E3668","warm":"#ECA98E","ink":"#38263B","onDark":"#F9F4F8","darkMute":"#DFCFE0","onLight":"#58435A"},{"id":"04","name":"Evergreen Voltage","tone":"organic forward","line":"Forest shadows with an electric edge.","night":"#0C2420","mid":"#244138","light":"#D8E5CE","light2":"#BFCEB6","accent":"#C8E38B","accentDark":"#35552F","warm":"#F0A58C","ink":"#253B2F","onDark":"#F5FAF0","darkMute":"#D3E3D4","onLight":"#405546"},{"id":"05","name":"Indigo & Peach","tone":"creative confident","line":"Deep indigo, powder blue, warm sunrise.","night":"#172044","mid":"#33436C","light":"#D9DFFA","light2":"#C3CDEE","accent":"#AFC6FF","accentDark":"#314D90","warm":"#FFC0A4","ink":"#253059","onDark":"#F3F6FF","darkMute":"#D5DDF4","onLight":"#445178"},{"id":"06","name":"Oxide & Ash","tone":"moody human","line":"Soft black, dusty rose, eucalyptus.","night":"#272123","mid":"#514044","light":"#E2D6D4","light2":"#D5C0C0","accent":"#F0B5AD","accentDark":"#6D3C43","warm":"#C0D6C3","ink":"#3B2931","onDark":"#FBF5F3","darkMute":"#E9DADB","onLight":"#5B444C"},{"id":"07","name":"Deep Petrol","tone":"modern grounded","line":"Petrol green, verdigris, faded terracotta.","night":"#08252E","mid":"#19515A","light":"#CADFD9","light2":"#AFCDC6","accent":"#8AD9D1","accentDark":"#15555A","warm":"#E7A47C","ink":"#193E43","onDark":"#EFF9F6","darkMute":"#D0E7E4","onLight":"#2D5255"},{"id":"08","name":"Violet Hour","tone":"bold creative","line":"Night indigo, iris light, coral spark.","night":"#201C3D","mid":"#423B6A","light":"#DDD8EE","light2":"#C7C1E0","accent":"#C6B9FF","accentDark":"#4E428A","warm":"#FFA998","ink":"#302C53","onDark":"#FAF7FF","darkMute":"#DDD7F2","onLight":"#4C456E"},{"id":"09","name":"Coffee & Terracotta","tone":"crafted warm","line":"Espresso, fired clay, gentle sage.","night":"#261D1B","mid":"#5B3F39","light":"#E5D9C8","light2":"#D5C4AC","accent":"#E9B28F","accentDark":"#714234","warm":"#A9D2C4","ink":"#4A322C","onDark":"#F9F3E9","darkMute":"#E7D7C6","onLight":"#61493E"},{"id":"10","name":"Carbon Ice","tone":"precise contemporary","line":"Black-blue, steel, cold light, violet edge.","night":"#0F1C27","mid":"#2D4859","light":"#D4E3EB","light2":"#B7D2DF","accent":"#A4DCFC","accentDark":"#1E587B","warm":"#D8B8E4","ink":"#223B4B","onDark":"#F4F9FC","darkMute":"#D0E2EC","onLight":"#3C5667"}] */
-html[data-colors="01"]{--pc-night:#081E2A;--pc-mid:#123B46;--pc-light:#CEE2E0;--pc-light2:#BCD4D0;--pc-accent:#85DFE1;--pc-accentDark:#115B6E;--pc-warm:#ED9E86;--pc-ink:#133846;--pc-onDark:#F2F9F7;--pc-darkMute:#C5DBDD;--pc-onLight:#355965;}
-html[data-colors="02"]{--pc-night:#171E22;--pc-mid:#333B3B;--pc-light:#DFD3C7;--pc-light2:#CFBDAF;--pc-accent:#EDAD86;--pc-accentDark:#644231;--pc-warm:#A7D4CA;--pc-ink:#342B29;--pc-onDark:#F8F2ED;--pc-darkMute:#DED2CA;--pc-onLight:#57453F;}
-html[data-colors="03"]{--pc-night:#1F1729;--pc-mid:#3D2947;--pc-light:#E4D6E3;--pc-light2:#D5BFCE;--pc-accent:#E0AFE2;--pc-accentDark:#6E3668;--pc-warm:#ECA98E;--pc-ink:#38263B;--pc-onDark:#F9F4F8;--pc-darkMute:#DFCFE0;--pc-onLight:#58435A;}
-html[data-colors="04"]{--pc-night:#0C2420;--pc-mid:#244138;--pc-light:#D8E5CE;--pc-light2:#BFCEB6;--pc-accent:#C8E38B;--pc-accentDark:#35552F;--pc-warm:#F0A58C;--pc-ink:#253B2F;--pc-onDark:#F5FAF0;--pc-darkMute:#D3E3D4;--pc-onLight:#405546;}
-html[data-colors="05"]{--pc-night:#172044;--pc-mid:#33436C;--pc-light:#D9DFFA;--pc-light2:#C3CDEE;--pc-accent:#AFC6FF;--pc-accentDark:#314D90;--pc-warm:#FFC0A4;--pc-ink:#253059;--pc-onDark:#F3F6FF;--pc-darkMute:#D5DDF4;--pc-onLight:#445178;}
-html[data-colors="06"]{--pc-night:#272123;--pc-mid:#514044;--pc-light:#E2D6D4;--pc-light2:#D5C0C0;--pc-accent:#F0B5AD;--pc-accentDark:#6D3C43;--pc-warm:#C0D6C3;--pc-ink:#3B2931;--pc-onDark:#FBF5F3;--pc-darkMute:#E9DADB;--pc-onLight:#5B444C;}
-html[data-colors="07"]{--pc-night:#08252E;--pc-mid:#19515A;--pc-light:#CADFD9;--pc-light2:#AFCDC6;--pc-accent:#8AD9D1;--pc-accentDark:#15555A;--pc-warm:#E7A47C;--pc-ink:#193E43;--pc-onDark:#EFF9F6;--pc-darkMute:#D0E7E4;--pc-onLight:#2D5255;}
-html[data-colors="08"]{--pc-night:#201C3D;--pc-mid:#423B6A;--pc-light:#DDD8EE;--pc-light2:#C7C1E0;--pc-accent:#C6B9FF;--pc-accentDark:#4E428A;--pc-warm:#FFA998;--pc-ink:#302C53;--pc-onDark:#FAF7FF;--pc-darkMute:#DDD7F2;--pc-onLight:#4C456E;}
-html[data-colors="09"]{--pc-night:#261D1B;--pc-mid:#5B3F39;--pc-light:#E5D9C8;--pc-light2:#D5C4AC;--pc-accent:#E9B28F;--pc-accentDark:#714234;--pc-warm:#A9D2C4;--pc-ink:#4A322C;--pc-onDark:#F9F3E9;--pc-darkMute:#E7D7C6;--pc-onLight:#61493E;}
-html[data-colors="10"]{--pc-night:#0F1C27;--pc-mid:#2D4859;--pc-light:#D4E3EB;--pc-light2:#B7D2DF;--pc-accent:#A4DCFC;--pc-accentDark:#1E587B;--pc-warm:#D8B8E4;--pc-ink:#223B4B;--pc-onDark:#F4F9FC;--pc-darkMute:#D0E2EC;--pc-onLight:#3C5667;}
+/* ARCHIEBASE / TEN RADICALLY DIFFERENT COLOR DIRECTIONS — preview only.
+   Each owns its OWN hero, story, method, founder and contact colors.
+   The live default is unchanged without ?colors=01..10. */
+/* PALETTE_CONFIG:[{"id":"01","name":"Acid / Velvet","mood":"Electric & audacious","line":"A chartreuse poster, violet depth, warm orange interruption.","nav":"#211B55","navText":"#FFFFFF","hero":"#DBFF4D","heroText":"#171B37","heroHi":"#5C277D","panel":"#26215E","panelText":"#FFFFFF","story":"#D9BCFF","storyText":"#211C4B","storyHi":"#54258D","method":"#FF8960","methodText":"#271C35","methodHi":"#442355","time":"#21194C","timeText":"#FFFFFF","timeHi":"#DBFF4D","idea":"#E7D8FF","ideaText":"#26194F","ideaHi":"#552E8F","founder":"#D9F958","founderText":"#1B2637","contact":"#31265E","contactText":"#FFFFFF","footer":"#211B55","footerText":"#FFFFFF","cta":"#211B55","ctaText":"#FFFFFF","form":"#E5D6FF","formText":"#241C49"},{"id":"02","name":"Cobalt / Tomato","mood":"Graphic & confident","line":"Pure electric blue meets vermilion and custard yellow.","nav":"#142BB6","navText":"#FFFFFF","hero":"#2449F0","heroText":"#FFFFFF","heroHi":"#FFF076","panel":"#FFDDCB","panelText":"#2D2554","story":"#FEE7CB","storyText":"#24284C","storyHi":"#9E263F","method":"#FA744C","methodText":"#25203C","methodHi":"#48255D","time":"#1D2C71","timeText":"#FFFFFF","timeHi":"#FFEE76","idea":"#BBDAFF","ideaText":"#24335C","ideaHi":"#3045A5","founder":"#FFCBD1","founderText":"#311F46","contact":"#DCE7FF","contactText":"#233059","footer":"#142BB6","footerText":"#FFFFFF","cta":"#FFF076","ctaText":"#23254A","form":"#F4E8E7","formText":"#2D2552"},{"id":"03","name":"Cherry Bomb","mood":"Confident & expressive","line":"Cherry-cola red, marigold, blush and raspberry.","nav":"#4A153B","navText":"#FFFFFF","hero":"#A60D54","heroText":"#FFFFFF","heroHi":"#FFE46B","panel":"#FFE09E","panelText":"#471B38","story":"#F7C6D4","storyText":"#421B36","storyHi":"#93204D","method":"#B31C60","methodText":"#FFFFFF","methodHi":"#FFE46B","time":"#411634","timeText":"#FFFFFF","timeHi":"#FFE46B","idea":"#FFE58C","ideaText":"#40203B","ideaHi":"#8B1A48","founder":"#F9A6C2","founderText":"#401B37","contact":"#57193F","contactText":"#FFFFFF","footer":"#2B0D2A","footerText":"#FFFFFF","cta":"#FFE46B","ctaText":"#401634","form":"#FFECE1","formText":"#3D203A"},{"id":"04","name":"Sunbaked Workshop","mood":"Earthy & tactile","line":"Burnt orange, dark olive, clay and worn linen.","nav":"#31251C","navText":"#FFFFFF","hero":"#E68A47","heroText":"#2D261B","heroHi":"#43291C","panel":"#344531","panelText":"#FFFFFF","story":"#E8D3B3","storyText":"#3A2B20","storyHi":"#77442A","method":"#34392B","methodText":"#FFFFFF","methodHi":"#F7CE87","time":"#75482D","timeText":"#FFFFFF","timeHi":"#F8DC96","idea":"#D6E8BC","ideaText":"#2D3B2C","ideaHi":"#365838","founder":"#F0BC8F","founderText":"#3B2A21","contact":"#E8D3B3","contactText":"#3A2B20","footer":"#31251C","footerText":"#FFFFFF","cta":"#313021","ctaText":"#FFFFFF","form":"#FBEBCF","formText":"#3B2A21"},{"id":"05","name":"Bubblegum & Wasabi","mood":"Unapologetically playful","line":"Lavender pink, lime candy, bright turquoise and berry.","nav":"#4A1557","navText":"#FFFFFF","hero":"#F1C0FD","heroText":"#452157","heroHi":"#702983","panel":"#DDFB78","panelText":"#294022","story":"#DDFB78","storyText":"#2A4125","storyHi":"#455D27","method":"#A12986","methodText":"#FFFFFF","methodHi":"#E8FF8C","time":"#411949","timeText":"#FFFFFF","timeHi":"#DAFE72","idea":"#B4F2E9","ideaText":"#204A4B","ideaHi":"#296768","founder":"#F9AFBD","founderText":"#45203F","contact":"#D6B2FA","contactText":"#3A2554","footer":"#4A1557","footerText":"#FFFFFF","cta":"#4A1557","ctaText":"#FFFFFF","form":"#FCEFD1","formText":"#3A2547"},{"id":"06","name":"Black Label / Safety Orange","mood":"Industrial & iconic","line":"Hard black, safety orange, brushed steel and bone.","nav":"#171717","navText":"#FFFFFF","hero":"#171717","heroText":"#FFFFFF","heroHi":"#FF813F","panel":"#D5E1DB","panelText":"#182B26","story":"#CED8DC","storyText":"#1C2C31","storyHi":"#315666","method":"#F7823E","methodText":"#302117","methodHi":"#39231C","time":"#272727","timeText":"#FFFFFF","timeHi":"#FF8B48","idea":"#D6ED9E","ideaText":"#303D28","ideaHi":"#485D29","founder":"#D8D2C1","founderText":"#2D2D29","contact":"#D4DCDD","contactText":"#222D31","footer":"#111111","footerText":"#FFFFFF","cta":"#FF813F","ctaText":"#23211D","form":"#E8EAE3","formText":"#1D2B28"},{"id":"07","name":"Tropical Signal","mood":"Fresh & fearless","line":"Clear turquoise, tomato, mango and limewash.","nav":"#0A4944","navText":"#FFFFFF","hero":"#24B6A9","heroText":"#092E30","heroHi":"#08373D","panel":"#FFD86A","panelText":"#4C311A","story":"#FCE07F","storyText":"#223C37","storyHi":"#85512C","method":"#FB8B6F","methodText":"#352528","methodHi":"#4F2632","time":"#0D4141","timeText":"#FFFFFF","timeHi":"#F7DE80","idea":"#C8F3DE","ideaText":"#25423B","ideaHi":"#28664E","founder":"#FBC5A8","founderText":"#42332D","contact":"#115D56","contactText":"#FFFFFF","footer":"#0A4944","footerText":"#FFFFFF","cta":"#FFE17E","ctaText":"#163C3D","form":"#FDEBCB","formText":"#3A332E"},{"id":"08","name":"Purple Rebellion","mood":"Art-school & kinetic","line":"Saturated amethyst, sulfur yellow and hot rose.","nav":"#251052","navText":"#FFFFFF","hero":"#6A34C7","heroText":"#FFFFFF","heroHi":"#E5FB6C","panel":"#E3FA88","panelText":"#2A214E","story":"#E1F66B","storyText":"#2A2C41","storyHi":"#52396B","method":"#281252","methodText":"#FFFFFF","methodHi":"#DDFC83","time":"#241344","timeText":"#FFFFFF","timeHi":"#DFFC82","idea":"#F4A7BE","ideaText":"#44263E","ideaHi":"#67204A","founder":"#CCBDFC","founderText":"#302450","contact":"#EDDFF5","contactText":"#3E2957","footer":"#251052","footerText":"#FFFFFF","cta":"#E3FA88","ctaText":"#2A2150","form":"#F6F0FF","formText":"#30204F"},{"id":"09","name":"Sky / Oxblood","mood":"Unexpected & elegant","line":"Sky blue runs straight into deep wine and blush.","nav":"#772843","navText":"#FFFFFF","hero":"#A9DFFF","heroText":"#243451","heroHi":"#762D4E","panel":"#732B45","panelText":"#FFFFFF","story":"#802E49","storyText":"#FFFFFF","storyHi":"#FFCCD9","method":"#FFCCBD","methodText":"#302D48","methodHi":"#73314C","time":"#1B3056","timeText":"#FFFFFF","timeHi":"#FFBDD2","idea":"#DCCBF7","ideaText":"#342D55","ideaHi":"#5E408E","founder":"#CCE6F4","founderText":"#273C54","contact":"#F7DDE2","contactText":"#38314C","footer":"#772843","footerText":"#FFFFFF","cta":"#772843","ctaText":"#FFFFFF","form":"#F6E7E5","formText":"#353048"},{"id":"10","name":"Saffron & Carmine","mood":"Vintage & visceral","line":"Golden yellow, rust red, pistachio and tobacco.","nav":"#421D18","navText":"#FFFFFF","hero":"#E8B83A","heroText":"#40271C","heroHi":"#662620","panel":"#522720","panelText":"#FFFFFF","story":"#AD3E2B","storyText":"#FFFFFF","storyHi":"#FFE09A","method":"#302724","methodText":"#FFFFFF","methodHi":"#F3CF80","time":"#5A2C24","timeText":"#FFFFFF","timeHi":"#FFE2A7","idea":"#D5E8A1","ideaText":"#2D3E27","ideaHi":"#526A31","founder":"#E6D5B7","founderText":"#443026","contact":"#F4BA93","contactText":"#442923","footer":"#321C18","footerText":"#FFFFFF","cta":"#49241C","ctaText":"#FFFFFF","form":"#FAE5C3","formText":"#443026"}] */
+html[data-colors="01"]{--p-nav:#211B55;--p-navText:#FFFFFF;--p-hero:#DBFF4D;--p-heroText:#171B37;--p-heroHi:#5C277D;--p-panel:#26215E;--p-panelText:#FFFFFF;--p-story:#D9BCFF;--p-storyText:#211C4B;--p-storyHi:#54258D;--p-method:#FF8960;--p-methodText:#271C35;--p-methodHi:#442355;--p-time:#21194C;--p-timeText:#FFFFFF;--p-timeHi:#DBFF4D;--p-idea:#E7D8FF;--p-ideaText:#26194F;--p-ideaHi:#552E8F;--p-founder:#D9F958;--p-founderText:#1B2637;--p-contact:#31265E;--p-contactText:#FFFFFF;--p-footer:#211B55;--p-footerText:#FFFFFF;--p-cta:#211B55;--p-ctaText:#FFFFFF;--p-form:#E5D6FF;--p-formText:#241C49;}
+html[data-colors="02"]{--p-nav:#142BB6;--p-navText:#FFFFFF;--p-hero:#2449F0;--p-heroText:#FFFFFF;--p-heroHi:#FFF076;--p-panel:#FFDDCB;--p-panelText:#2D2554;--p-story:#FEE7CB;--p-storyText:#24284C;--p-storyHi:#9E263F;--p-method:#FA744C;--p-methodText:#25203C;--p-methodHi:#48255D;--p-time:#1D2C71;--p-timeText:#FFFFFF;--p-timeHi:#FFEE76;--p-idea:#BBDAFF;--p-ideaText:#24335C;--p-ideaHi:#3045A5;--p-founder:#FFCBD1;--p-founderText:#311F46;--p-contact:#DCE7FF;--p-contactText:#233059;--p-footer:#142BB6;--p-footerText:#FFFFFF;--p-cta:#FFF076;--p-ctaText:#23254A;--p-form:#F4E8E7;--p-formText:#2D2552;}
+html[data-colors="03"]{--p-nav:#4A153B;--p-navText:#FFFFFF;--p-hero:#A60D54;--p-heroText:#FFFFFF;--p-heroHi:#FFE46B;--p-panel:#FFE09E;--p-panelText:#471B38;--p-story:#F7C6D4;--p-storyText:#421B36;--p-storyHi:#93204D;--p-method:#B31C60;--p-methodText:#FFFFFF;--p-methodHi:#FFE46B;--p-time:#411634;--p-timeText:#FFFFFF;--p-timeHi:#FFE46B;--p-idea:#FFE58C;--p-ideaText:#40203B;--p-ideaHi:#8B1A48;--p-founder:#F9A6C2;--p-founderText:#401B37;--p-contact:#57193F;--p-contactText:#FFFFFF;--p-footer:#2B0D2A;--p-footerText:#FFFFFF;--p-cta:#FFE46B;--p-ctaText:#401634;--p-form:#FFECE1;--p-formText:#3D203A;}
+html[data-colors="04"]{--p-nav:#31251C;--p-navText:#FFFFFF;--p-hero:#E68A47;--p-heroText:#2D261B;--p-heroHi:#43291C;--p-panel:#344531;--p-panelText:#FFFFFF;--p-story:#E8D3B3;--p-storyText:#3A2B20;--p-storyHi:#77442A;--p-method:#34392B;--p-methodText:#FFFFFF;--p-methodHi:#F7CE87;--p-time:#75482D;--p-timeText:#FFFFFF;--p-timeHi:#F8DC96;--p-idea:#D6E8BC;--p-ideaText:#2D3B2C;--p-ideaHi:#365838;--p-founder:#F0BC8F;--p-founderText:#3B2A21;--p-contact:#E8D3B3;--p-contactText:#3A2B20;--p-footer:#31251C;--p-footerText:#FFFFFF;--p-cta:#313021;--p-ctaText:#FFFFFF;--p-form:#FBEBCF;--p-formText:#3B2A21;}
+html[data-colors="05"]{--p-nav:#4A1557;--p-navText:#FFFFFF;--p-hero:#F1C0FD;--p-heroText:#452157;--p-heroHi:#702983;--p-panel:#DDFB78;--p-panelText:#294022;--p-story:#DDFB78;--p-storyText:#2A4125;--p-storyHi:#455D27;--p-method:#A12986;--p-methodText:#FFFFFF;--p-methodHi:#E8FF8C;--p-time:#411949;--p-timeText:#FFFFFF;--p-timeHi:#DAFE72;--p-idea:#B4F2E9;--p-ideaText:#204A4B;--p-ideaHi:#296768;--p-founder:#F9AFBD;--p-founderText:#45203F;--p-contact:#D6B2FA;--p-contactText:#3A2554;--p-footer:#4A1557;--p-footerText:#FFFFFF;--p-cta:#4A1557;--p-ctaText:#FFFFFF;--p-form:#FCEFD1;--p-formText:#3A2547;}
+html[data-colors="06"]{--p-nav:#171717;--p-navText:#FFFFFF;--p-hero:#171717;--p-heroText:#FFFFFF;--p-heroHi:#FF813F;--p-panel:#D5E1DB;--p-panelText:#182B26;--p-story:#CED8DC;--p-storyText:#1C2C31;--p-storyHi:#315666;--p-method:#F7823E;--p-methodText:#302117;--p-methodHi:#39231C;--p-time:#272727;--p-timeText:#FFFFFF;--p-timeHi:#FF8B48;--p-idea:#D6ED9E;--p-ideaText:#303D28;--p-ideaHi:#485D29;--p-founder:#D8D2C1;--p-founderText:#2D2D29;--p-contact:#D4DCDD;--p-contactText:#222D31;--p-footer:#111111;--p-footerText:#FFFFFF;--p-cta:#FF813F;--p-ctaText:#23211D;--p-form:#E8EAE3;--p-formText:#1D2B28;}
+html[data-colors="07"]{--p-nav:#0A4944;--p-navText:#FFFFFF;--p-hero:#24B6A9;--p-heroText:#092E30;--p-heroHi:#08373D;--p-panel:#FFD86A;--p-panelText:#4C311A;--p-story:#FCE07F;--p-storyText:#223C37;--p-storyHi:#85512C;--p-method:#FB8B6F;--p-methodText:#352528;--p-methodHi:#4F2632;--p-time:#0D4141;--p-timeText:#FFFFFF;--p-timeHi:#F7DE80;--p-idea:#C8F3DE;--p-ideaText:#25423B;--p-ideaHi:#28664E;--p-founder:#FBC5A8;--p-founderText:#42332D;--p-contact:#115D56;--p-contactText:#FFFFFF;--p-footer:#0A4944;--p-footerText:#FFFFFF;--p-cta:#FFE17E;--p-ctaText:#163C3D;--p-form:#FDEBCB;--p-formText:#3A332E;}
+html[data-colors="08"]{--p-nav:#251052;--p-navText:#FFFFFF;--p-hero:#6A34C7;--p-heroText:#FFFFFF;--p-heroHi:#E5FB6C;--p-panel:#E3FA88;--p-panelText:#2A214E;--p-story:#E1F66B;--p-storyText:#2A2C41;--p-storyHi:#52396B;--p-method:#281252;--p-methodText:#FFFFFF;--p-methodHi:#DDFC83;--p-time:#241344;--p-timeText:#FFFFFF;--p-timeHi:#DFFC82;--p-idea:#F4A7BE;--p-ideaText:#44263E;--p-ideaHi:#67204A;--p-founder:#CCBDFC;--p-founderText:#302450;--p-contact:#EDDFF5;--p-contactText:#3E2957;--p-footer:#251052;--p-footerText:#FFFFFF;--p-cta:#E3FA88;--p-ctaText:#2A2150;--p-form:#F6F0FF;--p-formText:#30204F;}
+html[data-colors="09"]{--p-nav:#772843;--p-navText:#FFFFFF;--p-hero:#A9DFFF;--p-heroText:#243451;--p-heroHi:#762D4E;--p-panel:#732B45;--p-panelText:#FFFFFF;--p-story:#802E49;--p-storyText:#FFFFFF;--p-storyHi:#FFCCD9;--p-method:#FFCCBD;--p-methodText:#302D48;--p-methodHi:#73314C;--p-time:#1B3056;--p-timeText:#FFFFFF;--p-timeHi:#FFBDD2;--p-idea:#DCCBF7;--p-ideaText:#342D55;--p-ideaHi:#5E408E;--p-founder:#CCE6F4;--p-founderText:#273C54;--p-contact:#F7DDE2;--p-contactText:#38314C;--p-footer:#772843;--p-footerText:#FFFFFF;--p-cta:#772843;--p-ctaText:#FFFFFF;--p-form:#F6E7E5;--p-formText:#353048;}
+html[data-colors="10"]{--p-nav:#421D18;--p-navText:#FFFFFF;--p-hero:#E8B83A;--p-heroText:#40271C;--p-heroHi:#662620;--p-panel:#522720;--p-panelText:#FFFFFF;--p-story:#AD3E2B;--p-storyText:#FFFFFF;--p-storyHi:#FFE09A;--p-method:#302724;--p-methodText:#FFFFFF;--p-methodHi:#F3CF80;--p-time:#5A2C24;--p-timeText:#FFFFFF;--p-timeHi:#FFE2A7;--p-idea:#D5E8A1;--p-ideaText:#2D3E27;--p-ideaHi:#526A31;--p-founder:#E6D5B7;--p-founderText:#443026;--p-contact:#F4BA93;--p-contactText:#442923;--p-footer:#321C18;--p-footerText:#FFFFFF;--p-cta:#49241C;--p-ctaText:#FFFFFF;--p-form:#FAE5C3;--p-formText:#443026;}
 html[data-colors]{
- --pc-dark-line:color-mix(in srgb,var(--pc-onDark) 23%,transparent);
- --pc-soft-line:color-mix(in srgb,var(--pc-ink) 18%,transparent);
- --pc-light-hover:color-mix(in srgb,var(--pc-light) 77%,var(--pc-accent) 23%);
- --pc-mid-hover:color-mix(in srgb,var(--pc-mid) 82%,var(--pc-accent) 18%);
- --pc-soft-person:color-mix(in srgb,var(--pc-light) 65%,var(--pc-light2) 35%);
- --pc-form-bg:color-mix(in srgb,var(--pc-light) 83%,var(--pc-light2) 17%);
+ --p-darkBorder:color-mix(in srgb,var(--p-heroText) 25%,var(--p-hero));
+ --p-borderDark:color-mix(in srgb,var(--p-methodText) 25%,var(--p-method));
+ --p-borderStory:color-mix(in srgb,var(--p-storyText) 23%,var(--p-story));
+ --p-onForm:color-mix(in srgb,var(--p-form) 85%,#FFFFFF);
 }
-html[data-colors] body{background:var(--pc-night)!important;color:var(--pc-onDark)!important}
-html[data-colors] .site-nav{background:var(--pc-night)!important;border-bottom:1px solid var(--pc-dark-line)!important;backdrop-filter:blur(14px)}
-html[data-colors] .wordmark,html[data-colors] .desktop-nav{color:var(--pc-onDark)!important}
-html[data-colors] .wordmark .dot{color:var(--pc-accent)!important}
-html[data-colors] .wordmark small{color:var(--pc-darkMute)!important}
-html[data-colors] .desktop-nav>a:not(.nav-action):hover{color:var(--pc-accent)!important}
-html[data-colors] .nav-action,html[data-colors] .primary-btn{background:var(--pc-accent)!important;border-color:var(--pc-accent)!important;color:var(--pc-night)!important;box-shadow:none!important}
-html[data-colors] .nav-action:hover,html[data-colors] .primary-btn:hover{background:var(--pc-onDark)!important;border-color:var(--pc-onDark)!important;color:var(--pc-night)!important}
-html[data-colors] .eyebrow:before{background:var(--pc-warm)!important}
-html[data-colors] ::selection{background:var(--pc-accent);color:var(--pc-night)}
-html[data-colors] .hero{background:var(--pc-night)!important;color:var(--pc-onDark)!important;border-color:var(--pc-dark-line)!important}
-html[data-colors] .hero .eyebrow{color:var(--pc-accent)!important}
-html[data-colors] .hero h1{color:var(--pc-onDark)!important}
-html[data-colors] .hero h1 em{color:var(--pc-accent)!important}
-html[data-colors] .hero .lede,html[data-colors] .hero .hero-turn{color:var(--pc-darkMute)!important}
-html[data-colors] .hero .lede strong,html[data-colors] .hero .hero-turn strong{color:var(--pc-onDark)!important}
-html[data-colors] .hero-proof{color:var(--pc-darkMute)!important}
-html[data-colors] .hero .secondary-link{color:var(--pc-accent)!important;border-color:var(--pc-accent)!important}
-html[data-colors] .hero-perspective.field-note{
- background:var(--pc-mid)!important;color:var(--pc-onDark)!important;
- border:1px solid var(--pc-dark-line)!important;border-left:3px solid var(--pc-warm)!important;box-shadow:none!important
-}
-html[data-colors] .hero-perspective.field-note:before{display:none}
-html[data-colors] .hero-perspective .label{color:var(--pc-accent)!important}
-html[data-colors] .hero-perspective h2,html[data-colors] .hero-perspective .perspective-rule strong{color:var(--pc-onDark)!important}
-html[data-colors] .hero-perspective>p,html[data-colors] .hero-perspective .perspective-rule span{color:var(--pc-darkMute)!important}
-html[data-colors] .hero-perspective .perspective-rule{border-color:var(--pc-dark-line)!important}
-html[data-colors] .hero-perspective .perspective-signature{color:var(--pc-accent)!important}
-html[data-colors] .real-life{background:var(--pc-light2)!important;color:var(--pc-ink)!important}
-html[data-colors] .real-life h2,html[data-colors] .reality h3,html[data-colors] .real-life .hint strong{color:var(--pc-ink)!important}
-html[data-colors] .real-life .section-head p,html[data-colors] .reality .moment,html[data-colors] .real-life .hint{color:var(--pc-onLight)!important}
-html[data-colors] .real-life .eyebrow,html[data-colors] .reality .cue,html[data-colors] .real-outcome .gain-label{color:var(--pc-accentDark)!important}
-html[data-colors] .reality-list,html[data-colors] .reality{border-color:var(--pc-soft-line)!important}
-html[data-colors] .real-outcome{border-left-color:var(--pc-accentDark)!important}
-html[data-colors] .real-outcome>p{color:var(--pc-onLight)!important}
-html[data-colors] .real-outcome>strong{color:var(--pc-accentDark)!important}
-html[data-colors] .real-outcome .human-stat{color:var(--pc-onLight)!important;border-color:var(--pc-soft-line)!important}
-html[data-colors] .real-outcome .human-stat a{color:var(--pc-accentDark)!important}
-html[data-colors] .approach{background:var(--pc-mid)!important;color:var(--pc-onDark)!important}
-html[data-colors] .approach .eyebrow,html[data-colors] .step .number{color:var(--pc-accent)!important}
-html[data-colors] .approach h2,html[data-colors] .approach h3,html[data-colors] .step h3{color:var(--pc-onDark)!important}
-html[data-colors] .approach .section-head p,html[data-colors] .step p,html[data-colors] .agreement-copy p{color:var(--pc-darkMute)!important}
-html[data-colors] .agreement-copy strong{color:var(--pc-onDark)!important}
-html[data-colors] .agreement h3 span{color:var(--pc-accent)!important}
-html[data-colors] .steps,html[data-colors] .agreement,html[data-colors] .method-signature{border-color:var(--pc-dark-line)!important}
-html[data-colors] .method-signature>p{color:var(--pc-onDark)!important}
-html[data-colors] .method-story-link{color:var(--pc-accent)!important}
-html[data-colors] .time-value{background:var(--pc-night)!important;color:var(--pc-onDark)!important}
-html[data-colors] .time-value .eyebrow,html[data-colors] .time-value h2 em,html[data-colors] .unspoken-life h3 em{color:var(--pc-accent)!important}
-html[data-colors] .time-value h2,html[data-colors] .unspoken-life h3{color:var(--pc-onDark)!important}
-html[data-colors] .time-value-prose p,html[data-colors] .unspoken-scenes span,html[data-colors] .unspoken-relief,html[data-colors] .time-value-close p{color:var(--pc-darkMute)!important}
-html[data-colors] .time-value-prose strong,html[data-colors] .unspoken-scenes strong{color:var(--pc-onDark)!important}
-html[data-colors] .time-value-prose .human-stat.light{color:var(--pc-darkMute)!important;border-color:var(--pc-accent)!important}
-html[data-colors] .time-value-prose .human-stat.light a{color:var(--pc-accent)!important}
-html[data-colors] .unspoken-life,html[data-colors] .unspoken-scenes,html[data-colors] .unspoken-scenes p,html[data-colors] .time-value-story,html[data-colors] .time-value-close{border-color:var(--pc-dark-line)!important}
-html[data-colors] .unspoken-close{color:var(--pc-onDark)!important}
-html[data-colors] .unspoken-close strong,html[data-colors] .time-truth strong,html[data-colors] .time-value-close strong{color:var(--pc-accent)!important}
-html[data-colors] .time-truth{color:var(--pc-onDark)!important;border-color:var(--pc-warm)!important}
-html[data-colors] .worth-layout{background:var(--pc-mid)!important;border-color:var(--pc-dark-line)!important}
-html[data-colors] .worth-fields{border-color:var(--pc-dark-line)!important}
-html[data-colors] .worth-top h3{color:var(--pc-onDark)!important}
-html[data-colors] .worth-top p,html[data-colors] .worth-field small{color:var(--pc-darkMute)!important}
-html[data-colors] .worth-field label{color:var(--pc-onDark)!important}
-html[data-colors] .worth-input{background:var(--pc-night)!important;border-color:var(--pc-dark-line)!important}
-html[data-colors] .worth-input input{color:var(--pc-onDark)!important}
-html[data-colors] .worth-unit,html[data-colors] .worth-dollar{color:var(--pc-accent)!important}
-html[data-colors] .worth-answer{background:var(--pc-light)!important;color:var(--pc-ink)!important}
-html[data-colors] .worth-overline,html[data-colors] .worth-hours strong,html[data-colors] .worth-money strong{color:var(--pc-accentDark)!important}
-html[data-colors] .worth-hours span,html[data-colors] .worth-weeks,html[data-colors] .worth-money span,html[data-colors] .worth-footnote{color:var(--pc-onLight)!important}
-html[data-colors] .worth-money{border-color:var(--pc-soft-line)!important}
-html[data-colors] .ai-perspective{background:var(--pc-light)!important;color:var(--pc-ink)!important}
-html[data-colors] .ai-perspective h2,html[data-colors] .ai-perspective h3{color:var(--pc-ink)!important}
-html[data-colors] .ai-perspective h2 em,html[data-colors] .ai-translation h3 span{color:var(--pc-accentDark)!important}
-html[data-colors] .ai-perspective p,html[data-colors] .ai-whisper p,html[data-colors] .ai-whisper>span{color:var(--pc-onLight)!important}
-html[data-colors] .ai-perspective .eyebrow,html[data-colors] .ai-overline{color:var(--pc-accentDark)!important}
-html[data-colors] .ai-headline p strong{color:var(--pc-ink)!important}
-html[data-colors] .ai-translation,html[data-colors] .ai-payoff{border-color:var(--pc-soft-line)!important}
-html[data-colors] .ai-whisper{border-color:var(--pc-accentDark)!important}
-html[data-colors] .ai-whisper.hopeful{border-color:var(--pc-warm)!important}
-html[data-colors] .ai-whisper a,html[data-colors] .ai-side-thought,html[data-colors] .ai-payoff .secondary-link{color:var(--pc-accentDark)!important}
-html[data-colors] .ai-side-thought{border-color:var(--pc-warm)!important}
-html[data-colors] .person{background:var(--pc-soft-person)!important;color:var(--pc-ink)!important;border-color:var(--pc-soft-line)!important}
-html[data-colors] .person h2,html[data-colors] .person .eyebrow{color:var(--pc-ink)!important}
-html[data-colors] .person .postscript,html[data-colors] .person-copy .small-link{color:var(--pc-accentDark)!important;border-color:var(--pc-warm)!important}
-html[data-colors] .person-copy>p{color:var(--pc-onLight)!important}
-html[data-colors] .person-copy strong{color:var(--pc-ink)!important}
-html[data-colors] .contact{background:var(--pc-mid)!important;color:var(--pc-onDark)!important}
-html[data-colors] .contact h2{color:var(--pc-onDark)!important}
-html[data-colors] .contact .eyebrow{color:var(--pc-accent)!important}
-html[data-colors] .contact .opening,html[data-colors] .contact .one-on-one{color:var(--pc-darkMute)!important}
-html[data-colors] .contact .one-on-one{border-color:var(--pc-dark-line)!important}
-html[data-colors] .contact .one-on-one:before{background:var(--pc-accent)!important;color:var(--pc-night)!important}
-html[data-colors] .contact-form{background:var(--pc-form-bg)!important;color:var(--pc-ink)!important;border:1px solid var(--pc-soft-line)!important}
-html[data-colors] .contact-form .form-intro{color:var(--pc-accentDark)!important;border-color:var(--pc-soft-line)!important}
-html[data-colors] .contact-form .field label{color:var(--pc-ink)!important}
-html[data-colors] .contact-form .field input,html[data-colors] .contact-form .field textarea{background:var(--pc-light)!important;color:var(--pc-ink)!important;border-color:var(--pc-soft-line)!important}
-html[data-colors] .contact-form .field input::placeholder,html[data-colors] .contact-form .field textarea::placeholder{color:var(--pc-onLight)!important;opacity:.8}
-html[data-colors] .contact-form .form-note,html[data-colors] .status{color:var(--pc-onLight)!important}
-html[data-colors] .contact-form .primary-btn{background:var(--pc-accentDark)!important;border-color:var(--pc-accentDark)!important;color:var(--pc-onDark)!important}
-html[data-colors] .contact-form .primary-btn:hover{background:var(--pc-ink)!important;color:var(--pc-onDark)!important}
-html[data-colors] .endnote{background:var(--pc-night)!important;color:var(--pc-onDark)!important}
-html[data-colors] .endnote h2{color:var(--pc-onDark)!important}
-html[data-colors] .endnote a{color:var(--pc-accent)!important}
-html[data-colors] footer{background:var(--pc-night)!important;color:var(--pc-darkMute)!important;border-color:var(--pc-dark-line)!important}
-html[data-colors] footer .wordmark{color:var(--pc-onDark)!important}
-html[data-colors] footer p,html[data-colors] .footer-nav{color:var(--pc-darkMute)!important}
-html[data-colors] .about-hero{background:var(--pc-night)!important;color:var(--pc-onDark)!important;border-color:var(--pc-dark-line)!important}
-html[data-colors] .about-hero h1{color:var(--pc-onDark)!important}
-html[data-colors] .about-hero h1 em,html[data-colors] .about-hero .eyebrow{color:var(--pc-accent)!important}
-html[data-colors] .about-hero .intro{color:var(--pc-darkMute)!important}
-html[data-colors] .about-story{background:var(--pc-light2)!important;color:var(--pc-ink)!important}
-html[data-colors] .about-story h2{color:var(--pc-ink)!important}
-html[data-colors] .about-story .eyebrow{color:var(--pc-accentDark)!important}
-html[data-colors] .story-prose p{color:var(--pc-onLight)!important}
-html[data-colors] .story-prose strong{color:var(--pc-ink)!important}
-html[data-colors] .field-lessons{background:var(--pc-light)!important;border-color:var(--pc-soft-line)!important;color:var(--pc-ink)!important}
-html[data-colors] .field-lessons h2,html[data-colors] .field-lessons h3{color:var(--pc-ink)!important}
-html[data-colors] .field-lessons-grid,html[data-colors] .field-lessons-grid article{border-color:var(--pc-soft-line)!important}
-html[data-colors] .field-lessons-grid p{color:var(--pc-onLight)!important}
-html[data-colors] .field-num,html[data-colors] .field-lessons .eyebrow{color:var(--pc-accentDark)!important}
-html[data-colors] .about-values{background:var(--pc-mid)!important;color:var(--pc-onDark)!important}
-html[data-colors] .about-values h2,html[data-colors] .about-values .value strong{color:var(--pc-onDark)!important}
-html[data-colors] .about-values .eyebrow{color:var(--pc-accent)!important}
-html[data-colors] .about-values .value{color:var(--pc-darkMute)!important}
-html[data-colors] .values{border-color:var(--pc-dark-line)!important}
-html[data-colors] .about-closer{background:var(--pc-night)!important;color:var(--pc-onDark)!important}
-html[data-colors] .about-closer h2{color:var(--pc-onDark)!important}
-html[data-colors] .about-closer p{color:var(--pc-darkMute)!important}
-html[data-colors] .about-closer .eyebrow{color:var(--pc-accent)!important}
-/* Tool page is color-coordinated in preview too, without changing functionality. */
-html[data-colors] header{background:var(--pc-night)!important;color:var(--pc-onDark)!important;border-color:var(--pc-dark-line)!important}
-html[data-colors] header .logo,html[data-colors] header .navlinks{color:var(--pc-onDark)!important}
-html[data-colors] .logo-dot{color:var(--pc-accent)!important}
-html[data-colors] .hero.workday-hero{background:var(--pc-light2)!important;color:var(--pc-ink)!important}
-html[data-colors] .wd-story h1,html[data-colors] .wd-who strong{color:var(--pc-ink)!important}
-html[data-colors] .wd-story .wd-handled,html[data-colors] .wd-kicker{color:var(--pc-accentDark)!important}
-html[data-colors] .wd-who,html[data-colors] .wd-reassurance{color:var(--pc-onLight)!important}
-html[data-colors] .wd-live,html[data-colors] .dark-section{background:var(--pc-night)!important;color:var(--pc-onDark)!important}
-html[data-colors] .wd-live h2,html[data-colors] .dark-section h2,html[data-colors] .offer h3{color:var(--pc-onDark)!important}
-html[data-colors] .wd-live-sub,html[data-colors] .offer p{color:var(--pc-darkMute)!important}
-html[data-colors] .wd-options button[aria-pressed="true"]{background:var(--pc-accent)!important;color:var(--pc-night)!important}
-html[data-colors] .problem,html[data-colors] .mini-card{background:var(--pc-light)!important;color:var(--pc-ink)!important}
-html[data-colors] .section:nth-of-type(even){background:var(--pc-light2)!important;color:var(--pc-ink)!important}
-html[data-colors] .section{background:var(--pc-light)!important;color:var(--pc-ink)!important}
-html[data-colors] .fix-left{background:var(--pc-mid)!important;color:var(--pc-onDark)!important}
-html[data-colors] .fix-right{background:var(--pc-light2)!important;color:var(--pc-ink)!important}
-html[data-colors] .offer{background:var(--pc-mid)!important;border-color:var(--pc-dark-line)!important}
-html[data-colors] .contact-banner{background:var(--pc-light2)!important;color:var(--pc-ink)!important}
-html[data-colors] .btn-blue,html[data-colors] .wd-primary{background:var(--pc-accentDark)!important;color:var(--pc-onDark)!important;border-color:var(--pc-accentDark)!important}
-html[data-colors] .btn-lime{background:var(--pc-accent)!important;color:var(--pc-night)!important}
-/* Preview-only ribbon intentionally not a site feature; keeps experiments separate from default. */
-html[data-colors] .color-preview-ribbon{position:fixed;bottom:16px;right:16px;z-index:350;background:var(--pc-night);color:var(--pc-onDark);border:1px solid var(--pc-dark-line);padding:10px 13px;display:flex;gap:14px;align-items:center;font:800 12px/1.5 'Nunito Sans',sans-serif;max-width:calc(100% - 32px);box-shadow:0 12px 32px #0004}
-html[data-colors] .color-preview-ribbon a{color:var(--pc-accent);text-decoration:underline;text-underline-offset:3px}
-@media(max-width:680px){
-html[data-colors] .color-preview-ribbon{left:8px;right:8px;bottom:8px;max-width:none;justify-content:space-between;gap:8px;font-size:11px}
-html[data-colors] .hero-perspective.field-note{box-shadow:none!important}
-}
+html[data-colors] body{background:var(--p-hero)!important;color:var(--p-heroText)!important}
+html[data-colors] ::selection{background:var(--p-heroHi);color:var(--p-hero)!important}
+html[data-colors] .site-nav{background:var(--p-nav)!important;color:var(--p-navText)!important;border-color:color-mix(in srgb,var(--p-navText) 24%,var(--p-nav))!important}
+html[data-colors] .site-nav .wordmark,html[data-colors] .site-nav .desktop-nav{color:var(--p-navText)!important}
+html[data-colors] .site-nav .wordmark .dot{color:var(--p-heroHi)!important}
+html[data-colors] .site-nav .wordmark small{color:var(--p-navText)!important;opacity:.85}
+html[data-colors] .site-nav .desktop-nav a:hover{color:var(--p-heroHi)!important}
+html[data-colors] .site-nav .nav-action{background:var(--p-cta)!important;border-color:var(--p-cta)!important;color:var(--p-ctaText)!important}
+html[data-colors] .site-nav .mobile-menu summary,html[data-colors] .site-nav .mobile-menu nav{background:var(--p-nav)!important;color:var(--p-navText)!important;border-color:color-mix(in srgb,var(--p-navText) 35%,var(--p-nav))!important}
+html[data-colors] .eyebrow:before{background:var(--p-heroHi)!important}
+html[data-colors] .hero{background:var(--p-hero)!important;color:var(--p-heroText)!important;border-color:var(--p-darkBorder)!important}
+html[data-colors] .hero .eyebrow,html[data-colors] .hero h1 em{color:var(--p-heroHi)!important}
+html[data-colors] .hero h1,html[data-colors] .hero .lede,html[data-colors] .hero .hero-turn,html[data-colors] .hero .hero-turn strong,html[data-colors] .hero .lede strong,html[data-colors] .hero-proof{color:var(--p-heroText)!important}
+html[data-colors] .hero .secondary-link{color:var(--p-heroText)!important;border-color:var(--p-heroText)!important}
+html[data-colors] .hero .primary-btn{background:var(--p-cta)!important;color:var(--p-ctaText)!important;border-color:var(--p-cta)!important;box-shadow:none!important}
+html[data-colors] .hero-perspective.field-note{background:var(--p-panel)!important;color:var(--p-panelText)!important;border:0!important;border-left:5px solid var(--p-heroHi)!important;box-shadow:none!important}
+html[data-colors] .hero-perspective.field-note:before{display:none!important}
+html[data-colors] .hero-perspective .label,html[data-colors] .hero-perspective h2,html[data-colors] .hero-perspective>p,html[data-colors] .hero-perspective .perspective-rule strong,html[data-colors] .hero-perspective .perspective-rule span,html[data-colors] .hero-perspective .perspective-signature{color:var(--p-panelText)!important}
+html[data-colors] .hero-perspective .perspective-rule{border-color:color-mix(in srgb,var(--p-panelText) 38%,var(--p-panel))!important}
+html[data-colors] .real-life{background:var(--p-story)!important;color:var(--p-storyText)!important}
+html[data-colors] .real-life h2,html[data-colors] .real-life h3,html[data-colors] .real-life .section-head p,html[data-colors] .real-life .reality .moment,html[data-colors] .real-life .reality .real-outcome>p,html[data-colors] .real-life .hint{color:var(--p-storyText)!important}
+html[data-colors] .real-life .eyebrow,html[data-colors] .reality .cue,html[data-colors] .real-outcome .gain-label,html[data-colors] .real-outcome>strong{color:var(--p-storyHi)!important}
+html[data-colors] .real-life .reality-list,html[data-colors] .reality,html[data-colors] .real-outcome,html[data-colors] .real-outcome .human-stat{border-color:var(--p-borderStory)!important}
+html[data-colors] .real-outcome .human-stat,html[data-colors] .real-outcome .human-stat a,html[data-colors] .real-life .hint strong{color:var(--p-storyText)!important}
+html[data-colors] .approach{background:var(--p-method)!important;color:var(--p-methodText)!important}
+html[data-colors] .approach h2,html[data-colors] .approach h3,html[data-colors] .approach .section-head p,html[data-colors] .approach .step p,html[data-colors] .approach .agreement-copy p,html[data-colors] .approach .agreement-copy strong,html[data-colors] .approach .method-signature>p{color:var(--p-methodText)!important}
+html[data-colors] .approach .eyebrow,html[data-colors] .approach .step .number,html[data-colors] .approach .agreement h3 span,html[data-colors] .method-story-link{color:var(--p-methodHi)!important}
+html[data-colors] .approach .steps,html[data-colors] .approach .agreement,html[data-colors] .approach .method-signature{border-color:var(--p-borderDark)!important}
+html[data-colors] .time-value{background:var(--p-time)!important;color:var(--p-timeText)!important}
+html[data-colors] .time-value h2,html[data-colors] .time-value h3,html[data-colors] .time-value p,html[data-colors] .time-value strong,html[data-colors] .time-value label,html[data-colors] .time-value .worth-top p{color:var(--p-timeText)!important}
+html[data-colors] .time-value h2 em,html[data-colors] .time-value h3 em,html[data-colors] .time-value .eyebrow,html[data-colors] .unspoken-close strong,html[data-colors] .time-truth strong,html[data-colors] .time-value-close strong{color:var(--p-timeHi)!important}
+html[data-colors] .time-value-story,html[data-colors] .unspoken-life,html[data-colors] .unspoken-scenes,html[data-colors] .unspoken-scenes p,html[data-colors] .time-value-close{border-color:color-mix(in srgb,var(--p-timeText) 30%,var(--p-time))!important}
+html[data-colors] .time-value .time-truth{border-color:var(--p-timeHi)!important}
+html[data-colors] .time-value .human-stat.light{color:var(--p-timeText)!important}
+html[data-colors] .time-value .human-stat.light a{color:var(--p-timeHi)!important}
+html[data-colors] .worth-layout{background:var(--p-method)!important;border-color:color-mix(in srgb,var(--p-methodText) 35%,var(--p-method))!important}
+html[data-colors] .worth-fields{border-color:color-mix(in srgb,var(--p-methodText) 30%,var(--p-method))!important}
+html[data-colors] .worth-fields label,html[data-colors] .worth-fields small,html[data-colors] .worth-unit,html[data-colors] .worth-dollar{color:var(--p-methodText)!important}
+html[data-colors] .worth-input{background:var(--p-method)!important;border-color:color-mix(in srgb,var(--p-methodText) 50%,var(--p-method))!important}
+html[data-colors] .worth-input input{color:var(--p-methodText)!important}
+html[data-colors] .worth-answer{background:var(--p-idea)!important;color:var(--p-ideaText)!important}
+html[data-colors] .worth-answer .worth-overline,html[data-colors] .worth-answer .worth-hours strong,html[data-colors] .worth-answer .worth-hours span,html[data-colors] .worth-answer .worth-weeks,html[data-colors] .worth-answer .worth-money strong,html[data-colors] .worth-answer .worth-money span,html[data-colors] .worth-answer .worth-footnote{color:var(--p-ideaText)!important}
+html[data-colors] .worth-answer .worth-money{border-color:color-mix(in srgb,var(--p-ideaText) 25%,var(--p-idea))!important}
+html[data-colors] .ai-perspective{background:var(--p-idea)!important;color:var(--p-ideaText)!important}
+html[data-colors] .ai-perspective h2,html[data-colors] .ai-perspective h3,html[data-colors] .ai-perspective p,html[data-colors] .ai-whisper p,html[data-colors] .ai-whisper span,html[data-colors] .ai-headline p strong{color:var(--p-ideaText)!important}
+html[data-colors] .ai-perspective .eyebrow,html[data-colors] .ai-perspective .ai-overline,html[data-colors] .ai-perspective h2 em,html[data-colors] .ai-translation h3 span{color:var(--p-ideaHi)!important}
+html[data-colors] .ai-perspective .ai-payoff,html[data-colors] .ai-perspective .ai-translation,html[data-colors] .ai-perspective .ai-whisper,html[data-colors] .ai-perspective .ai-side-thought{border-color:color-mix(in srgb,var(--p-ideaText) 32%,var(--p-idea))!important}
+html[data-colors] .ai-perspective a,html[data-colors] .ai-perspective .ai-side-thought{color:var(--p-ideaHi)!important}
+html[data-colors] .person{background:var(--p-founder)!important;color:var(--p-founderText)!important;border-color:color-mix(in srgb,var(--p-founderText) 25%,var(--p-founder))!important}
+html[data-colors] .person h2,html[data-colors] .person .eyebrow,html[data-colors] .person .postscript,html[data-colors] .person-copy>p,html[data-colors] .person-copy strong,html[data-colors] .person-copy .small-link{color:var(--p-founderText)!important}
+html[data-colors] .person .postscript{border-color:var(--p-founderText)!important}
+html[data-colors] .contact{background:var(--p-contact)!important;color:var(--p-contactText)!important}
+html[data-colors] .contact .eyebrow,html[data-colors] .contact h2,html[data-colors] .contact .opening,html[data-colors] .contact .one-on-one{color:var(--p-contactText)!important}
+html[data-colors] .contact .one-on-one{border-color:color-mix(in srgb,var(--p-contactText) 27%,var(--p-contact))!important}
+html[data-colors] .contact .one-on-one:before{background:var(--p-cta)!important;color:var(--p-ctaText)!important}
+html[data-colors] .contact-form{background:var(--p-form)!important;color:var(--p-formText)!important;border:1px solid color-mix(in srgb,var(--p-formText) 35%,var(--p-form))!important}
+html[data-colors] .contact-form .form-intro,html[data-colors] .contact-form .field label,html[data-colors] .contact-form .form-note,html[data-colors] .contact-form .status{color:var(--p-formText)!important}
+html[data-colors] .contact-form .field input,html[data-colors] .contact-form .field textarea{background:var(--p-onForm)!important;color:var(--p-formText)!important;border-color:color-mix(in srgb,var(--p-formText) 38%,var(--p-form))!important}
+html[data-colors] .contact-form .field input::placeholder,html[data-colors] .contact-form .field textarea::placeholder{color:var(--p-formText)!important;opacity:.85}
+html[data-colors] .contact-form .primary-btn{background:var(--p-cta)!important;border-color:var(--p-cta)!important;color:var(--p-ctaText)!important}
+html[data-colors] .endnote,html[data-colors] footer{background:var(--p-footer)!important;color:var(--p-footerText)!important;border-color:color-mix(in srgb,var(--p-footerText) 22%,var(--p-footer))!important}
+html[data-colors] .endnote h2,html[data-colors] .endnote a,html[data-colors] footer .wordmark,html[data-colors] footer p,html[data-colors] .footer-nav{color:var(--p-footerText)!important}
+html[data-colors] .about-hero{background:var(--p-hero)!important;color:var(--p-heroText)!important;border-color:var(--p-darkBorder)!important}
+html[data-colors] .about-hero h1,html[data-colors] .about-hero .intro{color:var(--p-heroText)!important}
+html[data-colors] .about-hero h1 em,html[data-colors] .about-hero .eyebrow{color:var(--p-heroHi)!important}
+html[data-colors] .about-story{background:var(--p-story)!important;color:var(--p-storyText)!important}
+html[data-colors] .about-story h2,html[data-colors] .about-story .eyebrow,html[data-colors] .story-prose p,html[data-colors] .story-prose strong{color:var(--p-storyText)!important}
+html[data-colors] .field-lessons{background:var(--p-idea)!important;color:var(--p-ideaText)!important;border-color:color-mix(in srgb,var(--p-ideaText) 24%,var(--p-idea))!important}
+html[data-colors] .field-lessons h2,html[data-colors] .field-lessons h3,html[data-colors] .field-lessons .eyebrow,html[data-colors] .field-lessons p,html[data-colors] .field-num{color:var(--p-ideaText)!important}
+html[data-colors] .field-lessons-grid,html[data-colors] .field-lessons-grid article{border-color:color-mix(in srgb,var(--p-ideaText) 24%,var(--p-idea))!important}
+html[data-colors] .about-values{background:var(--p-method)!important;color:var(--p-methodText)!important}
+html[data-colors] .about-values h2,html[data-colors] .about-values .eyebrow,html[data-colors] .about-values .value,html[data-colors] .about-values .value strong{color:var(--p-methodText)!important}
+html[data-colors] .about-values .values{border-color:var(--p-borderDark)!important}
+html[data-colors] .about-closer{background:var(--p-footer)!important;color:var(--p-footerText)!important}
+html[data-colors] .about-closer h2,html[data-colors] .about-closer p,html[data-colors] .about-closer .eyebrow{color:var(--p-footerText)!important}
+html[data-colors] .about-closer .primary-btn{background:var(--p-cta)!important;color:var(--p-ctaText)!important;border-color:var(--p-cta)!important}
+/* Free Tools shares the chosen preview palette, but the tools still function. */
+html[data-colors] header:has(.nav){background:var(--p-nav)!important;color:var(--p-navText)!important;border-color:color-mix(in srgb,var(--p-navText) 20%,var(--p-nav))!important}
+html[data-colors] header .logo,html[data-colors] header .navlinks{color:var(--p-navText)!important}
+html[data-colors] .logo-dot{color:var(--p-heroHi)!important}
+html[data-colors] .hero.workday-hero{background:var(--p-hero)!important;color:var(--p-heroText)!important}
+html[data-colors] .wd-story h1,html[data-colors] .wd-who,html[data-colors] .wd-who strong,html[data-colors] .wd-reassurance,html[data-colors] .wd-kicker{color:var(--p-heroText)!important}
+html[data-colors] .wd-story .wd-handled{color:var(--p-heroHi)!important}
+html[data-colors] .wd-live,html[data-colors] .dark-section{background:var(--p-time)!important;color:var(--p-timeText)!important}
+html[data-colors] .wd-live h2,html[data-colors] .dark-section h2,html[data-colors] .offer h3,html[data-colors] .wd-live-sub{color:var(--p-timeText)!important}
+html[data-colors] .wd-options button[aria-pressed="true"]{background:var(--p-timeHi)!important;color:var(--p-time)!important}
+html[data-colors] .section:not(.dark-section){background:var(--p-story)!important;color:var(--p-storyText)!important}
+html[data-colors] .section h2,html[data-colors] .section .dek{color:var(--p-storyText)!important}
+html[data-colors] .problem,html[data-colors] .mini-card{background:var(--p-idea)!important;color:var(--p-ideaText)!important}
+html[data-colors] .problem strong,html[data-colors] .problem small,html[data-colors] .mini-card h3,html[data-colors] .mini-card p{color:var(--p-ideaText)!important}
+html[data-colors] .fix-left{background:var(--p-method)!important;color:var(--p-methodText)!important}
+html[data-colors] .fix-left h3{color:var(--p-methodText)!important}
+html[data-colors] .fix-right{background:var(--p-founder)!important;color:var(--p-founderText)!important}
+html[data-colors] .offer{background:var(--p-method)!important}
+html[data-colors] .offer p,html[data-colors] .offer h3{color:var(--p-methodText)!important}
+html[data-colors] .contact-banner{background:var(--p-founder)!important;color:var(--p-founderText)!important}
+html[data-colors] .contact-banner h2,html[data-colors] .contact-banner p{color:var(--p-founderText)!important}
+html[data-colors] .btn-blue,html[data-colors] .wd-primary{background:var(--p-cta)!important;color:var(--p-ctaText)!important;border-color:var(--p-cta)!important}
+html[data-colors] .btn-lime{background:var(--p-cta)!important;color:var(--p-ctaText)!important}
+/* Preview ribbon only appears when ?colors= is present. */
+html[data-colors] .color-preview-ribbon{position:fixed;bottom:14px;right:14px;z-index:360;display:flex;gap:16px;align-items:center;padding:11px 14px;background:var(--p-nav);color:var(--p-navText);border:1px solid color-mix(in srgb,var(--p-navText) 34%,var(--p-nav));box-shadow:0 14px 34px #0005;font:800 12px/1.45 'Nunito Sans',sans-serif;max-width:calc(100% - 28px)}
+html[data-colors] .color-preview-ribbon a{color:var(--p-navText)!important;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:650px){html[data-colors] .color-preview-ribbon{left:9px;right:9px;bottom:9px;justify-content:space-between;gap:8px;font-size:11px}}
