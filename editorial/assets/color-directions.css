@@ -121,3 +121,42 @@ html[data-colors] .btn-lime{background:var(--p-cta)!important;color:var(--p-ctaT
 html[data-colors] .color-preview-ribbon{position:fixed;bottom:14px;right:14px;z-index:360;display:flex;gap:16px;align-items:center;padding:11px 14px;background:var(--p-nav);color:var(--p-navText);border:1px solid color-mix(in srgb,var(--p-navText) 34%,var(--p-nav));box-shadow:0 14px 34px #0005;font:800 12px/1.45 'Nunito Sans',sans-serif;max-width:calc(100% - 28px)}
 html[data-colors] .color-preview-ribbon a{color:var(--p-navText)!important;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:650px){html[data-colors] .color-preview-ribbon{left:9px;right:9px;bottom:9px;justify-content:space-between;gap:8px;font-size:11px}}
+
+
+/* FIGMA REFERENCE / COBALT SKY — #0047AB #000080 #82C8E5 #6D8196.
+   Dark navy -> cobalt -> sky -> navy -> slate -> sky -> slate -> cobalt -> navy.
+   The slate uses ink-black text so small type stays readable (not white on grey). */
+html[data-colors="sky"]{--p-nav:#000080;--p-navText:#FFFFFF;--p-hero:#0047AB;--p-heroText:#FFFFFF;--p-heroHi:#82C8E5;--p-panel:#000080;--p-panelText:#FFFFFF;--p-story:#82C8E5;--p-storyText:#000080;--p-storyHi:#0047AB;--p-method:#000080;--p-methodText:#FFFFFF;--p-methodHi:#82C8E5;--p-time:#6D8196;--p-timeText:#060B16;--p-timeHi:#060B16;--p-idea:#82C8E5;--p-ideaText:#000080;--p-ideaHi:#0047AB;--p-founder:#6D8196;--p-founderText:#060B16;--p-contact:#0047AB;--p-contactText:#FFFFFF;--p-footer:#000080;--p-footerText:#FFFFFF;--p-cta:#82C8E5;--p-ctaText:#000080;--p-form:#82C8E5;--p-formText:#000080;}
+html[data-colors="sky"]{--p-darkBorder:#82C8E5;--p-borderDark:#82C8E5;--p-borderStory:#0047AB;--p-onForm:#D3EDF8}
+html[data-colors="sky"] .site-nav .wordmark .dot{color:#82C8E5!important}
+html[data-colors="sky"] .site-nav .desktop-nav a:hover{color:#82C8E5!important}
+html[data-colors="sky"] .hero{border-bottom:0!important}
+html[data-colors="sky"] .hero h1 em{color:#82C8E5!important}
+html[data-colors="sky"] .hero .primary-btn{background:#82C8E5!important;color:#000080!important}
+html[data-colors="sky"] .hero-perspective.field-note{border:1px solid #82C8E5!important;border-left:5px solid #82C8E5!important}
+html[data-colors="sky"] .real-life{border-top:0!important}
+html[data-colors="sky"] .real-outcome .gain-label{color:#0047AB!important}
+html[data-colors="sky"] .real-life .eyebrow{color:#0047AB!important}
+html[data-colors="sky"] .approach{border-top:0!important}
+html[data-colors="sky"] .time-value{border-top:0!important}
+html[data-colors="sky"] .time-value .eyebrow,html[data-colors="sky"] .time-value h2 em,html[data-colors="sky"] .time-value h3 em,html[data-colors="sky"] .unspoken-close strong,html[data-colors="sky"] .time-truth strong,html[data-colors="sky"] .time-value-close strong{color:#060B16!important}
+html[data-colors="sky"] .time-value .human-stat.light a{color:#060B16!important}
+html[data-colors="sky"] .time-value .worth-layout{border-color:#000080!important}
+html[data-colors="sky"] .worth-top h3{color:#060B16!important}
+html[data-colors="sky"] .time-value-story,html[data-colors="sky"] .unspoken-life,html[data-colors="sky"] .unspoken-scenes,html[data-colors="sky"] .unspoken-scenes p,html[data-colors="sky"] .time-value-close{border-color:#162A46!important}
+html[data-colors="sky"] .time-value .time-truth{border-left-color:#000080!important}
+html[data-colors="sky"] .ai-perspective .eyebrow,html[data-colors="sky"] .ai-perspective h2 em{color:#0047AB!important}
+html[data-colors="sky"] .person{border-top:0!important}
+html[data-colors="sky"] .person .eyebrow:before{background:#000080!important}
+html[data-colors="sky"] .person .postscript{border-color:#060B16!important}
+html[data-colors="sky"] .contact .primary-btn{background:#82C8E5!important;color:#000080!important;border-color:#82C8E5!important}
+html[data-colors="sky"] .contact .status.error{color:#A80021!important}
+html[data-colors="sky"] .contact-form .field input,html[data-colors="sky"] .contact-form .field textarea{border-color:#0047AB!important}
+html[data-colors="sky"] .about-hero h1 em{color:#82C8E5!important}
+html[data-colors="sky"] .about-story .eyebrow,html[data-colors="sky"] .field-lessons .eyebrow{color:#0047AB!important}
+html[data-colors="sky"] .field-lessons{background:#82C8E5!important;color:#000080!important}
+html[data-colors="sky"] .about-values{background:#000080!important;color:#FFFFFF!important}
+html[data-colors="sky"] .about-closer{background:#0047AB!important;color:#FFFFFF!important}
+html[data-colors="sky"] .about-closer .primary-btn{background:#82C8E5!important;color:#000080!important;border-color:#82C8E5!important}
+html[data-colors="sky"] .wd-options button[aria-pressed="true"]{background:#82C8E5!important;color:#000080!important}
+html[data-colors="sky"] .color-preview-ribbon a{color:#82C8E5!important}
