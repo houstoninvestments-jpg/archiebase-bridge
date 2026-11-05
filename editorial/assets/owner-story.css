@@ -298,3 +298,12 @@ footer{background:#0A1D2A;color:#BFD2D8;border-top:1px solid #315061;padding:28p
  .ai-headline h2 em{font-size:.99em}
  .ai-translation h3,.ai-payoff h3{font-size:clamp(29px,7.2vw,36px)}
 }
+
+/* The math of one recurring interruption, shown as an illustration, not a guarantee. */
+.time-math{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.72fr);gap:clamp(25px,5vw,74px);align-items:end;margin:clamp(43px,6vw,78px) 0 0;padding:clamp(29px,3.8vw,45px) 0;border-top:2px solid #1E6D84;border-bottom:1px solid #BBD2D2}
+.time-math .eyebrow{display:flex;color:#1D7188;margin-bottom:18px}
+.time-math strong{display:block;font:800 clamp(24px,2.6vw,35px)/1.35 var(--body);letter-spacing:-.04em;color:#163B4F;max-width:680px}
+.time-math strong em{display:block;color:#176D87;font:italic 900 1.13em/1.25 var(--body);letter-spacing:-.05em;margin-top:2px}
+.time-math strong i{font-style:normal;color:#779CA8;font-size:.75em;margin-inline:3px}
+.time-math p{font-size:16px;line-height:1.7;color:#486573;max-width:440px}
+@media(max-width:760px){.time-math{grid-template-columns:1fr;gap:17px;padding:32px 0}.time-math strong{font-size:clamp(23px,5.7vw,32px)}.time-math p{font-size:15px}}
