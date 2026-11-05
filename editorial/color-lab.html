@@ -1,180 +1,282 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#101E29"><meta name="description" content="Ten carefully designed Archiebase color systems, shown on the actual brand typography and real page section flow.">
-<title>Archiebase / Ten Color Directions</title>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#151518"><meta name="description" content="Ten radically different Archiebase art directions with full-page color flow and interactive website previews.">
+<title>Archiebase / Ten Actually Different Colors</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&amp;display=swap" rel="stylesheet">
 <style>
-:root{--base:#101E29;--panel:#1A2B36;--line:#385361;--text:#F1F7F6;--muted:#C2D3DC;--cyan:#8CD8E7;--pink:#EFAD98}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}body{background:var(--base);margin:0;color:var(--text);font:400 16px/1.55 'Nunito Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
-h1,h2,h3,p{margin:0}.wrap{width:min(1400px,calc(100% - 56px));margin-inline:auto}
-header{border-bottom:1px solid #314A58;background:#091720}
-.top-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:77px}
-.brand{font:900 26px/1 'Nunito Sans',sans-serif;letter-spacing:-.08em}.brand span{color:#80D6E3}
-.top-back{font-weight:800;font-size:13px;color:#BBD7E0;border-bottom:1px solid #5A8FA3;padding-bottom:4px}
-.intro{padding:clamp(55px,7vw,105px) 0 43px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.68fr);gap:35px 80px;align-items:end}
-.eyebrow{font-weight:900;font-size:11px;letter-spacing:.135em;color:#92DBE6}
-.intro h1{font:400 clamp(44px,6.1vw,87px)/1.08 'Bowlby One SC',system-ui,sans-serif;letter-spacing:-.06em;margin-top:21px}
-.intro h1 em{display:block;font:italic 800 .96em/1.13 'Nunito Sans',sans-serif;color:#9CE0E7;letter-spacing:-.045em;margin-top:10px}
-.intro-copy{border-left:2px solid #EFAF96;padding-left:25px}
-.intro-copy p{font-size:17px;line-height:1.75;color:#D1DDE4;max-width:560px}
-.intro-copy strong{color:#FFF}
-.note{display:flex;gap:16px;justify-content:space-between;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin-bottom:32px;color:#B4C8D3;font-size:12px;font-weight:800}
-.note strong{color:var(--cyan)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;padding-bottom:120px}
-.specimen{min-width:0;border:1px solid #385260;background:var(--panel);transition:border-color .18s}
-.specimen:hover{border-color:#78BBD0}
-.site-mini{background:var(--c-night);color:var(--c-on-dark);min-width:0}
-.mini-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 23px;border-bottom:1px solid color-mix(in srgb,var(--c-on-dark) 22%,transparent)}
-.mini-brand{font:900 22px/1 'Nunito Sans',sans-serif;letter-spacing:-.08em}
-.mini-brand span{color:var(--c-accent)}
-.mini-navigation{font:800 9px/1.5 'Nunito Sans',sans-serif;letter-spacing:.08em;text-align:right;opacity:.82}
-.mini-hero{padding:clamp(24px,3.8vw,44px) 25px 36px;min-height:315px}
-.mini-hero small{display:block;color:var(--c-accent);font-size:10px;font-weight:900;letter-spacing:.1em}
-.mini-hero h3{font:400 clamp(23px,2.8vw,42px)/1.24 'Bowlby One SC',sans-serif;letter-spacing:-.045em;margin:19px 0 13px;max-width:600px;text-wrap:balance}
-.mini-hero h3 em{display:block;color:var(--c-accent);font:italic 800 1.05em/1.3 'Nunito Sans',sans-serif;letter-spacing:-.04em;margin-top:4px}
-.mini-hero p{color:var(--c-muted-dark);font-size:13px;line-height:1.6;max-width:380px}
-.mini-action{display:inline-flex;align-items:center;padding:9px 13px;margin-top:21px;background:var(--c-accent);color:var(--c-night);font-size:11px;font-weight:900;border-radius:3px}
-.scene-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
-.flow-stage{padding:15px 15px 17px;min-width:0;min-height:92px}
-.flow-stage strong{display:block;font-size:9px;line-height:1.5;font-weight:900;letter-spacing:.04em;margin-bottom:5px}
-.flow-stage span{display:block;font-size:12px;line-height:1.4;font-weight:700}
-.flow-stage.story{background:var(--c-light2);color:var(--c-ink)}
-.flow-stage.approach{background:var(--c-mid);color:var(--c-on-dark)}
-.flow-stage.time{background:var(--c-night);color:var(--c-accent)}
-.flow-stage.ai{background:var(--c-light);color:var(--c-ink)}
-.flow-stage.person{background:color-mix(in srgb,var(--c-light) 65%,var(--c-light2) 35%);color:var(--c-ink)}
-.flow-stage.contact{background:var(--c-mid);color:var(--c-on-dark)}
-.specimen-info{padding:26px 28px 28px}
-.specimen-title .number{font-size:10px;letter-spacing:.13em;color:#7ECEDF;font-weight:900}
-.specimen-title h2{font:800 27px/1.23 'Nunito Sans',sans-serif;letter-spacing:-.045em;color:#FFF;margin:7px 0 7px}
-.specimen-title p{color:#BCCFD7;font-size:14px;line-height:1.56}
-.tone{display:inline-block;margin-top:11px;font-size:11px;color:#9BD5E2;font-weight:900;text-transform:uppercase;letter-spacing:.055em}
-.swatches{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px;margin:20px 0}
-.swatches span{height:26px;border:1px solid #FFFFFF1B;min-width:0}
-.preview{display:flex;align-items:center;justify-content:space-between;gap:13px;padding:14px 17px;border:1px solid #8AB4C6;font-weight:900;font-size:13px;color:#F2F8F9}
-.preview:hover{background:#2A4655}
-.preview-mark{color:#97DAE8;font-size:11px;flex:none}
-footer{border-top:1px solid var(--line);padding:25px 0 55px;font-size:12px;color:var(--muted);line-height:1.7}
-@media(max-width:1020px){.grid{grid-template-columns:1fr;max-width:680px;margin-inline:auto}.intro{grid-template-columns:1fr;gap:28px}.intro-copy{max-width:740px}.mini-hero h3{font-size:clamp(27px,5.6vw,43px)}}
-@media(max-width:560px){.wrap{width:calc(100% - 30px)}.brand{font-size:23px}.top-nav{min-height:67px}.top-back{font-size:11px}.intro{padding-top:52px}.intro h1{font-size:clamp(36px,9vw,60px)}.intro-copy{padding-left:16px}.intro-copy p{font-size:15px}.grid{gap:18px;padding-bottom:80px}.mini-nav{padding:15px 17px}.mini-navigation{display:none}.mini-hero{padding:24px 19px 26px;min-height:285px}.mini-hero h3{font-size:clamp(25px,7.5vw,39px)}.flow-stage{padding:12px 10px;min-height:91px}.flow-stage strong{font-size:8px}.flow-stage span{font-size:11px}.specimen-info{padding:22px 20px}.specimen-title h2{font-size:25px}.preview{font-size:12px;padding:12px 13px}.preview-mark{font-size:10px}}
-@media(prefers-reduced-motion:reduce){.specimen{transition:none}}
-</style>
-</head><body>
-<header><div class="wrap top-nav"><a href="/" class="brand">archie<span>•</span>base</a><a href="/" class="top-back">Back to site</a></div></header>
-<main><div class="wrap intro"><div><span class="eyebrow">ARCHIEBASE / COLOR STUDY 01–10</span><h1>Less white.<em>More feeling.</em></h1></div><div class="intro-copy"><p><strong>These are complete color systems, not random hex codes.</strong> Compare the hero, story backgrounds, dark sections, editorial breaks, and final invitation. Every direction keeps the typography and copy you selected.</p></div></div>
-<div class="wrap note"><span><strong>10</strong> NEW DIRECTIONS</span><span>BASED ON REAL ARCHIEBASE SECTIONS</span><span>CURRENT LIVE COLORS UNCHANGED UNTIL YOU CHOOSE</span></div>
-<div class="wrap grid"><article class="specimen" id="palette-01" style="--c-night:#081E2A;--c-mid:#123B46;--c-light:#CEE2E0;--c-light2:#BCD4D0;--c-accent:#85DFE1;--c-accent-dark:#11667A;--c-warm:#ED9E86;--c-ink:#133846;--c-on-dark:#F2F9F7;--c-muted-dark:#C5DBDD;--c-on-light:#355965">
-<div class="site-mini">
-  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
-  <div class="mini-hero"><small>STUDIO BY AARON / 01</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
-  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#151518;color:#F5F4F0;font:400 16px/1.6 'Nunito Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid #FFDF73;outline-offset:4px}h1,h2,h3,p{margin:0}
+.wrap{width:min(1460px,calc(100% - 56px));margin-inline:auto}
+.top{border-bottom:1px solid #38383D;background:#111114}.topbar{display:flex;align-items:center;justify-content:space-between;min-height:78px;gap:20px}
+.logo{font:900 25px/1 'Nunito Sans',sans-serif;letter-spacing:-.08em}.logo span{color:#FF7E42}
+.back{font-size:12px;font-weight:800;color:#D4CFC4;border-bottom:1px solid #B5A89C;padding-bottom:5px}
+.intro{padding:clamp(70px,7vw,108px) 0 clamp(31px,4vw,54px);display:grid;grid-template-columns:1.15fr .63fr;align-items:end;gap:30px 80px}
+.kicker{color:#FFCC87;font:900 11px/1.5 'Nunito Sans',sans-serif;letter-spacing:.14em}
+.intro h1{font:400 clamp(42px,5.45vw,80px)/1.12 'Bowlby One SC',system-ui,sans-serif;letter-spacing:-.05em;margin:18px 0 0;max-width:900px}
+.intro h1 em{display:block;color:#FFC092;font:italic 800 1.06em/1.15 'Nunito Sans',sans-serif;letter-spacing:-.04em;margin-top:8px}
+.intro-side{border-left:3px solid #FF8858;padding-left:22px;color:#DAD7D2;line-height:1.8;font-size:16px;max-width:560px}
+.intro-side strong{color:#FFFFFF}
+.strip{border-block:1px solid #404047;display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap;padding:16px 0;font-size:12px;font-weight:800;color:#C0B9B3;margin-bottom:30px}
+.strip strong{color:#FFCD90}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;padding-bottom:110px}
+.direction{min-width:0;background:#242427;border:1px solid #48484B;transition:border-color .2s,transform .2s}
+.direction:hover{border-color:#A1A1A4;transform:translateY(-2px)}
+.site-preview{min-width:0;border-bottom:1px solid #3A3A3F}
+.sample-nav{padding:16px 23px;background:var(--v-nav);color:var(--v-navText);display:flex;justify-content:space-between;align-items:center;gap:15px}
+.sample-nav .brand{font:900 22px/1 'Nunito Sans',sans-serif;letter-spacing:-.07em}.sample-nav .brand span{color:var(--v-navText);opacity:.75}
+.nav-mini{font:900 9px/1.4 'Nunito Sans',sans-serif;letter-spacing:.04em;text-align:right}
+.sample-hero{background:var(--v-hero);color:var(--v-heroText);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.66fr);gap:22px;padding:clamp(22px,3.2vw,37px) 24px 33px;min-height:365px;align-items:center}
+.sample-copy{min-width:0}
+.sample-copy small{font:900 10px/1.5 'Nunito Sans',sans-serif;letter-spacing:.1em;display:block;color:var(--v-heroText)}
+.sample-copy h3{font:400 clamp(22px,2.3vw,35px)/1.26 'Bowlby One SC',sans-serif;letter-spacing:-.045em;margin:17px 0;text-wrap:balance}
+.sample-copy h3 em{display:block;font:italic 900 1.06em/1.26 'Nunito Sans',sans-serif;letter-spacing:-.045em;color:var(--v-heroHi);margin-top:8px}
+.sample-copy p{font:600 13px/1.7 'Nunito Sans',sans-serif;color:var(--v-heroText);max-width:450px}
+.sample-panel{min-width:0;padding:21px;background:var(--v-panel);color:var(--v-panelText);border-left:4px solid var(--v-heroHi)}
+.sample-panel small{display:block;font:900 9px/1.5 'Nunito Sans',sans-serif;letter-spacing:.09em;margin-bottom:15px}
+.sample-panel strong{display:block;font:800 19px/1.27 'Nunito Sans',sans-serif;letter-spacing:-.035em;margin-bottom:13px}
+.sample-panel span{display:block;font:700 13px/1.5 'Nunito Sans',sans-serif}
+.sample-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.stage{padding:18px 15px 17px;min-width:0;min-height:91px}
+.stage b{font:900 9px/1.35 'Nunito Sans',sans-serif;letter-spacing:.045em;display:block;margin-bottom:6px}
+.stage span{font:800 13px/1.4 'Nunito Sans',sans-serif;display:block}
+.stage-story{background:var(--v-story);color:var(--v-storyText)}
+.stage-method{background:var(--v-method);color:var(--v-methodText)}
+.stage-time{background:var(--v-time);color:var(--v-timeText)}
+.stage-idea{background:var(--v-idea);color:var(--v-ideaText)}
+.stage-founder{background:var(--v-founder);color:var(--v-founderText)}
+.stage-contact{background:var(--v-contact);color:var(--v-contactText)}
+.details{padding:24px 26px 26px}
+.index{font:900 10px/1.5 'Nunito Sans',sans-serif;letter-spacing:.15em;color:#DCC5AF}
+.details h2{font:800 28px/1.2 'Nunito Sans',sans-serif;letter-spacing:-.042em;margin:6px 0 6px;color:#FFFFFF}
+.details p{font-size:14px;line-height:1.6;color:#D0D0D0;max-width:560px}
+.vibe{display:inline-block;margin-top:13px;color:#FFC9A6;font:900 11px/1.4 'Nunito Sans',sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.palette-chips{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:5px;margin:20px 0}
+.palette-chips i{height:28px;border:1px solid #FFFFFF25}
+.view{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 15px;border:1px solid #96969A;font-weight:800;font-size:13px}
+.view:hover{background:#37373A}
+.view span{color:#FFD4A6;font-size:11px;white-space:nowrap}
+footer{border-top:1px solid #3D3D40;padding:25px 0 60px;color:#B6B7B9;font-size:13px;line-height:1.65}
+@media(max-width:1050px){.intro{grid-template-columns:1fr;gap:22px}.intro-side{max-width:720px}.gallery{grid-template-columns:1fr;max-width:730px;margin-inline:auto}.sample-copy h3{font-size:clamp(27px,4.4vw,39px)}}
+@media(max-width:560px){.wrap{width:calc(100% - 28px)}.topbar{min-height:65px}.logo{font-size:22px}.back{font-size:11px}.intro{padding-top:54px}.intro h1{font-size:clamp(36px,8.7vw,52px)}.intro-side{padding-left:15px}.strip{gap:10px;font-size:11px}.gallery{gap:20px;padding-bottom:76px}.sample-nav{padding:15px 17px}.nav-mini{display:none}.sample-hero{grid-template-columns:1fr;gap:19px;padding:22px 18px 25px;min-height:0}.sample-copy h3{font-size:clamp(25px,6.8vw,35px);margin:15px 0}.sample-panel{padding:17px}.sample-panel strong{font-size:17px;margin-bottom:7px}.sample-flow .stage{padding:12px 9px;min-height:85px}.stage b{font-size:8px}.stage span{font-size:11px}.details{padding:21px 19px}.details h2{font-size:25px}.view{font-size:12px;padding:12px 13px}.view span{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.direction{transition:none}.direction:hover{transform:none}}
+</style></head><body>
+<header class="top"><div class="wrap topbar"><a class="logo" href="/">archie<span>•</span>base</a><a class="back" href="/">Back to Archiebase</a></div></header>
+<main>
+<div class="wrap intro"><div><span class="kicker">COLOR DIRECTION / NEW SET 01–10</span><h1>These should not<em>look alike.</em></h1></div><div class="intro-side"><p><strong>Ten genuinely different visual identities.</strong> Not ten variations on navy. Compare the color of the hero, the emotional stories, the method, the time section, the creative chapter, and the invitation to talk. The typography stays the same.</p></div></div>
+<div class="wrap strip"><span><strong>10</strong> RADICALLY DIFFERENT DIRECTIONS</span><span>ALL SECTIONS RECOLORED</span><span>LIVE DEFAULT UNCHANGED</span></div>
+<div class="wrap gallery"><article class="direction" id="direction-01" style="--v-nav:#211B55;--v-navText:#FFFFFF;--v-hero:#DBFF4D;--v-heroText:#171B37;--v-heroHi:#5C277D;--v-panel:#26215E;--v-panelText:#FFFFFF;--v-story:#D9BCFF;--v-storyText:#211C4B;--v-method:#FF8960;--v-methodText:#271C35;--v-time:#21194C;--v-timeText:#FFFFFF;--v-idea:#E7D8FF;--v-ideaText:#26194F;--v-founder:#D9F958;--v-founderText:#1B2637;--v-contact:#31265E;--v-contactText:#FFFFFF">
+<div class="site-preview">
+ <div class="sample-nav"><span class="brand">archie<span>•</span>base</span><span class="nav-mini">THE PROBLEMS &nbsp; HOW I WORK &nbsp; MEET AARON</span></div>
+ <div class="sample-hero">
+  <div class="sample-copy"><small>A STUDIO BY AARON / 01</small><h3>You built a business to have a life.<em>Let's make it better.</em></h3><p>Creative fixes for real business problems, from websites to workflows to ideas nobody's built yet.</p></div>
+  <aside class="sample-panel"><small>THE WAY I SEE IT</small><strong>Understand the problem.</strong><span>Then find the right fix.</span></aside>
+ </div>
+ <div class="sample-flow">
+  <div class="stage stage-story"><b>THE PROBLEMS</b><span>Where it hurts</span></div>
+  <div class="stage stage-method"><b>THE APPROACH</b><span>Find the fix</span></div>
+  <div class="stage stage-time"><b>TIME &amp; LIFE</b><span>What matters</span></div>
+  <div class="stage stage-idea"><b>NEW IDEAS</b><span>Build better</span></div>
+  <div class="stage stage-founder"><b>ABOUT AARON</b><span>Experience</span></div>
+  <div class="stage stage-contact"><b>LET'S TALK</b><span>Start here</span></div>
+ </div>
 </div>
-<div class="specimen-info">
- <div class="specimen-title"><span class="number">01 / 10</span><h2>Harbor After Dark</h2><p>Cool water, deep ink, quiet warmth.</p><span class="tone">cool cinematic</span></div>
- <div class="swatches"><span style="background:#081E2A" title="Deep base"></span><span style="background:#123B46" title="Midtone"></span><span style="background:#BCD4D0" title="Story background"></span><span style="background:#CEE2E0" title="Light tint"></span><span style="background:#85DFE1" title="Accent"></span><span style="background:#ED9E86" title="Warm detail"></span></div>
- <a href="/?colors=01" class="preview">See Harbor After Dark on the actual Archiebase site <span class="preview-mark">Preview 01</span></a>
+<div class="details">
+ <div><span class="index">DIRECTION 01 / 10</span><h2>Acid / Velvet</h2><p>A chartreuse poster, violet depth, warm orange interruption.</p><span class="vibe">Electric & audacious</span></div>
+ <div class="palette-chips"><i style="background:#211B55" title="Navigation"></i><i style="background:#DBFF4D" title="Hero"></i><i style="background:#D9BCFF" title="Stories"></i><i style="background:#FF8960" title="Approach"></i><i style="background:#21194C" title="Time and life"></i><i style="background:#E7D8FF" title="Creative possibilities"></i><i style="background:#D9F958" title="Founder's story"></i><i style="background:#31265E" title="Contact"></i></div>
+ <a class="view" href="/?colors=01">Preview Acid / Velvet across the actual site <span>VIEW 01</span></a>
 </div></article>
-<article class="specimen" id="palette-02" style="--c-night:#171E22;--c-mid:#333B3B;--c-light:#DFD3C7;--c-light2:#CFBDAF;--c-accent:#EDAD86;--c-accent-dark:#865035;--c-warm:#A7D4CA;--c-ink:#342B29;--c-on-dark:#F8F2ED;--c-muted-dark:#DED2CA;--c-on-light:#614C45">
-<div class="site-mini">
-  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
-  <div class="mini-hero"><small>STUDIO BY AARON / 02</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
-  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+<article class="direction" id="direction-02" style="--v-nav:#142BB6;--v-navText:#FFFFFF;--v-hero:#2449F0;--v-heroText:#FFFFFF;--v-heroHi:#FFF076;--v-panel:#FFDDCB;--v-panelText:#2D2554;--v-story:#FEE7CB;--v-storyText:#24284C;--v-method:#FA744C;--v-methodText:#25203C;--v-time:#1D2C71;--v-timeText:#FFFFFF;--v-idea:#BBDAFF;--v-ideaText:#24335C;--v-founder:#FFCBD1;--v-founderText:#311F46;--v-contact:#DCE7FF;--v-contactText:#233059">
+<div class="site-preview">
+ <div class="sample-nav"><span class="brand">archie<span>•</span>base</span><span class="nav-mini">THE PROBLEMS &nbsp; HOW I WORK &nbsp; MEET AARON</span></div>
+ <div class="sample-hero">
+  <div class="sample-copy"><small>A STUDIO BY AARON / 02</small><h3>You built a business to have a life.<em>Let's make it better.</em></h3><p>Creative fixes for real business problems, from websites to workflows to ideas nobody's built yet.</p></div>
+  <aside class="sample-panel"><small>THE WAY I SEE IT</small><strong>Understand the problem.</strong><span>Then find the right fix.</span></aside>
+ </div>
+ <div class="sample-flow">
+  <div class="stage stage-story"><b>THE PROBLEMS</b><span>Where it hurts</span></div>
+  <div class="stage stage-method"><b>THE APPROACH</b><span>Find the fix</span></div>
+  <div class="stage stage-time"><b>TIME &amp; LIFE</b><span>What matters</span></div>
+  <div class="stage stage-idea"><b>NEW IDEAS</b><span>Build better</span></div>
+  <div class="stage stage-founder"><b>ABOUT AARON</b><span>Experience</span></div>
+  <div class="stage stage-contact"><b>LET'S TALK</b><span>Start here</span></div>
+ </div>
 </div>
-<div class="specimen-info">
- <div class="specimen-title"><span class="number">02 / 10</span><h2>Cinder & Copper</h2><p>Graphite, weathered stone, honest copper.</p><span class="tone">warm industrial</span></div>
- <div class="swatches"><span style="background:#171E22" title="Deep base"></span><span style="background:#333B3B" title="Midtone"></span><span style="background:#CFBDAF" title="Story background"></span><span style="background:#DFD3C7" title="Light tint"></span><span style="background:#EDAD86" title="Accent"></span><span style="background:#A7D4CA" title="Warm detail"></span></div>
- <a href="/?colors=02" class="preview">See Cinder & Copper on the actual Archiebase site <span class="preview-mark">Preview 02</span></a>
+<div class="details">
+ <div><span class="index">DIRECTION 02 / 10</span><h2>Cobalt / Tomato</h2><p>Pure electric blue meets vermilion and custard yellow.</p><span class="vibe">Graphic & confident</span></div>
+ <div class="palette-chips"><i style="background:#142BB6" title="Navigation"></i><i style="background:#2449F0" title="Hero"></i><i style="background:#FEE7CB" title="Stories"></i><i style="background:#FA744C" title="Approach"></i><i style="background:#1D2C71" title="Time and life"></i><i style="background:#BBDAFF" title="Creative possibilities"></i><i style="background:#FFCBD1" title="Founder's story"></i><i style="background:#DCE7FF" title="Contact"></i></div>
+ <a class="view" href="/?colors=02">Preview Cobalt / Tomato across the actual site <span>VIEW 02</span></a>
 </div></article>
-<article class="specimen" id="palette-03" style="--c-night:#1F1729;--c-mid:#3D2947;--c-light:#E4D6E3;--c-light2:#D5BFCE;--c-accent:#E0AFE2;--c-accent-dark:#7D3A75;--c-warm:#ECA98E;--c-ink:#38263B;--c-on-dark:#F9F4F8;--c-muted-dark:#DFCFE0;--c-on-light:#675069">
-<div class="site-mini">
-  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
-  <div class="mini-hero"><small>STUDIO BY AARON / 03</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
-  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+<article class="direction" id="direction-03" style="--v-nav:#4A153B;--v-navText:#FFFFFF;--v-hero:#A60D54;--v-heroText:#FFFFFF;--v-heroHi:#FFE46B;--v-panel:#FFE09E;--v-panelText:#471B38;--v-story:#F7C6D4;--v-storyText:#421B36;--v-method:#B31C60;--v-methodText:#FFFFFF;--v-time:#411634;--v-timeText:#FFFFFF;--v-idea:#FFE58C;--v-ideaText:#40203B;--v-founder:#F9A6C2;--v-founderText:#401B37;--v-contact:#57193F;--v-contactText:#FFFFFF">
+<div class="site-preview">
+ <div class="sample-nav"><span class="brand">archie<span>•</span>base</span><span class="nav-mini">THE PROBLEMS &nbsp; HOW I WORK &nbsp; MEET AARON</span></div>
+ <div class="sample-hero">
+  <div class="sample-copy"><small>A STUDIO BY AARON / 03</small><h3>You built a business to have a life.<em>Let's make it better.</em></h3><p>Creative fixes for real business problems, from websites to workflows to ideas nobody's built yet.</p></div>
+  <aside class="sample-panel"><small>THE WAY I SEE IT</small><strong>Understand the problem.</strong><span>Then find the right fix.</span></aside>
+ </div>
+ <div class="sample-flow">
+  <div class="stage stage-story"><b>THE PROBLEMS</b><span>Where it hurts</span></div>
+  <div class="stage stage-method"><b>THE APPROACH</b><span>Find the fix</span></div>
+  <div class="stage stage-time"><b>TIME &amp; LIFE</b><span>What matters</span></div>
+  <div class="stage stage-idea"><b>NEW IDEAS</b><span>Build better</span></div>
+  <div class="stage stage-founder"><b>ABOUT AARON</b><span>Experience</span></div>
+  <div class="stage stage-contact"><b>LET'S TALK</b><span>Start here</span></div>
+ </div>
 </div>
-<div class="specimen-info">
- <div class="specimen-title"><span class="number">03 / 10</span><h2>Midnight Fig</h2><p>Inky plum, lavender haze, soft apricot.</p><span class="tone">rich editorial</span></div>
- <div class="swatches"><span style="background:#1F1729" title="Deep base"></span><span style="background:#3D2947" title="Midtone"></span><span style="background:#D5BFCE" title="Story background"></span><span style="background:#E4D6E3" title="Light tint"></span><span style="background:#E0AFE2" title="Accent"></span><span style="background:#ECA98E" title="Warm detail"></span></div>
- <a href="/?colors=03" class="preview">See Midnight Fig on the actual Archiebase site <span class="preview-mark">Preview 03</span></a>
+<div class="details">
+ <div><span class="index">DIRECTION 03 / 10</span><h2>Cherry Bomb</h2><p>Cherry-cola red, marigold, blush and raspberry.</p><span class="vibe">Confident & expressive</span></div>
+ <div class="palette-chips"><i style="background:#4A153B" title="Navigation"></i><i style="background:#A60D54" title="Hero"></i><i style="background:#F7C6D4" title="Stories"></i><i style="background:#B31C60" title="Approach"></i><i style="background:#411634" title="Time and life"></i><i style="background:#FFE58C" title="Creative possibilities"></i><i style="background:#F9A6C2" title="Founder's story"></i><i style="background:#57193F" title="Contact"></i></div>
+ <a class="view" href="/?colors=03">Preview Cherry Bomb across the actual site <span>VIEW 03</span></a>
 </div></article>
-<article class="specimen" id="palette-04" style="--c-night:#0C2420;--c-mid:#244138;--c-light:#D8E5CE;--c-light2:#BFCEB6;--c-accent:#C8E38B;--c-accent-dark:#3F672F;--c-warm:#F0A58C;--c-ink:#253B2F;--c-on-dark:#F5FAF0;--c-muted-dark:#D3E3D4;--c-on-light:#526654">
-<div class="site-mini">
-  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
-  <div class="mini-hero"><small>STUDIO BY AARON / 04</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
-  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+<article class="direction" id="direction-04" style="--v-nav:#31251C;--v-navText:#FFFFFF;--v-hero:#E68A47;--v-heroText:#2D261B;--v-heroHi:#43291C;--v-panel:#344531;--v-panelText:#FFFFFF;--v-story:#E8D3B3;--v-storyText:#3A2B20;--v-method:#34392B;--v-methodText:#FFFFFF;--v-time:#75482D;--v-timeText:#FFFFFF;--v-idea:#D6E8BC;--v-ideaText:#2D3B2C;--v-founder:#F0BC8F;--v-founderText:#3B2A21;--v-contact:#E8D3B3;--v-contactText:#3A2B20">
+<div class="site-preview">
+ <div class="sample-nav"><span class="brand">archie<span>•</span>base</span><span class="nav-mini">THE PROBLEMS &nbsp; HOW I WORK &nbsp; MEET AARON</span></div>
+ <div class="sample-hero">
+  <div class="sample-copy"><small>A STUDIO BY AARON / 04</small><h3>You built a business to have a life.<em>Let's make it better.</em></h3><p>Creative fixes for real business problems, from websites to workflows to ideas nobody's built yet.</p></div>
+  <aside class="sample-panel"><small>THE WAY I SEE IT</small><strong>Understand the problem.</strong><span>Then find the right fix.</span></aside>
+ </div>
+ <div class="sample-flow">
+  <div class="stage stage-story"><b>THE PROBLEMS</b><span>Where it hurts</span></div>
+  <div class="stage stage-method"><b>THE APPROACH</b><span>Find the fix</span></div>
+  <div class="stage stage-time"><b>TIME &amp; LIFE</b><span>What matters</span></div>
+  <div class="stage stage-idea"><b>NEW IDEAS</b><span>Build better</span></div>
+  <div class="stage stage-founder"><b>ABOUT AARON</b><span>Experience</span></div>
+  <div class="stage stage-contact"><b>LET'S TALK</b><span>Start here</span></div>
+ </div>
 </div>
-<div class="specimen-info">
- <div class="specimen-title"><span class="number">04 / 10</span><h2>Evergreen Voltage</h2><p>Forest shadows with an electric edge.</p><span class="tone">organic forward</span></div>
- <div class="swatches"><span style="background:#0C2420" title="Deep base"></span><span style="background:#244138" title="Midtone"></span><span style="background:#BFCEB6" title="Story background"></span><span style="background:#D8E5CE" title="Light tint"></span><span style="background:#C8E38B" title="Accent"></span><span style="background:#F0A58C" title="Warm detail"></span></div>
- <a href="/?colors=04" class="preview">See Evergreen Voltage on the actual Archiebase site <span class="preview-mark">Preview 04</span></a>
+<div class="details">
+ <div><span class="index">DIRECTION 04 / 10</span><h2>Sunbaked Workshop</h2><p>Burnt orange, dark olive, clay and worn linen.</p><span class="vibe">Earthy & tactile</span></div>
+ <div class="palette-chips"><i style="background:#31251C" title="Navigation"></i><i style="background:#E68A47" title="Hero"></i><i style="background:#E8D3B3" title="Stories"></i><i style="background:#34392B" title="Approach"></i><i style="background:#75482D" title="Time and life"></i><i style="background:#D6E8BC" title="Creative possibilities"></i><i style="background:#F0BC8F" title="Founder's story"></i><i style="background:#E8D3B3" title="Contact"></i></div>
+ <a class="view" href="/?colors=04">Preview Sunbaked Workshop across the actual site <span>VIEW 04</span></a>
 </div></article>
-<article class="specimen" id="palette-05" style="--c-night:#172044;--c-mid:#33436C;--c-light:#D9DFFA;--c-light2:#C3CDEE;--c-accent:#AFC6FF;--c-accent-dark:#3555A1;--c-warm:#FFC0A4;--c-ink:#253059;--c-on-dark:#F3F6FF;--c-muted-dark:#D5DDF4;--c-on-light:#526086">
-<div class="site-mini">
-  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
-  <div class="mini-hero"><small>STUDIO BY AARON / 05</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
-  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+<article class="direction" id="direction-05" style="--v-nav:#4A1557;--v-navText:#FFFFFF;--v-hero:#F1C0FD;--v-heroText:#452157;--v-heroHi:#702983;--v-panel:#DDFB78;--v-panelText:#294022;--v-story:#DDFB78;--v-storyText:#2A4125;--v-method:#A12986;--v-methodText:#FFFFFF;--v-time:#411949;--v-timeText:#FFFFFF;--v-idea:#B4F2E9;--v-ideaText:#204A4B;--v-founder:#F9AFBD;--v-founderText:#45203F;--v-contact:#D6B2FA;--v-contactText:#3A2554">
+<div class="site-preview">
+ <div class="sample-nav"><span class="brand">archie<span>•</span>base</span><span class="nav-mini">THE PROBLEMS &nbsp; HOW I WORK &nbsp; MEET AARON</span></div>
+ <div class="sample-hero">
+  <div class="sample-copy"><small>A STUDIO BY AARON / 05</small><h3>You built a business to have a life.<em>Let's make it better.</em></h3><p>Creative fixes for real business problems, from websites to workflows to ideas nobody's built yet.</p></div>
+  <aside class="sample-panel"><small>THE WAY I SEE IT</small><strong>Understand the problem.</strong><span>Then find the right fix.</span></aside>
+ </div>
+ <div class="sample-flow">
+  <div class="stage stage-story"><b>THE PROBLEMS</b><span>Where it hurts</span></div>
+  <div class="stage stage-method"><b>THE APPROACH</b><span>Find the fix</span></div>
+  <div class="stage stage-time"><b>TIME &amp; LIFE</b><span>What matters</span></div>
+  <div class="stage stage-idea"><b>NEW IDEAS</b><span>Build better</span></div>
+  <div class="stage stage-founder"><b>ABOUT AARON</b><span>Experience</span></div>
+  <div class="stage stage-contact"><b>LET'S TALK</b><span>Start here</span></div>
+ </div>
 </div>
-<div class="specimen-info">
- <div class="specimen-title"><span class="number">05 / 10</span><h2>Indigo & Peach</h2><p>Deep indigo, powder blue, warm sunrise.</p><span class="tone">creative confident</span></div>
- <div class="swatches"><span style="background:#172044" title="Deep base"></span><span style="background:#33436C" title="Midtone"></span><span style="background:#C3CDEE" title="Story background"></span><span style="background:#D9DFFA" title="Light tint"></span><span style="background:#AFC6FF" title="Accent"></span><span style="background:#FFC0A4" title="Warm detail"></span></div>
- <a href="/?colors=05" class="preview">See Indigo & Peach on the actual Archiebase site <span class="preview-mark">Preview 05</span></a>
+<div class="details">
+ <div><span class="index">DIRECTION 05 / 10</span><h2>Bubblegum & Wasabi</h2><p>Lavender pink, lime candy, bright turquoise and berry.</p><span class="vibe">Unapologetically playful</span></div>
+ <div class="palette-chips"><i style="background:#4A1557" title="Navigation"></i><i style="background:#F1C0FD" title="Hero"></i><i style="background:#DDFB78" title="Stories"></i><i style="background:#A12986" title="Approach"></i><i style="background:#411949" title="Time and life"></i><i style="background:#B4F2E9" title="Creative possibilities"></i><i style="background:#F9AFBD" title="Founder's story"></i><i style="background:#D6B2FA" title="Contact"></i></div>
+ <a class="view" href="/?colors=05">Preview Bubblegum & Wasabi across the actual site <span>VIEW 05</span></a>
 </div></article>
-<article class="specimen" id="palette-06" style="--c-night:#272123;--c-mid:#514044;--c-light:#E2D6D4;--c-light2:#D5C0C0;--c-accent:#F0B5AD;--c-accent-dark:#9A4D52;--c-warm:#C0D6C3;--c-ink:#3B2931;--c-on-dark:#FBF5F3;--c-muted-dark:#E9DADB;--c-on-light:#70565E">
-<div class="site-mini">
-  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
-  <div class="mini-hero"><small>STUDIO BY AARON / 06</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
-  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+<article class="direction" id="direction-06" style="--v-nav:#171717;--v-navText:#FFFFFF;--v-hero:#171717;--v-heroText:#FFFFFF;--v-heroHi:#FF813F;--v-panel:#D5E1DB;--v-panelText:#182B26;--v-story:#CED8DC;--v-storyText:#1C2C31;--v-method:#F7823E;--v-methodText:#302117;--v-time:#272727;--v-timeText:#FFFFFF;--v-idea:#D6ED9E;--v-ideaText:#303D28;--v-founder:#D8D2C1;--v-founderText:#2D2D29;--v-contact:#D4DCDD;--v-contactText:#222D31">
+<div class="site-preview">
+ <div class="sample-nav"><span class="brand">archie<span>•</span>base</span><span class="nav-mini">THE PROBLEMS &nbsp; HOW I WORK &nbsp; MEET AARON</span></div>
+ <div class="sample-hero">
+  <div class="sample-copy"><small>A STUDIO BY AARON / 06</small><h3>You built a business to have a life.<em>Let's make it better.</em></h3><p>Creative fixes for real business problems, from websites to workflows to ideas nobody's built yet.</p></div>
+  <aside class="sample-panel"><small>THE WAY I SEE IT</small><strong>Understand the problem.</strong><span>Then find the right fix.</span></aside>
+ </div>
+ <div class="sample-flow">
+  <div class="stage stage-story"><b>THE PROBLEMS</b><span>Where it hurts</span></div>
+  <div class="stage stage-method"><b>THE APPROACH</b><span>Find the fix</span></div>
+  <div class="stage stage-time"><b>TIME &amp; LIFE</b><span>What matters</span></div>
+  <div class="stage stage-idea"><b>NEW IDEAS</b><span>Build better</span></div>
+  <div class="stage stage-founder"><b>ABOUT AARON</b><span>Experience</span></div>
+  <div class="stage stage-contact"><b>LET'S TALK</b><span>Start here</span></div>
+ </div>
 </div>
-<div class="specimen-info">
- <div class="specimen-title"><span class="number">06 / 10</span><h2>Oxide & Ash</h2><p>Soft black, dusty rose, eucalyptus.</p><span class="tone">moody human</span></div>
- <div class="swatches"><span style="background:#272123" title="Deep base"></span><span style="background:#514044" title="Midtone"></span><span style="background:#D5C0C0" title="Story background"></span><span style="background:#E2D6D4" title="Light tint"></span><span style="background:#F0B5AD" title="Accent"></span><span style="background:#C0D6C3" title="Warm detail"></span></div>
- <a href="/?colors=06" class="preview">See Oxide & Ash on the actual Archiebase site <span class="preview-mark">Preview 06</span></a>
+<div class="details">
+ <div><span class="index">DIRECTION 06 / 10</span><h2>Black Label / Safety Orange</h2><p>Hard black, safety orange, brushed steel and bone.</p><span class="vibe">Industrial & iconic</span></div>
+ <div class="palette-chips"><i style="background:#171717" title="Navigation"></i><i style="background:#171717" title="Hero"></i><i style="background:#CED8DC" title="Stories"></i><i style="background:#F7823E" title="Approach"></i><i style="background:#272727" title="Time and life"></i><i style="background:#D6ED9E" title="Creative possibilities"></i><i style="background:#D8D2C1" title="Founder's story"></i><i style="background:#D4DCDD" title="Contact"></i></div>
+ <a class="view" href="/?colors=06">Preview Black Label / Safety Orange across the actual site <span>VIEW 06</span></a>
 </div></article>
-<article class="specimen" id="palette-07" style="--c-night:#08252E;--c-mid:#19515A;--c-light:#CADFD9;--c-light2:#AFCDC6;--c-accent:#8AD9D1;--c-accent-dark:#135F64;--c-warm:#E7A47C;--c-ink:#193E43;--c-on-dark:#EFF9F6;--c-muted-dark:#D0E7E4;--c-on-light:#43696B">
-<div class="site-mini">
-  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
-  <div class="mini-hero"><small>STUDIO BY AARON / 07</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
-  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+<article class="direction" id="direction-07" style="--v-nav:#0A4944;--v-navText:#FFFFFF;--v-hero:#24B6A9;--v-heroText:#092E30;--v-heroHi:#08373D;--v-panel:#FFD86A;--v-panelText:#4C311A;--v-story:#FCE07F;--v-storyText:#223C37;--v-method:#FB8B6F;--v-methodText:#352528;--v-time:#0D4141;--v-timeText:#FFFFFF;--v-idea:#C8F3DE;--v-ideaText:#25423B;--v-founder:#FBC5A8;--v-founderText:#42332D;--v-contact:#115D56;--v-contactText:#FFFFFF">
+<div class="site-preview">
+ <div class="sample-nav"><span class="brand">archie<span>•</span>base</span><span class="nav-mini">THE PROBLEMS &nbsp; HOW I WORK &nbsp; MEET AARON</span></div>
+ <div class="sample-hero">
+  <div class="sample-copy"><small>A STUDIO BY AARON / 07</small><h3>You built a business to have a life.<em>Let's make it better.</em></h3><p>Creative fixes for real business problems, from websites to workflows to ideas nobody's built yet.</p></div>
+  <aside class="sample-panel"><small>THE WAY I SEE IT</small><strong>Understand the problem.</strong><span>Then find the right fix.</span></aside>
+ </div>
+ <div class="sample-flow">
+  <div class="stage stage-story"><b>THE PROBLEMS</b><span>Where it hurts</span></div>
+  <div class="stage stage-method"><b>THE APPROACH</b><span>Find the fix</span></div>
+  <div class="stage stage-time"><b>TIME &amp; LIFE</b><span>What matters</span></div>
+  <div class="stage stage-idea"><b>NEW IDEAS</b><span>Build better</span></div>
+  <div class="stage stage-founder"><b>ABOUT AARON</b><span>Experience</span></div>
+  <div class="stage stage-contact"><b>LET'S TALK</b><span>Start here</span></div>
+ </div>
 </div>
-<div class="specimen-info">
- <div class="specimen-title"><span class="number">07 / 10</span><h2>Deep Petrol</h2><p>Petrol green, verdigris, faded terracotta.</p><span class="tone">modern grounded</span></div>
- <div class="swatches"><span style="background:#08252E" title="Deep base"></span><span style="background:#19515A" title="Midtone"></span><span style="background:#AFCDC6" title="Story background"></span><span style="background:#CADFD9" title="Light tint"></span><span style="background:#8AD9D1" title="Accent"></span><span style="background:#E7A47C" title="Warm detail"></span></div>
- <a href="/?colors=07" class="preview">See Deep Petrol on the actual Archiebase site <span class="preview-mark">Preview 07</span></a>
+<div class="details">
+ <div><span class="index">DIRECTION 07 / 10</span><h2>Tropical Signal</h2><p>Clear turquoise, tomato, mango and limewash.</p><span class="vibe">Fresh & fearless</span></div>
+ <div class="palette-chips"><i style="background:#0A4944" title="Navigation"></i><i style="background:#24B6A9" title="Hero"></i><i style="background:#FCE07F" title="Stories"></i><i style="background:#FB8B6F" title="Approach"></i><i style="background:#0D4141" title="Time and life"></i><i style="background:#C8F3DE" title="Creative possibilities"></i><i style="background:#FBC5A8" title="Founder's story"></i><i style="background:#115D56" title="Contact"></i></div>
+ <a class="view" href="/?colors=07">Preview Tropical Signal across the actual site <span>VIEW 07</span></a>
 </div></article>
-<article class="specimen" id="palette-08" style="--c-night:#201C3D;--c-mid:#423B6A;--c-light:#DDD8EE;--c-light2:#C7C1E0;--c-accent:#C6B9FF;--c-accent-dark:#6250AD;--c-warm:#FFA998;--c-ink:#302C53;--c-on-dark:#FAF7FF;--c-muted-dark:#DDD7F2;--c-on-light:#655B86">
-<div class="site-mini">
-  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
-  <div class="mini-hero"><small>STUDIO BY AARON / 08</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
-  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+<article class="direction" id="direction-08" style="--v-nav:#251052;--v-navText:#FFFFFF;--v-hero:#6A34C7;--v-heroText:#FFFFFF;--v-heroHi:#E5FB6C;--v-panel:#E3FA88;--v-panelText:#2A214E;--v-story:#E1F66B;--v-storyText:#2A2C41;--v-method:#281252;--v-methodText:#FFFFFF;--v-time:#241344;--v-timeText:#FFFFFF;--v-idea:#F4A7BE;--v-ideaText:#44263E;--v-founder:#CCBDFC;--v-founderText:#302450;--v-contact:#EDDFF5;--v-contactText:#3E2957">
+<div class="site-preview">
+ <div class="sample-nav"><span class="brand">archie<span>•</span>base</span><span class="nav-mini">THE PROBLEMS &nbsp; HOW I WORK &nbsp; MEET AARON</span></div>
+ <div class="sample-hero">
+  <div class="sample-copy"><small>A STUDIO BY AARON / 08</small><h3>You built a business to have a life.<em>Let's make it better.</em></h3><p>Creative fixes for real business problems, from websites to workflows to ideas nobody's built yet.</p></div>
+  <aside class="sample-panel"><small>THE WAY I SEE IT</small><strong>Understand the problem.</strong><span>Then find the right fix.</span></aside>
+ </div>
+ <div class="sample-flow">
+  <div class="stage stage-story"><b>THE PROBLEMS</b><span>Where it hurts</span></div>
+  <div class="stage stage-method"><b>THE APPROACH</b><span>Find the fix</span></div>
+  <div class="stage stage-time"><b>TIME &amp; LIFE</b><span>What matters</span></div>
+  <div class="stage stage-idea"><b>NEW IDEAS</b><span>Build better</span></div>
+  <div class="stage stage-founder"><b>ABOUT AARON</b><span>Experience</span></div>
+  <div class="stage stage-contact"><b>LET'S TALK</b><span>Start here</span></div>
+ </div>
 </div>
-<div class="specimen-info">
- <div class="specimen-title"><span class="number">08 / 10</span><h2>Violet Hour</h2><p>Night indigo, iris light, coral spark.</p><span class="tone">bold creative</span></div>
- <div class="swatches"><span style="background:#201C3D" title="Deep base"></span><span style="background:#423B6A" title="Midtone"></span><span style="background:#C7C1E0" title="Story background"></span><span style="background:#DDD8EE" title="Light tint"></span><span style="background:#C6B9FF" title="Accent"></span><span style="background:#FFA998" title="Warm detail"></span></div>
- <a href="/?colors=08" class="preview">See Violet Hour on the actual Archiebase site <span class="preview-mark">Preview 08</span></a>
+<div class="details">
+ <div><span class="index">DIRECTION 08 / 10</span><h2>Purple Rebellion</h2><p>Saturated amethyst, sulfur yellow and hot rose.</p><span class="vibe">Art-school & kinetic</span></div>
+ <div class="palette-chips"><i style="background:#251052" title="Navigation"></i><i style="background:#6A34C7" title="Hero"></i><i style="background:#E1F66B" title="Stories"></i><i style="background:#281252" title="Approach"></i><i style="background:#241344" title="Time and life"></i><i style="background:#F4A7BE" title="Creative possibilities"></i><i style="background:#CCBDFC" title="Founder's story"></i><i style="background:#EDDFF5" title="Contact"></i></div>
+ <a class="view" href="/?colors=08">Preview Purple Rebellion across the actual site <span>VIEW 08</span></a>
 </div></article>
-<article class="specimen" id="palette-09" style="--c-night:#261D1B;--c-mid:#5B3F39;--c-light:#E5D9C8;--c-light2:#D5C4AC;--c-accent:#E9B28F;--c-accent-dark:#8B4D38;--c-warm:#A9D2C4;--c-ink:#4A322C;--c-on-dark:#F9F3E9;--c-muted-dark:#E7D7C6;--c-on-light:#70574A">
-<div class="site-mini">
-  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
-  <div class="mini-hero"><small>STUDIO BY AARON / 09</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
-  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+<article class="direction" id="direction-09" style="--v-nav:#772843;--v-navText:#FFFFFF;--v-hero:#A9DFFF;--v-heroText:#243451;--v-heroHi:#762D4E;--v-panel:#732B45;--v-panelText:#FFFFFF;--v-story:#802E49;--v-storyText:#FFFFFF;--v-method:#FFCCBD;--v-methodText:#302D48;--v-time:#1B3056;--v-timeText:#FFFFFF;--v-idea:#DCCBF7;--v-ideaText:#342D55;--v-founder:#CCE6F4;--v-founderText:#273C54;--v-contact:#F7DDE2;--v-contactText:#38314C">
+<div class="site-preview">
+ <div class="sample-nav"><span class="brand">archie<span>•</span>base</span><span class="nav-mini">THE PROBLEMS &nbsp; HOW I WORK &nbsp; MEET AARON</span></div>
+ <div class="sample-hero">
+  <div class="sample-copy"><small>A STUDIO BY AARON / 09</small><h3>You built a business to have a life.<em>Let's make it better.</em></h3><p>Creative fixes for real business problems, from websites to workflows to ideas nobody's built yet.</p></div>
+  <aside class="sample-panel"><small>THE WAY I SEE IT</small><strong>Understand the problem.</strong><span>Then find the right fix.</span></aside>
+ </div>
+ <div class="sample-flow">
+  <div class="stage stage-story"><b>THE PROBLEMS</b><span>Where it hurts</span></div>
+  <div class="stage stage-method"><b>THE APPROACH</b><span>Find the fix</span></div>
+  <div class="stage stage-time"><b>TIME &amp; LIFE</b><span>What matters</span></div>
+  <div class="stage stage-idea"><b>NEW IDEAS</b><span>Build better</span></div>
+  <div class="stage stage-founder"><b>ABOUT AARON</b><span>Experience</span></div>
+  <div class="stage stage-contact"><b>LET'S TALK</b><span>Start here</span></div>
+ </div>
 </div>
-<div class="specimen-info">
- <div class="specimen-title"><span class="number">09 / 10</span><h2>Coffee & Terracotta</h2><p>Espresso, fired clay, gentle sage.</p><span class="tone">crafted warm</span></div>
- <div class="swatches"><span style="background:#261D1B" title="Deep base"></span><span style="background:#5B3F39" title="Midtone"></span><span style="background:#D5C4AC" title="Story background"></span><span style="background:#E5D9C8" title="Light tint"></span><span style="background:#E9B28F" title="Accent"></span><span style="background:#A9D2C4" title="Warm detail"></span></div>
- <a href="/?colors=09" class="preview">See Coffee & Terracotta on the actual Archiebase site <span class="preview-mark">Preview 09</span></a>
+<div class="details">
+ <div><span class="index">DIRECTION 09 / 10</span><h2>Sky / Oxblood</h2><p>Sky blue runs straight into deep wine and blush.</p><span class="vibe">Unexpected & elegant</span></div>
+ <div class="palette-chips"><i style="background:#772843" title="Navigation"></i><i style="background:#A9DFFF" title="Hero"></i><i style="background:#802E49" title="Stories"></i><i style="background:#FFCCBD" title="Approach"></i><i style="background:#1B3056" title="Time and life"></i><i style="background:#DCCBF7" title="Creative possibilities"></i><i style="background:#CCE6F4" title="Founder's story"></i><i style="background:#F7DDE2" title="Contact"></i></div>
+ <a class="view" href="/?colors=09">Preview Sky / Oxblood across the actual site <span>VIEW 09</span></a>
 </div></article>
-<article class="specimen" id="palette-10" style="--c-night:#0F1C27;--c-mid:#2D4859;--c-light:#D4E3EB;--c-light2:#B7D2DF;--c-accent:#A4DCFC;--c-accent-dark:#1C6188;--c-warm:#D8B8E4;--c-ink:#223B4B;--c-on-dark:#F4F9FC;--c-muted-dark:#D0E2EC;--c-on-light:#546F80">
-<div class="site-mini">
-  <div class="mini-nav"><span class="mini-brand">archie<span>•</span>base</span><span class="mini-navigation">PROBLEMS &nbsp;·&nbsp; HOW I WORK &nbsp;·&nbsp; CONTACT</span></div>
-  <div class="mini-hero"><small>STUDIO BY AARON / 10</small><h3>Build a better business.<em>Make more room to live.</em></h3><p>I love finding the actual problem and building whatever makes it better.</p><span class="mini-action">Tell me what you'd like to improve</span></div>
-  <div class="scene-flow"><div class="flow-stage story"><strong>REAL STORIES</strong><span>What isn't working?</span></div><div class="flow-stage approach"><strong>HOW I WORK</strong><span>Find the right fix</span></div><div class="flow-stage time"><strong>TIME &amp; LIFE</strong><span>What matters most</span></div><div class="flow-stage ai"><strong>CREATIVE TOOLS</strong><span>Less friction</span></div><div class="flow-stage person"><strong>ABOUT AARON</strong><span>Real experience</span></div><div class="flow-stage contact"><strong>START HERE</strong><span>Let's talk</span></div></div>
+<article class="direction" id="direction-10" style="--v-nav:#421D18;--v-navText:#FFFFFF;--v-hero:#E8B83A;--v-heroText:#40271C;--v-heroHi:#662620;--v-panel:#522720;--v-panelText:#FFFFFF;--v-story:#AD3E2B;--v-storyText:#FFFFFF;--v-method:#302724;--v-methodText:#FFFFFF;--v-time:#5A2C24;--v-timeText:#FFFFFF;--v-idea:#D5E8A1;--v-ideaText:#2D3E27;--v-founder:#E6D5B7;--v-founderText:#443026;--v-contact:#F4BA93;--v-contactText:#442923">
+<div class="site-preview">
+ <div class="sample-nav"><span class="brand">archie<span>•</span>base</span><span class="nav-mini">THE PROBLEMS &nbsp; HOW I WORK &nbsp; MEET AARON</span></div>
+ <div class="sample-hero">
+  <div class="sample-copy"><small>A STUDIO BY AARON / 10</small><h3>You built a business to have a life.<em>Let's make it better.</em></h3><p>Creative fixes for real business problems, from websites to workflows to ideas nobody's built yet.</p></div>
+  <aside class="sample-panel"><small>THE WAY I SEE IT</small><strong>Understand the problem.</strong><span>Then find the right fix.</span></aside>
+ </div>
+ <div class="sample-flow">
+  <div class="stage stage-story"><b>THE PROBLEMS</b><span>Where it hurts</span></div>
+  <div class="stage stage-method"><b>THE APPROACH</b><span>Find the fix</span></div>
+  <div class="stage stage-time"><b>TIME &amp; LIFE</b><span>What matters</span></div>
+  <div class="stage stage-idea"><b>NEW IDEAS</b><span>Build better</span></div>
+  <div class="stage stage-founder"><b>ABOUT AARON</b><span>Experience</span></div>
+  <div class="stage stage-contact"><b>LET'S TALK</b><span>Start here</span></div>
+ </div>
 </div>
-<div class="specimen-info">
- <div class="specimen-title"><span class="number">10 / 10</span><h2>Carbon Ice</h2><p>Black-blue, steel, cold light, violet edge.</p><span class="tone">precise contemporary</span></div>
- <div class="swatches"><span style="background:#0F1C27" title="Deep base"></span><span style="background:#2D4859" title="Midtone"></span><span style="background:#B7D2DF" title="Story background"></span><span style="background:#D4E3EB" title="Light tint"></span><span style="background:#A4DCFC" title="Accent"></span><span style="background:#D8B8E4" title="Warm detail"></span></div>
- <a href="/?colors=10" class="preview">See Carbon Ice on the actual Archiebase site <span class="preview-mark">Preview 10</span></a>
+<div class="details">
+ <div><span class="index">DIRECTION 10 / 10</span><h2>Saffron & Carmine</h2><p>Golden yellow, rust red, pistachio and tobacco.</p><span class="vibe">Vintage & visceral</span></div>
+ <div class="palette-chips"><i style="background:#421D18" title="Navigation"></i><i style="background:#E8B83A" title="Hero"></i><i style="background:#AD3E2B" title="Stories"></i><i style="background:#302724" title="Approach"></i><i style="background:#5A2C24" title="Time and life"></i><i style="background:#D5E8A1" title="Creative possibilities"></i><i style="background:#E6D5B7" title="Founder's story"></i><i style="background:#F4BA93" title="Contact"></i></div>
+ <a class="view" href="/?colors=10">Preview Saffron & Carmine across the actual site <span>VIEW 10</span></a>
 </div></article></div>
-</main><footer><div class="wrap">Choose any direction to see it on the actual site. The color preview affects only pages opened with the palette parameter; it does not change the published default.</div></footer>
+</main>
+<footer><div class="wrap">Each preview opens the actual Archiebase homepage. Your published colors do not change until you choose a direction.</div></footer>
 </body></html>
