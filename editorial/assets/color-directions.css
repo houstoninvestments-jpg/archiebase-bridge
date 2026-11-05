@@ -1,0 +1,177 @@
+/* ARCHIEBASE / COLOR DIRECTIONS. Preview only: opt-in with ?colors=01..10. */
+/* PALETTE_CONFIG:[{"id":"01","name":"Harbor After Dark","tone":"cool cinematic","line":"Cool water, deep ink, quiet warmth.","night":"#081E2A","mid":"#123B46","light":"#CEE2E0","light2":"#BCD4D0","accent":"#85DFE1","accentDark":"#11667A","warm":"#ED9E86","ink":"#133846","onDark":"#F2F9F7","darkMute":"#C5DBDD","onLight":"#355965"},{"id":"02","name":"Cinder & Copper","tone":"warm industrial","line":"Graphite, weathered stone, honest copper.","night":"#171E22","mid":"#333B3B","light":"#DFD3C7","light2":"#CFBDAF","accent":"#EDAD86","accentDark":"#865035","warm":"#A7D4CA","ink":"#342B29","onDark":"#F8F2ED","darkMute":"#DED2CA","onLight":"#614C45"},{"id":"03","name":"Midnight Fig","tone":"rich editorial","line":"Inky plum, lavender haze, soft apricot.","night":"#1F1729","mid":"#3D2947","light":"#E4D6E3","light2":"#D5BFCE","accent":"#E0AFE2","accentDark":"#7D3A75","warm":"#ECA98E","ink":"#38263B","onDark":"#F9F4F8","darkMute":"#DFCFE0","onLight":"#675069"},{"id":"04","name":"Evergreen Voltage","tone":"organic forward","line":"Forest shadows with an electric edge.","night":"#0C2420","mid":"#244138","light":"#D8E5CE","light2":"#BFCEB6","accent":"#C8E38B","accentDark":"#3F672F","warm":"#F0A58C","ink":"#253B2F","onDark":"#F5FAF0","darkMute":"#D3E3D4","onLight":"#526654"},{"id":"05","name":"Indigo & Peach","tone":"creative confident","line":"Deep indigo, powder blue, warm sunrise.","night":"#172044","mid":"#33436C","light":"#D9DFFA","light2":"#C3CDEE","accent":"#AFC6FF","accentDark":"#3555A1","warm":"#FFC0A4","ink":"#253059","onDark":"#F3F6FF","darkMute":"#D5DDF4","onLight":"#526086"},{"id":"06","name":"Oxide & Ash","tone":"moody human","line":"Soft black, dusty rose, eucalyptus.","night":"#272123","mid":"#514044","light":"#E2D6D4","light2":"#D5C0C0","accent":"#F0B5AD","accentDark":"#9A4D52","warm":"#C0D6C3","ink":"#3B2931","onDark":"#FBF5F3","darkMute":"#E9DADB","onLight":"#70565E"},{"id":"07","name":"Deep Petrol","tone":"modern grounded","line":"Petrol green, verdigris, faded terracotta.","night":"#08252E","mid":"#19515A","light":"#CADFD9","light2":"#AFCDC6","accent":"#8AD9D1","accentDark":"#135F64","warm":"#E7A47C","ink":"#193E43","onDark":"#EFF9F6","darkMute":"#D0E7E4","onLight":"#43696B"},{"id":"08","name":"Violet Hour","tone":"bold creative","line":"Night indigo, iris light, coral spark.","night":"#201C3D","mid":"#423B6A","light":"#DDD8EE","light2":"#C7C1E0","accent":"#C6B9FF","accentDark":"#6250AD","warm":"#FFA998","ink":"#302C53","onDark":"#FAF7FF","darkMute":"#DDD7F2","onLight":"#655B86"},{"id":"09","name":"Coffee & Terracotta","tone":"crafted warm","line":"Espresso, fired clay, gentle sage.","night":"#261D1B","mid":"#5B3F39","light":"#E5D9C8","light2":"#D5C4AC","accent":"#E9B28F","accentDark":"#8B4D38","warm":"#A9D2C4","ink":"#4A322C","onDark":"#F9F3E9","darkMute":"#E7D7C6","onLight":"#70574A"},{"id":"10","name":"Carbon Ice","tone":"precise contemporary","line":"Black-blue, steel, cold light, violet edge.","night":"#0F1C27","mid":"#2D4859","light":"#D4E3EB","light2":"#B7D2DF","accent":"#A4DCFC","accentDark":"#1C6188","warm":"#D8B8E4","ink":"#223B4B","onDark":"#F4F9FC","darkMute":"#D0E2EC","onLight":"#546F80"}] */
+html[data-colors="01"]{--pc-night:#081E2A;--pc-mid:#123B46;--pc-light:#CEE2E0;--pc-light2:#BCD4D0;--pc-accent:#85DFE1;--pc-accentDark:#11667A;--pc-warm:#ED9E86;--pc-ink:#133846;--pc-onDark:#F2F9F7;--pc-darkMute:#C5DBDD;--pc-onLight:#355965;}
+html[data-colors="02"]{--pc-night:#171E22;--pc-mid:#333B3B;--pc-light:#DFD3C7;--pc-light2:#CFBDAF;--pc-accent:#EDAD86;--pc-accentDark:#865035;--pc-warm:#A7D4CA;--pc-ink:#342B29;--pc-onDark:#F8F2ED;--pc-darkMute:#DED2CA;--pc-onLight:#614C45;}
+html[data-colors="03"]{--pc-night:#1F1729;--pc-mid:#3D2947;--pc-light:#E4D6E3;--pc-light2:#D5BFCE;--pc-accent:#E0AFE2;--pc-accentDark:#7D3A75;--pc-warm:#ECA98E;--pc-ink:#38263B;--pc-onDark:#F9F4F8;--pc-darkMute:#DFCFE0;--pc-onLight:#675069;}
+html[data-colors="04"]{--pc-night:#0C2420;--pc-mid:#244138;--pc-light:#D8E5CE;--pc-light2:#BFCEB6;--pc-accent:#C8E38B;--pc-accentDark:#3F672F;--pc-warm:#F0A58C;--pc-ink:#253B2F;--pc-onDark:#F5FAF0;--pc-darkMute:#D3E3D4;--pc-onLight:#526654;}
+html[data-colors="05"]{--pc-night:#172044;--pc-mid:#33436C;--pc-light:#D9DFFA;--pc-light2:#C3CDEE;--pc-accent:#AFC6FF;--pc-accentDark:#3555A1;--pc-warm:#FFC0A4;--pc-ink:#253059;--pc-onDark:#F3F6FF;--pc-darkMute:#D5DDF4;--pc-onLight:#526086;}
+html[data-colors="06"]{--pc-night:#272123;--pc-mid:#514044;--pc-light:#E2D6D4;--pc-light2:#D5C0C0;--pc-accent:#F0B5AD;--pc-accentDark:#9A4D52;--pc-warm:#C0D6C3;--pc-ink:#3B2931;--pc-onDark:#FBF5F3;--pc-darkMute:#E9DADB;--pc-onLight:#70565E;}
+html[data-colors="07"]{--pc-night:#08252E;--pc-mid:#19515A;--pc-light:#CADFD9;--pc-light2:#AFCDC6;--pc-accent:#8AD9D1;--pc-accentDark:#135F64;--pc-warm:#E7A47C;--pc-ink:#193E43;--pc-onDark:#EFF9F6;--pc-darkMute:#D0E7E4;--pc-onLight:#43696B;}
+html[data-colors="08"]{--pc-night:#201C3D;--pc-mid:#423B6A;--pc-light:#DDD8EE;--pc-light2:#C7C1E0;--pc-accent:#C6B9FF;--pc-accentDark:#6250AD;--pc-warm:#FFA998;--pc-ink:#302C53;--pc-onDark:#FAF7FF;--pc-darkMute:#DDD7F2;--pc-onLight:#655B86;}
+html[data-colors="09"]{--pc-night:#261D1B;--pc-mid:#5B3F39;--pc-light:#E5D9C8;--pc-light2:#D5C4AC;--pc-accent:#E9B28F;--pc-accentDark:#8B4D38;--pc-warm:#A9D2C4;--pc-ink:#4A322C;--pc-onDark:#F9F3E9;--pc-darkMute:#E7D7C6;--pc-onLight:#70574A;}
+html[data-colors="10"]{--pc-night:#0F1C27;--pc-mid:#2D4859;--pc-light:#D4E3EB;--pc-light2:#B7D2DF;--pc-accent:#A4DCFC;--pc-accentDark:#1C6188;--pc-warm:#D8B8E4;--pc-ink:#223B4B;--pc-onDark:#F4F9FC;--pc-darkMute:#D0E2EC;--pc-onLight:#546F80;}
+html[data-colors]{
+ --pc-dark-line:color-mix(in srgb,var(--pc-onDark) 23%,transparent);
+ --pc-soft-line:color-mix(in srgb,var(--pc-ink) 18%,transparent);
+ --pc-light-hover:color-mix(in srgb,var(--pc-light) 77%,var(--pc-accent) 23%);
+ --pc-mid-hover:color-mix(in srgb,var(--pc-mid) 82%,var(--pc-accent) 18%);
+ --pc-soft-person:color-mix(in srgb,var(--pc-light) 65%,var(--pc-light2) 35%);
+ --pc-form-bg:color-mix(in srgb,var(--pc-light) 83%,var(--pc-light2) 17%);
+}
+html[data-colors] body{background:var(--pc-night)!important;color:var(--pc-onDark)!important}
+html[data-colors] .site-nav{background:var(--pc-night)!important;border-bottom:1px solid var(--pc-dark-line)!important;backdrop-filter:blur(14px)}
+html[data-colors] .wordmark,html[data-colors] .desktop-nav{color:var(--pc-onDark)!important}
+html[data-colors] .wordmark .dot{color:var(--pc-accent)!important}
+html[data-colors] .wordmark small{color:var(--pc-darkMute)!important}
+html[data-colors] .desktop-nav>a:not(.nav-action):hover{color:var(--pc-accent)!important}
+html[data-colors] .nav-action,html[data-colors] .primary-btn{background:var(--pc-accent)!important;border-color:var(--pc-accent)!important;color:var(--pc-night)!important;box-shadow:none!important}
+html[data-colors] .nav-action:hover,html[data-colors] .primary-btn:hover{background:var(--pc-onDark)!important;border-color:var(--pc-onDark)!important;color:var(--pc-night)!important}
+html[data-colors] .eyebrow:before{background:var(--pc-warm)!important}
+html[data-colors] ::selection{background:var(--pc-accent);color:var(--pc-night)}
+html[data-colors] .hero{background:var(--pc-night)!important;color:var(--pc-onDark)!important;border-color:var(--pc-dark-line)!important}
+html[data-colors] .hero .eyebrow{color:var(--pc-accent)!important}
+html[data-colors] .hero h1{color:var(--pc-onDark)!important}
+html[data-colors] .hero h1 em{color:var(--pc-accent)!important}
+html[data-colors] .hero .lede,html[data-colors] .hero .hero-turn{color:var(--pc-darkMute)!important}
+html[data-colors] .hero .lede strong,html[data-colors] .hero .hero-turn strong{color:var(--pc-onDark)!important}
+html[data-colors] .hero-proof{color:var(--pc-darkMute)!important}
+html[data-colors] .hero .secondary-link{color:var(--pc-accent)!important;border-color:var(--pc-accent)!important}
+html[data-colors] .hero-perspective.field-note{
+ background:var(--pc-mid)!important;color:var(--pc-onDark)!important;
+ border:1px solid var(--pc-dark-line)!important;border-left:3px solid var(--pc-warm)!important;box-shadow:none!important
+}
+html[data-colors] .hero-perspective.field-note:before{display:none}
+html[data-colors] .hero-perspective .label{color:var(--pc-accent)!important}
+html[data-colors] .hero-perspective h2,html[data-colors] .hero-perspective .perspective-rule strong{color:var(--pc-onDark)!important}
+html[data-colors] .hero-perspective>p,html[data-colors] .hero-perspective .perspective-rule span{color:var(--pc-darkMute)!important}
+html[data-colors] .hero-perspective .perspective-rule{border-color:var(--pc-dark-line)!important}
+html[data-colors] .hero-perspective .perspective-signature{color:var(--pc-accent)!important}
+html[data-colors] .real-life{background:var(--pc-light2)!important;color:var(--pc-ink)!important}
+html[data-colors] .real-life h2,html[data-colors] .reality h3,html[data-colors] .real-life .hint strong{color:var(--pc-ink)!important}
+html[data-colors] .real-life .section-head p,html[data-colors] .reality .moment,html[data-colors] .real-life .hint{color:var(--pc-onLight)!important}
+html[data-colors] .real-life .eyebrow,html[data-colors] .reality .cue,html[data-colors] .real-outcome .gain-label{color:var(--pc-accentDark)!important}
+html[data-colors] .reality-list,html[data-colors] .reality{border-color:var(--pc-soft-line)!important}
+html[data-colors] .real-outcome{border-left-color:var(--pc-accentDark)!important}
+html[data-colors] .real-outcome>p{color:var(--pc-onLight)!important}
+html[data-colors] .real-outcome>strong{color:var(--pc-accentDark)!important}
+html[data-colors] .real-outcome .human-stat{color:var(--pc-onLight)!important;border-color:var(--pc-soft-line)!important}
+html[data-colors] .real-outcome .human-stat a{color:var(--pc-accentDark)!important}
+html[data-colors] .approach{background:var(--pc-mid)!important;color:var(--pc-onDark)!important}
+html[data-colors] .approach .eyebrow,html[data-colors] .step .number{color:var(--pc-accent)!important}
+html[data-colors] .approach h2,html[data-colors] .approach h3,html[data-colors] .step h3{color:var(--pc-onDark)!important}
+html[data-colors] .approach .section-head p,html[data-colors] .step p,html[data-colors] .agreement-copy p{color:var(--pc-darkMute)!important}
+html[data-colors] .agreement-copy strong{color:var(--pc-onDark)!important}
+html[data-colors] .agreement h3 span{color:var(--pc-accent)!important}
+html[data-colors] .steps,html[data-colors] .agreement,html[data-colors] .method-signature{border-color:var(--pc-dark-line)!important}
+html[data-colors] .method-signature>p{color:var(--pc-onDark)!important}
+html[data-colors] .method-story-link{color:var(--pc-accent)!important}
+html[data-colors] .time-value{background:var(--pc-night)!important;color:var(--pc-onDark)!important}
+html[data-colors] .time-value .eyebrow,html[data-colors] .time-value h2 em,html[data-colors] .unspoken-life h3 em{color:var(--pc-accent)!important}
+html[data-colors] .time-value h2,html[data-colors] .unspoken-life h3{color:var(--pc-onDark)!important}
+html[data-colors] .time-value-prose p,html[data-colors] .unspoken-scenes span,html[data-colors] .unspoken-relief,html[data-colors] .time-value-close p{color:var(--pc-darkMute)!important}
+html[data-colors] .time-value-prose strong,html[data-colors] .unspoken-scenes strong{color:var(--pc-onDark)!important}
+html[data-colors] .time-value-prose .human-stat.light{color:var(--pc-darkMute)!important;border-color:var(--pc-accent)!important}
+html[data-colors] .time-value-prose .human-stat.light a{color:var(--pc-accent)!important}
+html[data-colors] .unspoken-life,html[data-colors] .unspoken-scenes,html[data-colors] .unspoken-scenes p,html[data-colors] .time-value-story,html[data-colors] .time-value-close{border-color:var(--pc-dark-line)!important}
+html[data-colors] .unspoken-close{color:var(--pc-onDark)!important}
+html[data-colors] .unspoken-close strong,html[data-colors] .time-truth strong,html[data-colors] .time-value-close strong{color:var(--pc-accent)!important}
+html[data-colors] .time-truth{color:var(--pc-onDark)!important;border-color:var(--pc-warm)!important}
+html[data-colors] .worth-layout{background:var(--pc-mid)!important;border-color:var(--pc-dark-line)!important}
+html[data-colors] .worth-fields{border-color:var(--pc-dark-line)!important}
+html[data-colors] .worth-top h3{color:var(--pc-onDark)!important}
+html[data-colors] .worth-top p,html[data-colors] .worth-field small{color:var(--pc-darkMute)!important}
+html[data-colors] .worth-field label{color:var(--pc-onDark)!important}
+html[data-colors] .worth-input{background:var(--pc-night)!important;border-color:var(--pc-dark-line)!important}
+html[data-colors] .worth-input input{color:var(--pc-onDark)!important}
+html[data-colors] .worth-unit,html[data-colors] .worth-dollar{color:var(--pc-accent)!important}
+html[data-colors] .worth-answer{background:var(--pc-light)!important;color:var(--pc-ink)!important}
+html[data-colors] .worth-overline,html[data-colors] .worth-hours strong,html[data-colors] .worth-money strong{color:var(--pc-accentDark)!important}
+html[data-colors] .worth-hours span,html[data-colors] .worth-weeks,html[data-colors] .worth-money span,html[data-colors] .worth-footnote{color:var(--pc-onLight)!important}
+html[data-colors] .worth-money{border-color:var(--pc-soft-line)!important}
+html[data-colors] .ai-perspective{background:var(--pc-light)!important;color:var(--pc-ink)!important}
+html[data-colors] .ai-perspective h2,html[data-colors] .ai-perspective h3{color:var(--pc-ink)!important}
+html[data-colors] .ai-perspective h2 em,html[data-colors] .ai-translation h3 span{color:var(--pc-accentDark)!important}
+html[data-colors] .ai-perspective p,html[data-colors] .ai-whisper p,html[data-colors] .ai-whisper>span{color:var(--pc-onLight)!important}
+html[data-colors] .ai-perspective .eyebrow,html[data-colors] .ai-overline{color:var(--pc-accentDark)!important}
+html[data-colors] .ai-headline p strong{color:var(--pc-ink)!important}
+html[data-colors] .ai-translation,html[data-colors] .ai-payoff{border-color:var(--pc-soft-line)!important}
+html[data-colors] .ai-whisper{border-color:var(--pc-accentDark)!important}
+html[data-colors] .ai-whisper.hopeful{border-color:var(--pc-warm)!important}
+html[data-colors] .ai-whisper a,html[data-colors] .ai-side-thought,html[data-colors] .ai-payoff .secondary-link{color:var(--pc-accentDark)!important}
+html[data-colors] .ai-side-thought{border-color:var(--pc-warm)!important}
+html[data-colors] .person{background:var(--pc-soft-person)!important;color:var(--pc-ink)!important;border-color:var(--pc-soft-line)!important}
+html[data-colors] .person h2,html[data-colors] .person .eyebrow{color:var(--pc-ink)!important}
+html[data-colors] .person .postscript,html[data-colors] .person-copy .small-link{color:var(--pc-accentDark)!important;border-color:var(--pc-warm)!important}
+html[data-colors] .person-copy>p{color:var(--pc-onLight)!important}
+html[data-colors] .person-copy strong{color:var(--pc-ink)!important}
+html[data-colors] .contact{background:var(--pc-mid)!important;color:var(--pc-onDark)!important}
+html[data-colors] .contact h2{color:var(--pc-onDark)!important}
+html[data-colors] .contact .eyebrow{color:var(--pc-accent)!important}
+html[data-colors] .contact .opening,html[data-colors] .contact .one-on-one{color:var(--pc-darkMute)!important}
+html[data-colors] .contact .one-on-one{border-color:var(--pc-dark-line)!important}
+html[data-colors] .contact .one-on-one:before{background:var(--pc-accent)!important;color:var(--pc-night)!important}
+html[data-colors] .contact-form{background:var(--pc-form-bg)!important;color:var(--pc-ink)!important;border:1px solid var(--pc-soft-line)!important}
+html[data-colors] .contact-form .form-intro{color:var(--pc-accentDark)!important;border-color:var(--pc-soft-line)!important}
+html[data-colors] .contact-form .field label{color:var(--pc-ink)!important}
+html[data-colors] .contact-form .field input,html[data-colors] .contact-form .field textarea{background:var(--pc-light)!important;color:var(--pc-ink)!important;border-color:var(--pc-soft-line)!important}
+html[data-colors] .contact-form .field input::placeholder,html[data-colors] .contact-form .field textarea::placeholder{color:var(--pc-onLight)!important;opacity:.8}
+html[data-colors] .contact-form .form-note,html[data-colors] .status{color:var(--pc-onLight)!important}
+html[data-colors] .contact-form .primary-btn{background:var(--pc-accentDark)!important;border-color:var(--pc-accentDark)!important;color:var(--pc-onDark)!important}
+html[data-colors] .contact-form .primary-btn:hover{background:var(--pc-ink)!important;color:var(--pc-onDark)!important}
+html[data-colors] .endnote{background:var(--pc-night)!important;color:var(--pc-onDark)!important}
+html[data-colors] .endnote h2{color:var(--pc-onDark)!important}
+html[data-colors] .endnote a{color:var(--pc-accent)!important}
+html[data-colors] footer{background:var(--pc-night)!important;color:var(--pc-darkMute)!important;border-color:var(--pc-dark-line)!important}
+html[data-colors] footer .wordmark{color:var(--pc-onDark)!important}
+html[data-colors] footer p,html[data-colors] .footer-nav{color:var(--pc-darkMute)!important}
+html[data-colors] .about-hero{background:var(--pc-night)!important;color:var(--pc-onDark)!important;border-color:var(--pc-dark-line)!important}
+html[data-colors] .about-hero h1{color:var(--pc-onDark)!important}
+html[data-colors] .about-hero h1 em,html[data-colors] .about-hero .eyebrow{color:var(--pc-accent)!important}
+html[data-colors] .about-hero .intro{color:var(--pc-darkMute)!important}
+html[data-colors] .about-story{background:var(--pc-light2)!important;color:var(--pc-ink)!important}
+html[data-colors] .about-story h2{color:var(--pc-ink)!important}
+html[data-colors] .about-story .eyebrow{color:var(--pc-accentDark)!important}
+html[data-colors] .story-prose p{color:var(--pc-onLight)!important}
+html[data-colors] .story-prose strong{color:var(--pc-ink)!important}
+html[data-colors] .field-lessons{background:var(--pc-light)!important;border-color:var(--pc-soft-line)!important;color:var(--pc-ink)!important}
+html[data-colors] .field-lessons h2,html[data-colors] .field-lessons h3{color:var(--pc-ink)!important}
+html[data-colors] .field-lessons-grid,html[data-colors] .field-lessons-grid article{border-color:var(--pc-soft-line)!important}
+html[data-colors] .field-lessons-grid p{color:var(--pc-onLight)!important}
+html[data-colors] .field-num,html[data-colors] .field-lessons .eyebrow{color:var(--pc-accentDark)!important}
+html[data-colors] .about-values{background:var(--pc-mid)!important;color:var(--pc-onDark)!important}
+html[data-colors] .about-values h2,html[data-colors] .about-values .value strong{color:var(--pc-onDark)!important}
+html[data-colors] .about-values .eyebrow{color:var(--pc-accent)!important}
+html[data-colors] .about-values .value{color:var(--pc-darkMute)!important}
+html[data-colors] .values{border-color:var(--pc-dark-line)!important}
+html[data-colors] .about-closer{background:var(--pc-night)!important;color:var(--pc-onDark)!important}
+html[data-colors] .about-closer h2{color:var(--pc-onDark)!important}
+html[data-colors] .about-closer p{color:var(--pc-darkMute)!important}
+html[data-colors] .about-closer .eyebrow{color:var(--pc-accent)!important}
+/* Tool page is color-coordinated in preview too, without changing functionality. */
+html[data-colors] header{background:var(--pc-night)!important;color:var(--pc-onDark)!important;border-color:var(--pc-dark-line)!important}
+html[data-colors] header .logo,html[data-colors] header .navlinks{color:var(--pc-onDark)!important}
+html[data-colors] .logo-dot{color:var(--pc-accent)!important}
+html[data-colors] .hero.workday-hero{background:var(--pc-light2)!important;color:var(--pc-ink)!important}
+html[data-colors] .wd-story h1,html[data-colors] .wd-who strong{color:var(--pc-ink)!important}
+html[data-colors] .wd-story .wd-handled,html[data-colors] .wd-kicker{color:var(--pc-accentDark)!important}
+html[data-colors] .wd-who,html[data-colors] .wd-reassurance{color:var(--pc-onLight)!important}
+html[data-colors] .wd-live,html[data-colors] .dark-section{background:var(--pc-night)!important;color:var(--pc-onDark)!important}
+html[data-colors] .wd-live h2,html[data-colors] .dark-section h2,html[data-colors] .offer h3{color:var(--pc-onDark)!important}
+html[data-colors] .wd-live-sub,html[data-colors] .offer p{color:var(--pc-darkMute)!important}
+html[data-colors] .wd-options button[aria-pressed="true"]{background:var(--pc-accent)!important;color:var(--pc-night)!important}
+html[data-colors] .problem,.html[data-colors] .mini-card{background:var(--pc-light)!important;color:var(--pc-ink)!important}
+html[data-colors] .section:nth-of-type(even){background:var(--pc-light2)!important;color:var(--pc-ink)!important}
+html[data-colors] .section{background:var(--pc-light)!important;color:var(--pc-ink)!important}
+html[data-colors] .fix-left{background:var(--pc-mid)!important;color:var(--pc-onDark)!important}
+html[data-colors] .fix-right{background:var(--pc-light2)!important;color:var(--pc-ink)!important}
+html[data-colors] .offer{background:var(--pc-mid)!important;border-color:var(--pc-dark-line)!important}
+html[data-colors] .contact-banner{background:var(--pc-light2)!important;color:var(--pc-ink)!important}
+html[data-colors] .btn-blue,html[data-colors] .wd-primary{background:var(--pc-accentDark)!important;color:var(--pc-onDark)!important;border-color:var(--pc-accentDark)!important}
+html[data-colors] .btn-lime{background:var(--pc-accent)!important;color:var(--pc-night)!important}
+/* Preview-only ribbon intentionally not a site feature; keeps experiments separate from default. */
+html[data-colors] .color-preview-ribbon{position:fixed;bottom:16px;right:16px;z-index:350;background:var(--pc-night);color:var(--pc-onDark);border:1px solid var(--pc-dark-line);padding:10px 13px;display:flex;gap:14px;align-items:center;font:800 12px/1.5 'Nunito Sans',sans-serif;max-width:calc(100% - 32px);box-shadow:0 12px 32px #0004}
+html[data-colors] .color-preview-ribbon a{color:var(--pc-accent);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:680px){
+html[data-colors] .color-preview-ribbon{left:8px;right:8px;bottom:8px;max-width:none;justify-content:space-between;gap:8px;font-size:11px}
+html[data-colors] .hero-perspective.field-note{box-shadow:none!important}
+}
