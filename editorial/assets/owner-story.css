@@ -546,3 +546,68 @@ footer{background:#0A1D2A;color:#BFD2D8;border-top:1px solid #315061;padding:28p
  .unspoken-close{font-size:19px}
  .ai-whisper{margin-top:9px;max-width:530px}
 }
+
+/* BROAD PROBLEM-SOLVER DESIGN FINISH
+   The emotional hook stays; the offer covers websites, customer experience,
+   workflows and useful creative tools without pretending to be an agency. */
+.hero-grid{grid-template-columns:minmax(0,1.42fr) minmax(270px,.73fr);align-items:center;gap:clamp(32px,5vw,85px)}
+.hero h1{font-size:clamp(37px,4.2vw,63px);line-height:1.19;max-width:860px;letter-spacing:-.039em;margin:28px 0 27px}
+.hero h1 em{font-size:.88em;font-weight:800;line-height:1.27;margin-top:14px;letter-spacing:-.043em}
+.hero .lede{font-size:clamp(17px,1.4vw,20px);line-height:1.74;max-width:710px;color:#355463}
+.hero .hero-turn{max-width:710px;margin-top:19px;font-size:17px;line-height:1.75;color:#3B5866}
+.hero .hero-turn strong{font-weight:800;color:#143C50}
+.hero-actions{margin-top:34px}
+.hero-perspective.field-note{padding:clamp(27px,3vw,42px);background:#FDFCF7;border:1px solid #B9CDCC;box-shadow:7px 7px 0 #E4EDE8}
+.hero-perspective.field-note:before{background:#79C9DC}
+.hero-perspective .label{color:#366B7B}
+.hero-perspective h2{font:800 clamp(24px,2.3vw,34px)/1.25 var(--body);letter-spacing:-.045em;max-width:400px;margin:18px 0 22px;color:#173949}
+.hero-perspective>p{font-size:16px;line-height:1.73;color:#405E69;max-width:440px}
+.perspective-rule{border-top:1px solid #C8D7D5;border-bottom:1px solid #C8D7D5;padding:18px 0;margin:26px 0 19px;display:flex;flex-direction:column;gap:5px}
+.perspective-rule strong{font:800 17px/1.45 var(--body);letter-spacing:-.02em;color:#0C536C}
+.perspective-rule span{font-size:14px;color:#53717D}
+.hero-perspective .perspective-signature{font:italic 800 15px/1.52 var(--body);color:#186A83}
+.real-life .reality h3{font-size:clamp(24px,2.35vw,34px);line-height:1.29;max-width:550px}
+.approach .section-head h2{font-size:clamp(35px,3.65vw,54px);line-height:1.24;max-width:790px}
+.method-signature{display:flex;justify-content:space-between;align-items:center;gap:30px 65px;border-top:1px solid #3C596B;border-bottom:1px solid #3C596B;padding:30px 0;margin-top:clamp(40px,5vw,65px)}
+.method-signature>p{font:italic 800 clamp(19px,1.7vw,25px)/1.58 var(--body);letter-spacing:-.018em;color:#D8E9EC;max-width:765px}
+.method-story-link{flex-shrink:0;font:800 13px/1.45 var(--body);color:#9CDCEB;border-bottom:1px solid currentColor;padding-bottom:4px}
+.method-story-link:hover{color:#FFFFFF}
+.approach .agreement{margin-top:clamp(45px,5vw,72px)}
+.person h2{font-size:clamp(33px,3.5vw,52px);line-height:1.22;max-width:570px}
+.person-copy>p{line-height:1.78;margin-bottom:18px}
+.ai-headline h2{font-size:clamp(35px,4.2vw,61px);max-width:970px}
+.ai-headline h2 em{font-size:.89em;line-height:1.25}
+.ai-headline>p{max-width:810px}
+.ai-side-thought{border-left:2px solid #EE997F;padding-left:21px;margin-top:28px!important;color:#365D6E!important;font:italic 700 clamp(17px,1.45vw,20px)/1.7 var(--body)}
+.ai-translation h3,.ai-payoff h3{max-width:700px}
+.field-lessons{background:#F8F8F3;padding:clamp(76px,8vw,117px) 0;border-block:1px solid var(--line)}
+.field-lessons-top{display:grid;grid-template-columns:minmax(0,.43fr) minmax(0,1fr);gap:30px 64px;align-items:start;margin-bottom:clamp(35px,4vw,55px)}
+.field-lessons-top h2{font:400 clamp(30px,3.15vw,47px)/1.22 var(--display);letter-spacing:-.04em;max-width:750px}
+.field-lessons-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #C3D1D1;border-left:1px solid #C3D1D1}
+.field-lessons-grid article{padding:clamp(27px,3vw,45px);border-right:1px solid #C3D1D1;border-bottom:1px solid #C3D1D1;min-width:0}
+.field-num{display:block;font:900 10px/1.5 var(--body);letter-spacing:.115em;color:#26798C;margin-bottom:20px}
+.field-lessons-grid h3{font:800 clamp(21px,2vw,29px)/1.27 var(--body);letter-spacing:-.032em;color:#1A3F51;margin:0 0 13px;text-wrap:balance}
+.field-lessons-grid p{font-size:16px;line-height:1.75;color:#4A6470;max-width:440px}
+@media(max-width:930px){
+ .hero-grid{grid-template-columns:minmax(0,1fr);gap:35px}
+ .hero h1{max-width:790px}
+ .hero-perspective.field-note{max-width:620px;box-shadow:none}
+ .method-signature{align-items:start;flex-direction:column;gap:22px}
+ .field-lessons-top{grid-template-columns:1fr;gap:15px}
+}
+@media(max-width:760px){
+ .hero h1{font-size:clamp(36px,7.5vw,54px);line-height:1.21}
+ .hero h1 em{font-size:.96em;line-height:1.25}
+ .hero .hero-turn{font-size:16px}
+ .hero-perspective h2{font-size:clamp(25px,5.4vw,32px)}
+ .field-lessons-grid{grid-template-columns:1fr}
+ .field-lessons{padding:78px 0}
+ .field-lessons-grid article{padding:26px}
+}
+@media(max-width:440px){
+ .hero h1{font-size:clamp(33px,8.1vw,43px)}
+ .hero h1 em{font-size:.98em}
+ .hero-perspective.field-note{padding:27px}
+ .person h2{font-size:clamp(31px,7.5vw,40px)}
+ .field-lessons-top h2{font-size:clamp(29px,7vw,38px)}
+}
