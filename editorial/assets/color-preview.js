@@ -2,8 +2,8 @@
 (function(){
  'use strict';
  var id=document.documentElement.getAttribute('data-colors');
- if(!/^(0[1-9]|10)$/.test(id||''))return;
- var names={"10":"Saffron & Carmine","01":"Acid / Velvet","02":"Cobalt / Tomato","03":"Cherry Bomb","04":"Sunbaked Workshop","05":"Bubblegum & Wasabi","06":"Black Label / Safety Orange","07":"Tropical Signal","08":"Purple Rebellion","09":"Sky / Oxblood"};
+ if(!/^(0[1-9]|10|sky)$/.test(id||''))return;
+ var names={"sky":"Cobalt Sky","10":"Saffron & Carmine","01":"Acid / Velvet","02":"Cobalt / Tomato","03":"Cherry Bomb","04":"Sunbaked Workshop","05":"Bubblegum & Wasabi","06":"Black Label / Safety Orange","07":"Tropical Signal","08":"Purple Rebellion","09":"Sky / Oxblood"};
  function enhance(){
   var root=document.documentElement;
   var first=window.location.pathname;
@@ -23,7 +23,7 @@
   var banner=document.createElement('aside');
   banner.className='color-preview-ribbon';
   banner.setAttribute('aria-label','Color preview controls');
-  banner.innerHTML='<span>COLOR '+id+' / '+names[id]+'</span><a href="/color-lab.html">Compare all 10</a><a href="'+first+'">Original</a>';
+  banner.innerHTML='<span>COLOR '+id+' / '+names[id]+'</span><a href="/color-lab.html">Compare palettes</a><a href="'+first+'">Original</a>';
   document.body.appendChild(banner);
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',enhance,{once:true});
