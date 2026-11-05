@@ -3,7 +3,7 @@
  'use strict';
  var id=document.documentElement.getAttribute('data-colors');
  if(!/^(0[1-9]|10)$/.test(id||''))return;
- var names={"10":"Carbon Ice","01":"Harbor After Dark","02":"Cinder & Copper","03":"Midnight Fig","04":"Evergreen Voltage","05":"Indigo & Peach","06":"Oxide & Ash","07":"Deep Petrol","08":"Violet Hour","09":"Coffee & Terracotta"};
+ var names={"10":"Saffron & Carmine","01":"Acid / Velvet","02":"Cobalt / Tomato","03":"Cherry Bomb","04":"Sunbaked Workshop","05":"Bubblegum & Wasabi","06":"Black Label / Safety Orange","07":"Tropical Signal","08":"Purple Rebellion","09":"Sky / Oxblood"};
  function enhance(){
   var root=document.documentElement;
   var first=window.location.pathname;
