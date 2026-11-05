@@ -58,13 +58,13 @@ export default async function handler(req, res) {
     try {
       upstream = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(recipient), {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Referer': 'https://archiebase-editorial-2026.vercel.app/', 'Origin': 'https://archiebase-editorial-2026.vercel.app' },
         body: JSON.stringify({
           _subject: 'Archiebase · New small business inquiry',
           _template: 'table',
           _captcha: 'false',
           _replyto: email,
-          _url: 'https://archiebase-public.vercel.app',
+          _url: 'https://archiebase-editorial-2026.vercel.app',
           name,
           email,
           business,
@@ -74,13 +74,25 @@ export default async function handler(req, res) {
         signal: controller.signal
       });
     } finally { clearTimeout(timer); }
-    const data = await upstream.json().catch(() => ({}));
-    if (!upstream.ok || data.success !== 'true' && data.success !== true) {
-      // Do not disclose upstream tokens, destination or third-party diagnostics.
+    const upstreamText = await upstream.text().catch(() => '');
+    let data = {};
+    try { data = JSON.parse(upstreamText); } catch { /* HTML challenges aren't JSON */ }
+    if (!upstream.ok || (data.success !== 'true' && data.success !== true)) {
+      // Log only safe upstream diagnostics. No email, name, message, or recipient.
+      console.warn('ARCHIEBASE_FORM_UPSTREAM_REJECTED', {
+        status: upstream.status,
+        type: String(upstream.headers.get('content-type') || '').split(';')[0].slice(0,50),
+        challenge: /just a moment|cloudflare|cf-chl|challenge-platform/i.test(upstreamText),
+        activation: /needs activation|activate form/i.test(upstreamText),
+        rejected: data.success === false || data.success === 'false'
+      });
       return res.status(502).json({ ok: false, error: 'We could not send your request. Please try again later.' });
     }
     return res.status(200).json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.warn('ARCHIEBASE_FORM_UPSTREAM_EXCEPTION', {
+      kind: String(error && error.name || 'unknown').slice(0,48)
+    });
     return res.status(502).json({ ok: false, error: 'We could not send your request. Please try again later.' });
   }
 }
