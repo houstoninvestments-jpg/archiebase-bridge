@@ -30,6 +30,15 @@
 <link rel="stylesheet" href="/assets/contrast-fixes.css">
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script>
+(function(){
+ var type=new URLSearchParams(location.search).get('type');
+ if(!/^(0[1-8])$/.test(type||''))return;
+ document.documentElement.setAttribute('data-type',type);
+ var css=document.createElement('link');css.rel='stylesheet';css.href='/assets/type-directions.css';document.head.appendChild(css);
+ var js=document.createElement('script');js.src='/assets/type-preview.js';js.defer=true;document.head.appendChild(js);
+})();
+</script>
 </head>
 <body>
 <a href="#main" class="visually-hidden">Skip to content</a>
