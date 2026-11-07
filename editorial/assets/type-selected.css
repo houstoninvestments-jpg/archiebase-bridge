@@ -1,0 +1,85 @@
+/* ARCHIEBASE SELECTED TYPOGRAPHY / THE FRIENDLY SPECIALIST (06)
+   Rubik headlines · DM Sans body · Fraunces emotional italic.
+   Applies only to regular site pages. ?type=01..08 still previews alternatives. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Fraunces:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap');
+html:not([data-type]){
+  --ty-heading:'Rubik',system-ui,sans-serif;
+  --ty-body:'DM Sans',system-ui,sans-serif;
+  --ty-accent:'Fraunces',Georgia,serif;
+  --ty-weight:800;
+  --ty-track:-.057em;
+  --display:var(--ty-heading);
+  --body:var(--ty-body);
+}
+html:not([data-type]) body{font-family:var(--ty-body);letter-spacing:-.006em}
+html:not([data-type]) .wordmark,
+html:not([data-type]) .brand{font-family:'Nunito Sans',sans-serif!important;letter-spacing:-.075em!important}
+html:not([data-type]) :is(
+ .hero h1,.about-hero h1,.hero-title,.two-col-title h2,.method-head h2,
+ .owner h2,.life h2,.promise h2,.approach .section-head h2,
+ .real-life .section-head h2,.time-value h2,.ai-headline h2,
+ .person h2,.contact h2,.endnote h2,.about-story h2,
+ .about-values h2,.about-closer h2,.field-lessons-top h2,
+ .ai-perspective h2
+){
+ font-family:var(--ty-heading)!important;
+ font-weight:var(--ty-weight)!important;
+ font-style:normal!important;
+ text-transform:none!important;
+ letter-spacing:var(--ty-track)!important;
+ line-height:1.15!important;
+ text-wrap:balance;
+}
+html:not([data-type]) :is(
+ .hero h1 em,.about-hero h1 em,.hero-title em,.owner h2 em,
+ .life h2 em,.promise h2 em,.time-value h2 em,.ai-headline h2 em,
+ .unspoken-life h3 em,.ai-translation h3 span,.about-hero h1 em
+){
+ font-family:var(--ty-accent)!important;
+ font-style:italic!important;
+ font-weight:650!important;
+ letter-spacing:-.044em!important;
+ line-height:1.2!important;
+ text-transform:none!important;
+ font-synthesis:style;
+}
+html:not([data-type]) .hero h1{font-size:clamp(38px,4.35vw,64px)!important;max-width:900px}
+html:not([data-type]) .hero h1 em{font-size:.93em!important;margin-top:16px!important}
+html:not([data-type]) .hero-title{font-size:clamp(38px,4.4vw,64px)!important}
+html:not([data-type]) .hero-title em{font-size:.93em!important;margin-top:16px!important}
+html:not([data-type]) :is(
+ .reality h3,.problem h3,.step h3,.trace h3,.hero-aside h2,
+ .hero-perspective h2,.ai-payoff h3,.ai-translation h3
+){font-family:var(--ty-heading)!important;font-weight:800!important;letter-spacing:-.052em!important;line-height:1.24!important}
+html:not([data-type]) :is(
+ .hero .lede,.hero-description,.hero .hero-turn,.owner-prose p,
+ .person-copy,.contact-intro,.contact .opening
+){font-family:var(--ty-body)!important;letter-spacing:-.01em}
+/* The separate Tools page gets the same heading/body personality. */
+html:not([data-type]) body:has(.wd-story){
+ font-family:var(--ty-body)!important;
+}
+html:not([data-type]) body:has(.wd-story) :is(
+ h1,h2,h3,.wd-story h1,.wd-story .wd-handled
+){font-family:var(--ty-heading)!important;font-weight:800;letter-spacing:-.055em;line-height:1.2}
+html:not([data-type]) body:has(.wd-story) .logo{
+ font-family:'Nunito Sans',sans-serif!important;
+}
+@media(max-width:820px){
+ html:not([data-type]) .hero h1,html:not([data-type]) .hero-title{
+  font-size:clamp(35px,6.8vw,56px)!important;
+ }
+ html:not([data-type]) :is(.real-life .section-head h2,.approach .section-head h2,.method-head h2,.two-col-title h2,.time-value h2){
+  font-size:clamp(32px,5vw,50px)!important;
+ }
+}
+@media(max-width:540px){
+ html:not([data-type]) .hero h1,html:not([data-type]) .hero-title{
+  font-size:clamp(32px,8vw,43px)!important;
+  line-height:1.17!important;
+ }
+ html:not([data-type]) .hero h1 em,html:not([data-type]) .hero-title em{
+  font-size:.93em!important;
+  line-height:1.23!important;
+ }
+}
