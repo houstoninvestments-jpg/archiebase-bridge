@@ -40,6 +40,7 @@
  var js=document.createElement('script');js.src='/assets/type-preview.js';js.defer=true;document.head.appendChild(js);
 })();
 </script>
+<script defer src="/assets/mobile-menu.js"></script>
 </head>
 <body>
 <a href="#main" class="visually-hidden">Skip to content</a>
@@ -193,7 +194,7 @@
    status.className='form-status error';status.textContent=error.message||'Unable to send. Please try again.';submit.disabled=false;
   }
  });
- document.querySelectorAll('.mobile-menu nav a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.mobile-menu').open=false;});});
+
 })();
 </script>
 <script>
