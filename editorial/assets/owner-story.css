@@ -611,3 +611,5 @@ footer{background:#0A1D2A;color:#BFD2D8;border-top:1px solid #315061;padding:28p
  .person h2{font-size:clamp(31px,7.5vw,40px)}
  .field-lessons-top h2{font-size:clamp(29px,7vw,38px)}
 }
+/* Close the double gap where the two dark sections meet (desktop). */
+@media(min-width:821px){.approach{padding-bottom:clamp(48px,4.5vw,72px)}}

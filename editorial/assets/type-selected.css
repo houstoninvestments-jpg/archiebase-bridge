@@ -7,7 +7,7 @@ html:not([data-type]){
   --ty-body:'DM Sans',system-ui,sans-serif;
   --ty-accent:'Fraunces',Georgia,serif;
   --ty-weight:800;
-  --ty-track:-.057em;
+  --ty-track:-.035em;
   --display:var(--ty-heading);
   --body:var(--ty-body);
 }
@@ -49,8 +49,9 @@ html:not([data-type]) .hero-title{font-size:clamp(38px,4.4vw,64px)!important}
 html:not([data-type]) .hero-title em{font-size:.93em!important;margin-top:16px!important}
 html:not([data-type]) :is(
  .reality h3,.problem h3,.step h3,.trace h3,.hero-aside h2,
- .hero-perspective h2,.ai-payoff h3,.ai-translation h3
-){font-family:var(--ty-heading)!important;font-weight:800!important;letter-spacing:-.052em!important;line-height:1.24!important}
+ .hero-perspective h2,.ai-payoff h3,.ai-translation h3,
+ .agreement h3,.worth-top h3
+){font-family:var(--ty-heading)!important;font-weight:800!important;letter-spacing:-.032em!important;line-height:1.24!important}
 html:not([data-type]) :is(
  .hero .lede,.hero-description,.hero .hero-turn,.owner-prose p,
  .person-copy,.contact-intro,.contact .opening
@@ -61,7 +62,7 @@ html:not([data-type]) body:has(.wd-story){
 }
 html:not([data-type]) body:has(.wd-story) :is(
  h1,h2,h3,.wd-story h1,.wd-story .wd-handled
-){font-family:var(--ty-heading)!important;font-weight:800;letter-spacing:-.055em;line-height:1.2}
+){font-family:var(--ty-heading)!important;font-weight:800;letter-spacing:-.035em;line-height:1.2}
 html:not([data-type]) body:has(.wd-story) .logo{
  font-family:'Nunito Sans',sans-serif!important;
 }
