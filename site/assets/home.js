@@ -78,42 +78,36 @@ request.addEventListener('submit', async event => {
     button.disabled = false;
   }
 });
-const panels = ['standby', 'customer', 'received'];
-const flaps = Array.from(document.querySelectorAll('.flap'));
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-let displayVersion = 0;
-function changeDisplay(word) {
-  const version = ++displayVersion;
-  flaps.forEach((cell, index) => {
-    const next = word[index];
-    const top = cell.querySelector('b');
-    const bottom = cell.querySelector('em');
-    const previous = top.textContent;
-    cell.querySelector('.leaf')?.remove();
-    const update = () => {
-      if (version !== displayVersion) return;
-      top.textContent = bottom.textContent = next;
-      if (previous === next || reducedMotion.matches) return;
-      const leaf = document.createElement('span');
-      leaf.className = 'leaf';
-      leaf.textContent = previous;
-      cell.append(leaf);
-      leaf.addEventListener('animationend', () => leaf.remove(), {once:true});
-    };
-    if (reducedMotion.matches) update();
-    else window.setTimeout(update, index * 55);
+
+const projectButtons = Array.from(document.querySelectorAll('[data-sheet]'));
+const stories = Array.from(document.querySelectorAll('[data-story]'));
+const stage = document.querySelector('.platen');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+function openProject(selected) {
+  if (selected.getAttribute('aria-pressed') === 'true') return;
+  for (const button of projectButtons) {
+    const active = button === selected;
+    button.setAttribute('aria-pressed', String(active));
+    const sheet = get(button.dataset.sheet);
+    sheet.hidden = !active;
+    if (active && !reduceMotion.matches) {
+      sheet.animate([
+        {opacity:0.15, transform:'translate(18px,12px) rotate(3deg)'},
+        {opacity:1, transform:'translate(0,0) rotate(-1deg)'}
+      ], {duration:370, easing:'cubic-bezier(.19,.8,.2,1)'});
+    }
+  }
+  for (const story of stories) story.hidden = story.dataset.story !== selected.dataset.sheet;
+  stage.dataset.active = selected.dataset.sheet;
+}
+for (const button of projectButtons) {
+  button.addEventListener('click', () => openProject(button));
+  button.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault();
+    const direction = event.key === 'ArrowLeft' ? -1 : 1;
+    const index = (projectButtons.indexOf(button) + direction + projectButtons.length) % projectButtons.length;
+    projectButtons[index].focus();
+    openProject(projectButtons[index]);
   });
 }
-function showDemo(id, word, focusId) {
-  for (const panel of panels) get(panel).hidden = panel !== id;
-  changeDisplay(word);
-  get(focusId).focus({preventScroll:true});
-}
-get('start-demo').addEventListener('click', () => showDemo('customer','INTAKE','demo-question'));
-get('customer').addEventListener('submit', event => {
-  event.preventDefault();
-  const values = new FormData(event.currentTarget);
-  get('order').textContent = values.get('piece') + ' · ' + values.get('repair');
-  showDemo('received','LOGGED','order');
-});
-get('reset-demo').addEventListener('click', () => showDemo('standby','CLOSED','start-demo'));
