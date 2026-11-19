@@ -1,116 +1,38 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ArchieBase | Websites and tools for local businesses</title>
-<meta name="description" content="Tell Aaron what keeps eating up your workday. Get a practical first fix by email, or try a free tool for your business. Based in Fairview, Oregon.">
-<meta name="theme-color" content="#f7f8f5">
-<style>
-:root{--ink:#172532;--paper:#f7f8f5;--blue:#2449de;--line:#c6cdd0;--muted:#485968;--lime:#d9f577;font:100%/1.5 Inter,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);scroll-behavior:smooth}
-*{box-sizing:border-box}body{margin:0}a{color:inherit;text-underline-offset:.2em}button,input,select,textarea{font:inherit}button,summary{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #ed7a3e;outline-offset:3px}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.02}h1,h2{letter-spacing:-.065em}a.skip{position:absolute;z-index:5;left:8px;top:-100px;background:white;padding:12px}.skip:focus{top:8px}.frame{max-width:1400px;margin:auto;padding-inline:clamp(20px,5vw,80px)}header{border-bottom:1px solid var(--ink)}nav,.foot{display:flex;justify-content:space-between;align-items:center;gap:24px}nav{min-height:78px}.word{font-weight:830;font-size:1.65rem;letter-spacing:-.075em;text-decoration:none}.word i{color:var(--blue);font-style:normal}.links{display:flex;align-items:center;gap:28px;font-weight:650;font-size:.94rem}.links a{text-decoration:none}.links a:hover{text-decoration:underline}.links .navcta{border:1px solid var(--ink);border-radius:50px;padding:8px 17px}.intro{display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);align-items:center;gap:clamp(26px,4vw,72px);padding-block:clamp(38px,5vw,82px)}.place,.ticket-label,.tabtitle,.tag{font:650 .8rem/1.4 ui-monospace,'Courier New',monospace;letter-spacing:.055em;text-transform:uppercase}.place{display:flex;gap:10px;align-items:center;color:var(--muted)}.place:before{content:'';width:24px;height:3px;background:var(--blue)}h1{font-size:clamp(3.55rem,5.85vw,6.1rem);margin:22px 0;max-width:10em}h1 span{color:var(--blue)}.lede{max-width:32em;font-size:clamp(1.05rem,1.38vw,1.22rem);line-height:1.48}.action,.send{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 19px;background:var(--blue);color:white;border:1px solid transparent;border-radius:5px;text-decoration:none;font-weight:720}.action:hover,.send:hover{background:#1633b1}.intro .action{margin:25px 0 10px}.quiet{color:var(--muted);font-size:.92rem}.bench{padding:clamp(18px,2.9vw,43px);border-radius:8px;background-color:#1e42d7;background-image:radial-gradient(#6782ef 1px,transparent 1px);background-size:15px 15px;color:white}.bench-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}.bench-head .tabtitle{background:#1e42d7;padding:3px}.tabs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}.tabs button{color:white;background:#1839b7;border:1px solid #9fb0ff;border-radius:24px;padding:5px 12px;font-size:.89rem}.tabs button[aria-pressed=true]{background:var(--lime);border-color:var(--lime);color:var(--ink);font-weight:bold}.ticket{position:relative;background:#fffef9;color:var(--ink);padding:22px clamp(17px,2.35vw,38px) 20px;box-shadow:4px 6px 0 #99adfa,7px 10px 0 #112c94;margin:0 8px 26px 0}.ticket:before{content:'';display:block;position:absolute;top:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--blue) 0 6px,transparent 6px 15px)}.ticket-label{color:#526376}.ticket h2{font-size:clamp(2rem,3.2vw,3.45rem);margin:7px 0 13px}.ticket ul{list-style:none;margin:0;padding:0;border-top:1px dashed #99a5b0}.ticket li{padding:5px 0;border-bottom:1px solid #d9dfdf;font-size:.93rem}.ticket li:before{content:'□';margin-right:9px;color:var(--blue)}.toolaction{background:white;color:#18349b;border:0;border-radius:4px;font-weight:bold;padding:9px 15px}.workshop{margin-top:15px;background:#1531a5;padding:14px;border-radius:4px}.workshop label{font-weight:bold}.workshop input{margin:5px 0 10px}.workshop p{margin-top:8px}.workshop a{font-weight:700}.section{padding-block:clamp(40px,6vw,88px);border-top:1px solid var(--line)}.spread{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,7vw,110px)}h2{font-size:clamp(2.25rem,4vw,4.15rem)}.section-intro{margin-top:16px;max-width:33em;color:var(--muted)}.projects{border-top:1px solid var(--ink)}details{border-bottom:1px solid var(--line)}summary{display:flex;align-items:center;justify-content:space-between;gap:14px;list-style:none;font-size:clamp(1.07rem,1.55vw,1.4rem);line-height:1.22;letter-spacing:-.03em;font-weight:700;padding:19px 0}summary::-webkit-details-marker{display:none}summary:after{content:'+';color:var(--blue);font-size:1.45rem;font-weight:400}details[open]>summary:after{content:'−'}details p{padding:0 26px 14px 0;color:var(--muted)}details a{display:inline-block;margin-bottom:18px;font-weight:bold;color:var(--blue)}.toolslink{display:inline-block;margin-top:21px;color:var(--blue);font-weight:bold}.contact{background:#e8edf4}.contact h2{max-width:9em}.tag{display:inline-block;margin-bottom:19px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:block;font-weight:660;font-size:.92rem}.wide{grid-column:1/-1}input,textarea,select{border:1px solid #98a5b0;background:white;color:var(--ink);padding:10px 12px;border-radius:4px;width:100%;margin-top:4px;min-width:0}textarea{min-height:96px;resize:vertical}.hp{display:none}.form-actions{margin-top:14px}.status{margin-top:9px}.status:empty{display:none}.foot{padding-block:24px;font-size:.9rem}.foot p{color:var(--muted)}[hidden]{display:none!important}
-@media(max-width:760px){nav{min-height:62px}.links{gap:12px}.links .optional{display:none}.intro,.spread{grid-template-columns:1fr}.intro{gap:26px}.intro h1{max-width:11em;font-size:clamp(3.15rem,10vw,4.6rem)}.bench{max-width:600px;width:100%}.section{padding-block:40px}.contact h2{max-width:100%}.foot{align-items:start}.spread{gap:24px}}
-@media(max-width:420px){.formgrid{grid-template-columns:1fr}.links{font-size:.86rem}.links .navcta{padding:6px 11px}.word{font-size:1.5rem}.foot{display:grid;gap:4px}.bench .tabs button{padding:5px 8px}.bench{padding-inline:15px}.intro .action{margin-top:17px}}
-@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}}
-</style></head>
-<body id="top"><a class="skip" href="#main">Skip to content</a>
-<header><nav class="frame" aria-label="Main navigation"><a class="word" href="#top">Archie<i>Base</i></a><div class="links"><a class="optional" href="#services">What I build</a><a href="/tools.html#tools">Free tools</a><a class="navcta" href="#audit">Ask Aaron</a></div></nav></header>
-<main id="main"><section class="intro frame">
-<div><p class="place">Fairview, Oregon</p><h1>What follows you home <span>after closing?</span></h1><p class="lede">The quotes you still owe. The calls you need to return. The job details you’ve typed twice. I’m Aaron. I build websites and tools that take those jobs off your list.</p><a class="action" href="#audit">Get a free first fix</a><p class="quiet">Tell me what’s eating up your time. I’ll reply by email.</p></div>
-<section class="bench" id="example" aria-label="Free interactive quote button builder">
-<div class="bench-head"><span class="tabtitle">Try a tool I built</span></div>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101914"><meta name="description" content="ArchieBase is Aaron Houston’s independent web studio in Fairview, Oregon. Websites, quote requests, follow-up and custom tools for local businesses. Get a useful first fix free.">
+<title>ArchieBase | Websites that work for local businesses</title>
+<link rel="preload" href="/assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/workshop.webp" as="image">
+<link rel="stylesheet" href="/assets/studio.css"><script defer src="/assets/home.js"></script></head>
+<body id="top"><a class="skip" href="#main">Skip to content</a><header class="mast"><nav class="wrap mainnav" aria-label="Main navigation"><a class="brand" href="/" aria-label="ArchieBase home"><span class="brandmark" aria-hidden="true"></span>ArchieBase</a><div class="navlinks"><a href="/#services">What I build</a><a href="/tools.html">Free tools</a><a class="navcontact" href="/#audit">Contact Aaron</a></div></nav></header>
+<main id="main">
+<section class="hero"><div class="photo" aria-hidden="true"></div><div class="wrap herogrid">
+<div class="hero-copy"><p class="eyeline"><span class="hair"></span>Independent web studio · Fairview, OR</p>
+<h1><span>Brochures</span><span>don’t book</span><span class="yellow">jobs.</span></h1>
+<p class="intro">I’m Aaron. I build websites that take quote requests, follow up with customers, and do the paperwork that usually lands back on your desk.</p>
+<a class="action" href="#audit">Get a free first fix</a></div>
+<div class="demowrap" id="example"><div class="demo-plate"><div class="screws" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="plate-top"><b>After hours</b><span>Interactive demo</span></div>
+<div class="flaps" aria-hidden="true"><span class="flap"><b>C</b><em>C</em></span><span class="flap"><b>L</b><em>L</em></span><span class="flap"><b>O</b><em>O</em></span><span class="flap"><b>S</b><em>S</em></span><span class="flap"><b>E</b><em>E</em></span><span class="flap"><b>D</b><em>D</em></span></div>
+<div class="demo-state" id="standby"><p class="displayline">The shop closes at six.</p><p>It’s 7:42. A driver needs a torn seat repaired. Can your website take the job details while you’re home?</p><button class="rocker" type="button" id="start-demo"><i aria-hidden="true"></i>Try the customer’s side</button></div>
+<form id="customer" class="demo-state" hidden><p class="displayline" id="demo-question" tabindex="-1">What needs repairing?</p><div class="demo-inputs"><label>Item<select name="piece"><option>Driver’s seat</option><option>Boat cushion</option><option>Bench seat</option></select></label><label>Problem<select name="repair"><option>Torn seam</option><option>Damaged cover</option><option>Worn padding</option></select></label></div><button class="rocker" type="submit"><i aria-hidden="true"></i>See the shop’s copy</button></form>
+<div class="demo-state" id="received" hidden><div class="print-slip"><small>Sample job ticket</small><strong id="order" tabindex="-1"></strong><p>Ready for the shop to review in the morning.</p></div><button class="replay" id="reset-demo" type="button">Replay the demo</button></div></div>
+<p class="caption">An upholstery shop example. Try it with sample details.</p></div></div></section>
+<section class="services wrap" id="services"><div class="section-header"><div><p class="eyeline"><span class="hair"></span>The work</p><h2>Give it a job.</h2></div><p>Pick the problem that sounds like your week. Here’s what I’d build and what it costs.</p></div>
+<div class="service-list" id="problems">
+<details><summary><span class="discipline">Website design</span><span class="problem">My site makes people call for the basics.</span><span class="plus" aria-hidden="true"></span></summary><div class="service-detail"><p>A mobile-friendly page that shows your work, answers the questions people call about, and gives them one clear way to book or ask for a quote.</p><p><b>$750</b> · One page, one contact action, testing and one revision. You provide the photos and business details. Hosting and domain are separate.</p><a class="textlink" href="#audit" data-topic="A clearer website">Ask Aaron about this</a></div></details>
+<details><summary><span class="discipline">Customer follow-up</span><span class="problem">I forget who needs a reply.</span><span class="plus" aria-hidden="true"></span></summary><div class="service-detail"><p>When someone fills out your form, they get an acknowledgement and you get a record in your tracker. Two follow-ups you approve keep the conversation from disappearing.</p><p><b>$950</b> · One inquiry source and one tracker, testing and one revision. Software and messaging fees are separate.</p><a class="textlink" href="#audit" data-topic="Following up on inquiries">Ask Aaron about this</a></div></details>
+<details><summary><span class="discipline">Admin automation</span><span class="problem">I type the same details twice.</span><span class="plus" aria-hidden="true"></span></summary><div class="service-detail"><p>Enter a job in one place and have the details appear in the second app your team uses.</p><p><b>$650</b> · One recurring task across two compatible apps, testing and one revision. You pay any software charges directly.</p><a class="textlink" href="#audit" data-topic="Less repeat admin">Ask Aaron about this</a></div></details>
+<details><summary><span class="discipline">Lead research</span><span class="problem">I hear about local jobs too late.</span><span class="plus" aria-hidden="true"></span></summary><div class="service-detail"><p>I check whether permit or contract records cover your trade and territory. Where there’s a fit, I can build a list of new projects with dates and sources you can check.</p><p><b>Custom</b> · I’ll show you a sample before quoting an ongoing search.</p><a class="textlink" href="#audit" data-topic="Finding new work">Ask Aaron about this</a></div></details>
+
+</div></section>
+<section class="giftband"><div class="wrap giftgrid"><div><p class="eyeline"><span class="hair"></span>From the workbench</p><h2>A little tool<br>to take home.</h2><p>Customers forget the details you need for a quote. Make a link that puts the questions in their email draft. Keep it and put it on your site.</p><a class="textlink" href="/tools.html">Browse the other free tools</a></div><section class="bench" id="quote-builder" aria-label="Free interactive quote button builder">
+<div class="bench-head"><span class="tabtitle">Free quote button</span></div>
 <div class="tabs" role="group" aria-label="Pick a business type"><button type="button" aria-pressed="true" data-kind="furniture">Furniture repair</button><button type="button" aria-pressed="false" data-kind="auto">Auto detail</button><button type="button" aria-pressed="false" data-kind="yard">Yard care</button></div>
-<div class="ticket" aria-live="polite"><span class="ticket-label">Customer email template</span><h2 id="ticket-title">Furniture repair quote</h2><ul id="prompts"><li>What piece needs work?</li><li>Approximate dimensions</li><li>What would you like repaired?</li><li>City and preferred timing</li></ul></div>
+<div class="ticket" aria-live="polite"><span class="ticket-label">Email preview</span><h2 id="ticket-title">Furniture repair quote</h2><ul id="prompts"><li>What piece needs work?</li><li>Approximate dimensions</li><li>What would you like repaired?</li><li>City and preferred timing</li></ul></div>
 <p style="margin:0 0 12px">Put a quote button on your website. When someone taps it, these questions are waiting in their email draft.</p>
 <button class="toolaction" id="make" type="button" aria-expanded="false" aria-controls="maker">Make my quote button</button>
-<form class="workshop" id="maker" hidden><label for="dest">Where should requests go?</label><input id="dest" type="email" autocomplete="email" required placeholder="yourshop@example.com"><button class="toolaction" type="submit">Create my link</button><p class="quiet" style="color:#e4eaff">Your address stays in this browser.</p><div id="result" hidden><p><a id="trylink">Open a sample email</a></p><label for="urlout">Link for your website button</label><input id="urlout" readonly><button type="button" id="copy" class="toolaction">Copy link</button><span id="copied" role="status"></span></div></form>
-</section></section>
-<section class="section" id="services"><div class="frame spread"><div id="problems"><h2>Where does the work pile up?</h2><p class="section-intro">Some owners need a better website. Others already have customers coming in and need a better way to keep up. Here are a few things I can build.</p><a class="toolslink" href="/tools.html#tools">Use the free review kit and reply templates</a></div>
-<div class="projects">
-<details open><summary>“People call to ask what’s already on my site.”</summary><p>I can build one mobile-friendly page that shows what you do, answers the questions customers keep asking, and gives them a clear way to book or request a quote.</p><p><strong>$750</strong> for one page, one contact action, testing and one revision. You supply the business details and photos. Hosting and domain are separate.</p><a href="#audit" data-topic="A clearer website">Ask about a website</a></details>
-<details><summary>“A customer emailed. I meant to get back to them.”</summary><p>I can connect your inquiry form to a tracker, send customers an acknowledgement, and set up two follow-ups you approve.</p><p><strong>$950</strong> for one inquiry source and one tracker, including testing and one revision. Software and messaging fees are separate.</p><a href="#audit" data-topic="Following up on inquiries">Ask about follow-up</a></details>
-<details><summary>“I enter the same job in two places.”</summary><p>I can make a job entered in one app show up in the other, so you can close the laptop when the job is done.</p><p><strong>$650</strong> for one routine task across up to two compatible apps, including testing and one revision. You pay any software fees directly.</p><a href="#audit" data-topic="Less repeat admin">Ask about a task</a></details>
-<details><summary>“How do I find out about new work sooner?”</summary><p>I can check whether a local permit or contract source covers your trade. If it does, I can build a short list of relevant jobs with dates and links to the original records.</p><a href="#audit" data-topic="Finding new work">Ask about my trade and area</a></details>
-</div></div></section>
-<section id="audit" class="section contact"><div class="frame spread"><div id="how"><span class="tag">Work with Aaron</span><h2>Tell me about one thing you’d change.</h2><p class="section-intro">A sentence is enough. I’ll look at it myself and email you a useful first step. If you want me to build something for you, I’ll give you a price before we start.</p></div>
-<form id="request"><div class="formgrid"><label class="field wide">What keeps getting in the way?<textarea id="message" name="message" required minlength="10" maxlength="1500" placeholder="Every time someone asks for a quote, I have to…"></textarea></label><label class="field">Your name<input name="name" autocomplete="name" required minlength="2" maxlength="90"></label><label class="field">Business name<input name="business" autocomplete="organization" required minlength="2" maxlength="120"></label><label class="field">Email for my reply<input name="email" autocomplete="email" type="email" required maxlength="180"></label><label class="field">Website (optional)<input name="site" type="url" maxlength="400" placeholder="https://"></label><input class="hp" tabindex="-1" aria-hidden="true" autocomplete="off" name="website"></div><div class="form-actions"><button class="send" type="submit">Send to Aaron</button></div><p class="status" id="formstatus" role="status"></p></form></div></section>
-</main><footer id="about" class="frame foot"><a class="word" href="#top">Archie<i>Base</i></a><p>Built by Aaron Houston in Fairview, Oregon.</p></footer>
-<script>
-const examples = {
-  furniture: { title: 'Furniture repair quote', questions: ['What piece needs work?', 'Approximate dimensions', 'What would you like repaired?', 'City and preferred timing'] },
-  auto: { title: 'Auto detailing quote', questions: ['Year, make and model', 'Interior, exterior or both?', 'What needs extra attention?', 'City and preferred timing'] },
-  yard: { title: 'Yard care quote', questions: ['What work needs doing?', 'Approximate area', 'Any access issues?', 'City and preferred timing'] }
-};
-const get = id => document.getElementById(id);
-let kind = 'furniture';
-function clearResult() {
-  get('result').hidden = true;
-  get('copied').textContent = '';
-}
-document.querySelectorAll('[data-kind]').forEach(button => button.addEventListener('click', () => {
-  kind = button.dataset.kind;
-  document.querySelectorAll('[data-kind]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-  get('ticket-title').textContent = examples[kind].title;
-  get('prompts').replaceChildren(...examples[kind].questions.map(question => {
-    const li = document.createElement('li');
-    li.textContent = question;
-    return li;
-  }));
-  clearResult();
-}));
-get('make').addEventListener('click', () => {
-  const form = get('maker');
-  form.hidden = !form.hidden;
-  get('make').setAttribute('aria-expanded', String(!form.hidden));
-  if (!form.hidden) get('dest').focus();
-});
-get('dest').addEventListener('input', clearResult);
-get('maker').addEventListener('submit', event => {
-  event.preventDefault();
-  const example = examples[kind];
-  const address = get('dest').value.trim().split('@').map(encodeURIComponent).join('@');
-  const body = ['Hello, I’d like a quote.', ...example.questions, 'I can attach photos here before sending.'].join('\r\n\r\n');
-  const url = 'mailto:' + address + '?subject=' + encodeURIComponent(example.title) + '&body=' + encodeURIComponent(body);
-  get('trylink').href = url;
-  get('urlout').value = url;
-  get('result').hidden = false;
-  get('copied').textContent = '';
-});
-get('copy').addEventListener('click', async () => {
-  try {
-    await navigator.clipboard.writeText(get('urlout').value);
-    get('copied').textContent = ' Copied.';
-  } catch {
-    get('urlout').select();
-    get('copied').textContent = ' Link selected. Use your device’s Copy command.';
-  }
-});
-const request = get('request');
-let topic = 'Free first fix';
-document.querySelectorAll('[data-topic]').forEach(link => link.addEventListener('click', () => {
-  topic = link.dataset.topic;
-  if (!get('message').value.trim()) get('message').value = topic + ' for my business: ';
-  get('message').focus({preventScroll:true});
-}));
-request.addEventListener('submit', async event => {
-  event.preventDefault();
-  const data = new FormData(request);
-  const button = request.querySelector('button');
-  const status = get('formstatus');
-  button.disabled = true;
-  status.textContent = 'Sending…';
-  try {
-    const response = await fetch('/api/contact', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({
-      name:data.get('name'), business:data.get('business'), email:data.get('email'), website:data.get('website'), issue:topic,
-      message:data.get('message') + (data.get('site') ? '\nWebsite: ' + data.get('site') : '')
-    })});
-    const reply = await response.json();
-    if (!response.ok || !reply.ok) throw new Error();
-    status.textContent = 'Your request was sent. I’ll reply by email.';
-    request.reset();
-    topic = 'Free first fix';
-  } catch {
-    status.textContent = 'Your request could not be sent. Your details are still here so you can try again.';
-  } finally {
-    button.disabled = false;
-  }
-});
-</script></body></html>
+<form class="workshop" id="maker" hidden><label for="dest">Where should requests go?</label><input id="dest" type="email" autocomplete="email" required placeholder="yourshop@example.com"><button class="toolaction" type="submit">Create my link</button><p class="quiet">Your address stays in this browser.</p><div id="result" hidden><p><a id="trylink">Open a sample email</a></p><label for="urlout">Link for your website button</label><input id="urlout" readonly><button type="button" id="copy" class="toolaction">Copy link</button><span id="copied" role="status"></span></div></form>
+</section></div></section>
+<section id="audit" class="contact wrap"><div id="how"><p class="eyeline"><span class="hair"></span>Work with Aaron</p><h2>Show me the<br>annoying part.</h2><p>Send me the page that frustrates your customers or the task that keeps you late. I’ll email you one concrete fix you can use for free. If you want me to build it, you’ll get a price first.</p></div><form id="request"><div class="formgrid"><label class="field wide">What keeps getting in the way?<textarea id="message" name="message" required minlength="10" maxlength="1500" placeholder="Every time someone asks for a quote, I have to…"></textarea></label><label class="field">Your name<input name="name" autocomplete="name" required minlength="2" maxlength="90"></label><label class="field">Business name<input name="business" autocomplete="organization" required minlength="2" maxlength="120"></label><label class="field">Email for my reply<input name="email" autocomplete="email" type="email" required maxlength="180"></label><label class="field">Website (optional)<input name="site" type="url" maxlength="400" placeholder="https://"></label><input class="hp" tabindex="-1" aria-hidden="true" autocomplete="off" name="website"></div><div class="form-actions"><button class="send" type="submit">Send to Aaron</button></div><p class="status" id="formstatus" role="status"></p></form></section>
+</main><footer class="wrap foot"><a class="brand" href="/" aria-label="ArchieBase home"><span class="brandmark" aria-hidden="true"></span>ArchieBase</a><span>Aaron Houston · Fairview, Oregon</span><a href="#top">Back to top</a></footer></body></html>
