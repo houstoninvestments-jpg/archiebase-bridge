@@ -3,6 +3,7 @@
 const MAX_BODY_BYTES = 10_000;
 const allowOrigin = new Set([
   'https://archiebase-public.vercel.app',
+  'https://archiebase-editorial-2026.vercel.app',
   'https://archiebase.com',
   'https://www.archiebase.com'
 ]);
@@ -18,7 +19,7 @@ export default async function handler(req, res) {
   }
   const origin = clean(req.headers.origin, 256);
   // Vercel preview URLs remain accessible for QA; public deployment has a fixed hostname.
-  if (origin && !allowOrigin.has(origin) && !/^https:\/\/archiebase-public-[a-z0-9-]+\.vercel\.app$/.test(origin)) {
+  if (origin && !allowOrigin.has(origin) && !/^https:\/\/archiebase-public-[a-z0-9-]+\.vercel\.app$/.test(origin) && !/^https:\/\/archiebase-editorial-2026-[a-z0-9-]+\.vercel\.app$/.test(origin)) {
     return res.status(403).json({ ok: false, error: 'Invalid website origin.' });
   }
   if (!String(req.headers['content-type'] || '').includes('application/json')) {
@@ -50,6 +51,57 @@ export default async function handler(req, res) {
 
   const recipient = process.env.CONTACT_EMAIL;
   if (!recipient) return res.status(503).json({ ok: false, error: 'Contact service is not configured.' });
+  // Prefer Resend, which is designed for server-to-server email delivery.
+  // Vercel's Resend marketplace integration provisions RESEND_API_KEY privately.
+  if (process.env.RESEND_API_KEY) {
+    const from = process.env.RESEND_FROM_EMAIL || 'Archiebase <onboarding@resend.dev>';
+    const textBody = [
+      'New Archiebase business inquiry',
+      '',
+      'Name: ' + name,
+      'Business: ' + business,
+      'Reply-to: ' + email,
+      'Interest: ' + (issue || 'General help'),
+      '',
+      'Message:',
+      message,
+      '',
+      'Submitted via the Archiebase website.'
+    ].join('\n');
+    try {
+      const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer ' + process.env.RESEND_API_KEY,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          from,
+          to: [recipient],
+          reply_to: email,
+          subject: 'Archiebase | New small business inquiry',
+          text: textBody
+        }),
+        signal: AbortSignal.timeout(12000)
+      });
+      if (response.ok) {
+        const data = await response.json().catch(() => ({}));
+        if (data.id) return res.status(200).json({ ok: true });
+      }
+      const data = await response.json().catch(() => ({}));
+      console.warn('ARCHIEBASE_RESEND_DELIVERY_FAILED', {
+        status: response.status,
+        code: String(data && data.name || data && data.code || 'unknown').slice(0,60)
+      });
+    } catch (error) {
+      console.warn('ARCHIEBASE_RESEND_DELIVERY_EXCEPTION', {
+        kind: String(error && error.name || 'unknown').slice(0,48)
+      });
+    }
+    return res.status(502).json({ ok: false, error: 'We could not send your request. Please try again later.' });
+  }
+  // Legacy provider is retained only until Resend is connected.
   try {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 12000);
@@ -57,13 +109,13 @@ export default async function handler(req, res) {
     try {
       upstream = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(recipient), {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Referer': 'https://archiebase-editorial-2026.vercel.app/', 'Origin': 'https://archiebase-editorial-2026.vercel.app' },
         body: JSON.stringify({
           _subject: 'Archiebase · New small business inquiry',
           _template: 'table',
           _captcha: 'false',
           _replyto: email,
-          _url: 'https://archiebase-public.vercel.app',
+          _url: 'https://archiebase-editorial-2026.vercel.app',
           name,
           email,
           business,
@@ -73,13 +125,25 @@ export default async function handler(req, res) {
         signal: controller.signal
       });
     } finally { clearTimeout(timer); }
-    const data = await upstream.json().catch(() => ({}));
-    if (!upstream.ok || data.success !== 'true' && data.success !== true) {
-      // Do not disclose upstream tokens, destination or third-party diagnostics.
+    const upstreamText = await upstream.text().catch(() => '');
+    let data = {};
+    try { data = JSON.parse(upstreamText); } catch { /* HTML challenges aren't JSON */ }
+    if (!upstream.ok || (data.success !== 'true' && data.success !== true)) {
+      // Log only safe upstream diagnostics. No email, name, message, or recipient.
+      console.warn('ARCHIEBASE_FORM_UPSTREAM_REJECTED', {
+        status: upstream.status,
+        type: String(upstream.headers.get('content-type') || '').split(';')[0].slice(0,50),
+        challenge: /just a moment|cloudflare|cf-chl|challenge-platform/i.test(upstreamText),
+        activation: /needs activation|activate form/i.test(upstreamText),
+        rejected: data.success === false || data.success === 'false'
+      });
       return res.status(502).json({ ok: false, error: 'We could not send your request. Please try again later.' });
     }
     return res.status(200).json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.warn('ARCHIEBASE_FORM_UPSTREAM_EXCEPTION', {
+      kind: String(error && error.name || 'unknown').slice(0,48)
+    });
     return res.status(502).json({ ok: false, error: 'We could not send your request. Please try again later.' });
   }
 }

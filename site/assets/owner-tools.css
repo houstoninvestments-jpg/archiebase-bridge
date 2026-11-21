@@ -1,0 +1,80 @@
+/* Archiebase / Free Tools. Brand bridge to the main owner-to-owner studio. */
+:root{
+ --navy:#102638;
+ --navy2:#1D3B4E;
+ --ink:#122E42;
+ --muted:#59717B;
+ --paper:#F5F3ED;
+ --line:#CEDBD9;
+ --electric:#176B85;
+ --acid:#78D4E7;
+ --radius:5px;
+ --shadow:none;
+}
+body{background:var(--paper)!important;color:var(--ink)!important;font-family:'Nunito Sans',system-ui,sans-serif!important}
+h1,h2,h3,.logo{font-family:'Bowlby One SC',system-ui,sans-serif!important;font-weight:400!important;letter-spacing:-.038em!important}
+button,input,textarea,select,.btn,.eyebrow,.navlinks{font-family:'Nunito Sans',system-ui,sans-serif!important}
+header{background:#F5F3ED!important;color:var(--ink)!important;position:relative!important;border-bottom:1px solid #CEDBD9!important}
+header .nav{min-height:81px!important}
+header .logo{color:#122E42!important;font:900 26px/1 'Nunito Sans',system-ui,sans-serif!important;letter-spacing:-.075em!important}
+.logo-dot,.wd-handled,.wd-stop{color:#176B85!important}
+.navlinks{color:#244D60!important}
+.navlinks a:hover{color:#176B85!important}
+.nav .btn{background:#102638!important;color:#fff!important;border-color:#102638!important;box-shadow:none!important;border-radius:4px!important}
+.nav .btn:hover{background:#1F516B!important}
+.hero.workday-hero{background:#F5F3ED!important;color:#122E42!important;box-shadow:none!important}
+.workday-hero:before{display:none!important}
+.wd-kicker{color:#346A7B!important}
+.wd-square{background:#EE997F!important}
+.wd-story h1{color:#122E42!important}
+.wd-story .wd-handled{color:#176B85!important}
+.wd-who{color:#3E5B68!important}
+.wd-who strong{color:#122E42!important}
+.wd-primary,.btn-blue,.wd-demo-go{background:#102638!important;color:white!important;border-color:#102638!important;box-shadow:none!important;border-radius:4px!important}
+.wd-primary:hover,.btn-blue:hover{background:#205574!important}
+.wd-link{color:#176B85!important}
+.wd-reassurance{color:#4B6B79!important}
+.wd-live{background:#102638!important;border:1px solid #345469!important;color:#F7FBFC!important;border-radius:5px!important}
+.wd-live-header{border-color:#35576B!important}
+.wd-live-id,.wd-live-serial,.wd-row-label{color:#9CDDEC!important}
+.wd-live-inner h2{color:#F5FAFC!important}
+.wd-live-sub{color:#C4D8E1!important}
+.wd-ticket{background:#17344A!important;border:1px solid #456477!important}
+.wd-ticket-row{border-color:#456477!important}
+.wd-ticket-row p{color:#E1EDF2!important}
+.wd-options button{background:#1F4158!important;border-color:#47667A!important;color:#D7EAF0!important;border-radius:4px!important}
+.wd-options button[aria-pressed="true"]{background:#78D4E7!important;color:#122638!important;border-color:#78D4E7!important}
+.wd-valuebar{background:#E3EEED!important;color:#122638!important;border-color:#C2D6D6!important}
+.section{background:#FFFEFA;color:#122638}
+.section:nth-of-type(even){background:#F5F3ED}
+.section h2{color:#122638!important}
+.section .dek{color:#4E6A76!important}
+.blue-tag,.eyebrow{color:#176B85!important}
+.problem,.mini-card{background:#FFFEFA!important;border:1px solid #C5D6D6!important;color:#122638!important;border-radius:5px!important;box-shadow:none!important}
+.problem strong,.mini-card h3{color:#15394B!important}
+.problem small,.mini-card p{color:#52707A!important}
+.problem[aria-pressed="true"]{border-color:#176B85!important;background:#E6F1F0!important}
+.problem span{color:#176B85!important}
+.btn-lime{background:#78D4E7!important;color:#102638!important;border-color:#78D4E7!important}
+.fix-panel{border:1px solid #C3D5D4!important;border-radius:5px!important;background:#FFFEFA!important;box-shadow:none!important}
+.fix-left{background:#102638!important;color:#F8FAFA!important}
+.fix-left h3{color:#fff!important}
+.fix-left .eyebrow{color:#78D4E7!important}
+.fix-right{background:#E9F0EF!important}
+.result-card{border:1px solid #C0D1D2!important;background:#FFFEFA!important;box-shadow:none!important}
+.dark-section{background:#102638!important;color:#E8F2F5!important}
+.dark-section h2{color:#F5FAFC!important}
+.dark-section .dek{color:#CBDBE2!important}
+.dark-section .blue-tag{color:#78D4E7!important}
+.offer{background:#183649!important;border-color:#36586A!important;border-radius:5px!important;box-shadow:none!important}
+.offer h3{color:#F7F9FA!important}
+.offer p{color:#C8DCE4!important}
+.offer .tag{color:#78D4E7!important}
+.offer .btn{background:#E6F1F0!important;color:#102638!important;box-shadow:none!important;border-radius:4px!important}
+.contact-banner{background:#E6F0EF!important;border:1px solid #C1D4D2!important;box-shadow:none!important}
+.contact-banner h2{color:#102638!important}
+.contact-banner p{color:#3E5E6A!important}
+.contact-banner .btn{border-radius:4px!important}
+.footer{background:#0A1D2A!important;color:#D0E4EA!important}
+.footer .logo{color:#F3FAFC!important;font:900 25px/1 'Nunito Sans',sans-serif!important;letter-spacing:-.07em!important}
+.footer p{color:#B9D1D9!important}
