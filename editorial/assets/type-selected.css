@@ -1,7 +1,6 @@
 /* BRICK & CURSOR SELECTED TYPOGRAPHY / THE FRIENDLY SPECIALIST (06)
    Rubik headlines · DM Sans body · Fraunces emotional italic.
    Applies only to regular site pages. ?type=01..08 still previews alternatives. */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Fraunces:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap');
 html:not([data-type]){
   --ty-heading:'Rubik',system-ui,sans-serif;
   --ty-body:'DM Sans',system-ui,sans-serif;

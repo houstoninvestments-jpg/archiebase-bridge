@@ -15,6 +15,13 @@ const skip = new Set([
   '.gitignore'
 ]);
 
+const publicPages = [
+  { loc: '/', file: 'index.html' },
+  { loc: '/about.html', file: 'about.html' },
+  { loc: '/tools.html', file: 'tools.html' },
+  { loc: '/privacy.html', file: 'privacy.html' }
+];
+
 await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });
 
@@ -36,6 +43,22 @@ const originMatch = configSource.match(/siteOrigin:\s*"([^"]+)"/);
 if (!originMatch) throw new Error('site-config.js is missing siteOrigin.');
 const origin = originMatch[1].replace(/\/$/, '');
 
+function absolutizeHtml(html) {
+  return html
+    .replace(
+      /(<meta\s+(?:property="og:(?:url|image)"|name="twitter:image")\s+content=")(\/[^"]*)(")/g,
+      (_, start, urlPath, end) => start + origin + urlPath + end
+    )
+    .replace(
+      /(<link\s+rel="canonical"\s+href=")(\/[^"]*)(")/g,
+      (_, start, urlPath, end) => start + origin + urlPath + end
+    )
+    .replace(
+      /("(?:url|image|@id)"\s*:\s*")(\/[^"]*)(")/g,
+      (_, start, urlPath, end) => start + origin + urlPath + end
+    );
+}
+
 async function absolutize(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     const file = path.join(dir, entry.name);
@@ -45,14 +68,35 @@ async function absolutize(dir) {
     }
     if (!entry.name.endsWith('.html')) continue;
     const html = await readFile(file, 'utf8');
-    const next = html.replace(
-      /(<meta\s+(?:property="og:(?:url|image)"|name="twitter:image")\s+content=")(\/[^"]*)(")/g,
-      (_, start, urlPath, end) => start + origin + urlPath + end
-    );
+    const next = absolutizeHtml(html);
     if (next !== html) await writeFile(file, next);
   }
 }
 
 await absolutize(out);
+
+const robots = [
+  'User-agent: *',
+  'Allow: /',
+  '',
+  `Sitemap: ${origin}/sitemap.xml`,
+  ''
+].join('\n');
+await writeFile(path.join(out, 'robots.txt'), robots);
+
+const urlEntries = publicPages.map((page) => {
+  const loc = `${origin}${page.loc}`;
+  return `  <url>\n    <loc>${loc}</loc>\n  </url>`;
+}).join('\n');
+const sitemap = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  urlEntries,
+  '</urlset>',
+  ''
+].join('\n');
+await writeFile(path.join(out, 'sitemap.xml'), sitemap);
+
 console.log('Static files written to editorial/dist');
 console.log('Open Graph origin:', origin);
+console.log('Wrote robots.txt and sitemap.xml for', publicPages.length, 'public pages');
