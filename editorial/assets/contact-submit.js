@@ -40,7 +40,9 @@
       throw new Error(friendly);
     }
     var data = await response.json().catch(function () { return {}; });
-    if (!response.ok || (data.success !== true && data.success !== "true")) {
+    // FormSubmit returns success as a string ("true" / "false"), not a boolean.
+    var succeeded = data.success === true || String(data.success).toLowerCase() === "true";
+    if (!response.ok || !succeeded) {
       throw new Error(friendly);
     }
     return data;
