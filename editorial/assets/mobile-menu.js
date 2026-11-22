@@ -1,4 +1,4 @@
-/* Archiebase mobile navigation: a selected destination should never leave the menu covering the page. */
+/* Brick & Cursor mobile navigation: a selected destination should never leave the menu covering the page. */
 (function () {
   'use strict';
   function init() {

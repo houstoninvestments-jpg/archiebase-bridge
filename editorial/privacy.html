@@ -4,24 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#F5F3ED">
-<meta name="description" content="What the Archiebase contact forms collect, how your note reaches Aaron, and what never happens to it.">
-<title>Privacy | Archiebase by Aaron</title>
+<meta name="description" content="What the Brick &amp; Cursor contact form collects, when a note can reach Aaron, and what never happens to it.">
+<title>Privacy | Brick &amp; Cursor</title>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Archiebase">
-<meta property="og:title" content="Privacy | Archiebase by Aaron">
-<meta property="og:description" content="What the Archiebase contact forms collect, how your note reaches Aaron, and what never happens to it.">
-<meta property="og:url" content="https://archiebase-editorial-2026.vercel.app/privacy.html">
-<meta property="og:image" content="https://archiebase-editorial-2026.vercel.app/assets/og-image.png">
+<meta property="og:site_name" content="Brick &amp; Cursor">
+<meta property="og:title" content="Privacy | Brick &amp; Cursor">
+<meta property="og:description" content="What the Brick &amp; Cursor contact form collects, when a note can reach Aaron, and what never happens to it.">
+<meta property="og:url" content="/privacy.html">
+<meta property="og:image" content="/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="archie•base by Aaron. Practical, Creative Solutions for Small Businesses">
+<meta property="og:image:alt" content="Brick &amp; Cursor. Independent design &amp; technology studio.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Privacy | Archiebase by Aaron">
-<meta name="twitter:description" content="What the Archiebase contact forms collect, how your note reaches Aaron, and what never happens to it.">
-<meta name="twitter:image" content="https://archiebase-editorial-2026.vercel.app/assets/og-image.png">
+<meta name="twitter:title" content="Privacy | Brick &amp; Cursor">
+<meta name="twitter:description" content="What the Brick &amp; Cursor contact form collects, when a note can reach Aaron, and what never happens to it.">
+<meta name="twitter:image" content="/assets/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&amp;display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.7 'Nunito
 .wrap{max-width:720px;margin:0 auto;padding:0 20px}
 header{border-bottom:1px solid var(--line);padding:18px 0}
 .wordmark{color:var(--ink);font:900 26px/1 'Nunito Sans',system-ui,sans-serif;letter-spacing:-.075em;text-decoration:none}
-.wordmark span{color:var(--dot)}
+.wordmark span{color:var(--dot);margin-inline:.2em}
 main{padding:40px 0 64px}
 h1{font-size:clamp(34px,8vw,48px);line-height:1.1;letter-spacing:-.03em;margin:0 0 12px}
 .lede{font-size:20px;color:var(--muted);margin:0 0 32px}
@@ -42,11 +42,9 @@ ul{padding-left:22px;margin:0 0 12px}
 a{color:var(--ink);text-underline-offset:3px}
 .updated{color:var(--muted);font-size:15px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
 </style>
-<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
-<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-<header><div class="wrap"><a class="wordmark" href="/" aria-label="Archiebase home">archie<span>•</span>base</a></div></header>
+<header><div class="wrap"><a class="wordmark" href="/" aria-label="Brick &amp; Cursor home">brick<span>&amp;</span>cursor</a></div></header>
 <main class="wrap">
 <h1>Privacy</h1>
 <p class="lede">Here is what happens when you send me a note. It's short on purpose.</p>
@@ -64,7 +62,8 @@ a{color:var(--ink);text-underline-offset:3px}
 <p>The free first fix tool works only in your browser. It doesn't send your answers anywhere.</p>
 
 <h2>How your note reaches me</h2>
-<p>A third-party email service called FormSubmit delivers your note to my inbox. That service handles your note so it can deliver it. It has its own privacy policy.</p>
+<p>The form tries to send your note to a contact route on the host (<code>/api/contact</code>). Where that route is configured, a third-party email service delivers it to me. Resend is used when it is connected. Otherwise the route can use FormSubmit. Those services handle the note so they can deliver it, and they have their own privacy policies. The recipient address is kept on the server. It is not published on this site.</p>
+<p>A static copy of this site, including a Cloudflare Pages deploy of the static files, does not include that route. The form then sends nothing. TODO: add a public studio email so the form can open a mail draft.</p>
 <p>Please don't send passwords or private customer records. Email is not the right place for those.</p>
 
 <h2>What I never do</h2>
@@ -75,12 +74,12 @@ a{color:var(--ink);text-underline-offset:3px}
 </ul>
 
 <h2>Visit counts</h2>
-<p>This site uses Vercel Web Analytics to count page visits. It shows me things like which pages get read. It does not tell me who you are.</p>
+<p>This site does not run a visit counter or an advertising tracker.</p>
 
 <h2>Questions or deletion</h2>
-<p>Want me to delete your note? Or have a question? Send a message through the <a href="/#contact">contact form</a>. I'll take care of it.</p>
+<p>Want me to delete a note I already have, or have a question? Use the <a href="/#contact">contact form</a> when it can deliver a message. Until a public studio email is listed here, that is the only path, and it only works on a host where the contact route is configured.</p>
 
-<p class="updated">Last updated November 5, 2026.</p>
+<p class="updated">© 2026 Brick &amp; Cursor. Last updated November 22, 2026.</p>
 </main>
 </body>
 </html>

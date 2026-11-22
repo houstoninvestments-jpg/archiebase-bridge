@@ -1,4 +1,4 @@
-/* ARCHIEBASE TYPE SYSTEMS v2 / coherent heading + accent + text + microcopy. 
+/* BRICK & CURSOR TYPE SYSTEMS v2 / coherent heading + accent + text + microcopy. 
    09 is deliberately left untouched: it is the published baseline. */
 html[data-font="01"]{--ab-accent:'Inter Tight',system-ui,sans-serif;--serif:'Inter Tight',system-ui,sans-serif;--ab-accent-weight:700;--ab-accent-style:italic;--ab-accent-track:-.058em;--ab-accent-size:0.79em;--ab-hero-size:clamp(46px,6.1vw,95px);--ab-headtrack:-.058em;--ab-hero-leading:1.04;--ab-ui-track:.005em;}
 html[data-font="02"]{--ab-accent:'Fraunces',system-ui,sans-serif;--serif:'Fraunces',system-ui,sans-serif;--ab-accent-weight:600;--ab-accent-style:italic;--ab-accent-track:-.045em;--ab-accent-size:0.94em;--ab-hero-size:clamp(46px,7.7vw,119px);--ab-headtrack:-.045em;--ab-hero-leading:1.04;--ab-ui-track:.005em;}
