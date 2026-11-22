@@ -39,16 +39,27 @@ img{max-width:100%;height:auto}
 .small-link{display:inline-flex;align-items:center;font-size:14px;font-weight:800;border-bottom:1px solid currentColor;padding-bottom:3px}
 .small-link:hover{color:#146989}
 /* navigation */
-.site-nav{position:sticky;top:0;z-index:30;background:rgba(245,243,237,.96);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
-.site-nav.is-over-dark{background:rgba(16,38,56,.96);border-bottom-color:#3A5A6C;color:#F3FAFC}
-.site-nav.is-over-dark .wordmark{color:#F3FAFC}
-.site-nav.is-over-dark .wordmark .dot{color:#9CD7E4}
-.site-nav.is-over-dark .wordmark small{color:#A9C5CE}
-.site-nav.is-over-dark .desktop-nav>a:not(.nav-action){color:#F3FAFC}
-.site-nav.is-over-dark .desktop-nav>a:not(.nav-action):hover{color:#A1DFEB}
-.site-nav.is-over-dark .nav-action{background:#F3FAFC;border-color:#F3FAFC;color:#102638}
-.site-nav.is-over-dark .nav-action:hover{background:#D7EEF3;border-color:#D7EEF3;color:#102638}
-.site-nav.is-over-dark .mobile-menu summary{color:#F3FAFC;border-color:#7EA3B1}
+.site-nav{position:sticky;top:0;z-index:30;background:rgba(245,243,237,.96);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+/* Dark treatment uses a solid fill and drops backdrop-filter so a sticky
+   composited layer actually repaints (backdrop-filter can keep the cream
+   pixels even after background changes). !important beats later palette
+   previews such as html[data-colors] .site-nav and themes.css. */
+header.site-nav.is-over-dark{
+  background:#102638 !important;
+  background-color:#102638 !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  border-bottom-color:#3A5A6C !important;
+  color:#F3FAFC !important;
+}
+header.site-nav.is-over-dark .wordmark{color:#F3FAFC !important}
+header.site-nav.is-over-dark .wordmark .dot{color:#9CD7E4 !important}
+header.site-nav.is-over-dark .wordmark small{color:#A9C5CE !important}
+header.site-nav.is-over-dark .desktop-nav>a:not(.nav-action){color:#F3FAFC !important}
+header.site-nav.is-over-dark .desktop-nav>a:not(.nav-action):hover{color:#A1DFEB !important}
+header.site-nav.is-over-dark .nav-action{background:#F3FAFC !important;border-color:#F3FAFC !important;color:#102638 !important}
+header.site-nav.is-over-dark .nav-action:hover{background:#D7EEF3 !important;border-color:#D7EEF3 !important;color:#102638 !important}
+header.site-nav.is-over-dark .mobile-menu summary{color:#F3FAFC !important;border-color:#7EA3B1 !important}
 
 .nav-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .wordmark{display:inline-flex;align-items:baseline;white-space:nowrap;gap:0;color:var(--ink);font:900 28px/1 var(--body);letter-spacing:-.075em}

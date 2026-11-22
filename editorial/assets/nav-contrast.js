@@ -13,6 +13,15 @@
         return box.top < navBox.bottom && box.bottom > navBox.top;
       });
       nav.classList.toggle('is-over-dark', overlaps);
+      /* Drop/restore backdrop-filter inline so a sticky composited layer
+         cannot keep the previous cream pixels after the class changes. */
+      if (overlaps) {
+        nav.style.setProperty('backdrop-filter', 'none', 'important');
+        nav.style.setProperty('-webkit-backdrop-filter', 'none', 'important');
+      } else {
+        nav.style.removeProperty('backdrop-filter');
+        nav.style.removeProperty('-webkit-backdrop-filter');
+      }
     }
 
     window.addEventListener('scroll', update, { passive: true });

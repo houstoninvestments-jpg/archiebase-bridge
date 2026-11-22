@@ -27,6 +27,15 @@ html[data-colors] .site-nav .wordmark small{color:var(--p-navText)!important;opa
 html[data-colors] .site-nav .desktop-nav a:hover{color:var(--p-heroHi)!important}
 html[data-colors] .site-nav .nav-action{background:var(--p-cta)!important;border-color:var(--p-cta)!important;color:var(--p-ctaText)!important;box-shadow:0 0 0 1px var(--p-navText)!important}
 html[data-colors] .site-nav .mobile-menu summary,html[data-colors] .site-nav .mobile-menu nav{background:var(--p-nav)!important;color:var(--p-navText)!important;border-color:color-mix(in srgb,var(--p-navText) 35%,var(--p-nav))!important}
+/* Keep the sticky header readable on the dark time band even during ?colors= previews. */
+html[data-colors] header.site-nav.is-over-dark{background:#102638!important;background-color:#102638!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-bottom-color:#3A5A6C!important;color:#F3FAFC!important}
+html[data-colors] header.site-nav.is-over-dark .wordmark,html[data-colors] header.site-nav.is-over-dark .desktop-nav{color:#F3FAFC!important}
+html[data-colors] header.site-nav.is-over-dark .wordmark .dot{color:#9CD7E4!important}
+html[data-colors] header.site-nav.is-over-dark .wordmark small{color:#A9C5CE!important}
+html[data-colors] header.site-nav.is-over-dark .desktop-nav a:hover{color:#A1DFEB!important}
+html[data-colors] header.site-nav.is-over-dark .nav-action{background:#F3FAFC!important;border-color:#F3FAFC!important;color:#102638!important;box-shadow:none!important}
+html[data-colors] header.site-nav.is-over-dark .mobile-menu summary{color:#F3FAFC!important;border-color:#7EA3B1!important}
+
 html[data-colors] .eyebrow:before{background:var(--p-heroHi)!important}
 html[data-colors] .hero{background:var(--p-hero)!important;color:var(--p-heroText)!important;border-color:var(--p-darkBorder)!important}
 html[data-colors] .hero .eyebrow,html[data-colors] .hero h1 em{color:var(--p-heroHi)!important}
