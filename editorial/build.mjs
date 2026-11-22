@@ -1,4 +1,4 @@
-import { cp, mkdir, readdir, rm } from 'node:fs/promises';
+import { cp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -30,4 +30,29 @@ async function copyTree(src, dest) {
 }
 
 await copyTree(root, out);
+
+const configSource = await readFile(path.join(root, 'site-config.js'), 'utf8');
+const originMatch = configSource.match(/siteOrigin:\s*"([^"]+)"/);
+if (!originMatch) throw new Error('site-config.js is missing siteOrigin.');
+const origin = originMatch[1].replace(/\/$/, '');
+
+async function absolutize(dir) {
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const file = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      await absolutize(file);
+      continue;
+    }
+    if (!entry.name.endsWith('.html')) continue;
+    const html = await readFile(file, 'utf8');
+    const next = html.replace(
+      /(<meta\s+(?:property="og:(?:url|image)"|name="twitter:image")\s+content=")(\/[^"]*)(")/g,
+      (_, start, urlPath, end) => start + origin + urlPath + end
+    );
+    if (next !== html) await writeFile(file, next);
+  }
+}
+
+await absolutize(out);
 console.log('Static files written to editorial/dist');
+console.log('Open Graph origin:', origin);

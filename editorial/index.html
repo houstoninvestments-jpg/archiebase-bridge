@@ -219,7 +219,7 @@
  </div>
 </div></section>
 <section class="contact" id="contact"><div class="wrap contact-grid">
- <div><span class="eyebrow">A good place to start</span><h2>What would you love to make better?</h2><p class="opening">Maybe the website needs a new direction, a process needs simplifying, the customers aren't getting the experience they deserve, or you've got a strange idea you want to build. Tell me in your own words. I'll read it myself and share a practical first thought. You decide what happens next.</p><div class="one-on-one">If the note can be delivered, it comes to me. I'll read it and reply in my own words.</div></div>
+ <div><span class="eyebrow">A good place to start</span><h2>What would you love to make better?</h2><p class="opening">Maybe the website needs a new direction, a process needs simplifying, the customers aren't getting the experience they deserve, or you've got a strange idea you want to build. Tell me in your own words. I'll read it myself and share a practical first thought. You decide what happens next.</p><div class="one-on-one">When you hit send, it comes to me. I'll read it and reply in my own words.</div></div>
  <form id="contact-form" class="contact-form">
   <p class="form-intro">A NOTE TO AARON / FREE FIRST LOOK</p>
   <div class="fields">
@@ -228,15 +228,16 @@
   </div>
   <div class="field"><label for="business">Your business</label><input id="business" name="business" required maxlength="120" placeholder="Business name"></div>
   <div class="field"><label for="message">What would you like to improve or build?</label><textarea id="message" name="message" required minlength="12" maxlength="1800" placeholder="Tell me the problem, the idea, or what you'd love to work better. Rough thoughts are perfect."></textarea></div>
-  <input class="trap" name="website" id="trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <input class="trap" name="_honey" id="trap" tabindex="-1" autocomplete="off" aria-hidden="true">
   <button id="send-button" class="primary-btn" type="submit">Send it to Aaron</button>
   <p id="form-status" class="status" aria-live="polite" role="status"></p>
-  <p class="form-note">No cost to reach out. Please don't send passwords or private customer information. If the note cannot be delivered, nothing is sent and the form will say so. <a class="privacy-link" href="/privacy.html">Privacy</a></p>
+  <p class="form-note">No cost to reach out. Please don't send passwords or private customer information. Your note is emailed to me through FormSubmit. <a class="privacy-link" href="/privacy.html">Privacy</a></p>
  </form>
 </div></section>
 <section class="endnote"><div class="wrap endnote-inner"><h2>Good businesses can always get better. Let's find how.</h2><a href="/tools.html">Or explore the free tools</a></div></section>
 </main>
-<script src="/assets/contact-fallback.js"></script>
+<script src="/site-config.js"></script>
+<script src="/assets/contact-submit.js"></script>
 <footer><div class="wrap footer-inner"><a class="wordmark" href="/">brick<span class="dot">&amp;</span>cursor</a><p>© 2026 Brick &amp; Cursor. Independent design &amp; technology studio. Built and run by Aaron.</p><nav class="footer-nav" aria-label="Footer"><a href="/about.html">About Aaron</a><a href="/tools.html">Free tools</a><a href="#contact">Say hello</a></nav></div></footer>
 <script>
 (function(){
@@ -248,22 +249,18 @@
   e.preventDefault();
   if(!form.reportValidity())return;
   btn.disabled=true;status.className='status';status.textContent='Sending your note...';
-  var payload={
-   name:document.getElementById('name').value.trim(),
-   email:document.getElementById('email').value.trim(),
-   business:document.getElementById('business').value.trim(),
-   issue:'PERSONAL FIRST LOOK / FROM THE STUDIO WEBSITE',
-   message:document.getElementById('message').value.trim(),
-   website:document.getElementById('trap').value
-  };
   try{
-   var response=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
-   var data=await response.json().catch(function(){return {ok:false}});
-   if(!response.ok||!data.ok)throw Error(window.studioContactFailure(response,data));
+   await window.sendStudioNote({
+    name:document.getElementById('name').value.trim(),
+    email:document.getElementById('email').value.trim(),
+    business:document.getElementById('business').value.trim(),
+    issue:'Personal first look',
+    message:document.getElementById('message').value.trim(),
+    honey:document.getElementById('trap').value
+   });
    form.reset();status.className='status';status.textContent="Message sent. I'll read it and reply by email.";btn.textContent='Message sent';
   }catch(error){
-   var note=(error&&error.name==='TypeError')?window.studioContactUnavailable:(error.message||window.studioContactUnavailable);
-   status.className='status error';status.textContent=note;btn.disabled=false;
+   status.className='status error';status.textContent=(error&&error.message)||"Something went wrong sending that. Please try again in a minute.";btn.disabled=false;
   }
  });
 })();

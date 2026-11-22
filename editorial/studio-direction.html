@@ -147,7 +147,7 @@
 <section class="contact" id="contact">
  <div class="wrap contact-grid">
   <div><span class="kicker">START WITH A CONVERSATION</span><h2>What would you love to make better?</h2>
-   <p class="contact-intro">Tell me the messy version. A business frustration nobody's had time to tackle. A website that doesn't feel like you. An idea you've been thinking about for years. If the note reaches me, I'll read it myself, ask better questions and share where I'd start.</p>
+   <p class="contact-intro">Tell me the messy version. A business frustration nobody's had time to tackle. A website that doesn't feel like you. An idea you've been thinking about for years. I'll read it myself, ask better questions and share where I'd start.</p>
    <p class="personal">Just me. A real conversation. No pressure to hire me.</p>
   </div>
   <form id="studio-contact-form" class="contact-form">
@@ -158,15 +158,16 @@
    </div>
    <div class="field"><label for="studio-business">Your business</label><input id="studio-business" name="business" required maxlength="120" placeholder="The name of your business"></div>
    <div class="field"><label for="studio-message">What are you trying to improve or build?</label><textarea id="studio-message" name="message" minlength="12" maxlength="1800" required placeholder="Tell me in your own words. Rough thoughts are fine."></textarea></div>
-   <input id="studio-hp" name="website" class="trap" autocomplete="off" tabindex="-1" aria-hidden="true">
+   <input id="studio-hp" name="_honey" class="trap" autocomplete="off" tabindex="-1" aria-hidden="true">
    <button id="studio-submit" type="submit" class="button-primary">Send it to Aaron</button>
    <p class="form-status" id="studio-status" role="status" aria-live="polite"></p>
-   <p class="form-notes">No cost to reach out. Please don't send passwords or private customer records. If the note cannot be delivered, nothing is sent and the form will say so. <a class="privacy-link" href="/privacy.html">Privacy</a></p>
+   <p class="form-notes">No cost to reach out. Please don't send passwords or private customer records. Your note is emailed to me through FormSubmit. <a class="privacy-link" href="/privacy.html">Privacy</a></p>
   </form>
  </div>
 </section>
 </main>
-<script src="/assets/contact-fallback.js"></script>
+<script src="/site-config.js"></script>
+<script src="/assets/contact-submit.js"></script>
 <footer class="footer"><div class="wrap footer-inner"><a href="/studio-direction.html" class="wordmark">brick<i>&amp;</i>cursor</a><span class="stamp">INDEPENDENT DESIGN &amp; TECHNOLOGY STUDIO</span><a href="#top" class="small-rule">Back to the top</a></div></footer>
 <script>
 (function(){
@@ -176,22 +177,18 @@
   event.preventDefault();
   if(!form.reportValidity())return;
   submit.disabled=true;status.className='form-status';status.textContent='Sending your note...';
-  var payload={
-   name:document.getElementById('studio-name').value.trim(),
-   email:document.getElementById('studio-email').value.trim(),
-   business:document.getElementById('studio-business').value.trim(),
-   issue:'STUDIO CONCEPT / PROJECT ENQUIRY',
-   message:document.getElementById('studio-message').value.trim(),
-   website:document.getElementById('studio-hp').value
-  };
   try{
-   var response=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
-   var data=await response.json().catch(function(){return {ok:false};});
-   if(!response.ok||!data.ok)throw new Error(window.studioContactFailure(response,data));
+   await window.sendStudioNote({
+    name:document.getElementById('studio-name').value.trim(),
+    email:document.getElementById('studio-email').value.trim(),
+    business:document.getElementById('studio-business').value.trim(),
+    issue:'Studio concept',
+    message:document.getElementById('studio-message').value.trim(),
+    honey:document.getElementById('studio-hp').value
+   });
    status.textContent="Message sent. I'll read it and reply by email.";form.reset();submit.textContent='Message sent';
   }catch(error){
-   var note=(error&&error.name==='TypeError')?window.studioContactUnavailable:(error.message||window.studioContactUnavailable);
-   status.className='form-status error';status.textContent=note;submit.disabled=false;
+   status.className='form-status error';status.textContent=(error&&error.message)||"Something went wrong sending that. Please try again in a minute.";submit.disabled=false;
   }
  });
 
