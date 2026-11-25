@@ -46,6 +46,17 @@
 .work-card h3 { margin-top: 16px; }
 .work-card p { margin-top: 7px; line-height: 1.5; }
 .work-card .small-link { margin-top: 12px; }
+.directory-work { margin-top: clamp(32px, 5vw, 64px); }
+.directory-work h3 { margin: 0 0 16px; font: 800 clamp(22px, 2.4vw, 32px)/1.2 var(--display); letter-spacing: -.03em; }
+.directory-list { list-style: none; padding: 0; margin: 0; }
+.directory-list li { border-top: 1px solid var(--line); }
+.directory-list a { display: grid; grid-template-columns: minmax(185px, 1fr) 2fr; gap: 8px 24px; align-items: baseline; padding: 14px 0; color: var(--ink); }
+.directory-list strong { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .23em; }
+.directory-list a:hover strong, .directory-list a:focus-visible strong { color: #17617a; }
+.directory-list span { color: #405b68; font-size: 1rem; line-height: 1.5; }
+@media (max-width: 620px) {
+  .directory-list a { grid-template-columns: 1fr; gap: 3px; }
+}
 .project-extras { margin-top: 32px; border-block: 1px solid var(--line); }
 .project-extras > summary { cursor: pointer; padding-block: 16px; font-weight: 700; }
 .project-extras .worth-tool { margin: 24px 0; }
@@ -135,8 +146,20 @@
    <a class="small-link" href="https://pickaplugin.com">Explore PickAPlugin</a>
   </li>
  </ul>
+ <section class="directory-work" aria-labelledby="directories">
+  <h3 id="directories">Directories I’ve built</h3>
+  <ul class="directory-list">
+   <li><a href="https://bath-fan-finder.pages.dev/"><strong>Bath Fan Finder</strong><span>Compare bathroom fans by noise, airflow, and duct size.</span></a></li>
+   <li><a href="https://backflowroster.pages.dev/"><strong>Backflow Roster</strong><span>Find a backflow tester on your water utility’s approved list.</span></a></li>
+   <li><a href="https://business-search-navigator.pages.dev/"><strong>Business Search Navigator</strong><span>Go straight to the official business registry for your state.</span></a></li>
+  </ul>
+ </section>
  <details class="project-extras" id="time-value">
   <summary>More work and free tools</summary>
+  <ul class="directory-list">
+   <li><a href="https://family-shore-fares.pages.dev/"><strong>Family Shore Fares</strong><span>Compare Alaska cruise excursions by your kids’ ages and the price for the whole family.</span></a></li>
+   <li><a href="https://lookoutroster.pages.dev/"><strong>Lookout Roster</strong><span>Find fire lookout cabins and campsites by state or national forest.</span></a></li>
+  </ul>
   <p><a class="small-link" href="https://thearchivistmethod.com">The Archivist Method</a> · A teaching site I built for people who want to change a recurring habit.</p>
   <div class="worth-tool" aria-labelledby="worth-title">
     <div class="worth-top"><h3 id="worth-title">What would an hour back be worth?</h3></div>
