@@ -198,7 +198,7 @@ footer{background:#d9dbc6;border:0}
 
 @font-face{font-family:Manrope;src:url('type/manrope-regular.woff') format('woff');font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:Manrope;src:url('type/manrope-bold.woff') format('woff');font-style:normal;font-weight:800;font-display:swap}
-body,.label,.section-name,.service-title,.open-door h3,.project-grid h3,.directory-index h3{font-family:Manrope,Arial,sans-serif}
+body,.label,.section-name,.service-title,.open-door h3,.project-grid h4,.directory-index h3{font-family:Manrope,Arial,sans-serif}
 body{font-weight:400}
 .cover h1,.guide-head h2,.work h2,.contact h2{
   font-family:Manrope,Arial,sans-serif;font-weight:800;line-height:1.04;letter-spacing:-.065em
@@ -222,15 +222,15 @@ body{font-weight:400}
   display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;object-position:top;
   border-radius:3px;box-shadow:0 0 0 1px #66554024;
 }
-.project-grid h3{margin:.68rem 0 .27rem;font-size:clamp(1rem,1.25vw,1.36rem);line-height:1.17;letter-spacing:-.035em;font-weight:800}
+.project-grid h4{margin:.68rem 0 .27rem;font-size:clamp(1rem,1.25vw,1.36rem);line-height:1.17;letter-spacing:-.035em;font-weight:800}
 .project-grid p{margin:0;max-width:36ch;font-size:clamp(.85rem,1vw,1rem);line-height:1.42}
-.project-entry:hover h3,.project-entry:focus-visible h3{color:var(--brick-ink);text-decoration:underline;text-underline-offset:.18em}
+.project-entry:hover h4,.project-entry:focus-visible h4{color:var(--brick-ink);text-decoration:underline;text-underline-offset:.18em}
 .project-entry:focus-visible{outline:2px solid var(--brick);outline-offset:4px}
 @media(min-width:641px) and (max-width:999px){.project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:640px){
   .cover h1{font-size:clamp(2.6rem,9.2vw,3.5rem)}
   .project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.45rem .85rem}
-  .project-grid h3{overflow-wrap:anywhere}
+  .project-grid h4{overflow-wrap:anywhere}
 }
 @media(max-width:350px){.project-grid{grid-template-columns:1fr}}
 @media(max-width:450px){
@@ -301,3 +301,13 @@ body{font-weight:400}
 .studio-form .solid{margin:.7rem 0}
 .studio-form .form-note,.studio-form .status{font-size:.95rem}
 @media(max-width:560px){.studio-form .fields{grid-template-columns:1fr;gap:0}}
+
+.work-group + .work-group{margin-top:clamp(2rem,4vw,4rem)}
+.work-group>h3{font:800 clamp(1.15rem,1.65vw,1.65rem)/1.22 Manrope,Arial,sans-serif;letter-spacing:-.035em;border-top:1px solid var(--rule);padding-top:.85rem;margin:0 0 1.12rem}
+.reply-note{max-width:58ch;margin:0 0 .85rem}
+@media(max-width:530px){
+ .mast{flex-wrap:wrap;gap:.55rem}
+ .mast nav{flex-basis:100%;justify-content:space-between;gap:.4rem}
+ .mast nav a:first-child{display:inline}
+ .mast .c-link{padding-inline:.75rem}
+}
