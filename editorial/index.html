@@ -1,222 +1,69 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#F5F3ED">
-<meta name="description" content="Work one-on-one with Aaron on a better website, an easier way to follow up with customers, or a tool for the work you’re doing by hand.">
-<title>Brick &amp; Cursor | Independent design &amp; technology studio</title>
-<link rel="canonical" href="/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/rubik/v31/iJWKBXyIfDnIV7nBrXyw023e.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z9mXg.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/fraunces/v38/6NUs8FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChJdt9vIVYX9G37lvd9mv0iQublWII.woff2" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&amp;family=Fraunces:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&amp;family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&amp;family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&amp;display=swap" rel="stylesheet">
-<script>(function(){var id=new URLSearchParams(location.search).get("colors");if(/^(0[1-9]|10|sky)$/.test(id||"")){document.documentElement.setAttribute("data-colors",id);var l=document.createElement("link");l.rel="stylesheet";l.href="/assets/color-directions.css";document.head.appendChild(l);}})();</script>
-<link rel="stylesheet" href="/assets/owner-story.css?v=navdark2">
-<script src="/assets/color-preview.js" defer></script>
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Brick &amp; Cursor">
-<meta property="og:title" content="Brick &amp; Cursor | Independent design &amp; technology studio">
-<meta property="og:description" content="Work one-on-one with Aaron on a better website, an easier way to follow up with customers, or a tool for the work you’re doing by hand.">
-<meta property="og:url" content="/">
-<meta property="og:image" content="/assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Brick &amp; Cursor. Independent design &amp; technology studio.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Brick &amp; Cursor | Independent design &amp; technology studio">
-<meta name="twitter:description" content="Work one-on-one with Aaron on a better website, an easier way to follow up with customers, or a tool for the work you’re doing by hand.">
-<meta name="twitter:image" content="/assets/og-image.png">
-<link rel="stylesheet" href="/assets/contrast-fixes.css">
-<link rel="stylesheet" href="/assets/type-selected.css">
-<link rel="stylesheet" href="/assets/work.css">
-<style>
-.hero { padding-block: clamp(42px, 6vw, 88px); }
-.hero .lede { max-width: 49ch; }
-.hero .small-link { display: inline-block; margin-top: 12px; }
-.work { padding-block: clamp(38px, 5vw, 72px); }
-.work h2 { font: 800 clamp(32px, 4vw, 54px)/1.12 var(--display); letter-spacing: -.04em; margin-bottom: 28px; }
-.work-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; max-width: none; }
-.work-card h3 { margin-top: 16px; }
-.work-card p { margin-top: 7px; line-height: 1.5; }
-.work-card .small-link { margin-top: 12px; }
-.directory-work { margin-top: clamp(32px, 5vw, 64px); }
-.directory-work h3 { margin: 0 0 16px; font: 800 clamp(22px, 2.4vw, 32px)/1.2 var(--display); letter-spacing: -.03em; }
-.directory-list { list-style: none; padding: 0; margin: 0; }
-.directory-list li { border-top: 1px solid var(--line); }
-.directory-list a { display: grid; grid-template-columns: minmax(185px, 1fr) 2fr; gap: 8px 24px; align-items: baseline; padding: 14px 0; color: var(--ink); }
-.directory-list strong { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .23em; }
-.directory-list a:hover strong, .directory-list a:focus-visible strong { color: #17617a; }
-.directory-list span { color: #405b68; font-size: 1rem; line-height: 1.5; }
-@media (max-width: 620px) {
-  .directory-list a { grid-template-columns: 1fr; gap: 3px; }
-}
-.project-extras { margin-top: 32px; border-block: 1px solid var(--line); }
-.project-extras > summary { cursor: pointer; padding-block: 16px; font-weight: 700; }
-.project-extras .worth-tool { margin: 24px 0; }
-.project-extras .worth-top { display: block; margin-bottom: 14px; }
-.project-extras .worth-top h3 { font-size: 24px; }
-.contact { padding-block: clamp(40px, 6vw, 88px); }
-.contact h2 { margin-top: 0; }
-@media(max-width: 760px) {
-  .work-grid { grid-template-columns: 1fr; gap: 28px; }
-  .work-card { display: grid; grid-template-columns: minmax(88px, 30%) 1fr; column-gap: 16px; align-content: start; }
-  .work-card .work-shot { grid-row: 1 / 4; align-self: start; }
-  .work-card .work-shot::before { height: 12px; }
-  .work-card h3 { margin-top: 0; font-size: 20px; }
-  .work-card .small-link { justify-self: start; min-height: 24px; }
-  .hero-perspective.field-note { padding: 18px 22px; }
-  .hero-perspective h2 { font-size: 22px; margin: 0; }
-}
-</style>
-<script>
-(function(){
- var type=new URLSearchParams(location.search).get('type');
- if(!/^(0[1-8])$/.test(type||''))return;
- document.documentElement.setAttribute('data-type',type);
- var css=document.createElement('link');css.rel='stylesheet';css.href='/assets/type-directions.css';document.head.appendChild(css);
- var js=document.createElement('script');js.src='/assets/type-preview.js';js.defer=true;document.head.appendChild(js);
-})();
-</script>
-<script defer src="/assets/mobile-menu.js"></script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["ProfessionalService", "Organization"],
-  "name": "Brick & Cursor",
-  "description": "Independent design and technology studio building websites, customer follow-up systems and custom tools for small businesses.",
-  "url": "/",
-  "image": "/assets/og-image.png",
-  "founder": {
-    "@type": "Person",
-    "name": "Aaron Houston"
-  },
-  "areaServed": [
-    "Local small businesses",
-    "Online businesses"
-  ]
-}
-</script>
-</head>
-<body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4ebdd"><link rel="icon" href="/assets/studio/pointer-30.png"><title>Brick &amp; Cursor · Independent design &amp; AI studio</title><link rel="preload" href="/assets/studio/type/manrope-bold.woff" as="font" type="font/woff" crossorigin><link rel="stylesheet" href="/assets/studio/page.css?v=glass11"><script src="/assets/studio/page.js?v=glass11" defer></script><meta name="description" content="Work one-on-one with Aaron on a better website, an easier way to follow up with customers, or a tool for the work you’re doing by hand."><meta property="og:type" content="website"><meta property="og:site_name" content="Brick &amp; Cursor"><meta property="og:title" content="Brick &amp; Cursor | Independent design &amp; technology studio"><meta property="og:description" content="Work one-on-one with Aaron on a better website, an easier way to follow up with customers, or a tool for the work you’re doing by hand."><meta property="og:url" content="https://brickandcursor.com/"><meta property="og:image" content="https://brickandcursor.com/assets/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Brick &amp; Cursor. Independent design &amp; technology studio."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Brick &amp; Cursor | Independent design &amp; technology studio"><meta name="twitter:description" content="Work one-on-one with Aaron on a better website, an easier way to follow up with customers, or a tool for the work you’re doing by hand."><meta name="twitter:image" content="https://brickandcursor.com/assets/og-image.png"><link rel="canonical" href="https://brickandcursor.com/"></head><body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-nav">
- <div class="wrap nav-inner">
-  <a class="wordmark" href="/">brick<span class="dot">&amp;</span>cursor<small>by Aaron</small></a>
-  <nav class="desktop-nav" aria-label="Main navigation"><a href="#work">Work</a><a href="/about.html">About Aaron</a><a href="/tools.html">Free tools</a><a class="nav-action" href="#contact">Talk to Aaron</a></nav>
-  <details class="mobile-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="#work">Work</a><a href="/about.html">About Aaron</a><a href="/tools.html">Free tools</a><a href="#contact">Talk to Aaron</a></nav></details>
- </div>
-</header>
+<header class="mast"><a class="brand" href="#main" aria-label="Brick and Cursor home">Brick <i>&amp;</i> Cursor<span>.</span></a><nav aria-label="Studio navigation"><a href="#help">How I help</a><a href="#built">Built &amp; run</a><a class="c-link" href="#contact">Talk to Aaron</a></nav></header>
 <main id="main">
-<section class="hero" id="top" aria-labelledby="hero-title"><div class="wrap hero-grid">
- <div>
-  <span class="eyebrow">Independent design &amp; technology studio</span>
-  <h1 id="hero-title">You built a business to have a life.<em>Somewhere along the way, it started taking over.</em></h1>
-  <p class="lede">I’m Aaron. I design websites, simplify customer follow-ups, and build tools for the work you’re still doing by hand.</p>
-  <div class="hero-actions"><a class="primary-btn" href="#contact">Talk to Aaron</a><a class="secondary-link" href="#work">See what I’ve built</a></div>
- </div>
- <aside id="me" class="field-note hero-perspective" aria-label="Meet Aaron">
-  <h2>My first business had two wheels. And a lawn mower.</h2>
-  <a class="small-link" href="/about.html">Read my story</a>
- </aside>
+<section class="cover" aria-labelledby="headline">
+<div class="intro"><p class="label"><span class="dash"></span> Independent design &amp; AI studio</p>
+<h1 id="headline">What do you wish <br>your business<br><span>could do?</span></h1>
+<div class="intro-byline"><img src="/assets/studio/aaron.webp" width="160" height="196" alt=""><strong>I’m Aaron.</strong></div>
+<p class="deck">I help businesses use AI, build websites and apps, and get repetitive work off their hands. Bring me the thing eating up your week or the idea you’d love to get off the ground.</p><a class="solid" href="#contact">Get a free first look</a>
+</div><a class="hero-art" href="#help" aria-label="Explore studio services"><img class="mouse-object" src="/assets/studio/cordless-brick.webp" width="1200" height="900" fetchpriority="high" alt="A cordless mouse sculpted from brick-red clay, with a cursor pressed into its side."><span class="mouse-action">Explore studio services<img class="link-pointer" src="/assets/studio/glazed-pointer.webp" width="36" height="36" alt=""></span></a></section>
+<section id="help" class="service-guide" aria-labelledby="guide-title">
+<header class="guide-head"><div><span class="section-name">Studio services</span></div><h2 id="guide-title">What would move <em>you forward?</em></h2></header>
+<div class="guide-rows"><details class="service"><summary><span class="service-title">AI consulting &amp; custom agents</span><span class="service-outcome">Decide where AI can earn its keep. Give your team a way to use it.</span><span class="expand" aria-hidden="true"></span></summary><p>We’ll look at how you work, choose where AI is worth trying, and build a plan around your people and budget. I can build custom agents, connect them to your tools, and show your team how to use them.</p></details>
+<details class="service"><summary><span class="service-title">Automation, workflows &amp; alerts</span><span class="service-outcome">Spend fewer paid hours copying, checking and chasing.</span><span class="expand" aria-hidden="true"></span></summary><p>I connect the tools you already use, simplify the handoffs, and automate repeat work. Monitoring and alerts bring changes to you, so someone only needs to step in when there’s a decision to make.</p></details>
+<details class="service"><summary><span class="service-title">Web design &amp; development</span><span class="service-outcome">Give people a site you’re proud to send them to.</span><span class="expand" aria-hidden="true"></span></summary><p>From a single landing page to a full multi-page site, I handle design, copy and development together. I can also improve the site you have, one part at a time.</p></details>
+<details class="service"><summary><span class="service-title">Search, Maps &amp; AI visibility</span><span class="service-outcome">Help customers find you on Google, in Maps and in AI answers.</span><span class="expand" aria-hidden="true"></span></summary><p>I audit and fix Google Business Profiles, improve the pages search engines read, and organize your expertise so answer engines can understand it. This covers SEO, answer engine optimization (AEO) and generative engine optimization (GEO).</p></details>
+<details class="service"><summary><span class="service-title">Custom apps &amp; digital tools</span><span class="service-outcome">Build the thing you keep wishing someone made.</span><span class="expand" aria-hidden="true"></span></summary><p>I design and build web and mobile apps, internal tools and customer-facing products. We can work through the idea together, put a first version in your hands, or build out the whole product.</p></details>
+<details class="service"><summary><span class="service-title">Brand, content &amp; publishing</span><span class="service-outcome">Look like yourself and keep showing up consistently.</span><span class="expand" aria-hidden="true"></span></summary><p>I design logos and visual identities, create content, and build content systems that can run from draft through publishing. You choose what runs automatically and where you want the final say.</p></details>
+<details class="service"><summary><span class="service-title">Lead generation &amp; email campaigns</span><span class="service-outcome">Find better-fit prospects and keep the conversation moving.</span><span class="expand" aria-hidden="true"></span></summary><p>I build lead research and monitoring tools, code branded emails, and connect campaigns and follow-ups to your customer list. You can see who replied and what needs your attention.</p></details>
+</div><aside class="open-door" aria-label="Start a conversation">
+<div><h3>“I don’t know what I need yet.”</h3><p>That’s a perfectly good place to start. Tell me what you’d like to change. We’ll figure out whether it needs a small fix, a bigger build, or just a second pair of eyes.</p><a href="#contact-form">Talk it through with Aaron</a></div>
+<div class="ai-invite" id="ai-101"><h3>New to AI?</h3><p>We can just talk. Bring a question, or pick something from your work and I’ll sit down with you and show you how I’d use it.</p><a href="#contact-form">Ask me about AI</a></div>
+</aside></section>
+<section class="work" id="built"><div class="work-head"><div class="section-name project-label">Studio projects</div><h2>Things I’ve built <em>and run.</em></h2></div>
+<div class="project-grid">
+<a class="project-entry" href="https://thearchivistmethod.com/"><img src="/assets/studio/projects/archivist.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>The Archivist Method</h3><p>Closest to my heart. A free place to catch a familiar reaction while you still have a choice.</p></a>
+<a class="project-entry" href="https://equipment-buying-desk.vercel.app/"><img src="/assets/studio/projects/ledger.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>The Equipment Ledger</h3><p>Work out what a used machine will really cost you.</p></a>
+<a class="project-entry" href="https://pickaplugin.com/"><img src="/assets/studio/projects/plugin.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>PickAPlugin</h3><p>Find ChatGPT and Codex plugins worth trying.</p></a>
+<a class="project-entry" href="https://paperworkpath.com/"><img src="/assets/studio/projects/paperwork.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>PaperworkPath</h3><p>Find the right office and fees for getting documents certified.</p></a>
+<a class="project-entry" href="https://dyebanchecker.com/"><img src="/assets/studio/projects/dye.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Dye Ban Checker</h3><p>Check a food’s dyes against the rules in your state.</p></a>
+<a class="project-entry" href="https://lookoutroster.pages.dev/"><img src="/assets/studio/projects/lookoutroster.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Lookout Roster</h3><p>Find a fire lookout or Forest Service cabin you can sleep in.</p></a>
+<a class="project-entry" href="https://pfastapcheck.pages.dev/"><img src="/assets/studio/projects/pfastapcheck.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>PFAS Tap Check</h3><p>Look up PFAS test results for drinking water by ZIP code.</p></a>
+<a class="project-entry" href="https://family-shore-fares.pages.dev/"><img src="/assets/studio/projects/family-shore-fares.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Family Shore Fares</h3><p>Price an Alaska shore excursion for your kids’ actual ages.</p></a>
+<a class="project-entry" href="https://grassrunways.pages.dev/"><img src="/assets/studio/projects/grassrunways.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Grass Runways</h3><p>Find grass airstrips and seaplane bases in FAA records.</p></a>
+<a class="project-entry" href="https://secondhandrecall.pages.dev/"><img src="/assets/studio/projects/secondhandrecall.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Secondhand Recall</h3><p>Check secondhand baby gear and appliances for recalls.</p></a>
+<a class="project-entry" href="https://backflowroster.pages.dev/"><img src="/assets/studio/projects/backflowroster.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Backflow Roster</h3><p>Find a backflow tester your water utility accepts.</p></a>
+<a class="project-entry" href="https://mattercompatible.pages.dev/"><img src="/assets/studio/projects/mattercompatible.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Matter Compatible</h3><p>Check which smart-home devices are Matter certified.</p></a>
+<a class="project-entry" href="https://supplementfillercheck.pages.dev/"><img src="/assets/studio/projects/supplementfillercheck.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Supplement Filler Check</h3><p>Search supplement labels for dyes, fillers and sweeteners.</p></a>
+<a class="project-entry" href="https://charterroster.pages.dev/"><img src="/assets/studio/projects/charterroster.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Charter Roster</h3><p>Find federally permitted fishing charters from Texas to Maine.</p></a>
+<a class="project-entry" href="https://bath-fan-finder.pages.dev/"><img src="/assets/studio/projects/bath-fan-finder.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Bath Fan Finder</h3><p>Compare bathroom fans by airflow, noise and duct size.</p></a>
+<a class="project-entry" href="https://darkskyplanner.pages.dev/"><img src="/assets/studio/projects/darkskyplanner.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Dark Sky Planner</h3><p>Pick a night for stargazing or plan where to see an eclipse.</p></a>
+<a class="project-entry" href="https://business-search-navigator.pages.dev/"><img src="/assets/studio/projects/business-search-navigator.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Business Search Navigator</h3><p>Go straight to the official business registry in your state.</p></a>
+<a class="project-entry" href="https://gangwaygear.pages.dev/"><img src="/assets/studio/projects/gangwaygear.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Gangway Gear</h3><p>Compare stroller and mobility rentals at Florida cruise ports.</p></a>
+<a class="project-entry" href="https://flooddiscountfinder.pages.dev/"><img src="/assets/studio/projects/flooddiscountfinder.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Flood Discount Finder</h3><p>Look up your town’s FEMA flood insurance discount.</p></a>
+<a class="project-entry" href="https://refrigerantfinder.pages.dev/"><img src="/assets/studio/projects/refrigerantfinder.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Refrigerant Finder</h3><p>Find the refrigerant a heat pump uses by model number.</p></a>
+<a class="project-entry" href="https://dogimportguide.pages.dev/"><img src="/assets/studio/projects/dogimportguide.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Dog Import Guide</h3><p>Find the paperwork for bringing your dog into the U.S.</p></a>
+<a class="project-entry" href="https://cleantruckroster.pages.dev/"><img src="/assets/studio/projects/cleantruckroster.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Clean Truck Roster</h3><p>Find a tester for California’s Clean Truck Check program.</p></a>
+<a class="project-entry" href="https://safershelf.pages.dev/"><img src="/assets/studio/projects/safershelf.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Safer Shelf</h3><p>Find cleaning products with the EPA Safer Choice label.</p></a>
+<a class="project-entry" href="https://ev-charger-finder.pages.dev/"><img src="/assets/studio/projects/ev-charger-finder.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>EV Charger Finder</h3><p>Compare home EV chargers and find state incentives.</p></a>
+<a class="project-entry" href="https://bondedroster.pages.dev/"><img src="/assets/studio/projects/bondedroster.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Bonded Roster</h3><p>Look up wineries, distilleries and other permitted producers.</p></a>
+<a class="project-entry" href="https://notaxontips.pages.dev/"><img src="/assets/studio/projects/notaxontips.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>No Tax on Tips</h3><p>Estimate federal deductions for tips and overtime.</p></a>
+<a class="project-entry" href="https://etiasguide.pages.dev/"><img src="/assets/studio/projects/etiasguide.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>ETIAS Guide</h3><p>Check who needs Europe’s ETIAS travel authorization and when.</p></a>
+<a class="project-entry" href="https://trumpaccountguide.pages.dev/"><img src="/assets/studio/projects/trumpaccountguide.webp" width="680" height="425" loading="lazy" decoding="async" alt=""><h3>Trump Account Guide</h3><p>Look up eligibility and enrollment for a child’s Trump Account.</p></a>
 </div></section>
-<section class="flagship" id="work" aria-labelledby="flagship-title">
- <div class="wrap flagship-layout">
-  <div class="flagship-copy">
-   <p class="flagship-label">Featured work</p>
-   <h2 id="flagship-title">The Archivist Method</h2>
-   <p class="flagship-story">This is the project closest to my heart. You know that moment when you say “sorry” again, or go quiet on someone you love? I built a free site around catching that moment while you still have a choice.</p>
-   <a class="flagship-link" href="https://thearchivistmethod.com/">Explore The Archivist Method <span aria-hidden="true">↗</span></a>
-  </div>
-  <img class="flagship-art" src="/assets/work/archivist-return.webp" srcset="/assets/work/archivist-return-640.webp 640w, /assets/work/archivist-return.webp 1536w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 53vw, 640px" width="1536" height="1024" alt="A torn photograph of an open doorway, stitched together with pink thread.">
- </div>
-</section>
-<section class="work" id="services" aria-labelledby="real-life"><div class="wrap">
- <h2 id="real-life">What can I help you with?</h2>
- <ul class="work-grid">
-  <li class="work-card">
-   <a class="work-shot" href="https://equipment-buying-desk.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit The Equipment Ledger (opens in a new tab)"><picture><source type="image/webp" srcset="/assets/work/equipment-ledger-640.webp 640w, /assets/work/equipment-ledger.webp 960w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 45vw, 480px"><img src="/assets/work/equipment-ledger.jpg" srcset="/assets/work/equipment-ledger-640.jpg 640w, /assets/work/equipment-ledger.jpg 960w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 45vw, 480px" width="960" height="600" loading="lazy" alt="Home page of The Equipment Ledger, with a cost calculator for a used machine"></picture></a>
-   <h3>A better website</h3><p>Show people what you do and make the next step obvious.</p>
-   <a class="small-link" href="https://equipment-buying-desk.vercel.app">See The Equipment Ledger</a>
-  </li>
-  <li class="work-card">
-   <a class="work-shot" href="/tools.html" aria-label="Try the Brick &amp; Cursor free tools"><picture><source type="image/webp" srcset="/assets/work/studio-tools-640.webp 640w, /assets/work/studio-tools.webp 960w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 45vw, 480px"><img src="/assets/work/studio-tools.jpg" srcset="/assets/work/studio-tools-640.jpg 640w, /assets/work/studio-tools.jpg 960w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 45vw, 480px" width="960" height="600" loading="lazy" alt="The Brick &amp; Cursor free tools page, showing an example fix for missed calls"></picture></a>
-   <h3>Less chasing</h3><p>Give missed calls and unanswered quotes a follow-up you can reuse.</p>
-   <a class="small-link" href="/tools.html#first-fix">Try a follow-up template</a>
-  </li>
-  <li class="work-card">
-   <a class="work-shot" href="https://pickaplugin.com" target="_blank" rel="noopener noreferrer" aria-label="Visit PickAPlugin (opens in a new tab)"><picture><source type="image/webp" srcset="/assets/work/pickaplugin-640.webp 640w, /assets/work/pickaplugin.webp 960w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 45vw, 480px"><img src="/assets/work/pickaplugin.jpg" srcset="/assets/work/pickaplugin-640.jpg 640w, /assets/work/pickaplugin.jpg 960w" sizes="(max-width: 700px) 92vw, (max-width: 1100px) 45vw, 480px" width="960" height="600" loading="lazy" alt="Home page of PickAPlugin, a catalog of software plugins with a search box"></picture></a>
-   <h3>An idea you can try</h3><p>Turn an idea into a working directory, calculator, or tool.</p>
-   <a class="small-link" href="https://pickaplugin.com">Explore PickAPlugin</a>
-  </li>
- </ul>
- <section class="directory-work" aria-labelledby="directories">
-  <h3 id="directories">Directories I’ve built</h3>
-  <ul class="directory-list">
-   <li><a href="https://bath-fan-finder.pages.dev/"><strong>Bath Fan Finder</strong><span>Compare bathroom fans by noise, airflow, and duct size.</span></a></li>
-   <li><a href="https://backflowroster.pages.dev/"><strong>Backflow Roster</strong><span>Find a backflow tester on your water utility’s approved list.</span></a></li>
-   <li><a href="https://business-search-navigator.pages.dev/"><strong>Business Search Navigator</strong><span>Go straight to the official business registry for your state.</span></a></li>
-  </ul>
- </section>
- <details class="project-extras" id="time-value">
-  <summary>More work and free tools</summary>
-  <ul class="directory-list">
-   <li><a href="https://family-shore-fares.pages.dev/"><strong>Family Shore Fares</strong><span>Compare Alaska cruise excursions by your kids’ ages and the price for the whole family.</span></a></li>
-   <li><a href="https://lookoutroster.pages.dev/"><strong>Lookout Roster</strong><span>Find fire lookout cabins and campsites by state or national forest.</span></a></li>
-  </ul>
-  <div class="worth-tool" aria-labelledby="worth-title">
-    <div class="worth-top"><h3 id="worth-title">What would an hour back be worth?</h3></div>
-    <div class="worth-layout">
-      <div class="worth-fields">
-        <div class="worth-field">
-          <label for="worth-hours">Hours you could get back each week</label>
-          <div class="worth-input"><input id="worth-hours" type="number" inputmode="decimal" min="0" max="80" step="0.5" value="5" aria-describedby="worth-hours-hint"><span class="worth-unit">hours</span></div>
-          <small id="worth-hours-hint">Routine admin, copying information, reminders, follow-ups.</small>
-        </div>
-        <div class="worth-field">
-          <label for="worth-rate">What an hour of your time is worth to you</label>
-          <div class="worth-input"><span class="worth-dollar">$</span><input id="worth-rate" type="number" inputmode="decimal" min="0" max="10000" step="5" value="50"><span class="worth-unit">per hour</span></div>
-        </div>
-      </div>
-      <div class="worth-answer" aria-live="polite" aria-atomic="true">
-        <span class="worth-overline">In a year, that adds up to</span>
-        <div class="worth-hours"><strong id="worth-annual-hours">260</strong><span>hours of your life</span></div>
-        <p class="worth-weeks">That's <strong id="worth-annual-weeks">6.5</strong> full 40-hour workweeks.</p>
-        <div class="worth-money"><strong id="worth-annual-value">$13,000</strong><span>in time you could put toward something more valuable to you.</span></div>
-        <small class="worth-footnote">Based on your hourly estimate over 52 weeks.</small>
-      </div>
-    </div>
-  </div>
- </details>
-</div></section>
-<section class="contact" id="contact"><div class="wrap contact-grid">
- <div id="approach"><h2>When you hit send, it comes to me.</h2>
-  <p class="opening">Send a link or tell me what’s stuck. I’ll take a look. If I can help, we’ll agree on the work and the price before I start.</p>
- </div>
- <form id="contact-form" class="contact-form">
+<section class="contact" id="contact"><div class="contact-copy"><div class="section-name">Work directly with Aaron</div><h2>What’s on <em>your mind?</em></h2><p>Send me a link, a screenshot or the idea you can’t quite explain. I’ll take a first look for free. If there’s work worth doing, we’ll agree on the fix and the price before I start.</p></div><a class="return-key" href="#contact-form"><img src="/assets/studio/return-cutout.webp" width="740" height="493" alt="" loading="lazy"><span>Write to Aaron</span></a></section>
+<form id="contact-form" class="contact-form studio-form">
   <div class="fields">
    <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required maxlength="90" placeholder="Your name"></div>
    <div class="field"><label for="email">Your email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="180" placeholder="you@yourbusiness.com"></div>
   </div>
   <div class="field"><label for="message">What would you like to improve or build?</label><textarea id="message" name="message" required minlength="12" maxlength="1800" placeholder="Tell me in your own words, or paste a link to your site or a screenshot."></textarea></div>
   <input class="trap" name="_honey" id="trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-  <button id="send-button" class="primary-btn" type="submit">Send my note</button>
+  <button id="send-button" class="solid" type="submit">Send my note</button>
   <p id="form-status" class="status" aria-live="polite" role="status"></p>
   <p class="form-note">Free first look. Please leave out passwords and private customer details. <a class="privacy-link" href="/privacy.html">Privacy</a></p>
- </form>
-</div></section>
-</main>
-<script defer src="/site-config.js"></script>
-<script defer src="/assets/contact-submit.js"></script>
-<footer><div class="wrap footer-inner"><a class="wordmark" href="/">brick<span class="dot">&amp;</span>cursor</a><p>© 2026 Brick &amp; Cursor</p><nav class="footer-nav" aria-label="Footer"><a href="/about.html">About Aaron</a><a href="/tools.html">Free tools</a><a href="#contact">Say hello</a></nav></div></footer>
-<script>
+ </form></main><footer><span>Brick &amp; Cursor</span><a href="/privacy.html">Privacy</a></footer><script src="/site-config.js"></script><script src="/assets/contact-submit.js"></script><script>
 (function(){
  'use strict';
  var form=document.getElementById('contact-form');
@@ -240,33 +87,4 @@
   }
  });
 })();
-</script>
-<script>
-(function(){
-  'use strict';
-  var hours=document.getElementById('worth-hours');
-  var rate=document.getElementById('worth-rate');
-  var annualHours=document.getElementById('worth-annual-hours');
-  var annualWeeks=document.getElementById('worth-annual-weeks');
-  var annualValue=document.getElementById('worth-annual-value');
-  if(!hours||!rate||!annualHours||!annualWeeks||!annualValue)return;
-  var currency=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
-  var whole=new Intl.NumberFormat('en-US',{maximumFractionDigits:0});
-  function bound(value,maximum){
-    var n=Number(value);
-    return Number.isFinite(n)?Math.max(0,Math.min(maximum,n)):0;
-  }
-  function refresh(){
-    var week=bound(hours.value,80);
-    var hourRate=bound(rate.value,10000);
-    var total=week*52;
-    annualHours.textContent=whole.format(total);
-    annualWeeks.textContent=(total/40).toLocaleString('en-US',{maximumFractionDigits:1});
-    annualValue.textContent=currency.format(total*hourRate);
-  }
-  hours.addEventListener('input',refresh);
-  rate.addEventListener('input',refresh);
-  refresh();
-})();
-</script>
-</body></html>
+</script></body></html>
