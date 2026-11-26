@@ -1,85 +1,96 @@
 const panel = document.querySelector('#first-look');
+const form = panel.querySelector('form');
+const input = form.elements.message;
+const thread = panel.querySelector('.kit-thread');
+const status = form.querySelector('[role="status"]');
+const submit = form.querySelector('[type="submit"]');
+const handoff = form.querySelector('.ai-handoff');
+const reset = form.querySelector('.ai-reset');
+const note = document.querySelector('#message');
+const history = [];
+let lastAdded = '';
+
 function openLinkedPanel() {
   if (location.hash === '#first-look') panel.open = true;
 }
 openLinkedPanel();
 window.addEventListener('hashchange', openLinkedPanel);
-const form = panel.querySelector('form');
-const goal = form.elements.goal;
-const answer = form.elements.answer;
-const question = panel.querySelector('.ai-question');
-const reply = panel.querySelector('.ai-reply');
-const suggestion = panel.querySelector('.ai-suggestion');
-const status = panel.querySelector('[role="status"]');
-const submit = form.querySelector('button');
-const handoff = panel.querySelector('.ai-handoff');
-const reset = panel.querySelector('.ai-reset');
-const message = document.querySelector('#message');
+
+function addTurn(speaker, content) {
+  const line = document.createElement('p');
+  const label = document.createElement('strong');
+  label.textContent = speaker;
+  line.append(label, document.createTextNode(content));
+  thread.append(line);
+  thread.scrollTop = thread.scrollHeight;
+  return line;
+}
 
 form.addEventListener('submit', async event => {
   event.preventDefault();
-  if (submit.disabled) return;
-  const followUp = !reply.hidden;
-  if (!(followUp ? answer : goal).value.trim()) return;
+  const content = input.value.trim();
+  if (!content || submit.disabled) return;
+  const question = {role:'user',content};
+  const pending = addTurn('You', content);
   submit.disabled = true;
-  goal.readOnly = true;
-  answer.readOnly = true;
-  status.textContent = followUp ? 'Thinking through a first step…' : 'Reading your idea…';
+  input.readOnly = true;
+  reset.disabled = true;
+  handoff.disabled = true;
+  status.textContent = 'Kit is thinking…';
   try {
     const response = await fetch('/api/first-look', {
       method:'POST', headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(followUp ? {goal:goal.value,question:question.textContent,answer:answer.value} : {goal:goal.value})
+      body:JSON.stringify({messages:[...history.slice(-16),question]}),
+      signal:AbortSignal.timeout(55000)
     });
     if (!response.ok) throw new Error();
-    const data = await response.json();
-    if (followUp) {
-      if (!data.suggestion) throw new Error();
-      suggestion.textContent = data.suggestion;
-      suggestion.hidden = false;
-      suggestion.focus();
-      submit.hidden = true;
-      handoff.hidden = false;
-    } else {
-      if (!data.question) throw new Error();
-      question.textContent = data.question;
-      reply.hidden = false;
-      answer.required = true;
-      answer.readOnly = false;
-      submit.textContent = 'Show my first step';
-      answer.focus();
-    }
+    const {reply} = await response.json();
+    if (typeof reply !== 'string' || !reply.trim()) throw new Error();
+    history.push(question,{role:'assistant',content:reply});
+    addTurn('Kit',reply);
+    input.value = '';
     status.textContent = '';
-    reset.hidden = false;
   } catch {
-    status.textContent = 'The AI couldn’t finish this time. Try again, or take your note straight to Aaron.';
-    goal.readOnly = followUp;
-    answer.readOnly = false;
-    handoff.hidden = false;
+    pending.remove();
+    status.textContent = 'Kit couldn’t answer that time. Your message is still here to retry or add to your note.';
   } finally {
     submit.disabled = false;
+    input.readOnly = false;
+    handoff.disabled = false;
+    reset.disabled = false;
+    handoff.hidden = false;
+    reset.hidden = false;
+    if (panel.open && form.contains(document.activeElement)) input.focus({preventScroll:true});
   }
 });
 
-let addedDraft = '';
 handoff.addEventListener('click', () => {
-  const draft = [goal.value.trim(), answer.value.trim(), suggestion.textContent.trim()].filter(Boolean).join('\n\n');
-  if (draft && addedDraft !== draft) {
-    const combined = [message.value.trim(),draft].filter(Boolean).join('\n\n');
-    if (combined.length <= message.maxLength) {
-      message.value = combined;
-      addedDraft = draft;
-    } else {
-      status.textContent = 'Your existing note is nearly full. Shorten it before adding this first look.';
+  const goals = history.filter(turn => turn.role === 'user');
+  if (input.value.trim()) goals.push({content:input.value.trim()});
+  const latestReply = history.at(-1)?.content;
+  const parts = [...new Set([goals[0]?.content, goals.at(-1)?.content].filter(Boolean))];
+  if (latestReply) parts.push('Kit suggested: '+latestReply);
+  const draft = parts.join('\n\n');
+  if (draft && draft !== lastAdded) {
+    const prefix = note.value.trim() ? note.value.trim()+'\n\n' : '';
+    const free = note.maxLength - prefix.length;
+    if (free < 60) {
+      status.textContent = 'Your note is full. Shorten it before adding this conversation.';
       return;
     }
+    note.value = prefix + (draft.length > free ? draft.slice(0,free-1)+'…' : draft);
+    lastAdded = draft;
   }
   location.hash = 'contact-form';
-  message.focus();
+  note.focus();
 });
+
 reset.addEventListener('click', () => {
-  if (submit.disabled) return;
-  form.reset(); goal.readOnly = false; answer.readOnly = false; answer.required = false;
-  question.textContent = ''; suggestion.textContent = ''; status.textContent = '';
-  reply.hidden = true; suggestion.hidden = true; reset.hidden = true; handoff.hidden = true;
-  submit.hidden = false; submit.textContent = 'Ask the AI'; goal.focus();
+  history.length = 0;
+  while (thread.children.length > 1) thread.lastElementChild.remove();
+  form.reset();
+  status.textContent = '';
+  reset.hidden = true;
+  handoff.hidden = true;
+  input.focus();
 });

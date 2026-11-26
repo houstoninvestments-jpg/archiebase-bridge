@@ -341,3 +341,9 @@ body{font-weight:400}
   .intro .deck{margin-block:.35rem .75rem}
   .intro .first-look{margin-top:.6rem}
 }
+
+.kit-thread{max-height:min(20rem,42svh);overflow:auto;overscroll-behavior:contain;margin-bottom:.8rem;scrollbar-color:#b7a593 transparent}
+.kit-thread p{white-space:pre-line;overflow-wrap:anywhere;margin:0 .4rem .8rem 0;line-height:1.45}
+.kit-thread strong{display:block;margin-bottom:.13rem;font-size:.8rem;color:var(--brick-ink)}
+.first-look button{margin-bottom:.32rem}
+.first-look [role=status]:not(:empty){margin-top:.45rem}
