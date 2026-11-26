@@ -1,3 +1,5 @@
+import {speakReply} from './kit-voice.js';
+
 const endpoint = 'https://ai-gateway.vercel.sh/v1/chat/completions';
 const models = ['nvidia/nemotron-3.5-lightning-free', 'reflection/beam-free'];
 const studio = `You are Kit, the AI studio guide at Brick & Cursor. Aaron is the human who runs the studio.
@@ -39,7 +41,8 @@ export default async function handler(req, res) {
   const instruction = first
     ? 'Reply with just one short, specific follow-up question that would change your recommendation. Ask about how they work today. No preamble.'
     : 'Suggest one immediately useful, realistic first step based on their answer, including one concrete example or action they can try themselves. Stay under 75 words, plain text, no headings or follow-up questions.';
-  const messages = chat ? [{role:'system',content:studio}, ...conversation.map(({role,content}) => ({role,content}))] : [
+  const guidance = req.body?.voice === true ? ' This answer will be spoken aloud. Use two or three short sentences, plain text, and natural pauses. Avoid lists, links, and reading out punctuation.' : '';
+  const messages = chat ? [{role:'system',content:studio + guidance}, ...conversation.map(({role,content}) => ({role,content}))] : [
     {role:'system',content:studio+' '+instruction},
     {role:'user',content:JSON.stringify(first ? {goal} : {goal,question,answer})}
   ];
@@ -58,7 +61,10 @@ export default async function handler(req, res) {
       const text = data.choices?.[0]?.message?.content?.trim();
       if (!text) continue;
       if (chat) {
-        if (text.length <= 1800) return res.status(200).json({reply:text});
+        if (text.length <= 1800) {
+          const speech = req.body.voice === true ? await speakReply(req,text) : {};
+          return res.status(200).json({reply:text, ...speech});
+        }
       } else if (first) {
         const question = text.match(/[^.!?\n]*\?/u)?.[0].trim();
         if (question && question.length <= 320) return res.status(200).json({question});

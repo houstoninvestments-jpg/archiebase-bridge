@@ -347,3 +347,7 @@ body{font-weight:400}
 .kit-thread strong{display:block;margin-bottom:.13rem;font-size:.8rem;color:var(--brick-ink)}
 .first-look button{margin-bottom:.32rem}
 .first-look [role=status]:not(:empty){margin-top:.45rem}
+
+.first-look [hidden]{display:none!important}
+.kit-voice-tools small{display:block;margin:.5rem 0;line-height:1.4}
+.kit-audio{display:block;width:min(100%,20rem);margin:.6rem 0}
