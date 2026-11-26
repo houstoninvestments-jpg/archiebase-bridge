@@ -325,3 +325,19 @@ body{font-weight:400}
 .first-look .ai-suggestion{margin:.7rem 0;white-space:pre-line;font-weight:500}
 .first-look .ai-reset{border:0;background:transparent;text-decoration:underline}
 .tools-link{margin-top:1.5rem}
+
+/* Keep the complete introduction in view on wide, shallow laptop screens. */
+@media (min-width:641px){
+  .cover{grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);padding-top:clamp(.8rem,2.8svh,2rem)}
+  .cover h1{font-size:clamp(2.25rem,min(5.1vw,8.4svh),6rem)}
+  .intro .label{margin-bottom:clamp(.75rem,2.2svh,1.55rem)}
+  .intro-byline{margin-top:clamp(.65rem,1.6svh,1.2rem)}
+  .intro .deck{max-width:46ch}
+  .hero-art{min-height:clamp(18rem,48svh,31rem)}
+}
+@media (min-width:641px) and (max-height:720px){
+  .mast{padding-block:.65rem}
+  .intro-byline img{width:2.25rem}
+  .intro .deck{margin-block:.35rem .75rem}
+  .intro .first-look{margin-top:.6rem}
+}
