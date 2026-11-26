@@ -1,4 +1,9 @@
 const panel = document.querySelector('#first-look');
+function openLinkedPanel() {
+  if (location.hash === '#first-look') panel.open = true;
+}
+openLinkedPanel();
+window.addEventListener('hashchange', openLinkedPanel);
 const form = panel.querySelector('form');
 const goal = form.elements.goal;
 const answer = form.elements.answer;
