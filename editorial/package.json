@@ -7,6 +7,6 @@
   },
   "scripts": {
     "build": "node build.mjs",
-    "vercel-build": "node -e \"process.exit(0)\""
+    "vercel-build": "node build.mjs"
   }
 }

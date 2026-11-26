@@ -311,3 +311,17 @@ body{font-weight:400}
  .mast nav a:first-child{display:inline}
  .mast .c-link{padding-inline:.75rem}
 }
+
+.first-look{max-width:38rem;margin-top:1rem}
+.first-look summary,.tools-link a{color:var(--brick-ink);font-weight:800;cursor:pointer;text-underline-offset:.2em}
+.first-look summary{width:fit-content;text-decoration:underline}
+.first-look form{margin:.8rem 0;padding:.9rem 1rem 1rem;border-left:2px solid var(--brick);background:#fffaf065}
+.first-look label,.ai-suggestion{display:block;font-weight:800}
+.first-look textarea{width:100%;resize:vertical;font:inherit;background:#fffaf0;color:var(--ink);border:1px solid #867965;border-radius:.45rem;padding:.55rem;margin:.5rem 0}
+.ai-hint,.first-look [role=status]{font-size:.93rem;line-height:1.45}
+.first-look button{min-height:42px;padding:.4rem .75rem;background:#fffaef;border:1px solid #867965;border-radius:.65rem;font-weight:700}
+.first-look button:disabled{opacity:.65}
+.first-look [hidden]{display:none}
+.first-look .ai-suggestion{margin:.7rem 0;white-space:pre-line;font-weight:500}
+.first-look .ai-reset{border:0;background:transparent;text-decoration:underline}
+.tools-link{margin-top:1.5rem}
