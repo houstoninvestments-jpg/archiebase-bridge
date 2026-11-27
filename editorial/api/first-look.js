@@ -1,4 +1,4 @@
-import {speakReply} from './kit-voice.js';
+import {speakReply, reserveVoiceReply, voiceChatModel} from './kit-voice.js';
 
 const endpoint = 'https://ai-gateway.vercel.sh/v1/chat/completions';
 const models = ['nvidia/nemotron-3.5-lightning-free', 'reflection/beam-free'];
@@ -46,12 +46,13 @@ export default async function handler(req, res) {
     {role:'system',content:studio+' '+instruction},
     {role:'user',content:JSON.stringify(first ? {goal} : {goal,question,answer})}
   ];
-  for (const model of models) {
+  const useVoiceModel = chat && req.body.voice === true && await reserveVoiceReply(req,messages);
+  for (const model of useVoiceModel ? [voiceChatModel, ...models] : models) {
     try {
       const response = await fetch(endpoint, {
         method:'POST', signal:AbortSignal.timeout(20000),
         headers:{Authorization:'Bearer ' + token, 'Content-Type':'application/json'},
-        body:JSON.stringify({model,messages,reasoning_effort:'low',max_tokens:1400})
+        body:JSON.stringify(model === voiceChatModel ? {model,messages,max_tokens:256} : {model,messages,reasoning_effort:'low',max_tokens:1400})
       });
       if (!response.ok) {
         console.warn('First look model unavailable', model, response.status);

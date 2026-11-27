@@ -7,7 +7,8 @@ const river = 'SAz9YHcvj6GT2YYXdXww';
 const sampleRate = 16000;
 
 const expiry = Date.parse('2027-11-26T23:59:59Z');
-const voiceModels = {speech:'elevenlabs/eleven-flash-v2.5',listen:'elevenlabs/scribe-v2'};
+export const voiceChatModel = 'openai/gpt-4.1-mini';
+const voiceModels = {chat:voiceChatModel,speech:'elevenlabs/eleven-flash-v2.5',listen:'elevenlabs/scribe-v2'};
 const limit = 4900000; // Microdollars. Leave ten cents of the approved $5 unused.
 
 function runtimeToken(req) {
@@ -24,9 +25,13 @@ async function reserve(kind, units) {
   const prices = await fetch('https://ai-gateway.vercel.sh/v1/models', {signal:AbortSignal.timeout(5000)});
   if (!prices.ok) throw Error('Voice pricing unavailable');
   const model = (await prices.json()).data.find(m => m.id === voiceModels[kind]);
-  const price = Number(model?.pricing?.[kind === 'speech' ? 'speech_input_character_cost' : 'transcription_duration_cost_per_second']);
+  const pricing = model?.pricing;
+  const field = {speech:'speech_input_character_cost',listen:'transcription_duration_cost_per_second',chat:'input'}[kind];
+  const price = Number(pricing?.[field]);
   if (!Number.isFinite(price) || price <= 0) throw Error('Voice price missing');
-  const amount = Math.max(10000, Math.ceil(units * price * 1500000));
+  const outputCost = kind === 'chat' ? 256 * Number(pricing?.output) : 0;
+  const amount = Math.max(10000, Math.ceil((units * price + outputCost) * 1500000));
+  if (!Number.isSafeInteger(amount) || amount <= 0) throw Error('Voice pricing unavailable');
   const path = 'kit-budget/' + new Date().toISOString().slice(0,7) + '.txt';
   const current = await get(path,{access:'private',useCache:false});
   const spent = current ? Number(await new Response(current.stream).text()) : 0;
@@ -35,6 +40,17 @@ async function reserve(kind, units) {
     access:'private',addRandomSuffix:false,
     ...(current ? {ifMatch:current.blob.etag} : {allowOverwrite:false})
   });
+}
+
+export async function reserveVoiceReply(req,messages) {
+  if (!configured(req)) return false;
+  try {
+    // One token per UTF-8 byte plus framing is a conservative ceiling for this model.
+    await reserve('chat',Buffer.byteLength(JSON.stringify(messages)) + 512);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 // Accept exactly the mono PCM layout the studio recorder writes, capped at 25 seconds.
