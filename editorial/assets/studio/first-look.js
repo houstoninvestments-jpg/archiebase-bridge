@@ -45,11 +45,12 @@ async function chooseRoute(hash, moveFocus) {
   if (voiceSupported) {
     let available = false;
     try {
-      const response = await fetch('/api/kit-voice',{cache:'no-store'});
+      const response = await fetch('/api/voice-conversation',{cache:'no-store'});
       available = response.ok && (await response.json()).enabled;
     } catch {}
     if (view !== hash || id !== lastVoiceCheck) return;
-    mic.hidden = tools.hidden = !available && !call;
+    if (!available && call) endVoice('Voice is unavailable right now. You can type to Kit.');
+    mic.hidden = tools.hidden = !available;
     if (hash === voiceRoute && !call && !submit.disabled) {
       status.textContent = available ? 'Start voice chat when you’re ready.' : 'Voice is unavailable right now. Type your question here or choose Write to Aaron.';
       if (moveFocus) (available ? mic : input).focus({preventScroll:true});
@@ -127,7 +128,7 @@ handoff.addEventListener('click', () => {
   if (input.value.trim()) goals.push({content:input.value.trim()});
   const latestReply = history.at(-1)?.content;
   const parts = goals.map(turn => turn.content);
-  if (latestReply) parts.push('Kit suggested: '+latestReply);
+  if (latestReply && !latestReply.startsWith('[Visitor interrupted')) parts.push('Kit suggested: '+latestReply);
   const draft = parts.join('\n\n');
   if (draft && (draft !== lastAdded || !note.value.trim())) {
     const prefix = note.value.trim() ? note.value.trim()+'\n\n' : '';
@@ -189,6 +190,7 @@ function endVoice(message = '') {
   const session = call;
   if (!session) return;
   call = null;
+  form.classList.remove('in-voice-chat');
   session.turn?.abort();
   clearTimeout(session.idle);
   stopSound(session);
@@ -329,6 +331,7 @@ function microphoneFrame(session, data) {
     session.frames=session.chunks.reduce((n,c)=>n+c.length,0);
     session.quiet=0;
     session.phase='speaking';
+    session.hasSpoken=true;
     clearTimeout(session.idle);
     status.textContent='Listening to you…';
     return;
@@ -337,7 +340,8 @@ function microphoneFrame(session, data) {
   session.chunks.push(data.subarray(0,count));
   session.frames+=count;
   session.quiet=loud ? 0 : session.quiet+count;
-  if(session.quiet<13600 && session.frames<960000) return;
+  const pauseFrames=session.frames<32000 ? 10880 : 13280;
+  if(session.quiet<pauseFrames && session.frames<960000) return;
   const chunks=session.chunks, frames=session.frames;
   session.chunks=[];session.frames=session.attack=session.quiet=0;
   answerTurn(session,chunks,frames);
@@ -348,6 +352,9 @@ async function startVoice() {
   if (input.value.trim()) {status.textContent='Send or clear your typed draft before starting voice chat.';return;}
   const session={phase:'opening',sources:new Set(),nextAudio:0,turn:null,heard:'',pre:[],chunks:[],frames:0,attack:0,quiet:0,floor:.003};
   call=session;
+  form.classList.add('in-voice-chat');
+  const welcome = history.length ? null : fetch('/assets/studio/kit-welcome.mp3')
+    .then(r=>r.ok ? r.arrayBuffer() : null).catch(()=>null);
   tools.hidden=mic.hidden=false;
   mic.textContent='End voice chat';
   mic.setAttribute('aria-pressed','true');
@@ -368,6 +375,15 @@ async function startVoice() {
     session.node.connect(session.context.destination);
     stream.getAudioTracks()[0].onended=()=>{if(call===session)endVoice('Your microphone disconnected.');};
     listen(session);
+    if (welcome) {
+      const bytes=await welcome;
+      if (bytes && call===session && session.phase==='listening' && !session.hasSpoken) {
+        try {
+          const greeting=await session.context.decodeAudioData(bytes);
+          if (call===session && session.phase==='listening' && !session.hasSpoken) enqueueAudio(session,greeting);
+        } catch {}
+      }
+    }
   } catch(error) {
     if(call===session) endVoice(error.name==='NotAllowedError' ? 'Microphone access is off. Allow it in your browser or type here.' : 'Your microphone couldn’t start. You can type here.');
   }

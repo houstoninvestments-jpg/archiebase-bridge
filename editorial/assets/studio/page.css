@@ -367,3 +367,7 @@ body{font-weight:400}
 .reply-fields select{width:100%;font:inherit;color:var(--ink);background:#fffaf0;border:1px solid #897b68;border-radius:.4rem;padding:.65rem}
 .reach .first-look>summary{font-size:1.1rem}
 @media(max-width:680px){.reach-options{grid-template-columns:1fr;gap:.5rem}.reach-options a{padding:.8rem 1rem}.reach-options span{margin-top:.15rem}.reach-head img{display:none}}
+
+.first-look .in-voice-chat :is(label[for="kit-input"],#kit-input,button[type="submit"]){display:none}
+.first-look .in-voice-chat .kit-mic{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.first-look .in-voice-chat [role="status"]{font-weight:700;color:var(--brick-ink)}

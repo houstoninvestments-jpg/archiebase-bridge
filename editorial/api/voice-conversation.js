@@ -3,11 +3,12 @@ import {transcribe, streamText, experimental_streamSpeech as streamSpeech} from 
 import {studio, validConversation} from './first-look.js';
 import {configured, readRecording, reserveConversation, river, runtimeToken, speakReply, voiceChatModel, voiceModels} from './kit-voice.js';
 
-const spokenStyle = 'You are in a live voice conversation. Answer the latest thought directly in one or two short sentences. Match the visitor’s pace. If they cut in, go with the new thought. Ask one question only if it helps. Use plain spoken English, no formatting, no generic preamble.';
+const spokenStyle = 'You’re talking out loud with one person. Give them room to talk. Aim for about 25 words per turn. One concrete thought, occasionally a follow-up. Use contractions. Skip sales language and generic reassurance. Follow interruptions. A free first look starts with a note; Aaron takes a look himself and replies by text or email. Never imply it is a booked call or meeting.';
 
 export default async function handler(req,res) {
   res.setHeader('Cache-Control','no-store, no-transform');
-  if (req.method !== 'POST') { res.setHeader('Allow','POST'); return res.status(405).end(); }
+  if (req.method === 'GET') return res.status(200).json({enabled:configured(req)});
+  if (req.method !== 'POST') { res.setHeader('Allow','GET, POST'); return res.status(405).end(); }
   if (!configured(req)) return res.status(503).json({error:'Voice is unavailable. You can still type to Kit.'});
   if (!req.headers['content-type']?.startsWith('application/json')) return res.status(415).end();
   const past = req.body?.history;
@@ -40,11 +41,23 @@ export default async function handler(req,res) {
       maxOutputTokens:128,maxRetries:0,abortSignal:signal,onError:()=>{}});
     let reply = '';
     async function* words() {
+      let pending = '';
       for await (const delta of answer.textStream) {
-        const piece = delta.slice(0,420-reply.length);
-        if (!piece) break;
-        reply += piece;
-        yield piece;
+        pending += delta;
+        // Send a complete phrase so River can start naturally and never cut off a word at the limit.
+        let match;
+        while ((match = pending.match(/^.*?[.!?](?=\s)/s))) {
+          const sentence = match[0] + ' ';
+          if ((reply + sentence).length > 420) return;
+          reply += sentence;
+          yield sentence;
+          pending = pending.slice(match[0].length).trimStart();
+        }
+        if (pending.length + reply.length > 420) break;
+      }
+      if (pending.trim() && pending.length + reply.length <= 420) {
+        reply += pending;
+        yield pending;
       }
     }
     let audioSent = false;
@@ -59,7 +72,10 @@ export default async function handler(req,res) {
         audioSent = true;
       }
     } catch { if (signal.aborted) return; }
-    if (!reply.trim()) reply=(await answer.text).trim().slice(0,420);
+    if (!reply.trim()) {
+      const full=(await answer.text).trim();
+      reply=full.length<=420 ? full : full.slice(0,417).replace(/\s+\S*$/, '')+'…';
+    }
     if (!reply) throw Error('Missing reply');
     if (!audioSent && !signal.aborted) {
       const fallback = await speakReply(req,reply);
