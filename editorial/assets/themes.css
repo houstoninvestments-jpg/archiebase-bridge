@@ -1,4 +1,4 @@
-/* ARCHIEBASE / THEME LAB v1.
+/* BRICK & CURSOR / THEME LAB v1.
    Design tokens are intentional and editable. The palette changes color, never hierarchy.
    Contrast is managed per-role; the alternate palettes are previews, not separate products. */
 :root{
@@ -295,7 +295,7 @@ html[data-palette="10"] .pricing{padding-bottom:clamp(85px,8vw,125px)!important}
  .solution-row > p{grid-column:2!important}
 }
 
-/* ARCHIEBASE EDITORIAL SIMPLIFICATION 2026-11-04
+/* BRICK & CURSOR EDITORIAL SIMPLIFICATION 2026-11-04
    Fewer competing elements. Deliberate hierarchy, whitespace and concise copy. */
 html[data-palette="10"] .sb-hero{
  padding:clamp(75px,8.5vw,128px) 0 clamp(78px,8vw,122px)!important;

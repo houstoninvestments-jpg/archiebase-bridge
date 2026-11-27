@@ -1,5 +1,7 @@
-// Archiebase public business inquiries.
-// The recipient is an encrypted Vercel environment variable, never sent to the browser.
+// Brick & Cursor public business inquiries.
+// The recipient is an encrypted host environment variable, never sent to the browser.
+// Static Cloudflare Pages builds omit this file. The hostnames below are the existing
+// public origins that may still post here; they are not the new studio name.
 const MAX_BODY_BYTES = 10_000;
 const allowOrigin = new Set([
   'https://archiebase-public.vercel.app',
@@ -54,9 +56,9 @@ export default async function handler(req, res) {
   // Prefer Resend, which is designed for server-to-server email delivery.
   // Vercel's Resend marketplace integration provisions RESEND_API_KEY privately.
   if (process.env.RESEND_API_KEY) {
-    const from = process.env.RESEND_FROM_EMAIL || 'Archiebase <onboarding@resend.dev>';
+    const from = process.env.RESEND_FROM_EMAIL || 'Brick & Cursor <onboarding@resend.dev>';
     const textBody = [
-      'New Archiebase business inquiry',
+      'New Brick & Cursor inquiry',
       '',
       'Name: ' + name,
       'Business: ' + business,
@@ -66,7 +68,7 @@ export default async function handler(req, res) {
       'Message:',
       message,
       '',
-      'Submitted via the Archiebase website.'
+      'Submitted via the Brick & Cursor website.'
     ].join('\n');
     try {
       const response = await fetch('https://api.resend.com/emails', {
@@ -80,7 +82,7 @@ export default async function handler(req, res) {
           from,
           to: [recipient],
           reply_to: email,
-          subject: 'Archiebase | New small business inquiry',
+          subject: 'Brick & Cursor | New inquiry',
           text: textBody
         }),
         signal: AbortSignal.timeout(12000)
@@ -90,12 +92,12 @@ export default async function handler(req, res) {
         if (data.id) return res.status(200).json({ ok: true });
       }
       const data = await response.json().catch(() => ({}));
-      console.warn('ARCHIEBASE_RESEND_DELIVERY_FAILED', {
+      console.warn('STUDIO_RESEND_DELIVERY_FAILED', {
         status: response.status,
         code: String(data && data.name || data && data.code || 'unknown').slice(0,60)
       });
     } catch (error) {
-      console.warn('ARCHIEBASE_RESEND_DELIVERY_EXCEPTION', {
+      console.warn('STUDIO_RESEND_DELIVERY_EXCEPTION', {
         kind: String(error && error.name || 'unknown').slice(0,48)
       });
     }
@@ -111,7 +113,7 @@ export default async function handler(req, res) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Referer': 'https://archiebase-editorial-2026.vercel.app/', 'Origin': 'https://archiebase-editorial-2026.vercel.app' },
         body: JSON.stringify({
-          _subject: 'Archiebase · New small business inquiry',
+          _subject: 'Brick & Cursor | New inquiry',
           _template: 'table',
           _captcha: 'false',
           _replyto: email,
@@ -130,7 +132,7 @@ export default async function handler(req, res) {
     try { data = JSON.parse(upstreamText); } catch { /* HTML challenges aren't JSON */ }
     if (!upstream.ok || (data.success !== 'true' && data.success !== true)) {
       // Log only safe upstream diagnostics. No email, name, message, or recipient.
-      console.warn('ARCHIEBASE_FORM_UPSTREAM_REJECTED', {
+      console.warn('STUDIO_FORM_UPSTREAM_REJECTED', {
         status: upstream.status,
         type: String(upstream.headers.get('content-type') || '').split(';')[0].slice(0,50),
         challenge: /just a moment|cloudflare|cf-chl|challenge-platform/i.test(upstreamText),
@@ -141,7 +143,7 @@ export default async function handler(req, res) {
     }
     return res.status(200).json({ ok: true });
   } catch (error) {
-    console.warn('ARCHIEBASE_FORM_UPSTREAM_EXCEPTION', {
+    console.warn('STUDIO_FORM_UPSTREAM_EXCEPTION', {
       kind: String(error && error.name || 'unknown').slice(0,48)
     });
     return res.status(502).json({ ok: false, error: 'We could not send your request. Please try again later.' });

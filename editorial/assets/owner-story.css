@@ -1,4 +1,4 @@
-/* ARCHIEBASE / OWNER-TO-OWNER / NOV 2026
+/* BRICK & CURSOR / OWNER-TO-OWNER / NOV 2026
    Simple warm editorial identity. No agency cards, synthetic dashboards or sales funnels. */
 :root{
  --paper:#F5F3ED;
@@ -39,10 +39,31 @@ img{max-width:100%;height:auto}
 .small-link{display:inline-flex;align-items:center;font-size:14px;font-weight:800;border-bottom:1px solid currentColor;padding-bottom:3px}
 .small-link:hover{color:#146989}
 /* navigation */
-.site-nav{position:sticky;top:0;z-index:30;background:rgba(245,243,237,.96);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+.site-nav{position:sticky;top:0;z-index:30;background:rgba(245,243,237,.96);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+/* Dark treatment uses a solid fill and drops backdrop-filter so a sticky
+   composited layer actually repaints (backdrop-filter can keep the cream
+   pixels even after background changes). !important beats later palette
+   previews such as html[data-colors] .site-nav and themes.css. */
+header.site-nav.is-over-dark{
+  background:#102638 !important;
+  background-color:#102638 !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  border-bottom-color:#3A5A6C !important;
+  color:#F3FAFC !important;
+}
+header.site-nav.is-over-dark .wordmark{color:#F3FAFC !important}
+header.site-nav.is-over-dark .wordmark .dot{color:#9CD7E4 !important}
+header.site-nav.is-over-dark .wordmark small{color:#A9C5CE !important}
+header.site-nav.is-over-dark .desktop-nav>a:not(.nav-action){color:#F3FAFC !important}
+header.site-nav.is-over-dark .desktop-nav>a:not(.nav-action):hover{color:#A1DFEB !important}
+header.site-nav.is-over-dark .nav-action{background:#F3FAFC !important;border-color:#F3FAFC !important;color:#102638 !important}
+header.site-nav.is-over-dark .nav-action:hover{background:#D7EEF3 !important;border-color:#D7EEF3 !important;color:#102638 !important}
+header.site-nav.is-over-dark .mobile-menu summary{color:#F3FAFC !important;border-color:#7EA3B1 !important}
+
 .nav-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .wordmark{display:inline-flex;align-items:baseline;white-space:nowrap;gap:0;color:var(--ink);font:900 28px/1 var(--body);letter-spacing:-.075em}
-.wordmark .dot{color:#1683A7}
+.wordmark .dot{color:#1683A7;margin-inline:.2em}
 .wordmark small{font:700 10px/1 var(--body);letter-spacing:.04em;color:var(--muted);margin-left:12px}
 .desktop-nav{display:flex;align-items:center;gap:29px;font-size:13px;font-weight:800}
 .desktop-nav>a:not(.nav-action):hover{color:#147798}
@@ -194,8 +215,8 @@ footer{background:#0A1D2A;color:#BFD2D8;border-top:1px solid #315061;padding:28p
 }
 @media(max-width:440px){
  .wrap{width:calc(100% - 32px)}
- .wordmark{font-size:24px}
- .wordmark small{font-size:9px;margin-left:8px}
+ .wordmark{font-size:18px;letter-spacing:-.06em}
+ .wordmark small{display:none}
  .hero h1{font-size:clamp(33px,8.3vw,44px)}
  .hero h1 em{font-size:.95em;line-height:1.2}
  .hero-actions{align-items:stretch;flex-direction:column;gap:14px}
@@ -312,6 +333,7 @@ footer{background:#0A1D2A;color:#BFD2D8;border-top:1px solid #315061;padding:28p
 .time-value{background:#102638;color:#F3FAFC;padding:clamp(89px,10vw,148px) 0}
 .time-value .eyebrow{color:#9CD7E4}
 .time-value-story{border-bottom:1px solid #426173;padding-bottom:clamp(65px,7vw,108px)}
+.time-value-intro{margin-bottom:clamp(36px,5vw,72px);max-width:780px}
 .time-value-head{display:grid;grid-template-columns:minmax(0,1.07fr) minmax(0,.9fr);gap:clamp(40px,7vw,118px);align-items:start;margin-top:25px}
 .time-value h2{font:400 clamp(39px,4.5vw,67px)/1.19 var(--display);letter-spacing:-.042em;max-width:680px;text-wrap:balance}
 .time-value h2 em{display:block;color:#A1DFEB;font:italic 800 .91em/1.22 var(--body);letter-spacing:-.045em;margin-top:20px}

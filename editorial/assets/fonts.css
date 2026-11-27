@@ -1,4 +1,4 @@
-/* ARCHIEBASE FONT EXPLORATION. No change unless data-font is selected. */
+/* BRICK & CURSOR FONT EXPLORATION. No change unless data-font is selected. */
 html[data-font="01"]{--ab-head:'Unbounded',sans-serif;--ab-body:'Inter Tight',sans-serif;--ab-headweight:800;--ab-headtrack:-.07em}
 html[data-font="02"]{--ab-head:'Fraunces',sans-serif;--ab-body:'Manrope',sans-serif;--ab-headweight:700;--ab-headtrack:-.055em}
 html[data-font="03"]{--ab-head:'Archivo Black',sans-serif;--ab-body:'Source Sans 3',sans-serif;--ab-headweight:400;--ab-headtrack:-.075em}
