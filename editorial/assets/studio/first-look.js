@@ -27,11 +27,54 @@ function clearPlayback() {
   audioUrl = '';
 }
 
-function openLinkedPanel() {
-  if (location.hash === '#first-look') panel.open = true;
+const contactForm = note.form;
+const options = document.querySelector('.reach-options');
+const voiceRoute = '#kit-voice';
+const voiceSupported = Boolean(window.AudioContext && window.AudioWorkletNode && navigator.mediaDevices?.getUserMedia);
+let view = '';
+let lastVoiceCheck = 0;
+
+async function chooseRoute(hash, moveFocus) {
+  const chat = hash === '#first-look' || hash === voiceRoute;
+  const direct = hash === '#contact-form';
+  view = hash;
+  panel.open = chat;
+  panel.hidden = !chat;
+  contactForm.hidden = !direct;
+  for (const link of options.querySelectorAll('a')) {
+    if (link.hash === hash) link.setAttribute('aria-current','true');
+    else link.removeAttribute('aria-current');
+  }
+  if (!chat) {
+    if (moveFocus && direct) note.focus({preventScroll:true});
+    return;
+  }
+  if (moveFocus && hash !== voiceRoute) input.focus({preventScroll:true});
+  const id = ++lastVoiceCheck;
+  if (hash === voiceRoute && mic.hidden) {
+    status.textContent = voiceSupported ? 'Checking microphone availability…' : 'Voice needs a browser with microphone access. You can type your question here or choose Write to Aaron.';
+  }
+  if (voiceSupported) {
+    let available = false;
+    try {
+      const response = await fetch('/api/kit-voice',{cache:'no-store'});
+      available = response.ok && (await response.json()).enabled;
+    } catch {}
+    if (view !== hash || id !== lastVoiceCheck) return;
+    mic.hidden = tools.hidden = !available;
+    if (hash === voiceRoute && !recording && !submit.disabled) {
+      status.textContent = available ? 'Press Start recording when you’re ready.' : 'Voice is unavailable right now. Type your question here or choose Write to Aaron.';
+      if (moveFocus) (available ? mic : input).focus({preventScroll:true});
+    }
+  }
 }
-openLinkedPanel();
-window.addEventListener('hashchange', openLinkedPanel);
+
+chooseRoute(location.hash,false);
+window.addEventListener('hashchange', () => chooseRoute(location.hash,true));
+options.addEventListener('click',event => {
+  const link = event.target.closest('a');
+  if (link && link.hash === location.hash) chooseRoute(link.hash,true);
+});
 
 function addTurn(speaker, content) {
   const line = document.createElement('p');
@@ -102,10 +145,10 @@ handoff.addEventListener('click', () => {
   const goals = history.filter(turn => turn.role === 'user');
   if (input.value.trim()) goals.push({content:input.value.trim()});
   const latestReply = history.at(-1)?.content;
-  const parts = [...new Set([goals[0]?.content, goals.at(-1)?.content].filter(Boolean))];
+  const parts = goals.map(turn => turn.content);
   if (latestReply) parts.push('Kit suggested: '+latestReply);
   const draft = parts.join('\n\n');
-  if (draft && draft !== lastAdded) {
+  if (draft && (draft !== lastAdded || !note.value.trim())) {
     const prefix = note.value.trim() ? note.value.trim()+'\n\n' : '';
     const free = note.maxLength - prefix.length;
     if (free < 60) {
@@ -115,8 +158,9 @@ handoff.addEventListener('click', () => {
     note.value = prefix + (draft.length > free ? draft.slice(0,free-1)+'…' : draft);
     lastAdded = draft;
   }
+  contactForm.hidden = false;
   location.hash = 'contact-form';
-  note.focus();
+  note.focus({preventScroll:true});
 });
 
 reset.addEventListener('click', () => {
@@ -162,7 +206,7 @@ function release(session) {
 }
 
 function unlockRecorder() {
-  mic.textContent = 'Talk to Kit';
+  mic.textContent = 'Start recording';
   mic.disabled = false;
   cancel.hidden = true;
   submit.disabled = false;
@@ -261,15 +305,3 @@ function leaveVoice() {
 }
 panel.addEventListener('toggle', () => { if (!panel.open) leaveVoice(); });
 window.addEventListener('pagehide',leaveVoice);
-if (window.AudioContext && window.AudioWorkletNode && navigator.mediaDevices?.getUserMedia) {
-  const checkVoice = async () => {
-    if (!panel.open) return;
-    panel.removeEventListener('toggle',checkVoice);
-    try {
-      const response = await fetch('/api/kit-voice',{cache:'no-store'});
-      if (response.ok && (await response.json()).enabled) mic.hidden = tools.hidden = false;
-    } catch {}
-  };
-  panel.addEventListener('toggle',checkVoice);
-  checkVoice();
-}

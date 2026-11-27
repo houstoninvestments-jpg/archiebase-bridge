@@ -4,6 +4,35 @@
   'use strict';
   var friendly = "Something went wrong sending that. Please try again in a minute.";
 
+  function setReplyFields(form) {
+    for (const group of form.querySelectorAll('[data-reply]')) {
+      const active = group.dataset.reply === form.elements.replyMethod.value;
+      group.hidden = !active;
+      const input = group.querySelector('input');
+      input.disabled = !active;
+      input.required = active;
+    }
+  }
+
+  for (const selector of document.querySelectorAll('select[name="replyMethod"]')) {
+    const form = selector.form;
+    setReplyFields(form);
+    selector.addEventListener('change', () => setReplyFields(form));
+    form.addEventListener('reset', () => queueMicrotask(() => setReplyFields(form)));
+  }
+
+  window.studioReplyDetails = function (form) {
+    if (form.elements.replyMethod.value === 'text') {
+      const mobile = form.elements.mobile.value.trim();
+      if (!/^[+0-9().\s-]+$/.test(mobile) || !/^\d{7,15}$/.test(mobile.replace(/\D/g,''))) {
+        form.elements.mobile.focus();
+        throw new Error('Please enter a mobile number where Aaron can text you.');
+      }
+      return {replyMethod:'text', mobile};
+    }
+    return {replyMethod:'email', email:form.elements.email.value.trim()};
+  };
+
   window.sendStudioNote = async function (fields) {
     var config = window.BRICK_CURSOR || {};
     var target = String(config.formTarget || "").trim();
@@ -15,14 +44,16 @@
     var message = String(fields.message || "").trim();
     var payload = {
       name: name,
-      email: email,
+      "Reply by": fields.replyMethod === "text" ? "Text" : "Email",
       message: message,
       _subject: "New Brick & Cursor inquiry from " + name,
       _template: "table",
       _captcha: "false",
-      _replyto: email,
+
       _honey: ""
     };
+    if (fields.replyMethod === "text") payload["Mobile number"] = fields.mobile;
+    else { payload.email = email; payload._replyto = email; }
     if (fields.business) payload.business = String(fields.business).trim();
     if (fields.issue) payload.issue = String(fields.issue).trim();
 
