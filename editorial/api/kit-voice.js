@@ -35,9 +35,10 @@ async function reserve(kind, units) {
   await reserveAmount(amount);
 }
 
-async function reserveAmount(amount) {
+async function reserveAmount(estimate) {
   const path = 'kit-budget/' + new Date().toISOString().slice(0,7) + '.txt';
-  const current = await get(path,{access:'private',useCache:false});
+  const [amount,current] = await Promise.all([estimate,get(path,{access:'private',useCache:false})]);
+  if (!Number.isSafeInteger(amount) || amount <= 0) throw Error('Voice pricing unavailable');
   const spent = current ? Number(await new Response(current.stream).text()) : 0;
   if (!Number.isSafeInteger(spent) || spent < 0 || spent + amount > limit) throw Error('Voice budget unavailable');
   await put(path,String(spent + amount),{
@@ -47,7 +48,11 @@ async function reserveAmount(amount) {
 }
 
 // Reserve the complete bounded turn before starting any metered provider work.
-export async function reserveConversation(historyBytes, seconds) {
+export function reserveConversation(historyBytes, seconds) {
+  return reserveAmount(conversationCost(historyBytes,seconds));
+}
+
+async function conversationCost(historyBytes,seconds) {
   const response = await fetch('https://ai-gateway.vercel.sh/v1/models',{signal:AbortSignal.timeout(5000)});
   if (!response.ok) throw Error('Voice pricing unavailable');
   const catalog = (await response.json()).data;
@@ -59,7 +64,7 @@ export async function reserveConversation(historyBytes, seconds) {
   const cost = Math.max(seconds,60) * price(voiceModels.listen,'transcription_duration_cost_per_second')
     + (historyBytes + 6500) * price(voiceChatModel,'input') + 128 * price(voiceChatModel,'output')
     + 420 * price(voiceModels.speech,'speech_input_character_cost');
-  await reserveAmount(Math.ceil(cost * 1500000));
+  return Math.ceil(cost * 1500000);
 }
 
 export async function reserveVoiceReply(req,messages) {

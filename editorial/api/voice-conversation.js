@@ -3,7 +3,7 @@ import {transcribe, streamText, experimental_streamSpeech as streamSpeech} from 
 import {studio, validConversation} from './first-look.js';
 import {configured, readRecording, reserveConversation, river, runtimeToken, speakReply, voiceChatModel, voiceModels} from './kit-voice.js';
 
-const spokenStyle = 'You’re talking out loud with one person. Give them room to talk. Aim for about 25 words per turn. One concrete thought, occasionally a follow-up. Use contractions. Skip sales language and generic reassurance. Follow interruptions. A free first look starts with a note; Aaron takes a look himself and replies by text or email. Never imply it is a booked call or meeting.';
+const spokenStyle = 'You’re talking out loud with one person. Give them room to talk. Aim for about 25 words per turn. One concrete thought, occasionally a follow-up. Use contractions. Skip sales language and generic reassurance. Follow interruptions. A free first look starts with a note; Aaron takes a look himself and replies by text or email. Never imply it is a booked call or meeting. For example, if someone asks how a first look works: “Send Aaron a link and tell him what feels off. He’ll take a look for free and text or email you what he’d try first.” If someone says they have no idea where to start: “That’s okay. What’s one thing you’d happily take off your plate this week?” Match that rhythm in your own words.';
 
 export default async function handler(req,res) {
   res.setHeader('Cache-Control','no-store, no-transform');
@@ -42,6 +42,7 @@ export default async function handler(req,res) {
     let reply = '';
     async function* words() {
       let pending = '';
+      let sentences = 0;
       for await (const delta of answer.textStream) {
         pending += delta;
         // Send a complete phrase so River can start naturally and never cut off a word at the limit.
@@ -51,6 +52,8 @@ export default async function handler(req,res) {
           if ((reply + sentence).length > 420) return;
           reply += sentence;
           yield sentence;
+          sentences++;
+          if (sentences >= 2 || reply.trim().split(/\s+/).length >= 36) return;
           pending = pending.slice(match[0].length).trimStart();
         }
         if (pending.length + reply.length > 420) break;
