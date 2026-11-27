@@ -72,22 +72,30 @@ options.addEventListener('click',event => {
 
 // Deal one line per turn. A slow response keeps the same label for its whole wait.
 const waitingLines = [
-  'Let me think that through.',
-  'Give me a second with that.',
-  'Let me put that into words.',
-  'Thinking about what you said.',
-  'Let me find a good starting point.',
-  'One moment while I sort that out.',
-  'Let me take that piece by piece.',
-  'Thinking it over.',
-  'Give me a beat.',
-  'Let me work through that.',
-  'Finding the clearest way to say it.',
-  'Let me pull that together.',
-  'A moment to think.',
-  'Let me start with what matters.',
-  'Putting a thought together.',
-  'Let me chew on that for a second.'
+  'Consulting the ampersand…',
+  'Moving one pixel left…',
+  'Unfolding a pocket-sized theory…',
+  'Giving the loose end a tug…',
+  'Penciling in a possibility…',
+  'Checking behind the obvious…',
+  'Turning the sketch sideways…',
+  'Borrowing a pencil from the cursor…',
+  'Sweeping up spare pixels…',
+  'Folding a thought into thirds…',
+  'Waking up the little gears…',
+  'Making room on the workbench…',
+  'Connecting two suspiciously friendly dots…',
+  'Looking for the sneaky little hinge…',
+  'Holding that thought up to the light…',
+  'Assembling a very small staircase…',
+  'Untangling the curly bit…',
+  'Giving the idea a quarter turn…',
+  'Testing the wobbly brick…',
+  'Following a particularly good hunch…',
+  'Taking a shortcut through the margins…',
+  'Putting the kettle on for an idea…',
+  'Dusting off the good ruler…',
+  'Scooting the pieces into place…'
 ];
 let remainingLines = [];
 let previousLine = '';
