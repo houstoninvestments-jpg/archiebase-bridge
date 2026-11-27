@@ -11,21 +11,8 @@ const history = [];
 let lastAdded = '';
 const mic = form.querySelector('.kit-mic');
 const tools = form.querySelector('.kit-voice-tools');
-const cancel = form.querySelector('.kit-cancel');
-const player = form.querySelector('.kit-audio');
-let voiceNext = false;
-let recording = null;
-let audioUrl = '';
-let playbackGeneration = 0;
-
-function clearPlayback() {
-  playbackGeneration++;
-  player.pause();
-  player.removeAttribute('src');
-  player.hidden = true;
-  if (audioUrl) URL.revokeObjectURL(audioUrl);
-  audioUrl = '';
-}
+let call = null;
+let typing = false;
 
 const contactForm = note.form;
 const options = document.querySelector('.reach-options');
@@ -37,6 +24,7 @@ let lastVoiceCheck = 0;
 async function chooseRoute(hash, moveFocus) {
   const chat = hash === '#first-look' || hash === voiceRoute;
   const direct = hash === '#contact-form';
+  if (call && hash !== voiceRoute) endVoice();
   view = hash;
   panel.open = chat;
   panel.hidden = !chat;
@@ -61,9 +49,9 @@ async function chooseRoute(hash, moveFocus) {
       available = response.ok && (await response.json()).enabled;
     } catch {}
     if (view !== hash || id !== lastVoiceCheck) return;
-    mic.hidden = tools.hidden = !available;
-    if (hash === voiceRoute && !recording && !submit.disabled) {
-      status.textContent = available ? 'Press Start recording when you’re ready.' : 'Voice is unavailable right now. Type your question here or choose Write to Aaron.';
+    mic.hidden = tools.hidden = !available && !call;
+    if (hash === voiceRoute && !call && !submit.disabled) {
+      status.textContent = available ? 'Start voice chat when you’re ready.' : 'Voice is unavailable right now. Type your question here or choose Write to Aaron.';
       if (moveFocus) (available ? mic : input).focus({preventScroll:true});
     }
   }
@@ -73,7 +61,12 @@ chooseRoute(location.hash,false);
 window.addEventListener('hashchange', () => chooseRoute(location.hash,true));
 options.addEventListener('click',event => {
   const link = event.target.closest('a');
-  if (link && link.hash === location.hash) chooseRoute(link.hash,true);
+  if (link?.hash === voiceRoute && voiceSupported && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+    event.preventDefault();
+    if (location.hash !== voiceRoute) location.hash = voiceRoute;
+    chooseRoute(voiceRoute,false);
+    if (!call) startVoice();
+  } else if (link && link.hash === location.hash) chooseRoute(link.hash,true);
 });
 
 function addTurn(speaker, content) {
@@ -90,10 +83,7 @@ form.addEventListener('submit', async event => {
   event.preventDefault();
   const content = input.value.trim();
   if (!content || submit.disabled) return;
-  const voice = voiceNext;
-  voiceNext = false;
-  clearPlayback();
-  const playback = playbackGeneration;
+  typing = true;
   mic.disabled = true;
   const question = {role:'user',content};
   const pending = addTurn('You', content);
@@ -105,31 +95,22 @@ form.addEventListener('submit', async event => {
   try {
     const response = await fetch('/api/first-look', {
       method:'POST', headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({messages:[...history.slice(-16),question],voice}),
+      body:JSON.stringify({messages:[...history.slice(-16),question]}),
       signal:AbortSignal.timeout(65000)
     });
     if (!response.ok) throw new Error();
-    const {reply,audio} = await response.json();
+    const {reply} = await response.json();
     if (typeof reply !== 'string' || !reply.trim()) throw new Error();
     history.push(question,{role:'assistant',content:reply});
     addTurn('Kit',reply);
     input.value = '';
     status.textContent = '';
-    if (voice && playback === playbackGeneration && panel.open) {
-      if (audio) {
-        const bytes = Uint8Array.from(atob(audio), c => c.charCodeAt(0));
-        audioUrl = URL.createObjectURL(new Blob([bytes], {type:'audio/mpeg'}));
-        player.src = audioUrl;
-        player.hidden = false;
-        try { await player.play(); } catch { status.textContent = 'Press play to hear Kit.'; }
-      } else {
-        status.textContent = 'Kit’s reply is above. Voice playback is unavailable right now.';
-      }
-    }
+
   } catch {
     pending.remove();
     status.textContent = 'Kit couldn’t answer that time. Your message is still here to retry or add to your note.';
   } finally {
+    typing = false;
     mic.disabled = false;
     submit.disabled = false;
     input.readOnly = false;
@@ -164,7 +145,7 @@ handoff.addEventListener('click', () => {
 });
 
 reset.addEventListener('click', () => {
-  clearPlayback();
+  endVoice();
   history.length = 0;
   while (thread.children.length > 1) thread.lastElementChild.remove();
   form.reset();
@@ -198,110 +179,201 @@ function encodeRecording(chunks, frames) {
   return btoa(binary);
 }
 
-function release(session) {
-  clearTimeout(session.timer);
+function stopSound(session) {
+  for (const source of session.sources) { try { source.stop(); } catch {} }
+  session.sources.clear();
+  session.nextAudio = 0;
+}
+
+function endVoice(message = '') {
+  const session = call;
+  if (!session) return;
+  call = null;
+  session.turn?.abort();
+  clearTimeout(session.idle);
+  stopSound(session);
   session.stream?.getTracks().forEach(track => track.stop());
   session.node?.disconnect();
-  if (session.context && session.context.state !== 'closed') session.context.close().catch(() => {});
+  session.context?.close().catch(()=>{});
+  mic.textContent = 'Start voice chat';
+  mic.removeAttribute('aria-pressed');
+  submit.disabled = input.readOnly = false;
+  handoff.disabled = reset.disabled = false;
+  status.textContent = message;
 }
 
-function unlockRecorder() {
-  mic.textContent = 'Start recording';
-  mic.disabled = false;
-  cancel.hidden = true;
-  submit.disabled = false;
-  reset.disabled = false;
-  handoff.disabled = false;
-  input.readOnly = false;
+function resetIdle(session) {
+  clearTimeout(session.idle);
+  session.idle = setTimeout(()=>{ if (call===session) endVoice('Voice chat ended after a quiet minute.'); },60000);
 }
 
-async function endRecording(send) {
-  const session = recording;
-  if (!session) return;
-  release(session);
-  session.capturing = false;
-  if (!send || session.frames < 1600) {
-    recording = null;
-    session.abort.abort();
-    unlockRecorder();
-    status.textContent = send ? 'That was too short. Try again when you’re ready.' : '';
-    return;
+function enqueueAudio(session, buffer) {
+  const context = session.context;
+  const source = context.createBufferSource();
+  source.buffer = buffer;
+  source.connect(context.destination);
+  const start = Math.max(context.currentTime + .015, session.nextAudio);
+  session.nextAudio = start + buffer.duration;
+  session.sources.add(source);
+  session.phase = 'answering';
+  status.textContent = 'Kit is speaking. You can jump in.';
+  source.onended = () => {
+    session.sources.delete(source);
+    if (call===session && session.sources.size===0 && !session.turn && session.phase==='answering') listen(session);
+  };
+  source.start(start);
+}
+
+function listen(session) {
+  session.phase = 'listening';
+  status.textContent = 'Kit is listening.';
+  resetIdle(session);
+}
+
+function interrupt(session) {
+  session.turn?.abort();
+  session.turn = null;
+  stopSound(session);
+  if (session.heard) {
+    history.push({role:'user',content:session.heard},{role:'assistant',content:'[Visitor interrupted the reply.]'});
+    session.heard = '';
   }
-  mic.disabled = true;
-  status.textContent = 'Listening to your question…';
+}
+
+async function answerTurn(session, chunks, frames) {
+  const turn = new AbortController();
+  session.turn = turn;
+  session.phase = 'thinking';
+  clearTimeout(session.idle);
+  status.textContent = 'Kit is thinking…';
+  let complete = false;
+  let leftover = null;
+  const current = () => call===session && session.turn===turn;
   try {
-    const response = await fetch('/api/kit-voice', {
-      method:'POST', headers:{'Content-Type':'application/json'},
-      signal:AbortSignal.any([session.abort.signal,AbortSignal.timeout(25000)]),
-      body:JSON.stringify({recording:encodeRecording(session.chunks,session.frames)})
+    const response = await fetch('/api/voice-conversation',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      signal:AbortSignal.any([turn.signal,AbortSignal.timeout(55000)]),
+      body:JSON.stringify({history:history.slice(-16),recording:encodeRecording(chunks,frames)})
     });
-    const data = await response.json();
-    if (!response.ok || !data.transcript) throw Error(data.error || 'Voice is unavailable. You can still type to Kit.');
-    if (recording !== session) return;
-    recording = null;
-    unlockRecorder();
-    input.value = data.transcript;
-    voiceNext = true;
-    form.requestSubmit();
-  } catch (error) {
-    if (recording !== session) return;
-    recording = null;
-    unlockRecorder();
-    status.textContent = error.message.startsWith('Voice') || error.message.startsWith('Try') ? error.message : 'That recording didn’t go through. Try again or type your question.';
+    if (!response.ok) throw Error('Voice is unavailable right now. You can keep typing to Kit.');
+    const reader = response.body.getReader(), decoder = new TextDecoder();
+    let pending = '';
+    while (current()) {
+      const {value,done} = await reader.read();
+      if (!current()) return;
+      if (done) break;
+      pending += decoder.decode(value,{stream:true});
+      const lines = pending.split('\n');
+      pending = lines.pop();
+      for (const line of lines) {
+        if (!current()) return;
+        if (!line) continue;
+        const e = JSON.parse(line);
+        if (e.type==='heard') {
+          session.heard=e.text;
+          addTurn('You',e.text);
+        } else if (e.type==='pcm') {
+          let bytes=Uint8Array.from(atob(e.audio),c=>c.charCodeAt(0));
+          if (leftover!==null) {const combined=new Uint8Array(bytes.length+1);combined[0]=leftover;combined.set(bytes,1);bytes=combined;}
+          leftover=bytes.length%2 ? bytes[bytes.length-1] : null;
+          const count=Math.floor(bytes.length/2);
+          if (!count) continue;
+          const audio=session.context.createBuffer(1,count,e.rate);
+          const samples=audio.getChannelData(0), raw=new DataView(bytes.buffer);
+          for(let i=0;i<count;i++) samples[i]=raw.getInt16(i*2,true)/32768;
+          enqueueAudio(session,audio);
+        } else if(e.type==='mp3') {
+          const bytes=Uint8Array.from(atob(e.audio),c=>c.charCodeAt(0));
+          const audio=await session.context.decodeAudioData(bytes.buffer);
+          if(current()) enqueueAudio(session,audio);
+        } else if(e.type==='reply') {
+          history.push({role:'user',content:session.heard},{role:'assistant',content:e.text});
+          session.heard='';
+          addTurn('Kit',e.text);
+          handoff.hidden=reset.hidden=false;
+          complete=true;
+          if(!e.spoken) throw Error('Kit’s reply is above. Voice playback is unavailable.');
+        } else if(e.type==='silence') {
+          complete=true;
+        } else if(e.type==='error') {
+          throw Error(e.message);
+        }
+      }
+    }
+    if (!current()) return;
+    if (!complete) throw Error('Voice chat disconnected. You can restart it or type here.');
+    session.turn=null;
+    if (!session.sources.size) listen(session);
+  } catch(error) {
+    if (!current()) return;
+    if (session.heard) {input.value=session.heard;handoff.hidden=false;}
+    endVoice(error.name==='Error' ? error.message : 'Voice chat disconnected. You can restart it or type here.');
   }
 }
 
-mic.addEventListener('click', async () => {
-  if (recording?.capturing) return endRecording(true);
-  if (recording || submit.disabled) return;
-  if (input.value.trim()) {
-    status.textContent = 'Send or clear your typed draft before recording.';
+function microphoneFrame(session, data) {
+  if (call!==session || session.phase==='opening') return;
+  let energy=0;
+  for (const sample of data) energy+=sample*sample;
+  const rms=Math.sqrt(energy/data.length);
+  const threshold=Math.max(session.phase==='answering' ? .025 : .010,session.floor*3.2);
+  const loud=rms>=threshold;
+  if (!loud && !session.frames) session.floor=.99*session.floor+.01*Math.min(rms,.016);
+  if (!session.frames) {
+    session.pre.push(data);
+    if(session.pre.length>12) session.pre.shift();
+    session.attack=loud ? session.attack+data.length : 0;
+    if (session.attack < (session.phase==='answering' ? 2880 : 1440)) return;
+    if (session.turn || session.sources.size) interrupt(session);
+    session.chunks=session.pre.splice(0);
+    session.frames=session.chunks.reduce((n,c)=>n+c.length,0);
+    session.quiet=0;
+    session.phase='speaking';
+    clearTimeout(session.idle);
+    status.textContent='Listening to you…';
     return;
   }
-  clearPlayback();
-  const session = {frames:0,chunks:[],abort:new AbortController()};
-  recording = session;
-  mic.disabled = true;
-  submit.disabled = true;
-  reset.disabled = true;
-  handoff.disabled = true;
-  input.readOnly = true;
-  cancel.hidden = false;
-  status.textContent = 'Opening your microphone…';
-  try {
-    session.context = new AudioContext({sampleRate:16000});
-    await session.context.resume();
-    if (recording !== session) return;
-    session.stream = await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:true},video:false});
-    if (recording !== session) return release(session);
-    await session.context.audioWorklet.addModule('/assets/studio/kit-recorder.js');
-    if (recording !== session) return;
-    session.node = new AudioWorkletNode(session.context,'kit-recorder');
-    session.node.port.onmessage = ({data}) => {
-      if (recording !== session || !session.capturing) return;
-      const count = Math.min(data.length,400000-session.frames);
-      session.chunks.push(data.subarray(0,count));
-      session.frames += count;
-      if (session.frames === 400000) endRecording(true);
-    };
-    session.context.createMediaStreamSource(session.stream).connect(session.node);
-    session.node.connect(session.context.destination);
-    session.capturing = true;
-    session.timer = setTimeout(() => endRecording(true),25000);
-    mic.textContent = 'Send recording';
-    mic.disabled = false;
-    status.textContent = 'Listening. Tap Send recording when you’re done.';
-  } catch (error) {
-    if (recording !== session) return;
-    await endRecording(false);
-    status.textContent = error.name === 'NotAllowedError' ? 'Your microphone is off. You can allow it in your browser or type here.' : 'Your microphone couldn’t start. You can type here.';
-  }
-});
-
-cancel.addEventListener('click', () => endRecording(false));
-function leaveVoice() {
-  if (recording) endRecording(false);
-  clearPlayback();
+  const count=Math.min(960000-session.frames,data.length);
+  session.chunks.push(data.subarray(0,count));
+  session.frames+=count;
+  session.quiet=loud ? 0 : session.quiet+count;
+  if(session.quiet<13600 && session.frames<960000) return;
+  const chunks=session.chunks, frames=session.frames;
+  session.chunks=[];session.frames=session.attack=session.quiet=0;
+  answerTurn(session,chunks,frames);
 }
-panel.addEventListener('toggle', () => { if (!panel.open) leaveVoice(); });
-window.addEventListener('pagehide',leaveVoice);
+
+async function startVoice() {
+  if (call || typing) return;
+  if (input.value.trim()) {status.textContent='Send or clear your typed draft before starting voice chat.';return;}
+  const session={phase:'opening',sources:new Set(),nextAudio:0,turn:null,heard:'',pre:[],chunks:[],frames:0,attack:0,quiet:0,floor:.003};
+  call=session;
+  tools.hidden=mic.hidden=false;
+  mic.textContent='End voice chat';
+  mic.setAttribute('aria-pressed','true');
+  submit.disabled=input.readOnly=true;
+  status.textContent='Opening your microphone…';
+  try {
+    session.context=new AudioContext({sampleRate:16000});
+    await session.context.resume();
+    if(call!==session) return;
+    const stream=await navigator.mediaDevices.getUserMedia({video:false,audio:{channelCount:1,echoCancellation:true,noiseSuppression:true,autoGainControl:true}});
+    if(call!==session) {stream.getTracks().forEach(t=>t.stop());return;}
+    session.stream=stream;
+    await session.context.audioWorklet.addModule('/assets/studio/kit-recorder.js?v=2');
+    if(call!==session) return;
+    session.node=new AudioWorkletNode(session.context,'kit-recorder');
+    session.node.port.onmessage=({data})=>microphoneFrame(session,data);
+    session.context.createMediaStreamSource(stream).connect(session.node);
+    session.node.connect(session.context.destination);
+    stream.getAudioTracks()[0].onended=()=>{if(call===session)endVoice('Your microphone disconnected.');};
+    listen(session);
+  } catch(error) {
+    if(call===session) endVoice(error.name==='NotAllowedError' ? 'Microphone access is off. Allow it in your browser or type here.' : 'Your microphone couldn’t start. You can type here.');
+  }
+}
+
+mic.addEventListener('click',()=>{if(call)endVoice('Voice chat ended.');else startVoice();});
+panel.addEventListener('toggle',()=>{if(!panel.open)endVoice();});
+window.addEventListener('pagehide',()=>endVoice());
+document.addEventListener('visibilitychange',()=>{if(document.hidden)endVoice();});

@@ -3,19 +3,19 @@ import {generateSpeech, transcribe} from 'ai';
 import {get, put} from '@vercel/blob';
 
 const unavailable = 'Voice is unavailable right now. You can still type to Kit.';
-const river = 'SAz9YHcvj6GT2YYXdXww';
+export const river = 'SAz9YHcvj6GT2YYXdXww';
 const sampleRate = 16000;
 
 const expiry = Date.parse('2027-11-26T23:59:59Z');
 export const voiceChatModel = 'openai/gpt-4.1-mini';
-const voiceModels = {chat:voiceChatModel,speech:'elevenlabs/eleven-flash-v2.5',listen:'elevenlabs/scribe-v2'};
+export const voiceModels = {chat:voiceChatModel,speech:'elevenlabs/eleven-flash-v2.5',listen:'elevenlabs/scribe-v2'};
 const limit = 4900000; // Microdollars. Leave ten cents of the approved $5 unused.
 
-function runtimeToken(req) {
+export function runtimeToken(req) {
   return process.env.VERCEL_OIDC_TOKEN || req.headers['x-vercel-oidc-token'];
 }
 
-function configured(req) {
+export function configured(req) {
   return Date.now() < expiry && Boolean(runtimeToken(req) && process.env.BLOB_READ_WRITE_TOKEN);
 }
 
@@ -32,6 +32,10 @@ async function reserve(kind, units) {
   const outputCost = kind === 'chat' ? 256 * Number(pricing?.output) : 0;
   const amount = Math.max(10000, Math.ceil((units * price + outputCost) * 1500000));
   if (!Number.isSafeInteger(amount) || amount <= 0) throw Error('Voice pricing unavailable');
+  await reserveAmount(amount);
+}
+
+async function reserveAmount(amount) {
   const path = 'kit-budget/' + new Date().toISOString().slice(0,7) + '.txt';
   const current = await get(path,{access:'private',useCache:false});
   const spent = current ? Number(await new Response(current.stream).text()) : 0;
@@ -40,6 +44,22 @@ async function reserve(kind, units) {
     access:'private',addRandomSuffix:false,
     ...(current ? {ifMatch:current.blob.etag} : {allowOverwrite:false})
   });
+}
+
+// Reserve the complete bounded turn before starting any metered provider work.
+export async function reserveConversation(historyBytes, seconds) {
+  const response = await fetch('https://ai-gateway.vercel.sh/v1/models',{signal:AbortSignal.timeout(5000)});
+  if (!response.ok) throw Error('Voice pricing unavailable');
+  const catalog = (await response.json()).data;
+  function price(model,field) {
+    const value = Number(catalog.find(m => m.id === model)?.pricing?.[field]);
+    if (!Number.isFinite(value) || value <= 0) throw Error('Voice pricing unavailable');
+    return value;
+  }
+  const cost = Math.max(seconds,60) * price(voiceModels.listen,'transcription_duration_cost_per_second')
+    + (historyBytes + 6500) * price(voiceChatModel,'input') + 128 * price(voiceChatModel,'output')
+    + 420 * price(voiceModels.speech,'speech_input_character_cost');
+  await reserveAmount(Math.ceil(cost * 1500000));
 }
 
 export async function reserveVoiceReply(req,messages) {
@@ -54,10 +74,10 @@ export async function reserveVoiceReply(req,messages) {
 }
 
 // Accept exactly the mono PCM layout the studio recorder writes, capped at 25 seconds.
-function readRecording(encoded) {
-  if (typeof encoded !== 'string' || encoded.length > 1066800) return;
+export function readRecording(encoded, seconds = 25) {
+  if (typeof encoded !== 'string' || encoded.length > Math.ceil((44 + sampleRate * 2 * seconds)/3)*4) return;
   const b = Buffer.from(encoded, 'base64');
-  if (b.length < 44 + 3200 || b.length > 44 + sampleRate * 2 * 25 || b.length % 2 ||
+  if (b.length < 44 + 3200 || b.length > 44 + sampleRate * 2 * seconds || b.length % 2 ||
       b.toString('ascii', 0, 4) !== 'RIFF' || b.toString('ascii', 8, 16) !== 'WAVEfmt ' ||
       b.readUInt32LE(4) !== b.length - 8 || b.readUInt32LE(16) !== 16 ||
       b.readUInt16LE(20) !== 1 || b.readUInt16LE(22) !== 1 ||
