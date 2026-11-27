@@ -70,6 +70,50 @@ options.addEventListener('click',event => {
   } else if (link && link.hash === location.hash) chooseRoute(link.hash,true);
 });
 
+// Deal one line per turn. A slow response keeps the same label for its whole wait.
+const waitingLines = [
+  'Let me think that through.',
+  'Give me a second with that.',
+  'Let me put that into words.',
+  'Thinking about what you said.',
+  'Let me find a good starting point.',
+  'One moment while I sort that out.',
+  'Let me take that piece by piece.',
+  'Thinking it over.',
+  'Give me a beat.',
+  'Let me work through that.',
+  'Finding the clearest way to say it.',
+  'Let me pull that together.',
+  'A moment to think.',
+  'Let me start with what matters.',
+  'Putting a thought together.',
+  'Let me chew on that for a second.'
+];
+let remainingLines = [];
+let previousLine = '';
+
+function showThinking() {
+  if (!remainingLines.length) {
+    remainingLines = waitingLines.slice();
+    for (let i = remainingLines.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [remainingLines[i], remainingLines[j]] = [remainingLines[j], remainingLines[i]];
+    }
+    const last = remainingLines.length - 1;
+    if (remainingLines[last] === previousLine) {
+      [remainingLines[0], remainingLines[last]] = [remainingLines[last], remainingLines[0]];
+    }
+  }
+  previousLine = remainingLines.pop();
+  const line = document.createElement('span');
+  line.className = 'kit-thinking';
+  const mark = document.createElement('span');
+  mark.className = 'kit-thinking-mark';
+  mark.setAttribute('aria-hidden','true');
+  line.append(mark, document.createTextNode(previousLine));
+  status.replaceChildren(line);
+}
+
 function addTurn(speaker, content) {
   const line = document.createElement('p');
   const label = document.createElement('strong');
@@ -92,7 +136,7 @@ form.addEventListener('submit', async event => {
   input.readOnly = true;
   reset.disabled = true;
   handoff.disabled = true;
-  status.textContent = 'Kit is thinking…';
+  showThinking();
   try {
     const response = await fetch('/api/first-look', {
       method:'POST', headers:{'Content-Type':'application/json'},
@@ -247,7 +291,7 @@ async function answerTurn(session, chunks, frames) {
   session.turn = turn;
   session.phase = 'thinking';
   clearTimeout(session.idle);
-  status.textContent = 'Kit is thinking…';
+  showThinking();
   let complete = false;
   let leftover = null;
   const current = () => call===session && session.turn===turn;

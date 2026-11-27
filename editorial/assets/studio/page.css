@@ -371,3 +371,18 @@ body{font-weight:400}
 .first-look .in-voice-chat :is(label[for="kit-input"],#kit-input,button[type="submit"]){display:none}
 .first-look .in-voice-chat .kit-mic{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .first-look .in-voice-chat [role="status"]{font-weight:700;color:var(--brick-ink)}
+
+.kit-thinking{display:inline-flex;align-items:center;gap:.6rem;color:var(--brick-ink);font-weight:650;line-height:1.5}
+.kit-thinking-mark{position:relative;display:inline-block;flex:0 0 1.85rem;height:1.35rem}
+.kit-thinking-mark::before,.kit-thinking-mark::after{content:"";position:absolute}
+.kit-thinking-mark::before{left:1px;bottom:2px;width:.64rem;height:.33rem;border-radius:1px;background:var(--brick);box-shadow:.75rem 0 var(--brick);opacity:.65}
+.kit-thinking-mark::after{left:.43rem;bottom:.52rem;width:.64rem;height:.33rem;border-radius:1px;background:var(--brick-ink);animation:kit-set-brick 2.4s cubic-bezier(.4,0,.2,1) infinite}
+.kit-thinking-mark{background:url('/assets/studio/pointer-30.png') right top / .64rem .64rem no-repeat}
+@keyframes kit-set-brick{
+  0%,82%,100%{transform:translate(0,0);opacity:1}
+  18%{transform:translate(0,0);opacity:0}
+  19%{transform:translate(.29rem,-.37rem);opacity:0}
+  37%{transform:translate(.29rem,-.37rem);opacity:1}
+  63%{transform:translate(0,0);opacity:1}
+}
+@media(prefers-reduced-motion:reduce){.kit-thinking-mark::after{animation:none}}
